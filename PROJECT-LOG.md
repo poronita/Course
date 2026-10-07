@@ -88,7 +88,7 @@ Image Swiss Knife is a free, ad-supported image toolkit, offered as a website an
 - **Note:** a usage limit interrupted the first attempt. The drafts were kept, then reviewed and polished after the reset.
 - **Next:** the owner picks a character. Then update the Pip Pro mockup with the new mascot, the reward and badge system, and the SEO page structure.
 
-### 10. UI round 4: Pip Prime mockup (current)
+### 10. UI round 4: Pip Prime mockup
 - **Owner chose:** Pip Prime, but not in red. Dark theme uses a little dark Turkish blue, light theme uses creamy white.
 - **Asked for:** one HTML file with a single 60-second mockup, a dark/light theme toggle and an app/website toggle. Focus points repeated by the owner:
   1. Keep XP and levels, and add virtual awards and badges so the app feels more rewarding.
@@ -100,6 +100,17 @@ Image Swiss Knife is a free, ad-supported image toolkit, offered as a website an
   - Game layer: XP ring and bar, streak, daily quests, bronze, silver and gold badges, rank titles, level-up moment, weekly trophy, daily chest with a Pip skin.
   - SEO shown: the address bar changes per tool and preset in website mode (`/compress-image-to-200kb`, `/crop-photo-1-1`, `/photo-location-checker`, `/video-to-gif`), the tab title changes, and the last scene shows search results and the page source with the (i) text in the HTML.
 - **Next:** the owner reviews it and gives changes. After that, the build can start from the SEO plan below.
+
+### 11. Android Studio hand-off (current)
+- **Asked for:** a very detailed master prompt to start the Android Studio project, and an asset folder with the character, icon sets and a base to start from. New requirements: at least 25 transition and download effects used at random; many more character actions (10 per service, random each time); celebration and level-up variety; touch reactions on the tummy (tools menu), feet, ears, hands and mouth, with escalating reactions if the pointer stays near without clicking; pick Pip up by the blade and fling him; stay on the feet and the cursor becomes a magic carpet that bursts on a jerk or click; a sound for every effect and reaction, each switchable in settings; XP and rewards are local to the device and not stored online.
+- **Delivered:** `handoff/`.
+  - `KICKSTART-PROMPT.md` (paste this) and `MASTER-PROMPT.md` (the full brief, about 22,700 words).
+  - Catalogue of 32 transitions, 30 save effects, 12 progress bars, 90 service actions, 14 celebrations, 10 level-ups, badge, streak, error and egg reactions, 10 touch zones, 7 gestures: `catalogue/`.
+  - Rewards data: XP rules, levels, ranks, streaks, 20 quests, 45 badges, 12 skins, chest loot, awards, and the "stored only on this device" wording: `data/gamification.json`.
+  - Sound system spec with category and per-sound switches; 262 synthesised placeholder sounds (1.7 MB).
+  - Asset pack: Pip in 2 themes (16 poses as SVG and PNG, 28 layers with pivots, animated source rig), 55 icons (SVG and Android VectorDrawable), badges and trophies, app icon set, colour tokens, fonts note, and the approved mock-up.
+  - The research report copied to `handoff/reference/report`.
+- **Findings:** the Pip rig has no legs and no ears; feet and shoulder rivets stand in. Android cloud backup must be disabled so rewards never go online.
 
 ## SEO plan (D9), first draft for the next round
 
