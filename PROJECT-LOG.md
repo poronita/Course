@@ -19,6 +19,7 @@ Image Swiss Knife is a free, ad-supported image toolkit, offered as a website an
 | D7 | UI direction: the **Pip Pro** style (style 9), which is gamified and has a mascot. | UI round 3 |
 | D8 | The mascot becomes the brand identity. It must be recognisable from far away and memorable after one look. | UI round 3 |
 | D9 | The site must be SEO friendly: every tool and popular preset has its own crawlable URL, and each tool's info (i) bubble text is in the HTML at load. | UI round 3 |
+| D10 | **Pip Prime** is the mascot. Colour: Turkish blue (dark theme) and creamy white (light theme). The red was dropped. | UI round 4 |
 
 ## Timeline
 
@@ -63,7 +64,7 @@ Image Swiss Knife is a free, ad-supported image toolkit, offered as a website an
   - unique transition, process and finish effects.
 - **Delivered:** styles 9 to 16 (Pip Pro, Bolt Control, Lumi Deep, Quest Map, Mochi Cards, Panda Dojo, Cosmo Launchpad, Sprout Garden), plus the engine's progress-bar library, screen transitions and a "Shuffle bars" button. Same artifact link.
 
-### 9. UI round 3: Pip Pro chosen, character casting (current)
+### 9. UI round 3: Pip Pro chosen, character casting
 - **Owner chose:** the Pip Pro style.
 - **Asked for:**
   1. **More reward:** keep XP and levels, and add virtual awards and badges so finishing a job feels more rewarding.
@@ -86,6 +87,19 @@ Image Swiss Knife is a free, ad-supported image toolkit, offered as a website an
 - **Published:** https://claude.ai/artifact/A8heE81CL3ugiLSfBp7F4Z
 - **Note:** a usage limit interrupted the first attempt. The drafts were kept, then reviewed and polished after the reset.
 - **Next:** the owner picks a character. Then update the Pip Pro mockup with the new mascot, the reward and badge system, and the SEO page structure.
+
+### 10. UI round 4: Pip Prime mockup (current)
+- **Owner chose:** Pip Prime, but not in red. Dark theme uses a little dark Turkish blue, light theme uses creamy white.
+- **Asked for:** one HTML file with a single 60-second mockup, a dark/light theme toggle and an app/website toggle. Focus points repeated by the owner:
+  1. Keep XP and levels, and add virtual awards and badges so the app feels more rewarding.
+  2. A page for each type of function so search engines list each one (for example "crop photo to 1:1"), while the app still feels integrated. A separate page is not mandatory if the web app is listed anyway.
+  3. An (i) bubble on each function with detailed text that loads with the app, so search crawlers can read it. One codebase for Android and web.
+- **Delivered:** `design/pip-prime-mockup.html` (source in `design/mockup/`).
+  - Pip Prime re-coloured per theme (`design/mockup/tint.mjs`).
+  - Story: meet Pip, pick a photo, shrink to 200 KB, crop to 1:1 (tap Pip for the quick menu, open the (i) bubble), check and remove a location, video to GIF, level up with a trophy case and daily chest, results with one ad slot, then how search engines find each tool.
+  - Game layer: XP ring and bar, streak, daily quests, bronze, silver and gold badges, rank titles, level-up moment, weekly trophy, daily chest with a Pip skin.
+  - SEO shown: the address bar changes per tool and preset in website mode (`/compress-image-to-200kb`, `/crop-photo-1-1`, `/photo-location-checker`, `/video-to-gif`), the tab title changes, and the last scene shows search results and the page source with the (i) text in the HTML.
+- **Next:** the owner reviews it and gives changes. After that, the build can start from the SEO plan below.
 
 ## SEO plan (D9), first draft for the next round
 
