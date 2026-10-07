@@ -2,7 +2,7 @@
    that flips out to other tools. */
 CAST.register({
   id: 'pip', order: 1, name: 'Pip Prime', tagline: 'The pocket knife that grew a face.',
-  concept: 'Pip Prime is a red knife handle with a steel belt and a blade for a quiff. Each tool in the app lives in that quiff. It flips one out for every job, then puts it away.',
+  concept: 'Pip Prime is a red knife handle with a steel belt and a blade for a quiff. Each tool in the app lives in that quiff. It flips one out for every job, then puts it away. A steel keyring hangs off its belt and swings like a tail.',
   signature: 'The steel blade quiff. In the signature move it flips through scissors, a magnifier, a crop corner and a clapper, then spins the blade back and winks.',
   why: ['A red capsule with a blade on top reads as a pocket knife at any size.', 'The tool flip is a move nobody else has.', 'It grows straight out of the Pip people already know.'],
   risks: ['A blade on the head may feel sharp to some parents.', 'The capsule body is simple, so the face does most of the acting.'],
@@ -39,13 +39,27 @@ CAST.register({
     A.grad('photo', [[0, '#7FC8F8'], [1, '#FFE0B5']]);
     A.grad('swoosh', [[0, '#fff', 0], [1, '#fff', 0.7]], { x1: 0, y1: 0, x2: 1, y2: 0 });
 
+    A.grad('lidT', [[0, '#EE4537'], [0.85, '#EC4034'], [1, '#D0312A']]);
+    A.grad('lidB', [[0, '#C42A24'], [0.12, '#EC4034'], [1, '#E8392E']]);
     const BODY = 'M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z';
     const BLADE = 'M14 10V-50Q16 -92 -18 -122Q-27 -84 -17 -44L-17 10Z';
 
     /* ---------- rig ---------- */
     const shadow = A.el('ellipse', { cx: 200, cy: 350, rx: 92, ry: 13, fill: A.url('shadow') }, g);
+    const fxBack = A.el('g', {}, g);
     const root = A.el('g', {}, g);
-    const swoosh = A.el('path', { fill: 'none', stroke: '#FFE6DC', 'stroke-width': 16, 'stroke-linecap': 'round', opacity: 0 }, root);
+    const swoosh = A.el('path', { fill: '#FFF1EA', opacity: 0 }, root);
+    /* keyring tail: hangs off the bolster, swings with lag */
+    const ringG = A.el('g', {}, root);
+    A.el('path', { d: 'M278 282Q292 280 294 292', fill: 'none', stroke: STEELO, 'stroke-width': 6, 'stroke-linecap': 'round' }, ringG);
+    A.el('path', { d: 'M278 282Q292 280 294 292', fill: 'none', stroke: A.url('steelX'), 'stroke-width': 3, 'stroke-linecap': 'round' }, ringG);
+    A.el('circle', { cx: 294, cy: 309, r: 15, fill: 'none', stroke: STEELO, 'stroke-width': 7.5 }, ringG);
+    A.el('circle', { cx: 294, cy: 309, r: 15, fill: 'none', stroke: A.url('steelX'), 'stroke-width': 4 }, ringG);
+    A.el('path', { d: 'M282 302A14 14 0 0 1 292 294.5', fill: 'none', stroke: '#fff', 'stroke-width': 2, 'stroke-linecap': 'round', opacity: 0.9 }, ringG);
+    /* opener nub: a second, smaller tool that always sits beside the blade */
+    const nubG = A.el('g', {}, root);
+    A.el('path', { d: 'M-7 10V-36Q-7 -46 3 -46Q12 -46 12 -38Q12 -33 6 -31L2 -29V-24L8 -22V10Z', fill: A.url('steelX'), stroke: STEELO, 'stroke-width': 2.6, 'stroke-linejoin': 'round' }, nubG);
+    A.el('path', { d: 'M-3 6V-36Q-3 -42 3 -42', fill: 'none', stroke: '#fff', 'stroke-width': 1.8, 'stroke-linecap': 'round', opacity: 0.85 }, nubG);
 
     /* tools: behind the body, pivoting on the dome */
     const toolG = A.el('g', {}, root);
@@ -130,6 +144,7 @@ CAST.register({
     A.el('rect', { x: 186, y: 276, width: 22, height: 7, rx: 3.5, fill: 'none', stroke: '#6F7889', 'stroke-width': 1.6, opacity: 0.8 }, belt);
     A.el('path', { d: 'M204 276L212 268.5Q213.5 267.5 213.5 269L209 276', fill: 'none', stroke: '#6F7889', 'stroke-width': 1.6, opacity: 0.8, 'stroke-linejoin': 'round' }, belt);
 
+    // soft face light so the eyes pop
     // cheeks
     const cheeks = [[150, 236], [250, 236]].map(([x, y]) => A.el('ellipse', { cx: x, cy: y, rx: 12, ry: 6.5, fill: '#FF8E7A', opacity: 0.4 }, bodyG));
 
@@ -153,11 +168,15 @@ CAST.register({
       let d = ''; for (let k = 0; k <= 60; k++) { const th = k / 60 * Math.PI * 4.4, r = 1 + th * 1.35; d += (k ? 'L' : 'M') + (Math.cos(th) * r).toFixed(1) + ' ' + (Math.sin(th) * r).toFixed(1); }
       A.attr(spiral, { d });
       A.el('ellipse', { cy: -ERY + 4, rx: ERX, ry: 8, fill: '#3A0A10', opacity: 0.12 }, inner);
-      const lidT = A.el('path', { fill: '#E53A30' }, inner);
-      const lidB = A.el('path', { fill: '#E2362D' }, inner);
-      const lashT = A.el('path', { fill: 'none', stroke: '#2A0A10', 'stroke-width': 3.2, 'stroke-linecap': 'round' }, eg);
-      const lashB = A.el('path', { fill: 'none', stroke: '#5E0A0E', 'stroke-width': 2, 'stroke-linecap': 'round', opacity: 0.6 }, eg);
       A.el('ellipse', { rx: ERX, ry: ERY, fill: 'none', stroke: '#2A0A10', 'stroke-width': 2.6 }, eg);
+      // lids sit over the outline so they sculpt the eye shape (smiles, squints, sleepy)
+      const lcid = A.id('lid' + i);
+      A.el('ellipse', { rx: ERX + 4.5, ry: ERY + 4.5 }, A.el('clipPath', { id: lcid }, A.defs));
+      const lidsG = A.el('g', { 'clip-path': `url(#${lcid})` }, eg);
+      const lidT = A.el('path', { fill: A.url('lidT') }, lidsG);
+      const lidB = A.el('path', { fill: A.url('lidB') }, lidsG);
+      const lashT = A.el('path', { fill: 'none', stroke: '#2A0A10', 'stroke-width': 3.4, 'stroke-linecap': 'round' }, eg);
+      const lashB = A.el('path', { fill: 'none', stroke: '#2A0A10', 'stroke-width': 2.8, 'stroke-linecap': 'round' }, eg);
       return { eg, iris, irisS, pupil, spiral, lidT, lidB, lashT, lashB, ex, ey };
     });
     // brows
@@ -171,6 +190,8 @@ CAST.register({
     const teeth = A.el('rect', { x: -30, width: 60, height: 5, fill: '#fff' }, mIn);
     const tongue = A.el('ellipse', { fill: '#FF7A86' }, mIn);
     const tip = A.el('path', { d: 'M0 0Q2 9 8 8Q12 5 7 -1Z', fill: '#FF7A86', stroke: '#2A070C', 'stroke-width': 2.4, 'stroke-linejoin': 'round' }, mouthG);
+    // soft occlusion where the tools meet the dome
+    A.el('ellipse', { cx: PX - 4, cy: PY + 9, rx: 26, ry: 7, fill: '#4A0508', opacity: 0.28 }, bodyG);
     // pivot pin on the dome (in front of the body)
     const pin = A.el('g', {}, root);
     A.el('path', { d: 'M150 150A76 76 0 0 1 250 150', fill: 'none', stroke: STEELO, 'stroke-width': 8, 'stroke-linecap': 'round' }, pin);
@@ -192,7 +213,11 @@ CAST.register({
     const mkArm = (parent, side) => {
       const arm = A.el('g', {}, parent);
       const seg_ = A.el('rect', { x: -8.5, y: -8, width: 17, height: 44, rx: 8.5, fill: A.url('arm'), stroke: DEEP, 'stroke-width': 2.6 }, arm);
-      A.el('path', { d: 'M-3.5 -2V22', stroke: '#fff', 'stroke-opacity': 0.35, 'stroke-width': 3, 'stroke-linecap': 'round' }, arm);
+      A.el('path', { d: 'M-3.5 6V26', stroke: '#fff', 'stroke-opacity': 0.4, 'stroke-width': 3, 'stroke-linecap': 'round' }, arm);
+      if (!A.small) {
+        A.el('circle', { r: 6.2, fill: A.url('rivet'), stroke: STEELO, 'stroke-width': 1.6 }, arm);
+        A.el('circle', { cx: -1.6, cy: -1.6, r: 1.5, fill: '#fff' }, arm);
+      }
       const hand = A.el('g', {}, arm);
       const medal = side === 0 ? A.el('g', {}, hand) : null;
       const P = {};
@@ -237,16 +262,17 @@ CAST.register({
     const sparks = Array.from({ length: 8 }, (_, i) => A.el('path', { d: STAR(9 + (i % 3) * 3), fill: i % 2 ? '#FFE08A' : '#fff' }, fx));
     const CONF = ['#E5322B', '#F5B83D', '#FFFFFF', '#7FC8F8', '#D5DAE2'];
     const R = A.rng(41);
-    const confetti = Array.from({ length: 18 }, (_, i) => ({ e: A.el('rect', { x: -4, y: -2.5, width: 8, height: 5, rx: 1.2, fill: CONF[i % 5] }, fx), x: 60 + R() * 280, sp: 80 + R() * 70, ph: R(), rot: R() * 720 - 360, sw: R() * 6 }));
+    const confetti = Array.from({ length: 18 }, (_, i) => ({ e: A.el('rect', { x: -4, y: -2.5, width: 8, height: 5, rx: 1.2, fill: CONF[i % 5] }, i % 3 ? fxBack : fx), x: 60 + R() * 280, sp: 80 + R() * 70, ph: R(), rot: R() * 720 - 360, sw: R() * 6 }));
     const zs = [0, 1, 2].map(i => A.el('text', { 'font-family': 'system-ui, sans-serif', 'font-weight': 900, 'font-size': 18 + i * 6, fill: '#F6F1EA', text: 'z' }, fx));
     const dots = [[272, 150, 5], [288, 128, 7.5], [310, 102, 11]].map(([x, y, r]) => A.el('circle', { cx: x, cy: y, r, fill: '#F6F1EA' }, fx));
     const shock = A.el('path', { d: 'M110 140L96 128M104 168L86 166M118 116L110 98M290 140L304 128M296 168L314 166M282 116L290 98', stroke: '#FFE08A', 'stroke-width': 5, 'stroke-linecap': 'round' }, fx);
     const glint = A.el('path', { d: STAR(12), fill: '#fff' }, fx);
+    const dStars = [0, 1, 2].map(i => A.el('path', { d: STAR(8), fill: i === 1 ? '#fff' : '#FFE08A' }, fx));
 
     /* ---------- poses ---------- */
     // face: lt/lb lids [L,R], by/ba brows [L,R], mouth w c o a, ck cheek, ps pupil, gz gaze override [w,x,y]
     const F = {
-      idle: { lt: [0.12, 0.12], lb: [0.04, 0.04], by: [0, 0], ba: [0, 0], mw: 13, mc: 4, mo: 0, ma: 0, ck: 0.4, ps: 1, gz: [0, 0, 0] },
+      idle: { lt: [0.12, 0.12], lb: [0, 0], by: [0, 0], ba: [0, 0], mw: 13, mc: 4, mo: 0, ma: 0, ck: 0.4, ps: 1, gz: [0, 0, 0] },
       happy: { lt: [0.08, 0.08], lb: [0.32, 0.32], by: [-7, -7], ba: [3, 3], mw: 17, mc: 9, mo: 9, ma: 0, ck: 0.75, ps: 1, gz: [0, 0, 0] },
       wink: { lt: [0.1, 0.5], lb: [0.22, 0.5], by: [-9, 4], ba: [-2, -6], mw: 15, mc: 7, mo: 3, ma: 4, ck: 0.7, ps: 1, gz: [0.6, 0.2, 0.1] },
       surprised: { lt: [0, 0], lb: [0, 0], by: [-16, -16], ba: [6, 6], mw: 7, mc: 0, mo: 15, ma: 0, ck: 0.3, ps: 0.72, gz: [0.8, 0, -0.1] },
@@ -260,7 +286,7 @@ CAST.register({
     // arms: la/ra angle (outward +), lh/rh hand rot, lp/rp pose
     const ARM = {
       idle: [10, 0, 'open', 10, 0, 'open'], happy: [38, -10, 'open', 38, -10, 'open'], wink: [14, 0, 'open', 82, 0, 'thumb'],
-      surprised: [128, 20, 'open', 128, 20, 'open'], thinking: [14, 0, 'open', -60, 40, 'fist'], working: [-22, -20, 'fist', -22, -20, 'fist'],
+      surprised: [128, 20, 'open', 128, 20, 'open'], thinking: [14, 0, 'open', -97, 70, 'fist'], working: [-22, -20, 'fist', -22, -20, 'fist'],
       celebrate: [158, 0, 'open', 158, 0, 'open'], sleepy: [4, 0, 'open', 4, 0, 'open'], levelup: [162, 0, 'fist', 84, 0, 'thumb'], signature: [60, -20, 'open', 60, -20, 'open'],
     };
     const TOOL = { idle: 'blade', happy: 'blade', wink: 'blade', surprised: 'blade', thinking: 'lens', working: 'scissors', celebrate: 'blade', sleepy: 'blade', levelup: 'blade', signature: 'blade' };
@@ -276,7 +302,7 @@ CAST.register({
         case 'surprised': return lerp(b, 4, ease.out(seg(mt, 0, 0.12))) + 26 * wobble(mt, 20, 4);
         case 'thinking': return b + 5 * Math.sin(t * 1.4);
         case 'working': return b + 3 * Math.sin(mt * 9);
-        case 'celebrate': { const ph = (mt % 0.9) / 0.9; return b - 360 * ease.inOut(seg(ph, 0.08, 0.62)); }
+        case 'celebrate': { const ph = (mt % 0.9) / 0.9; return b - 360 * ease.inOut(seg(ph, 0.14, 0.86)); }
         case 'sleepy': return lerp(b, -96, ease.inOut(seg(mt, 0, 1.2))) + 5 * Math.sin(t * 1.1);
         case 'levelup': return -4 + 18 * wobble(mt, 14, 4);
         default: return b;
@@ -324,6 +350,7 @@ CAST.register({
       if (A_.medal) { A.show(A_.medal, medalOn > 0.01); if (medalOn > 0.01) A.tf(A_.medal, 0, 8, -(ang + hr), medalOn, medalOn); }
     };
 
+    const spr = { lt: null, pby: 0, prot: 0, pbx: 0, a: 0, v: 0, r: 0, rv: 0 };
     return {
       update(s) {
         const { t, mt } = s, m = s.mood, pv = s.prev || 'idle', bl = s.blend;
@@ -358,14 +385,14 @@ CAST.register({
           shockOn = seg(mt, 0.02, 0.1) * (1 - seg(mt, 0.8, 1.1)); blinkAllowed = mt > 1.5;
           la += 8 * wobble(mt, 12, 4); ra += 8 * wobble(mt, 12, 4);
         } else if (m === 'thinking') {
-          rot += 4 * ease.inOut(seg(mt, 0, 0.6)); dotOn = 1; rL = lerp(34, 50, bl);
+          rot += 4 * ease.inOut(seg(mt, 0, 0.6)); dotOn = 1; rL = lerp(34, 44, bl);
           f.ma += Math.sin(t * 2.2) * 1.5;
         } else if (m === 'working') {
           cardOn = ease.out(seg(mt, 0, 0.3)); sciOpen = 0.5 + 0.5 * Math.sin(mt * 12);
           by = -2 * Math.abs(Math.sin(mt * 6)); la += 3 * Math.sin(mt * 12); ra -= 3 * Math.sin(mt * 12);
         } else if (m === 'celebrate') {
           const ph = (mt % 0.9) / 0.9, air = Math.sin(Math.PI * seg(ph, 0.1, 0.8)), land = seg(ph, 0.8, 1) * (1 - seg(ph, 0.92, 1)) + (ph < 0.1 ? 1 - ph / 0.1 : 0);
-          by = -46 * air; sy *= 1 + 0.08 * air - 0.12 * land; sx *= 1 - 0.05 * air + 0.1 * land;
+          by = -40 * air; sy *= 1 + 0.07 * air - 0.12 * land; sx *= 1 - 0.05 * air + 0.1 * land;
           la += 14 * Math.sin(mt * 14); ra += 14 * Math.sin(mt * 14 + 2); sparkOn = 1; confOn = 1;
         } else if (m === 'sleepy') {
           rot = 5 * Math.sin(t * 0.9); by = 2 * Math.sin(t * 1.8); zOn = 1; blinkAllowed = false;
@@ -415,6 +442,7 @@ CAST.register({
           const w = wobble(pk, 16, 5);
           sx *= 1 + 0.1 * w; sy *= 1 - 0.1 * w; rot += 6 * wobble(pk, 11, 4);
           tang += 40 * wobble(pk, 18, 4);
+          shockOn = Math.max(shockOn, 1 - seg(pk, 0.04, 0.35));
           if (s.pokes >= 3) dizzy = true;
           else {
             const k = clamp(pkW * 1.6);
@@ -428,6 +456,21 @@ CAST.register({
           f.by = [-8 + 4 * Math.sin(pk * 7), -4 - 4 * Math.sin(pk * 7)]; f.ba = [6, -4];
           la = 40 + 20 * Math.sin(pk * 10); ra = 40 - 20 * Math.sin(pk * 10);
         }
+
+        /* secondary motion: springs driven by body velocity (reset on time jumps) */
+        const dt = spr.lt == null ? 0 : t - spr.lt;
+        if (dt > 0 && dt < 0.1) {
+          const vy = (by - spr.pby) / dt, vr = (rot - spr.prot) / dt + (bx - spr.pbx) / dt * 0.6;
+          spr.v += (-170 * spr.a - 9 * spr.v + vy * 1.6) * dt; spr.a += spr.v * dt;
+          spr.rv += (-120 * spr.r - 5 * spr.rv - vr * 9 + vy * 2.2) * dt; spr.r += spr.rv * dt;
+          spr.a = clamp(spr.a, -30, 30); spr.r = clamp(spr.r, -60, 60);
+        } else if (dt !== 0) { spr.a = spr.v = spr.r = spr.rv = 0; }
+        spr.lt = t; spr.pby = by; spr.prot = rot; spr.pbx = bx;
+        tang += dizzy ? 0 : spr.a;
+        const ringA = spr.r - rot * 0.6 + 26 * wobble(pk, 10, 3.2) + 3 * Math.sin(t * 1.7);
+        A.tf(ringG, 0, 0, ringA, 1, 1, 286, 284);
+        const nubA = 36 + (m === 'sleepy' ? 44 * ease.inOut(seg(mt, 0, 1.2)) : 0) - spr.a * 0.6 + 22 * wobble(pk - 0.05, 16, 4.5) + (dizzy ? 20 * Math.sin(pk * 14) : 0);
+        A.tf(nubG, PX, PY, nubA);
 
         /* body */
         A.tf(root, bx, by, rot, sx, sy, 200, 345);
@@ -451,17 +494,18 @@ CAST.register({
           if (dizzy) A.tf(E.spiral, 0, 0, (i ? -1 : 1) * s.poke * 600);
           const y1 = -ERY + 2 * ERY * clamp(lt), y2 = ERY - 2 * ERY * clamp(lb);
           const meet = y1 >= y2 - 0.5;
-          const sag = 7 * (1 - clamp(lt) * 0.4), arch = 8;
+          const sag = 7 * (1 - clamp(lt) * 0.4), arch = 4 + 26 * clamp(lb * 1.6);
           const yT = meet ? (y1 + y2) / 2 : y1, yB = meet ? (y1 + y2) / 2 : y2;
-          A.attr(E.lidT, { d: `M-30 -32H30V${yT - 2}Q0 ${yT + sag} -30 ${yT - 2}Z` });
-          A.attr(E.lidB, { d: `M-30 32H30V${yB + 2}Q0 ${yB - arch} -30 ${yB + 2}Z` });
+          A.attr(E.lidT, { d: `M-32 -34H32V${yT - 2}Q0 ${yT + sag} -32 ${yT - 2}Z` });
+          A.attr(E.lidB, { d: `M-32 34H32V${yB + 2}Q0 ${yB - arch} -32 ${yB + 2}Z` });
           const lidOn = lt > 0.05 || meet;
           A.op(E.lashT, lidOn ? 1 : 0);
           const xw = Math.sqrt(Math.max(0, 1 - (yT / ERY) ** 2)) * ERX;
           A.attr(E.lashT, { d: meet ? `M${-ERX + 1} ${yT - 2}Q0 ${yT + sag + 3} ${ERX - 1} ${yT - 2}` : `M${-xw} ${yT - 1}Q0 ${yT + sag + 1} ${xw} ${yT - 1}` });
           const xb = Math.sqrt(Math.max(0, 1 - (yB / ERY) ** 2)) * ERX;
-          A.op(E.lashB, lb > 0.08 && !meet ? 0.6 : 0);
-          A.attr(E.lashB, { d: `M${-xb} ${yB + 1}Q0 ${yB - arch - 1} ${xb} ${yB + 1}` });
+          A.op(E.lashB, !meet ? clamp((lb - 0.06) * 6) : 0);
+          const xb2 = Math.min(ERX + 1, xb + arch * 0.25);
+          A.attr(E.lashB, { d: `M${-xb2} ${yB + 3}Q0 ${yB - arch - 1} ${xb2} ${yB + 3}` });
         });
         brows.forEach((B, i) => {
           const ex = EYES[i][0] + gx * 2.5, a = f.ba[i] * (i ? 1 : -1);
@@ -486,10 +530,16 @@ CAST.register({
         const [, tPrev] = toolPose(m, Math.max(0, mt - 0.04), t - 0.04, pv);
         const dA = tang - tPrev;
         const sw = !s.small && Math.abs(dA) > 12 && Math.abs(dA) < 200 && !dizzy;
-        A.op(swoosh, sw ? clamp((Math.abs(dA) - 12) / 30) * 0.55 : 0);
+        A.op(swoosh, sw ? clamp((Math.abs(dA) - 12) / 30) * 0.22 : 0);
         if (sw) {
-          const r = 96, a1 = (tPrev - 90) * Math.PI / 180, a2 = (tang - 90) * Math.PI / 180;
-          A.attr(swoosh, { d: `M${PX + r * Math.cos(a1)} ${PY + r * Math.sin(a1)}A${r} ${r} 0 0 ${dA > 0 ? 1 : 0} ${PX + r * Math.cos(a2)} ${PY + r * Math.sin(a2)}` });
+          const tail = tang - clamp(dA * 1.4, -120, 120);
+          let o = '', inn = '';
+          for (let k = 0; k <= 12; k++) {
+            const q = k / 12, a = (lerp(tail, tang, q) - 90) * Math.PI / 180, ro = 120 + 3 * q, ri = lerp(118, 92, q * q);
+            o += (k ? 'L' : 'M') + (PX + ro * Math.cos(a)).toFixed(1) + ' ' + (PY + ro * Math.sin(a)).toFixed(1);
+            inn = 'L' + (PX + ri * Math.cos(a)).toFixed(1) + ' ' + (PY + ri * Math.sin(a)).toFixed(1) + inn;
+          }
+          A.attr(swoosh, { d: o + inn + 'Z' });
         }
 
         /* arms */
@@ -542,6 +592,12 @@ CAST.register({
         });
         dots.forEach((d, i) => { A.show(d, dotOn > 0); if (dotOn) A.op(d, clamp(Math.sin(t * 3 - i * 0.7) * 0.4 + 0.6) * seg(mt, 0.2 + i * 0.15, 0.4 + i * 0.15)); });
         A.show(shock, shockOn > 0.01); A.op(shock, shockOn);
+        dStars.forEach((e, i) => {
+          const on = dizzy && !s.small; A.show(e, on); if (!on) return;
+          const a = pk * 5 + i * 2.094, z = Math.sin(a), sc = 0.75 + 0.35 * z;
+          A.tf(e, 200 + bx + 70 * Math.cos(a), 112 + by + 14 * z, pk * 200, sc, sc);
+          A.op(e, (0.55 + 0.45 * z) * (1 - seg(pk, 1.6, 2)));
+        });
         A.show(glint, glintOn > 0.01);
         if (glintOn > 0.01) { A.tf(glint, 262, 170, t * 90, glintOn, glintOn); A.op(glint, glintOn); }
       },
