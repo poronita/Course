@@ -1,0 +1,254 @@
+<title>Mascot Casting Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Hanken+Grotesk:wght@400..800&family=JetBrains+Mono:wght@400;600&family=Baloo+2:wght@500..800&family=Plus+Jakarta+Sans:wght@400..800&display=swap">
+<style>
+/* Layout: a casting room. The candidate stands on a lit stage in the middle,
+   the casting card sits beside it, the recognition tests run underneath,
+   and the full line-up stands along the bottom for side-by-side comparison. */
+:root{
+  --bg:#eef0f4; --panel:#ffffff; --ink:#151922; --muted:#5c6577; --line:#d7dce5; --chip:#f3f5f8;
+  --accent:#e2382c; --accent-ink:#ffffff; --focus:#2463eb; --mat:#e4e7ee;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"Hanken Grotesk",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1116; --panel:#171a21; --ink:#edf0f5; --muted:#9aa3b4; --line:#2a303b; --chip:#1f242d;
+  --accent:#ff5a4a; --accent-ink:#160605; --focus:#7aa2ff; --mat:#0b0d11; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0f1116; --panel:#171a21; --ink:#edf0f5; --muted:#9aa3b4; --line:#2a303b; --chip:#1f242d;
+  --accent:#ff5a4a; --accent-ink:#160605; --focus:#7aa2ff; --mat:#0b0d11; color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-inline:16px;padding-block:0 36px;box-sizing:border-box}
+.k-wrap{max-width:1360px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.k-wrap *{box-sizing:border-box}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.k-top{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding-block:16px 0}
+.k-brand{display:flex;gap:12px;align-items:center;margin-right:auto;min-width:0}
+.k-mark{width:36px;height:36px;border-radius:10px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;flex:none}
+.k-top h1{font:800 21px/1.1 var(--f-display);font-stretch:112%;margin:0;text-wrap:balance}
+.k-top p{margin:2px 0 0;color:var(--muted);font-size:13px}
+.k-ctl{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.k-btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:8px 12px;font:700 13px/1 var(--f-body);cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.k-btn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.k-sel{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:8px 32px 8px 12px;font:700 14px/1 var(--f-body);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
+.k-main{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:16px}
+@media (max-width:960px){.k-main{grid-template-columns:minmax(0,1fr)}}
+.k-stagecol{display:flex;flex-direction:column;gap:12px;min-width:0}
+.k-stage{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/11;max-height:620px;display:grid;place-items:center;cursor:pointer;touch-action:manipulation;user-select:none}
+@media (max-width:600px){.k-stage{aspect-ratio:1/1}}
+.k-stage .cast-svg{width:min(92%,560px);height:96%;display:block}
+.k-floor{position:absolute;inset:0;pointer-events:none}
+.k-hint{position:absolute;left:14px;top:12px;font:600 11px/1.3 var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.85);background:rgba(0,0,0,.25);padding:6px 9px;border-radius:8px;pointer-events:none}
+.k-moodname{position:absolute;right:14px;top:12px;font:700 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.3);padding:7px 10px;border-radius:8px;pointer-events:none}
+.k-moods{display:flex;flex-wrap:wrap;gap:6px}
+.k-moods button{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:7px 12px;font:600 13px/1 var(--f-body);cursor:pointer}
+.k-moods button.is-on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.k-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:16px;min-width:0;align-self:start}
+.k-eyebrow{font:600 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.k-card h2{font:800 34px/1 var(--f-display);font-stretch:108%;margin:6px 0 4px;letter-spacing:-.01em}
+.k-tag{margin:0;font-weight:700;font-size:16px}
+.k-card p{margin:0}
+.k-muted{color:var(--muted)}
+.k-card h3{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.k-card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.k-quote{border-left:3px solid var(--accent);padding:4px 0 4px 12px;font-style:italic}
+.k-scores{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:center;margin:0}
+.k-scores dt{font-size:13px;font-weight:700}
+.k-scores dd{margin:0;display:flex;gap:4px}
+.k-scores i{width:100%;max-width:32px;height:9px;border-radius:3px;background:var(--chip);box-shadow:inset 0 0 0 1px var(--line)}
+.k-scores i.on{background:var(--ink);box-shadow:none}
+.k-sw{display:flex;gap:6px;flex-wrap:wrap}
+.k-sw i{width:28px;height:28px;border-radius:8px;box-shadow:0 0 0 1px var(--line)}
+.k-panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.k-panel h2{font:800 18px/1.1 var(--f-display);font-stretch:108%;margin:0 0 4px}
+.k-panel>p{margin:0 0 12px;color:var(--muted)}
+.k-recog{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end}
+.k-recog figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+.k-recog figcaption{font:600 11px/1.2 var(--f-mono);color:var(--muted);text-align:center}
+.k-tile{display:grid;place-items:center;overflow:hidden}
+.k-tile .cast-svg{width:100%;height:100%;display:block}
+.k-icon{width:96px;height:96px;border-radius:24px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.k-home{width:220px;height:140px;border-radius:16px;background:linear-gradient(160deg,#3a4a7a,#1d2340);display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px;align-content:start}
+.k-home i{width:38px;height:38px;border-radius:10px;display:block;margin:auto}
+.k-home .k-tile{width:38px;height:38px;border-radius:10px;margin:auto}
+.k-sil .cast-svg{filter:brightness(0)}
+.k-far .cast-svg{filter:blur(1.1px)}
+.k-sticker .cast-svg{filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 4px 6px rgba(0,0,0,.25))}
+.k-checker{background-color:#f6c94c;background-image:radial-gradient(#e8b52f 2px,transparent 2.5px);background-size:12px 12px}
+.k-line{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px}
+@media (max-width:900px){.k-line{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.k-line button{border:1px solid var(--line);background:var(--chip);border-radius:14px;padding:6px 6px 10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--ink);min-width:0}
+.k-line button.is-on{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent) inset}
+.k-line .k-tile{width:100%;aspect-ratio:1}
+.k-line b{font:800 13px/1.1 var(--f-display);font-stretch:105%}
+.k-line span{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.k-line.is-sil .cast-svg{filter:brightness(0)}
+.k-foot{color:var(--muted);font-size:13px;margin:0}
+@media (prefers-reduced-motion:reduce){.k-stage{cursor:default}}
+/*@@CHAR_CSS@@*/
+</style>
+
+<div class="k-wrap">
+  <header class="k-top">
+    <div class="k-brand">
+      <div class="k-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="9" r="5"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
+      <div><h1>Mascot Casting Room</h1><p>Eight candidates for the face of Image Swiss Knife. Move your pointer, click to poke, try every mood.</p></div>
+    </div>
+    <div class="k-ctl">
+      <button class="k-btn" id="prev" aria-label="Previous character">‹</button>
+      <label class="k-eyebrow" for="pick" style="margin:0">Candidate</label>
+      <select class="k-sel" id="pick"></select>
+      <button class="k-btn" id="next" aria-label="Next character">›</button>
+      <button class="k-btn" id="tour" aria-pressed="true">Mood tour</button>
+    </div>
+  </header>
+
+  <main class="k-main">
+    <section class="k-stagecol" aria-label="Character stage">
+      <div class="k-stage" id="stage">
+        <span class="k-hint">Move the pointer · click to poke</span>
+        <span class="k-moodname" id="moodname">Idle</span>
+      </div>
+      <div class="k-moods" id="moods" role="group" aria-label="Moods"></div>
+    </section>
+    <aside class="k-card" id="card" aria-live="polite"></aside>
+  </main>
+
+  <section class="k-panel" aria-label="Recognition tests">
+    <h2>Can you spot it from across the room?</h2>
+    <p>The same character at app-icon size, on a phone home screen, as a sticker, blurred, and as a pure black silhouette. A great mascot still reads in every one.</p>
+    <div class="k-recog" id="recog"></div>
+  </section>
+
+  <section class="k-panel" aria-label="Line-up">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px">
+      <div><h2>The line-up</h2><p class="k-muted" style="margin:0">All eight doing the current mood together. Turn on silhouettes to test the shapes.</p></div>
+      <button class="k-btn" id="sil" aria-pressed="false">Silhouettes</button>
+    </div>
+    <div class="k-line" id="line"></div>
+  </section>
+  <p class="k-foot">Concept art for choosing a direction. The winner gets a full model sheet, more moods, and the app mockup update.</p>
+</div>
+
+<script>
+/*@@CAST@@*/
+</script>
+<script>
+/*@@CHARS@@*/
+</script>
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const C = CAST.chars, M = CAST.MOODS;
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  let ci = 0, mood = 'idle', prev = 'idle', mStart = 0, tour = true, frozen = null, sil = false;
+  const reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) tour = false;
+  const now = () => frozen ?? performance.now() / 1000;
+  const look = { x: 0, y: 0 }, tgt = { x: 0, y: 0 };
+  let lastMove = -10, pokes = [], hover = false;
+
+  const pick = $('#pick');
+  C.forEach((d, i) => { const o = document.createElement('option'); o.value = d.id; o.textContent = `${i + 1} · ${d.name}`; pick.appendChild(o); });
+  const moods = $('#moods');
+  M.forEach(([id, label]) => { const b = document.createElement('button'); b.textContent = label; b.dataset.m = id; b.addEventListener('click', () => { setTour(false); setMood(id); }); moods.appendChild(b); });
+
+  let big = null, rec = [], line = [];
+  const stage = $('#stage');
+  function setMood(m) { prev = mood; mood = m; mStart = now(); $('#moodname').textContent = (M.find(x => x[0] === m) || [0, m])[1]; moods.querySelectorAll('button').forEach(b => b.classList.toggle('is-on', b.dataset.m === m)); }
+  function setTour(on) { tour = on; $('#tour').setAttribute('aria-pressed', on); }
+
+  function score(n) { let h = ''; for (let i = 1; i <= 5; i++) h += `<i class="${i <= n ? 'on' : ''}"></i>`; return `<dd aria-label="${n} of 5">${h}</dd>`; }
+  function card(d, i) {
+    const s = d.scores || {};
+    $('#card').innerHTML = `
+      <div><p class="k-eyebrow">Candidate ${i + 1} of ${C.length}</p><h2>${esc(d.name)}</h2><p class="k-tag">${esc(d.tagline)}</p></div>
+      <p class="k-muted">${esc(d.concept)}</p>
+      ${d.voice ? `<p class="k-quote">"${esc(d.voice)}"</p>` : ''}
+      <div><h3>Signature</h3><p>${esc(d.signature)}</p></div>
+      <div><h3>Why people remember it</h3><ul>${(d.why || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+      <div><h3>Watch out for</h3><ul>${(d.risks || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+      <div><h3>Scores</h3><dl class="k-scores"><dt>Memorable</dt>${score(s.memorable)}<dt>Stylish</dt>${score(s.stylish)}<dt>Expressive</dt>${score(s.expressive)}<dt>Reads small</dt>${score(s.small)}<dt>Brand fit</dt>${score(s.fit)}</dl></div>
+      <div><h3>Colours</h3><div class="k-sw">${(d.palette || []).map(c => `<i style="background:${c}" title="${c}"></i>`).join('')}</div></div>`;
+  }
+  function tile(host, d, cls, size, extra) {
+    const t = document.createElement('div'); t.className = 'k-tile ' + (cls || ''); if (size) { t.style.width = size + 'px'; t.style.height = size + 'px'; }
+    if (extra) Object.assign(t.style, extra);
+    host.appendChild(t);
+    const inst = CAST.mount(d, t, { small: true });
+    if (d.icon && d.icon.viewBox) inst.svg.setAttribute('viewBox', d.icon.viewBox);
+    return inst;
+  }
+  function select(i) {
+    ci = (i + C.length) % C.length; const d = C[ci]; pick.value = d.id;
+    stage.querySelectorAll('.cast-svg,.k-floor').forEach(e => e.remove());
+    stage.style.background = d.stage || `radial-gradient(120% 90% at 50% 30%, ${d.bg || '#3a4a8a'}, #10131c)`;
+    big = CAST.mount(d, stage, {});
+    card(d, ci);
+    const R = $('#recog'); R.innerHTML = ''; rec = [];
+    const fig = (cap, build) => { const f = document.createElement('figure'); const b = document.createElement('div'); f.appendChild(b); const c = document.createElement('figcaption'); c.textContent = cap; f.appendChild(c); R.appendChild(f); build(b); };
+    fig('App icon', b => rec.push(tile(b, d, 'k-icon', 96, { background: d.iconBg || d.bg || '#e2382c' })));
+    fig('Home screen', b => { b.className = 'k-home'; for (let k = 0; k < 8; k++) { if (k === 5) rec.push(tile(b, d, '', 38, { background: d.iconBg || d.bg })); else { const i2 = document.createElement('i'); i2.style.background = ['#4c7cf0', '#f0a34c', '#52c08a', '#c063e0', '#e8e8ef', '#5bc8e8', '#f06a7a', '#8a96b8'][k]; b.appendChild(i2); } } });
+    fig('48 px', b => rec.push(tile(b, d, '', 48)));
+    fig('24 px', b => rec.push(tile(b, d, '', 24)));
+    fig('Sticker', b => { b.className = 'k-checker'; b.style.cssText = 'width:110px;height:110px;border-radius:14px;display:grid;place-items:center'; rec.push(tile(b, d, 'k-sticker', 92)); });
+    fig('Across the room', b => rec.push(tile(b, d, 'k-far', 30)));
+    fig('Silhouette', b => rec.push(tile(b, d, 'k-sil', 96)));
+    document.querySelectorAll('#line button').forEach((b, k) => b.classList.toggle('is-on', k === ci));
+    try { history.replaceState(null, '', '#' + d.id); } catch (e) {}
+  }
+  // line-up
+  const L = $('#line');
+  C.forEach((d, i) => { const b = document.createElement('button'); b.setAttribute('aria-label', d.name); L.appendChild(b); line.push(tile(b, d, '', null)); const n = document.createElement('b'); n.textContent = d.name; b.appendChild(n); const s = document.createElement('span'); s.textContent = d.tagline; b.appendChild(s); b.addEventListener('click', () => select(i)); });
+
+  pick.addEventListener('change', () => select(C.findIndex(d => d.id === pick.value)));
+  $('#prev').addEventListener('click', () => select(ci - 1));
+  $('#next').addEventListener('click', () => select(ci + 1));
+  $('#tour').addEventListener('click', () => setTour(!tour));
+  $('#sil').addEventListener('click', e => { sil = !sil; e.currentTarget.setAttribute('aria-pressed', sil); L.classList.toggle('is-sil', sil); });
+  window.addEventListener('pointermove', e => {
+    const r = stage.getBoundingClientRect();
+    tgt.x = CAST.clamp((e.clientX - (r.left + r.width / 2)) / (r.width * 0.45), -1, 1);
+    tgt.y = CAST.clamp((e.clientY - (r.top + r.height * 0.48)) / (r.height * 0.45), -1, 1);
+    lastMove = now();
+  });
+  stage.addEventListener('pointerenter', () => { hover = true; });
+  stage.addEventListener('pointerleave', () => { hover = false; });
+  stage.addEventListener('pointerdown', () => { pokes.push(now()); });
+  document.addEventListener('keydown', e => {
+    if (e.target.closest && e.target.closest('select')) return;
+    if (e.key === 'ArrowRight') select(ci + 1); else if (e.key === 'ArrowLeft') select(ci - 1);
+    else if (e.key === ' ') { e.preventDefault(); pokes.push(now()); }
+  });
+
+  function state(t, small, m, ms, pv) {
+    const lastPoke = pokes.length ? pokes[pokes.length - 1] : -1e9;
+    return { t, mood: m, mt: t - ms, prev: pv, blend: CAST.ease.out(CAST.clamp((t - ms) / 0.35)), look: { x: look.x * (small ? 0.7 : 1), y: look.y * (small ? 0.7 : 1) }, poke: small ? 1e9 : t - lastPoke, pokes: small ? 0 : pokes.filter(p => t - p < 2.5).length, hover: small ? false : hover, small };
+  }
+  function frame() {
+    const t = now();
+    if (tour && t - mStart > 3.2) { const k = M.findIndex(x => x[0] === mood); setMood(M[(k + 1) % M.length][0]); }
+    if (frozen == null) {
+      if (t - lastMove > 2.5) { tgt.x = 0.55 * Math.sin(t * 0.45); tgt.y = 0.25 * Math.sin(t * 0.31); }
+      look.x += (tgt.x - look.x) * 0.12; look.y += (tgt.y - look.y) * 0.12;
+    }
+    pokes = pokes.filter(p => t - p < 6);
+    if (big) big.update(state(t, false, mood, mStart, prev));
+    rec.forEach(r => r.update(state(t, true, 'idle', -1000, 'idle')));
+    line.forEach(r => r.update(state(t, true, mood, mStart, prev)));
+    if (frozen == null) requestAnimationFrame(frame);
+  }
+  window.__cast = {
+    select(id) { select(C.findIndex(d => d.id === id)); },
+    freeze(t, m, sinceMood = 1.2, lk = { x: 0.3, y: -0.1 }, pokeAgo = null) {
+      setTour(false); frozen = t; if (m) { setMood(m); prev = 'idle'; mStart = t - sinceMood; }
+      look.x = lk.x; look.y = lk.y; pokes = pokeAgo == null ? [] : [t - pokeAgo]; frame();
+    },
+  };
+  const h = (location.hash || '').slice(1), hi = C.findIndex(d => d.id === h);
+  select(hi >= 0 ? hi : 0);
+  setMood('idle'); setTour(tour);
+  requestAnimationFrame(frame);
+})();
+</script>
