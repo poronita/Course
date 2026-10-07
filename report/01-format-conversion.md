@@ -15,9 +15,9 @@ Status: **complete** · Verified on 2026-10-07 · Tiers/labels defined in `00-me
 | Decode/encode **PNG** + lossless optimise | `@jsquash/png`, `@jsquash/oxipng` | A | ~85 KB + ~74 KB |
 | Decode/encode **WebP** (Safari can't encode natively) | `@jsquash/webp` | A | ~190 KB |
 | Decode/encode **AVIF** | `@jsquash/avif` | A | enc ~1.1 MB, dec ~0.34 MB |
-| Decode/encode **JPEG XL** (+ lossless JPEG recompress) | `@jsquash/jxl` | A | enc ~0.51–0.57 MB, dec ~0.31 MB |
-| **HEIC/HEIF → JPG/PNG** (decode only) | `libheif-js` (separate `.wasm`) — on Android prefer the OS decoder | **B (LGPL-3.0)** + PATENT-FLAG | ~515 KB |
-| **RAW → JPG** (CR2/NEF/ARW/DNG…) | `@colorhythm/libraw-wasm` (use LibRaw's **CDDL** option) | **B** | ~340 KB |
+| Decode/encode **JPEG XL** (experimental; *no* JPEG-transcode API) | `@jsquash/jxl` | A | enc ~0.51–0.57 MB, dec ~0.31 MB |
+| **HEIC/HEIF → JPG/PNG** (decode only) | `libheif-js` (separate `.wasm`) — on Android prefer the OS decoder. **Strict profile: Safari-native + Android OS decoder only (no software decoder)** | **B (LGPL-3.0)** + PATENT-FLAG | ~515 KB (Extended only) |
+| **RAW → JPG** (CR2/NEF/ARW/DNG…) | Strict: **UTIF preview extraction** (embedded JPEG; UTIF README: it *does not* develop raw sensor data). Extended: `@colorhythm/libraw-wasm` full develop (LibRaw **CDDL** option) | A (preview) / **B** (develop) | ~19 KB / ~340 KB |
 | **TIFF** multi-page read/write | `utif` (+`pako`) | A | ~33 KB |
 | **PSD → PNG/JPG** (flattened view) | `ag-psd` | A | ~166 KB |
 | **SVG → raster** | browser `<img>`+canvas (0 KB); optional `@resvg/resvg-wasm` for fidelity | A / **B (MPL-2.0)** | 0 / ~940 KB |
@@ -74,7 +74,7 @@ Common facts: Apache-2.0 wrapper licence in every package [verified-registry]; d
 **Capability ↔ feature mapping the AI developer needs**
 - *Convert to target format with quality slider*: every encoder above.
 - *Compress to exact KB (WebP)*: `target_size` is natively supported by libwebp (see `02-compression-and-size.md`).
-- *Lossless JPEG → JPEG XL*: libjxl supports it, but **the jSquash wrapper exposes ImageData in/out only**; true bit-exact JPEG transcoding (`JxlEncoderAddJPEGFrame`) is **not exposed** by the wrapper → treat "lossless JPEG recompress" as **`[unverified]`; needs a custom build or confirm with a test** before promising it.
+- *Lossless JPEG → JPEG XL*: **NOT available through jSquash.** The jSquash JXL README documents only encoding of raw pixel data (and a `lossless` flag for pixel-lossless output) and states that stable browser support for displaying JXL is still limited ("intended for experimentation and testing") [verified-registry; confirmed by the parallel research review in `11`]. The "≈ 20 % smaller, pixel-identical JPEG recompression" is a **libjxl** capability that would need a **custom libjxl build** exposing JPEG transcoding. Position JXL as an **experimental / archival** output, not a web-delivery format.
 
 ### 2.2 HEIC / HEIF decode — `libheif-js` — **Tier B (LGPL-3.0) + PATENT-FLAG**
 
@@ -99,6 +99,7 @@ Common facts: Apache-2.0 wrapper licence in every package [verified-registry]; d
 | Capabilities | Exposes sensor buffer, geometry, CFA info, camera metadata, black/saturation levels, embedded thumbnails, and LibRaw-processed RGB output [verified-search + README] |
 | Files | `libraw.wasm` 833 KB → **319 KB gz**; `libraw.mjs` 74 KB → 19 KB |
 | Weight | **≈ 340 KB gz** |
+| **Tier-A alternative (from parallel research, verified)** | `utif` (MIT) can parse TIFF-based RAW containers (DNG, CR2, NEF, ARW…) and **extract embedded JPEG previews and raw sensor data**, but its README states it *"does not convert the raw data into a displayable image"*. → The **Strict profile** ships "RAW **preview**"; "full RAW develop" stays Extended-only. Show the user which one they got |
 | Practical limits | RAW files are 20–80 MB; decoding in a browser needs ≈ 2–4× file size in RAM → on low-end Android show a "large file" warning; **fast path = extract the embedded JPEG thumbnail/preview** (instant, tiny memory) and offer "full-quality develop" as slow mode |
 | Alternative | `libraw-wasm@1.6.0` (ISC wrapper, 1.38 MB wasm, repo `ybouane/LibRaw-Wasm`) — no licence files shipped in tarball (underlying LibRaw terms unstated) → not chosen |
 
@@ -232,6 +233,9 @@ Ordered by value ÷ effort. Each is **pure client-side** with the tools above.
 10. **Vite**: add every `@jsquash/*` to `optimizeDeps.exclude`; keep `.wasm` as static assets with long cache headers; use `new URL('./x.wasm', import.meta.url)` patterns [verified-upstream known issues].
 11. **LGPL compliance checklist (libheif-js, LibRaw-if-LGPL, wasm-vips)**: separate `.wasm` file (not inlined), in-app licence screen with full texts, link to exact source tarball/version, keep glue unminified-replaceable instructions in the repo README.
 12. **Licences page**: generate from `licenses.json` produced by a tool such as `license-checker-rseidelsohn` `[unverified: tool name]` during CI; fail CI on GPL/AGPL/unknown.
+13. **pdf.js memory discipline** *(adopted from the parallel research)*: never render all pages at once. Use a **virtualised page list**, render in the pdf.js **worker** to `OffscreenCanvas` → `ImageBitmap`, keep a **byte-budgeted LRU cache (≈ 256 MB ceiling, lower on phones)**, and **explicitly purge** canvases/bitmaps (`canvas.width=canvas.height=0`, `bitmap.close()`) when pages scroll away; pdf.js leaks canvases if contexts are not released and mobile Safari tabs crash first.
+14. **Building PDFs is not pdf.js's job**: pdf.js renders; create/merge PDFs with the own minimal writer (JPEG as DCT) or `@cantoo/pdf-lib`.
+15. **AVIF > 8-bit input**: to encode 10/12-bit AVIF the `data` of the `ImageData`-like object **must be a `Uint16Array`** with values in the bit-depth's range [verified-registry: jSquash AVIF README]; decode with `bitDepth: 10|12|16` returns a `Uint16Array` too.
 
 ---
 

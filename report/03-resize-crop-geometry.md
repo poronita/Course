@@ -1,7 +1,7 @@
 # 03 — Resize, Crop & Geometry (research)
 
 Status: **complete** · Verified on 2026-10-07 · Labels/tiers: see `00-methodology.md`
-**Companion data:** `data/presets.json` (43 verified-with-confidence presets + paper/print size tables)
+**Companion data:** `data/presets.json` (51 presets with confidence/sources + paper/print size tables)
 
 **Functions covered:** resize (px / % / longest side / print size + DPI) · **exact W×H crop** (fit / fill / pad modes) · aspect-ratio & social presets · ID/passport/exam-portal presets · DPI changer · rotate / flip / straighten · perspective fix · pad / expand canvas · grid / carousel splitter · stitch · print-sheet maker · smart (non-AI) crop · content-aware resize (seam carving).
 
@@ -157,7 +157,7 @@ Sanity checks that agree with sources: US passport "2×2 in" ↔ min/max 600/120
 
 ## 4. Preset database (high-value, needs care)
 
-Full data: **`data/presets.json`** (43 entries) — social, stickers, store assets, ID/passport, India exams/government forms, with `confidence`, `sources[]`, `lastVerified`.
+Full data: **`data/presets.json`** (51 entries; merged with the parallel research — see `11`) — social, stickers, store assets, ID/passport, India exams/government forms, with `confidence`, `sources[]`, `lastVerified`.
 
 ### Key verified facts (summary)
 
@@ -174,7 +174,7 @@ Full data: **`data/presets.json`** (43 entries) — social, stickers, store asse
 | **US passport/visa (digital)** | **600–1200 px square, JPEG, ≤ 240 KB**, sRGB, 24-bit, compression ratio ≤ 20:1 [**official** travel.state.gov] |
 | **UK passport (online)** | **≥ 600×750 px, 50 KB–10 MB, JPEG**; print 35×45 mm, head 29–34 mm [**official** gov.uk] |
 | **India Passport Seva** | **630×810 px JPEG, 10–250 KB**; 35×45 mm [third-party; portal validates exactly] |
-| **India exams** | SSC photo ≈ 275×354 px, 20–50 KB; signature ≈ 236×79 px, 10–20 KB (older: 100×120 / 140×60); NEET/JEE photo 10–200 KB; JEE signature 10–100 KB (older 4–30 KB); UPSC photo 20–200 KB, signature 20–100 KB (rules reportedly updated 2026) [**conflicting / low confidence**] |
+| **India exams** | SSC photo ≈ 275×354 px, 20–50 KB; signature 236×79 **or** 140×60 px, 10–20 KB · **UPSC** photo **350×350 px, 20–300 KB** (another source: ≤ 200 KB → enforce the stricter by default), signature 20–100 KB · **NEET UG** passport 200×230 px 10–200 KB, postcard 4×6 in 10–200 KB, signature 4–30 KB, thumbprints 10–200 KB, optional name+date strip · **IBPS** photo 200×230 (20–50 KB), signature 140×60 (10–20 KB), thumb 240×240 (20–50 KB), declaration 800×400 (50–100 KB) · JEE photo 10–200 KB, signature 10–100 KB (older 4–30 KB) [**conflicting / third-party — see `11`**] |
 | **PAN** | photo 20–50 KB; reported change April 2026 to 5×3.5 cm (≈ 394×276 px @200 dpi); older 213×213 [**low confidence — verify**] |
 | **Visa prints** | Schengen 35×45 mm (head 32–36 mm); China 33×48 mm; Canada 50×70 mm [third-party] |
 
@@ -194,6 +194,10 @@ Full data: **`data/presets.json`** (43 entries) — social, stickers, store asse
 3. **One-tap pipeline presets:** *size + format + KB limit + background + DPI* in one (e.g. "Passport Seva 630×810 · JPG · 10–250 KB · white"). Applies crop → resize → compress (`02`) automatically and **verifies** the result against the preset (✔ size, ✔ KB, ✔ format) before download.
 4. **Ratio chips:** 1:1, 4:5, 3:4, 2:3, 9:16, 16:9, 1.91:1, 3:2, 3:1, 4:1, A-series (√2), custom; lock/unlock; swap orientation button.
 5. **Overlays (pure drawing, no AI):** rule-of-thirds, golden-ratio, centre cross; **circle mask** for profile pictures; **safe areas** (YouTube banner 1546×423 verified; Instagram Story UI zones `[numbers unverified]`); **ID-photo head guide** (oval + chin/crown lines using the UK 29–34 mm rule) so the user aligns the face themselves.
+
+6. **Exam-kit bundles** *(from the parallel research)*: pick an exam (NEET, UPSC, SSC, IBPS…) → the app asks for **one portrait + one signature (+ thumbprints/declaration where required)** and produces **every required file at the exact px and KB limits** in **one ZIP** (names like `Photograph.jpg`, `Signature.jpg` — several portals validate file names, `[verify per portal]`). Internally: crop (locked ratio) → resize (pica/Lanczos) → **target-KB search** (`02` §3) → verify against the preset → ZIP (`fflate`). Show ✔/✖ per requirement and the preset's `lastVerified` date.
+7. **Caption strip** (NEET-style): optional white strip below the face with **candidate name + photo date** drawn on canvas before the size search (preset `neet-name-date-strip`; single-source rule — verify with the current bulletin). Fonts: §07 §2.5 (Gujarati/Devanagari/Latin).
+8. **Stricter-limit default:** where sources disagree (UPSC 200 vs 300 KB), the tool aims for the **stricter** limit and tells the user.
 
 ### B. Multi-target & batch
 6. **"Social kit" export:** from *one* image generate Instagram 4:5 + Story 9:16 + Facebook cover + LinkedIn banner + YouTube thumbnail + X header; each target gets an **independent crop** (initialised by `smartcrop`, adjustable), then one ZIP.

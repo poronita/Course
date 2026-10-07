@@ -20,6 +20,7 @@
 | `07-dev-designer-utilities.md` | icon/favicon studio, SVG, QR/barcodes, colour tools, diff, fun effects, fonts | `data/verdicts-07-*.json` |
 | `08-licence-register-and-size-budget.md` | **generated**: pack sizes, scenarios (Android Lite/Standard/Full), licence register, Tier-B checklist, attributions | `data/packs.computed.json`, `data/libraries.json` |
 | `09-rejected-sources.md` | **generated**: rejected & not-needed sources (names + reasons), "licence traps" | — |
+| `11-parallel-research-reconciliation.md` | **review of the product owner's own Word research**: agreements, 12 verified disagreements/corrections, **Strict vs Extended licence profiles**, size-claim comparison, adopted ideas | updated `data/presets.json` |
 | `10-cross-cutting-infra.md` | Capacitor + native plugin specs, hosting/headers, build/test tooling, PWA/storage, ads wording, licence CI | — |
 | `tools/` | `inspect-pkgs.mjs` (measure licence/size from npm tarballs), `headtext.mjs`, `build-register.mjs` (regenerates 08/09 + JSON) | — |
 | `data/measurements.json` | raw measurements for 257 packages (version, licence, publish date, per-file raw/gzip/brotli) | — |
@@ -34,16 +35,17 @@
 |---|---|
 | **Shell** | TypeScript monorepo → **PWA** + **Capacitor 8** Android app (minSdk 24, target 36); heavy features as **lazy "packs"**; Android pre-bundles a scenario |
 | **Image codecs** | **jSquash** (mozjpeg, libwebp, libavif, libjxl, oxipng, resize — Apache-2.0 wrappers over BSD/MIT codecs). Native canvas only for previews (Safari can't encode WebP; unsupported `toBlob` types silently return PNG) |
-| **HEIC** | `libheif-js` (**LGPL-3.0**, separate `.wasm`, 503 KB gz) on web; **OS decoder on Android** (also avoids HEVC-patent exposure); Safari decodes natively |
+| **HEIC** | **Strict:** Safari native + Android OS decoder. **Extended:** + `libheif-js` (**LGPL-3.0**, separate `.wasm`, 503 KB gz) for other web browsers; OS decoder first on Android (also avoids HEVC-patent exposure) |
 | **RAW / TIFF / PSD / PDF / SVG** | LibRaw-wasm (**CDDL** option) · UTIF · ag-psd · pdf.js + own minimal PDF writer · `<img>`/canvas (+svgo, vtracer) |
 | **Compression** | target-KB search (algorithm in `02`), WebP native `target_size`, oxipng, image-q/UPNG for lossy PNG, Butteraugli/SSIMULACRA2 score thresholds for "visually lossless" |
-| **Crop/resize** | `cropperjs` v2 (or framework cropper), `smartcrop` (classical, not AI), Lanczos3/Magic-Kernel resize, **data-driven preset DB** (43 entries with confidence + sources) |
+| **Crop/resize** | `cropperjs` v2 (or framework cropper), `smartcrop` (classical, not AI), Lanczos3/Magic-Kernel resize, **data-driven preset DB** (51 entries with confidence + sources) |
 | **Metadata & location** | `exifr` (read), `piexifjs` + own JPEG/PNG/WebP strippers (write), **GeoNames (CC-BY) nearest-city + Natural Earth shapes offline**, link-outs to maps (no OSM tile use) |
 | **Android-only edge** | custom Kotlin plugins: **original-file/GPS access**, **Media3 video compress/trim**, **WorkManager background batch**, share-target, MediaStore bulk — specs in `10 §2.3` |
 | **GIF / animated / video** | **No FFmpeg** (GPL core). `gifenc` + palette/dither code, `wasm-webp`, `upng-js`, **WebCodecs + `mediabunny` (MPL-2.0)**; Media3 on Android |
 | **Utilities** | svgo, `uqr`/`qr-code-styling`/`jsqr`/`zxing-wasm`, `jsbarcode`/`bwip-js`, `colord`/`culori`/`colorthief`, `pixelmatch`, OFL fonts (Latin, Gujarati, Devanagari) |
 | **Hosting** | static host with `_headers` (Cloudflare Pages) — but **design single-thread** so COOP/COEP is *not required* (it would conflict with ad scripts; GitHub Pages can't set headers) |
-| **Compliance** | CI licence deny-list + Tier-B allow-list + SBOM; in-app Licences page; ad SDKs declared in Data-Safety |
+| **Licence profiles** | **Strict-permissive (default MVP):** MIT/Apache/ISC/BSD/zlib only — Android Standard **4.43 MB**. **Extended:** + Tier-B packs (LGPL/MPL/CDDL) after legal review — **5.01 MB**. Decision logic in `11 §3` |
+| **Compliance** | CI licence deny-list + (Extended-only) Tier-B allow-list + SBOM; in-app Licences page; ad SDKs declared in Data-Safety |
 
 ### Size at a glance (gzip, measured; see `08`)
 | Scenario | Total |
@@ -51,8 +53,8 @@
 | Web first-load libs (excl. your UI) | **≈ 42 KB** |
 | Core image codecs (JPEG/PNG/WebP/oxipng/resize) | **≈ 502 KB** (lazy) |
 | Android **Lite** pre-bundle (core codecs, metadata, crop, GIF, QR, palette, offline location) | **≈ 0.85 MB** |
-| Android **Standard** (+AVIF, JXL, HEIC, TIFF, PSD, PDF, SVG/vectorise, animated WebP, video, SVGO) | **≈ 5.0 MB** |
-| Android **Full** (+RAW, multi-format scanner, 2-D barcodes, PDF extras) | **≈ 6.8 MB** |
+| Android **Standard** (+AVIF, JXL, HEIC, TIFF, PSD, PDF, SVG/vectorise, animated WebP, video, SVGO) | **≈ 5.0 MB** Extended · **≈ 4.4 MB Strict** |
+| Android **Full** (+RAW, multi-format scanner, 2-D barcodes, PDF extras) | **≈ 6.8 MB** Extended · **≈ 5.9 MB Strict** |
 | Optional heavies (never default) | ImageMagick 5.4 MB · ExifTool 7.5 MB · wasm-vips 3.9 MB · C2PA 3.3 MB · OpenCV 3.6 MB |
 
 *(Add your own app code, UI framework, Capacitor runtime, ad SDKs and native AARs when scaffolding.)*
@@ -69,7 +71,7 @@ Legend — **Plat:** W = web, A = Android-only, WA = both · **Phase:** 0 spike,
 | C01 | JPG↔PNG↔WebP convert (+ quality, strip metadata, background for transparency) | WA | 1 | jSquash → `core-image-codecs` |
 | C02 | AVIF / JXL convert | WA | 2 | `avif`, `jxl` |
 | C03 | **HEIC → JPG/PNG** (batch) | WA | 1 | OS decoder (A) / `heic-decode` (W) |
-| C04 | RAW → JPG (full + embedded-preview fast path) | WA | 2 | `raw-decode` |
+| C04 | RAW → JPG: **preview extraction (Strict, UTIF)** · full develop (Extended, LibRaw) | WA | 2 | `tiff` (UTIF) / `raw-decode` |
 | C05 | TIFF (multi-page), PSD→PNG, BMP, ICO | WA | 2 | `tiff`, `psd`, own writers |
 | C06 | **"Fix my file"** (detect true type, rename, orient) | WA | 1 | `file-type` → `core-always-loaded` |
 | C07 | SVG→raster; raster→SVG | WA | 2 | canvas; `vectorise` |
@@ -87,6 +89,7 @@ Legend — **Plat:** W = web, A = Android-only, WA = both · **Phase:** 0 spike,
 | P05 | Lossless PNG optimise; lossy PNG palette | WA | 1/2 | oxipng; `lossy-png-and-apng` |
 | P06 | Format shoot-out + `srcset`/`<picture>` pack + placeholders | WA | 2 | jSquash, `placeholders` |
 | P07 | Gallery cleaner / bulk shrink in place / auto-compress screenshots | **A** | 2/3 | native plugins (WorkManager, MediaStore) |
+| P08 | Receipt / expense compressor (HEIC→JPEG→scan filter→palette→≤150 KB image/PDF) | WA | 2 | canvas + image-q + own PDF writer |
 
 ### C. Resize / crop (`03`)
 | ID | Function | Plat | Phase | Engine |
@@ -98,6 +101,7 @@ Legend — **Plat:** W = web, A = Android-only, WA = both · **Phase:** 0 spike,
 | G05 | Passport/ID sheet maker · print-size calculator · DPI fixer | WA | 2 | canvas, `changedpi` |
 | G06 | Rotate/flip/straighten · manual perspective fix | WA | 1/2 | canvas |
 | G07 | Auto document scanner (opt-in) | WA | 3 | `OPTIONAL-opencv` |
+| G08 | **Exam kits** (NEET/UPSC/SSC/IBPS: photo + postcard + signature + thumb + declaration → one ZIP, caption strip, verified against preset) | WA | **1** | crop-ui + target-KB search + `presets.json` + `fflate` |
 
 ### D. Metadata / privacy (`04`)
 | ID | Function | Plat | Phase | Engine |
@@ -141,7 +145,7 @@ Legend — **Plat:** W = web, A = Android-only, WA = both · **Phase:** 0 spike,
 
 ### Phased build order
 - **Phase 0 — spikes (de-risk first):** (1) pipeline + worker pool + pack loader; (2) **Android `OriginalFilePlugin` (GPS)**; (3) **WebCodecs encoder matrix on real phones**; (4) measure real bundle sizes; (5) LGPL packaging + legal read; (6) preset schema/search UI.
-- **Phase 1 — MVP (web + Android):** C01, C03, C06, C08, P01, P02, P05, G01–G03, G06, M01–M03, U04.
+- **Phase 1 — MVP (web + Android):** C01, C03, C06, C08, P01, P02, P05, G01–G03, **G08 (exam kits — highest India demand)**, G06, M01–M03, U04.
 - **Phase 2 — growth:** AVIF/JXL, RAW/TIFF/PSD, GIF/WebP/APNG/video tools, icon studio, privacy scan, duplicates, QR/colour tools, Android share-target + gallery cleaner + background batch.
 - **Phase 3 — differentiators/long tail:** Media3 compress, C2PA, vault/steganography, scanner pack, fun effects, optional heavy packs.
 
@@ -153,7 +157,7 @@ Legend — **Plat:** W = web, A = Android-only, WA = both · **Phase:** 0 spike,
 2. **No FFmpeg is needed** — WebCodecs + `mediabunny` (MPL-2.0) cover video; GIF/WebP/APNG use small permissive encoders. `gifski` is AGPL (earlier recommendation withdrawn).
 3. **Android hides photo GPS** unless you hold `ACCESS_MEDIA_LOCATION` and bypass the system photo picker — a native plugin is mandatory for the location features.
 4. **Safari cannot encode WebP via canvas; unsupported `toBlob` types silently return PNG** → ship WASM encoders for deterministic output.
-5. **Preset data is volatile** (SSC, JEE, PAN changed/conflicted) → data-driven presets with `confidence`, `sources`, `lastVerified`, user-editable.
+5. **Preset data is volatile** (SSC, JEE, UPSC KB limit, PAN changed/conflicted) → data-driven presets with `confidence`, `sources`, `lastVerified`, user-editable.
 6. **Don't use `tile.openstreetmap.org` as default tiles**; use link-outs + an offline dot-map built from Natural Earth.
 7. **Don't require COOP/COEP** (breaks ad scripts; GitHub Pages can't set headers; Capacitor WebView can't easily) → single-thread WASM builds.
 8. **Lossless JPEG tools (jpegtran) have no verified browser package** → own metadata stripper + EXIF-flag rotate; optionally compile jpegtran (BSD/IJG).
@@ -161,6 +165,12 @@ Legend — **Plat:** W = web, A = Android-only, WA = both · **Phase:** 0 spike,
 10. **Ad SDKs mean you cannot claim "no data collected"** — claim "your images never leave your device".
 
 ---
+
+## 4b. Corrections from reviewing the parallel research (details in `11`)
+- **UTIF.js does not "develop" RAW** (README): preview/sensor-data extraction only → Strict profile = RAW *preview*.
+- **`@jsquash/jxl` has no lossless-JPEG-transcode API**; **`@jsquash/webp` has no animation API**; **pdf.js cannot create PDFs**.
+- Their **LGPL stance** is now a first-class build profile (**Strict**), not an afterthought.
+- Their **exam presets** were merged (UPSC 350×350 / 20–300 KB with conflict flag; IBPS ×4; NEET ×4) and **Exam kits** added to the MVP.
 
 ## 5. What is *not* verified (be honest in the build)
 

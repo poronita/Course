@@ -5,13 +5,14 @@
     "method": "Values read from web-search result summaries on 2026-10-07 (sources listed per entry). Pixel values marked 'derived' were computed from the physical size and DPI. No entry was verified against a live official page unless confidence = 'official'.",
     "confidenceLevels": {
       "official": "Quoted from the issuing organisation's page (as returned by search).",
-      "third-party": "Reported by 2+ aggregator/marketing sites; may be outdated.",
+      "third-party": "Reported by 2+ aggregator/marketing sites (e.g. resizebox, resizerelay, mergeimages, photoresizer); may be outdated. Official bulletins always override.",
       "single-source": "Only one secondary source found.",
       "derived": "Computed from physical size x DPI.",
       "unverified": "From background knowledge; must be checked."
     },
     "schema": "id, group, label, widthPx, heightPx (null = free), minWidthPx/minHeightPx/maxWidthPx/maxHeightPx, aspect, physicalMm [w,h], dpiHint, formats[], minKB, maxKB, fit ('cover'|'contain'|'pad'|'exact'), background, notes, confidence, sources[], validNote",
-    "updatePolicy": "Presets change (e.g. PAN photo size changed April 2026 per one source; SSC specs differ between years). Provide an in-app 'last verified' date, a report-wrong-preset button (mailto/GitHub issue link, no server), and allow users to create/share their own presets."
+    "updatePolicy": "Presets change (e.g. PAN photo size changed April 2026 per one source; SSC specs differ between years). Provide an in-app 'last verified' date, a report-wrong-preset button (mailto/GitHub issue link, no server), and allow users to create/share their own presets.",
+    "lastUpdated": "2026-10-07 (merged with the product owner's parallel research document; see 11-parallel-research-reconciliation.md)"
   },
   "presets": [
     {
@@ -660,7 +661,7 @@
         45
       ],
       "fit": "cover",
-      "notes": "3.5x4.5 cm at 200 dpi = 276x354. Some sources/years list 100x120 px. Always follow the current notification.",
+      "notes": "3.5x4.5 cm at 200 dpi = 276x354. Some sources/years list 100x120 px. Always follow the current notification. Parallel research agrees on 275x354 px, 20-50 KB.",
       "confidence": "third-party",
       "validNote": "conflicting sources",
       "sources": [
@@ -680,20 +681,29 @@
       ],
       "minKB": 10,
       "maxKB": 20,
-      "notes": "Older/alternative: ~140x60 px, 10-30 KB. Follow current notification.",
+      "notes": "236x79 px (10-20 KB) per pw.live; parallel research and older notifications list 140x60 px at 10-20 KB. Offer both as variants; follow the current notification.",
       "confidence": "third-party",
       "validNote": "conflicting sources",
       "sources": [
         "https://www.pw.live/ssc/exams/ssc-cgl-photo-and-signature-size-2026"
+      ],
+      "alternatives": [
+        {
+          "widthPx": 140,
+          "heightPx": 60,
+          "minKB": 10,
+          "maxKB": 20,
+          "note": "older / parallel-research value"
+        }
       ]
     },
     {
       "id": "neet-photo",
       "group": "exam",
       "country": "IN",
-      "label": "NEET UG photograph",
-      "widthPx": null,
-      "heightPx": null,
+      "label": "NEET UG passport photograph",
+      "widthPx": 200,
+      "heightPx": 230,
       "formats": [
         "jpg"
       ],
@@ -703,12 +713,15 @@
         35,
         45
       ],
-      "notes": "One aggregator lists 200x230 px; pixel size may be unconstrained — follow the NTA bulletin.",
+      "notes": "200x230 px is the aggregator value; the NTA bulletin states passport size (2.5x3.5 in at 72 dpi per one source) and 10-200 KB. Face ~80% with ears visible. Name + date strip may be required printed below the face (see neet-name-date-strip).",
       "confidence": "third-party",
       "sources": [
         "https://www.aakash.ac.in/blog/neet-ug-2026-photograph-signature-upload-guidelines-document/",
         "https://news.aglasem.com/jee-main-photo-requirements/"
-      ]
+      ],
+      "aspect": "20:23",
+      "fit": "cover",
+      "background": "white"
     },
     {
       "id": "jee-main-photo",
@@ -761,14 +774,21 @@
         "jpg"
       ],
       "minKB": 20,
-      "maxKB": 200,
-      "notes": "Face >= 75% of photo; plain white background.",
-      "confidence": "single-source",
-      "validNote": "rules updated 2026 per source",
+      "maxKB": 300,
+      "notes": "350x350 px, 20-300 KB (parallel research + search). Some sources say 20-200 KB -> ENFORCE THE STRICTER (<=200 KB) by default and show the conflict. Face >= 75% of frame; ears visible; JPG only. UPSC may also require a live photo capture.",
+      "confidence": "third-party",
+      "validNote": "conflicting KB maximum (200 vs 300) across sources",
       "sources": [
         "https://www.visionias.in/blog/upsc-news/upsc-new-photo-signature-rules-2026-dos-and-donts",
-        "https://vajiramandravi.com/upsc-exam/upsc-photo-and-signature-guidelines/"
-      ]
+        "https://vajiramandravi.com/upsc-exam/upsc-photo-and-signature-guidelines/",
+        "https://vajiramandravi.com/upsc-exam/upsc-photo-and-signature-guidelines/",
+        "https://ilovexams.in/resizer/upsc-exam-photo-signature-size/ (cited in parallel research; not reachable from sandbox)"
+      ],
+      "widthPx": 350,
+      "heightPx": 350,
+      "aspect": "1:1",
+      "fit": "cover",
+      "background": "white"
     },
     {
       "id": "upsc-signature",
@@ -780,7 +800,7 @@
       ],
       "minKB": 20,
       "maxKB": 100,
-      "notes": "Source says: sign three times one below the other, scan as one image; dimensions 350-500 px (ambiguous).",
+      "notes": "20-100 KB; dimension 350-500 px (one source, ambiguous). Source says: sign three times one below the other and scan as one image.",
       "confidence": "single-source",
       "sources": [
         "https://www.visionias.in/blog/upsc-news/upsc-new-photo-signature-rules-2026-dos-and-donts"
@@ -827,6 +847,155 @@
       "confidence": "single-source",
       "sources": [
         "https://mergeimages.net/resize-photo-for/pan-card"
+      ]
+    },
+    {
+      "id": "neet-photo-postcard",
+      "group": "exam",
+      "country": "IN",
+      "label": "NEET UG postcard photograph (4x6 in)",
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 10,
+      "maxKB": 200,
+      "physicalMm": [
+        101.6,
+        152.4
+      ],
+      "dpiHint": 300,
+      "widthPx": 1200,
+      "heightPx": 1800,
+      "fit": "cover",
+      "background": "white",
+      "notes": "4x6 inch; px derived at 300 dpi but the portal likely only checks KB — verify. Same photo as the passport one, to be pasted on the admit card.",
+      "confidence": "third-party",
+      "sources": [
+        "https://medicine.careers360.com/articles/neet-photo-size-format-documents",
+        "https://www.resizerelay.com/exam-photo/neet (cited in parallel research)"
+      ]
+    },
+    {
+      "id": "neet-signature",
+      "group": "exam",
+      "country": "IN",
+      "label": "NEET UG signature",
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 4,
+      "maxKB": 30,
+      "notes": "Black ink on white paper, running handwriting (no capitals). Pixel size reported as 140x60 by aggregators — unconfirmed for NEET (the parallel doc's inline dimension image was truncated).",
+      "confidence": "third-party",
+      "sources": [
+        "https://medicine.careers360.com/articles/neet-photo-and-signature-guidelines"
+      ]
+    },
+    {
+      "id": "neet-thumb",
+      "group": "exam",
+      "country": "IN",
+      "label": "NEET UG left/right thumb impression",
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 10,
+      "maxKB": 200,
+      "notes": "Blue ink on white paper; both thumbs.",
+      "confidence": "single-source",
+      "sources": [
+        "https://medicine.careers360.com/articles/neet-photo-and-signature-guidelines"
+      ]
+    },
+    {
+      "id": "neet-name-date-strip",
+      "group": "exam",
+      "country": "IN",
+      "label": "NEET photo: name + date strip (layout rule)",
+      "notes": "Parallel research states the photo should show the candidate's NAME and the DATE the photo was taken printed below the face on a white strip (source: resizerelay.com). Implement as an optional 'caption strip' step; verify against the current NTA bulletin.",
+      "confidence": "single-source",
+      "sources": [
+        "https://www.resizerelay.com/exam-photo/neet (cited in parallel research)"
+      ]
+    },
+    {
+      "id": "ibps-photo",
+      "group": "exam",
+      "country": "IN",
+      "label": "IBPS (PO/Clerk) photograph",
+      "widthPx": 200,
+      "heightPx": 230,
+      "aspect": "20:23",
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 20,
+      "maxKB": 50,
+      "physicalMm": [
+        35,
+        45
+      ],
+      "fit": "cover",
+      "background": "white",
+      "confidence": "third-party",
+      "sources": [
+        "https://mergeimages.net/resize-photo-for/ibps",
+        "https://www.mahendras.org/blogs/ibps-po-documents-required-complete-list-prelims-to-final-joining-format-size-tips"
+      ]
+    },
+    {
+      "id": "ibps-signature",
+      "group": "exam",
+      "country": "IN",
+      "label": "IBPS signature",
+      "widthPx": 140,
+      "heightPx": 60,
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 10,
+      "maxKB": 20,
+      "background": "white",
+      "notes": "Black ink, not in capital letters.",
+      "confidence": "third-party",
+      "sources": [
+        "https://mergeimages.net/resize-photo-for/ibps"
+      ]
+    },
+    {
+      "id": "ibps-thumb",
+      "group": "exam",
+      "country": "IN",
+      "label": "IBPS left thumb impression",
+      "widthPx": 240,
+      "heightPx": 240,
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 20,
+      "maxKB": 50,
+      "background": "white",
+      "confidence": "third-party",
+      "sources": [
+        "https://mergeimages.net/resize-photo-for/ibps"
+      ]
+    },
+    {
+      "id": "ibps-declaration",
+      "group": "exam",
+      "country": "IN",
+      "label": "IBPS handwritten declaration",
+      "widthPx": 800,
+      "heightPx": 400,
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 50,
+      "maxKB": 100,
+      "background": "white",
+      "confidence": "third-party",
+      "sources": [
+        "https://mergeimages.net/resize-photo-for/ibps"
       ]
     }
   ],

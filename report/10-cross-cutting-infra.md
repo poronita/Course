@@ -17,6 +17,7 @@ Scope: everything the six function sections (`01`–`05`, `07`) depend on but th
 | Concurrency | **Web Workers + `comlink`** (Apache-2.0, 3 KB) | all codecs run off the main thread |
 | Storage | `idb-keyval` (Apache-2.0, 2 KB) for recipes/history; **OPFS**/Cache API for large temp files `[verify on target WebViews]` | no server |
 | Hosting | **Cloudflare Pages** (supports `_headers`) or any static host; **not GitHub Pages if you need custom headers** | see §3 |
+| **Licence profile** | **`PROFILE=strict` (default for MVP) / `extended`** — Tier-B packs compiled in only for `extended` (see `11` §3) | follows the product owner's conservative LGPL stance; Extended after a legal read |
 | Cross-origin isolation (COOP/COEP) | **Do not require it** | breaks third-party ad scripts on the web build; not needed if you use single-thread WASM builds (§3) |
 | Licence automation | `license-checker-rseidelsohn` (BSD-3) / `license-report` (MIT) + `@cyclonedx/cyclonedx-npm` (Apache-2.0 SBOM) in CI, deny-list GPL/AGPL/NC | keeps the "free for commercial use" promise true over time |
 
@@ -40,6 +41,8 @@ data/              # presets.json, cities pack build script, licences.json (gene
 ```
 
 **Pack system (core idea):** every heavy capability is a **versioned pack** `{id, files[], sizeGzip, license, loader()}` listed in a manifest. The shell loads packs on demand, caches them (Cache API), shows size before download, works offline afterwards. On Android the build can **pre-bundle** selected packs into the APK/assets. This keeps first load small (web) and tools instant (app). See `08-…` for measured pack sizes.
+
+**Shell + Worker budget** *(adopted from the parallel research)*: keep the **initial HTML/CSS/JS shell < 200 KB gz**; render the UI immediately; use native `createImageBitmap`/canvas for the first preview when a file is dropped; **prefetch the heavy WASM pack the user is likely to need (e.g. AVIF/vectoriser) in the background right after the first drop** so it is cached before they press Convert. Never load more than one heavy pack concurrently on low-memory devices.
 
 **Feature-detection layer:** one `capabilities.ts` returning booleans: `wasmSimd`, `wasmThreads` (cross-origin isolated?), `offscreenCanvas`, `imageDecoder`, `videoEncoder{avc,vp9,vp8,av01}`, `canvasWebp/AVIF`, `fileSystemAccess`, `eyeDropper`, `barcodeDetector`, `intlDisplayNames`, `storagePersist`. UI adapts; failures show human messages.
 
@@ -170,7 +173,7 @@ All of these should expose **the same JS interface as the web fallback** (e.g. `
 ```yaml
 # CI policy (pseudo)
 allow:   [MIT, ISC, BSD-2-Clause, BSD-3-Clause, Apache-2.0, 0BSD, Unlicense, CC0-1.0, Zlib, OFL-1.1, CC-BY-4.0(data/art only), "MIT AND Zlib"]
-allow-tier-B-by-name:                      # explicit allow-list; each needs a notice + replaceable file
+allow-tier-B-by-name:                      # ONLY when PROFILE=extended; explicit allow-list; each needs a notice + replaceable file
   - libheif-js (LGPL-3.0)         # separate .wasm
   - "@colorhythm/libraw-wasm"     # choose CDDL-1.0 of LibRaw
   - wasm-vips (LGPL)              # optional pack only

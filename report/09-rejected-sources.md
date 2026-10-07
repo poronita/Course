@@ -62,7 +62,7 @@
 - ExifTool (as a default dependency) — Perl Artistic OR GPL + embeds a Perl interpreter — kept only as an optional, legal-review pack
 - Google ML Kit / proprietary SDKs for barcode/OCR — on-device but not open source — outside the product rule
 
-## B. Researched but not needed (41)
+## B. Researched but not needed (39)
 
 **Format conversion:** `bmp-js`, `gif-encoder-2`, `jimp`, `jpeg-js`, `jspdf`, `pdfkit`, `pngjs`, `unpdf`
 
@@ -72,7 +72,7 @@
 
 **Metadata/privacy:** `@pinta365/steganography`, `exif-js`, `geo-tz`
 
-**GIF/video:** `@ffmpeg/ffmpeg`, `gif-encoder-2`, `gif.js`, `libav.js`, `mediainfo.js`, `mp4-muxer`, `mp4-wasm`, `ts-gif`, `webm-muxer`
+**GIF/video:** `@ffmpeg/ffmpeg`, `gif-encoder-2`, `gif.js`, `libav.js`, `mediainfo.js`, `mp4-wasm`, `ts-gif`
 
 **Dev/designer utils:** `@zxing/library`, `chroma-js`, `colorjs.io`, `ico-endec`, `qr-scanner`, `resemblejs`, `satori`, `tinycolor2`, `twemoji`
 

@@ -1071,8 +1071,8 @@
    ],
    "tierB": false,
    "optional": false,
-   "gzip": 5010,
-   "raw": 18148,
+   "gzip": 6086,
+   "raw": 22450,
    "files": []
   },
   "OPTIONAL-imagemagick": {
@@ -1230,6 +1230,46 @@
      "gzip": 3754423
     }
    ]
+  },
+  "video-strict": {
+   "label": "STRICT video path: mp4box (BSD-3) demux + mp4-muxer/webm-muxer (MIT, deprecated but functional) — replaces mediabunny (MPL-2.0)",
+   "sections": [
+    "05"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 86626,
+   "raw": 461775,
+   "files": [
+    {
+     "pkg": "mp4box",
+     "version": "2.4.1",
+     "file": "dist/mp4box.all.mjs",
+     "raw": 91813,
+     "gzip": 16728
+    },
+    {
+     "pkg": "mp4box",
+     "version": "2.4.1",
+     "file": "dist/styp-9TIZZDLN.mjs",
+     "raw": 236007,
+     "gzip": 43783
+    },
+    {
+     "pkg": "mp4-muxer",
+     "version": "5.2.2",
+     "file": "build/mp4-muxer.mjs",
+     "raw": 69011,
+     "gzip": 14361
+    },
+    {
+     "pkg": "webm-muxer",
+     "version": "5.1.4",
+     "file": "build/webm-muxer.mjs",
+     "raw": 64944,
+     "gzip": 11754
+    }
+   ]
   }
  },
  "scenarios": {
@@ -1260,7 +1300,7 @@
     "colour-tools",
     "font-latin-inter"
    ],
-   "gzip": 872144,
+   "gzip": 873220,
    "hasTierB": false
   },
   "android-standard": {
@@ -1295,7 +1335,7 @@
     "font-noto-gujarati",
     "font-noto-devanagari"
    ],
-   "gzip": 5249423,
+   "gzip": 5250499,
    "hasTierB": true
   },
   "android-full": {
@@ -1337,8 +1377,82 @@
     "pdf-write-lib",
     "world-50m"
    ],
-   "gzip": 7123490,
+   "gzip": 7124566,
    "hasTierB": true
+  },
+  "android-standard-strict": {
+   "label": "Android 'Standard' under the STRICT-PERMISSIVE profile (no LGPL/MPL/CDDL: no libheif, no mediabunny)",
+   "packs": [
+    "core-always-loaded",
+    "core-image-codecs",
+    "metadata-read-edit",
+    "crop-ui",
+    "gif-tools",
+    "lossy-png-and-apng",
+    "qr-generate",
+    "qr-scan-lite",
+    "location-code",
+    "world-110m",
+    "presets-json",
+    "placeholders",
+    "metrics-fast",
+    "colour-tools",
+    "font-latin-inter",
+    "avif",
+    "jxl",
+    "tiff",
+    "psd",
+    "pdf-read",
+    "vectorise",
+    "animated-webp",
+    "video-strict",
+    "svgo",
+    "metrics-butteraugli",
+    "font-noto-gujarati",
+    "font-noto-devanagari"
+   ],
+   "gzip": 4644973,
+   "hasTierB": false
+  },
+  "android-full-strict": {
+   "label": "Android 'Full' under the STRICT profile (adds multi-format scanning, 2-D barcodes, PDF extras; still no RAW develop, no HEIC software decode)",
+   "packs": [
+    "core-always-loaded",
+    "core-image-codecs",
+    "metadata-read-edit",
+    "crop-ui",
+    "gif-tools",
+    "lossy-png-and-apng",
+    "qr-generate",
+    "qr-scan-lite",
+    "location-code",
+    "world-110m",
+    "presets-json",
+    "placeholders",
+    "metrics-fast",
+    "colour-tools",
+    "font-latin-inter",
+    "avif",
+    "jxl",
+    "tiff",
+    "psd",
+    "pdf-read",
+    "vectorise",
+    "animated-webp",
+    "video-strict",
+    "svgo",
+    "metrics-butteraugli",
+    "font-noto-gujarati",
+    "font-noto-devanagari",
+    "qr-scan-full",
+    "barcode-1d",
+    "barcode-2d",
+    "pdf-read-optional-wasm",
+    "pdf-write-lib",
+    "world-50m"
+   ],
+   "gzip": 6172162,
+   "hasTierB": false
   }
  }
 }

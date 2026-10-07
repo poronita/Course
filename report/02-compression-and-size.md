@@ -168,6 +168,7 @@ inputs: source (decoded ImageData, orientation applied), format F, targetBytes, 
 10. **Mixed-goal:** "≤ 100 KB **and** exactly 600×800 px" (resize → search quality) — chains with `03-resize-crop-geometry.md`.
 
 ### C. Content-aware modes
+11a. **Receipt / expense compressor** *(from the parallel research)*: HEIC→JPEG → scanner-style contrast/threshold (canvas) → palette reduction (`image-q`/UPNG) → **≤ 150 KB image or PDF** (own PDF writer). Turns a 6 MB shadowed receipt photo into a ~150 KB, readable upload.
 11. **Screenshot/text mode:** detect text-heavy images (few colours + hard edges) → prefer PNG-palette / WebP-lossless / JPEG 4:4:4 at high quality, avoid heavy downscale; show a **"text still readable?" 200 % zoom check**.
 12. **Document-scan mode:** grayscale / 1-bit threshold + JPEG/PNG, deskew (crop tool), optional PDF — typical for forms.
 13. **Photo mode:** mozjpeg progressive, 4:2:0, optimise-coding on.

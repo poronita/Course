@@ -27,7 +27,7 @@ Reference implementation to match: **your own `video-to-gif`** (FFmpeg `paletteg
 | Motion-Photo extraction | own byte parser (XMP `Container:Directory` / `Item:Length`) | — | ~2 KB |
 
 **Hard rejections (licence):** `@ffmpeg/core` & `@ffmpeg/core-mt` — **GPL-2.0-or-later**, wasm **31.5 MB → 10 MB gz** · `gifsicle-wasm` — **GPL-2.0-only** · `gifsicle-wasm-browser` — labelled MIT but bundles gifsicle (GPL) · `@wordpress/video-conversion` — GPL-2.0-or-later · `gifski`/`gifski-lite` — AGPL-3.0 (see earlier correction) · `web-demuxer` (no licence) · FFmpegKit for Android (**retired**).
-**So: no FFmpeg in this product.** Everything is built from WebCodecs + small pure-JS/WASM encoders, which also keeps the app light.
+**So: no FFmpeg in this product.** *(Parallel-research note, verified: `@jsquash/webp` has **no animation API** — animated WebP needs `wasm-webp` or the custom muxer below.)* **Strict-permissive profile video path** (no MPL): `mp4box` (BSD-3, ~59 KB gz incl. shared chunk) demux + WebCodecs + `mp4-muxer`/`webm-muxer` (MIT, deprecated but functional, 14/11 KB gz) — ≈ 85 KB total, see `11` §3. Everything is built from WebCodecs + small pure-JS/WASM encoders, which also keeps the app light.
 
 ---
 

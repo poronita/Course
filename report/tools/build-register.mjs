@@ -101,6 +101,15 @@ Per-pack numbers are the **sum of gzip(-9) sizes of the exact files listed in \`
 ${packRows}
 
 ${missing.length ? `> ⚠️ Files not found in measurements (excluded from sums): ${missing.join('; ')}\n` : ''}
+## 2a. Licence profiles
+
+| Profile | Allowed licences | What you lose |
+|---|---|---|
+| **Strict-permissive** (the conservative stance in the product owner's parallel research) | MIT, Apache-2.0, ISC, BSD, zlib, Unlicense, OFL — **no LGPL, MPL or CDDL code at all** | software **HEIC decode** (libheif/libde265 LGPL) on non-Safari web (Android can still use the OS decoder; Safari decodes natively); **full RAW develop** (LibRaw CDDL/LGPL — RAW *preview* extraction via UTIF stays); mediabunny convenience (replaced by mp4box + deprecated-but-MIT muxers); high-fidelity resvg; exifreader; wasm-vips; libav.js polyfill; MP3/AAC encoder extensions |
+| **Extended** (this report's default) | strict list **plus** Tier-B packs (LGPL as separate replaceable wasm, MPL/CDDL file-level copyleft) after a legal read | nothing; adds the features above |
+
+Build both from one code base: Tier-B packs are optional modules behind a build flag (\`PROFILE=strict|extended\`). Scenarios named \`*-strict\` below contain no Tier-B pack.
+
 ## 2. Scenarios (what to ship where)
 
 | Scenario | Meaning | # packs | Contains Tier-B? | **Total gzip** |

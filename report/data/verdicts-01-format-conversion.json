@@ -1,49 +1,447 @@
 [
-  {"id":"@jsquash/jpeg","section":"01","tier":"A","status":"recommended","role":"JPEG enc/dec (mozjpeg)","license":"Apache-2.0","upstream":"mozjpeg: IJG+BSD-3+zlib","lazy":true},
-  {"id":"@jsquash/png","section":"01","tier":"A","status":"recommended","role":"PNG enc/dec","license":"Apache-2.0","upstream":"Rust png crate; Google BSD-3 notice in tarball","lazy":true},
-  {"id":"@jsquash/oxipng","section":"01","tier":"A","status":"recommended","role":"lossless PNG optimise","license":"Apache-2.0","upstream":"oxipng MIT","lazy":true},
-  {"id":"@jsquash/webp","section":"01","tier":"A","status":"recommended","role":"WebP enc/dec (has target_size)","license":"Apache-2.0","upstream":"libwebp BSD-3","lazy":true},
-  {"id":"@jsquash/avif","section":"01","tier":"A","status":"recommended","role":"AVIF enc/dec","license":"Apache-2.0","upstream":"libavif BSD-2 + aom BSD-2 + AOM patent licence","lazy":true},
-  {"id":"@jsquash/jxl","section":"01","tier":"A","status":"recommended","role":"JPEG XL enc/dec (beta)","license":"Apache-2.0","upstream":"libjxl BSD-3 + Google PATENTS grant","lazy":true},
-  {"id":"@jsquash/resize","section":"01","tier":"A","status":"recommended","role":"Resize ImageData (lanczos3, magic-kernel, hqx...)","license":"Apache-2.0","upstream":"resize crate MIT; hqx Apache-2.0; magic-kernel MIT","lazy":true},
-  {"id":"@jsquash/qoi","section":"01","tier":"A","status":"optional","role":"QOI (niche)","license":"Apache-2.0","upstream":"QOI MIT","lazy":true},
-  {"id":"libheif-js","section":"01","tier":"B","status":"recommended","role":"HEIC decode (libde265 inside)","license":"LGPL-3.0","upstream":"libheif LGPL, libde265 LGPL","flags":["PATENT-FLAG","LGPL-separate-wasm"],"lazy":true},
-  {"id":"@colorhythm/libraw-wasm","section":"01","tier":"B","status":"recommended","role":"RAW decode","license":"MIT wrapper; LibRaw LGPL-2.1 OR CDDL-1.0 (choose CDDL)","flags":["choose-CDDL"],"lazy":true},
-  {"id":"utif","section":"01","tier":"A","status":"recommended","role":"TIFF enc/dec multi-page","license":"MIT","stale":"2019","lazy":true},
-  {"id":"tiff","section":"01","tier":"A","status":"optional","role":"TIFF decode (fallback)","license":"MIT","lazy":true},
-  {"id":"ag-psd","section":"01","tier":"A","status":"recommended","role":"PSD read/write","license":"MIT","lazy":true},
-  {"id":"icojs","section":"01","tier":"A","status":"recommended","role":"ICO/CUR parse","license":"MIT","lazy":true},
-  {"id":"bmp-ts","section":"01","tier":"A","status":"recommended","role":"BMP enc/dec","license":"MIT","lazy":true},
-  {"id":"png-to-ico","section":"01","tier":"A","status":"optional","role":"PNG->ICO (Node oriented; hand-written writer preferred)","license":"MIT"},
-  {"id":"tga-js","section":"01","tier":"A","status":"optional","role":"TGA decode (niche)","license":"MIT","stale":"2020"},
-  {"id":"pako","section":"01","tier":"A","status":"recommended","role":"zlib in JS (dep of utif/upng)","license":"MIT AND Zlib"},
-  {"id":"fflate","section":"01","tier":"A","status":"recommended","role":"ZIP/gzip, streaming","license":"MIT"},
-  {"id":"jszip","section":"01","tier":"A","status":"optional","role":"ZIP (use MIT option of MIT OR GPL-3.0-or-later)","license":"MIT OR GPL-3.0-or-later"},
-  {"id":"@resvg/resvg-wasm","section":"01","tier":"B","status":"optional","role":"High-fidelity SVG rasteriser","license":"MPL-2.0","lazy":true},
-  {"id":"canvg","section":"01","tier":"A","status":"optional","role":"SVG on canvas","license":"MIT"},
-  {"id":"vtracer-wasm","section":"01","tier":"A","status":"recommended","role":"Raster->SVG (colour tracing)","license":"MIT (LICENSE file; no package.json licence field)","upstream":"visioncortex/vtracer MIT","risk":"single maintainer v0.1.0","lazy":true},
-  {"id":"imagetracerjs","section":"01","tier":"A","status":"optional","role":"Raster->SVG tiny","license":"Unlicense","stale":"2020"},
-  {"id":"pdfjs-dist","section":"01","tier":"A","status":"recommended","role":"PDF render to canvas","license":"Apache-2.0","lazy":true},
-  {"id":"@cantoo/pdf-lib","section":"01","tier":"A","status":"optional","role":"PDF create/merge/split (maintained pdf-lib fork)","license":"MIT","lazy":true},
-  {"id":"file-type","section":"01","tier":"A","status":"recommended","role":"Detect true file type by magic bytes","license":"MIT"},
-  {"id":"probe-image-size","section":"01","tier":"A","status":"recommended","role":"Read dimensions/orientation without decode","license":"MIT"},
-  {"id":"image-size","section":"01","tier":"A","status":"optional","role":"Dimensions only","license":"MIT"},
-  {"id":"@imagemagick/magick-wasm","section":"01","tier":"A","status":"optional","role":"Long-tail formats pack (100+)","license":"Apache-2.0 + ImageMagick License","flags":["very-heavy-5.4MB-gz"],"lazy":true},
-  {"id":"wasm-vips","section":"01","tier":"B","status":"optional","role":"Streaming big-image engine (Phase 3)","license":"MIT wrapper; libvips LGPL-3.0(+)","flags":["needs-COOP-COEP","early-development"],"lazy":true},
-  {"id":"unpdf","section":"01","tier":"A","status":"not-needed","role":"pdf.js wrapper","license":"MIT"},
-  {"id":"potrace","section":"01","tier":"X","status":"rejected","role":"Raster->SVG","license":"GPL-2.0","reason":"GPL"},
-  {"id":"heic2any","section":"01","tier":"X","status":"rejected","role":"HEIC decode","license":"MIT label; bundles libheif (LGPL) in minified single file","reason":"un-swappable LGPL, stale 2023"},
-  {"id":"heic-to","section":"01","tier":"X","status":"rejected","role":"HEIC decode","license":"LGPL-3.0","reason":"3MB single-file bundle, not replaceable"},
-  {"id":"@saschazar/wasm-heif","section":"01","tier":"X","status":"rejected","role":"HEIC decode","license":"MIT label; libheif/libde265 inside","reason":"stale 2021, bundles LGPL"},
-  {"id":"@abasb75/openjpeg","section":"01","tier":"X","status":"rejected","role":"JPEG2000","license":null,"reason":"no licence declared/shipped"},
-  {"id":"libraw-wasm","section":"01","tier":"X","status":"rejected","role":"RAW decode","license":"ISC wrapper","reason":"no upstream licence files in tarball; heavier than colorhythm build"},
-  {"id":"jimp","section":"01","tier":"A","status":"not-needed","role":"Pure-JS image lib","license":"MIT","reason":"slow for big images; superseded by WASM codecs"},
-  {"id":"jspdf","section":"01","tier":"A","status":"not-needed","role":"PDF generation","license":"MIT","reason":"31MB unpacked / 265KB gz; custom writer or pdf-lib fork better"},
-  {"id":"pdfkit","section":"01","tier":"A","status":"not-needed","role":"PDF generation","license":"MIT","reason":"Node-first; no advantage"},
-  {"id":"pngjs","section":"01","tier":"A","status":"not-needed","role":"PNG pure JS","license":"MIT","reason":"superseded by WASM"},
-  {"id":"jpeg-js","section":"01","tier":"A","status":"not-needed","role":"JPEG pure JS","license":"BSD-3-Clause","reason":"superseded by mozjpeg wasm"},
-  {"id":"bmp-js","section":"01","tier":"A","status":"not-needed","role":"BMP","license":"MIT","reason":"2018; bmp-ts preferred"},
-  {"id":"upng-js","section":"01","tier":"A","status":"recommended","role":"APNG enc/dec (see section 05) and lossy PNG quantise (see 02)","license":"MIT","stale":"2017"},
-  {"id":"gif-encoder-2","section":"01","tier":"A","status":"not-needed","role":"GIF encode","license":"Unlicense","reason":"see section 05"},
-  {"id":"omggif","section":"01","tier":"A","status":"see-05","role":"GIF decode/encode","license":"MIT"}
+ {
+  "id": "@jsquash/jpeg",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "JPEG enc/dec (mozjpeg)",
+  "license": "Apache-2.0",
+  "upstream": "mozjpeg: IJG+BSD-3+zlib",
+  "lazy": true
+ },
+ {
+  "id": "@jsquash/png",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "PNG enc/dec",
+  "license": "Apache-2.0",
+  "upstream": "Rust png crate; Google BSD-3 notice in tarball",
+  "lazy": true
+ },
+ {
+  "id": "@jsquash/oxipng",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "lossless PNG optimise",
+  "license": "Apache-2.0",
+  "upstream": "oxipng MIT",
+  "lazy": true
+ },
+ {
+  "id": "@jsquash/webp",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "WebP enc/dec (has target_size); static only — NO animation API",
+  "license": "Apache-2.0",
+  "upstream": "libwebp BSD-3",
+  "lazy": true
+ },
+ {
+  "id": "@jsquash/avif",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "AVIF enc/dec",
+  "license": "Apache-2.0",
+  "upstream": "libavif BSD-2 + aom BSD-2 + AOM patent licence",
+  "lazy": true
+ },
+ {
+  "id": "@jsquash/jxl",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "JPEG XL enc/dec (experimental; NO lossless-JPEG-transcode API in wrapper)",
+  "license": "Apache-2.0",
+  "upstream": "libjxl BSD-3 + Google PATENTS grant",
+  "lazy": true
+ },
+ {
+  "id": "@jsquash/resize",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "Resize ImageData (lanczos3, magic-kernel, hqx...)",
+  "license": "Apache-2.0",
+  "upstream": "resize crate MIT; hqx Apache-2.0; magic-kernel MIT",
+  "lazy": true
+ },
+ {
+  "id": "@jsquash/qoi",
+  "section": "01",
+  "tier": "A",
+  "status": "optional",
+  "role": "QOI (niche)",
+  "license": "Apache-2.0",
+  "upstream": "QOI MIT",
+  "lazy": true
+ },
+ {
+  "id": "libheif-js",
+  "section": "01",
+  "tier": "B",
+  "status": "recommended",
+  "role": "HEIC decode (libde265 inside)",
+  "license": "LGPL-3.0",
+  "upstream": "libheif LGPL, libde265 LGPL",
+  "flags": [
+   "PATENT-FLAG",
+   "LGPL-separate-wasm",
+   "extended-profile-only"
+  ],
+  "lazy": true
+ },
+ {
+  "id": "@colorhythm/libraw-wasm",
+  "section": "01",
+  "tier": "B",
+  "status": "recommended",
+  "role": "RAW decode",
+  "license": "MIT wrapper; LibRaw LGPL-2.1 OR CDDL-1.0 (choose CDDL)",
+  "flags": [
+   "choose-CDDL",
+   "extended-profile-only"
+  ],
+  "lazy": true
+ },
+ {
+  "id": "utif",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "TIFF enc/dec multi-page; RAW (DNG/CR2/NEF): previews + sensor data only, no RGBA develop (README)",
+  "license": "MIT",
+  "stale": "2019",
+  "lazy": true
+ },
+ {
+  "id": "tiff",
+  "section": "01",
+  "tier": "A",
+  "status": "optional",
+  "role": "TIFF decode (fallback)",
+  "license": "MIT",
+  "lazy": true
+ },
+ {
+  "id": "ag-psd",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "PSD read/write",
+  "license": "MIT",
+  "lazy": true
+ },
+ {
+  "id": "icojs",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "ICO/CUR parse",
+  "license": "MIT",
+  "lazy": true
+ },
+ {
+  "id": "bmp-ts",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "BMP enc/dec",
+  "license": "MIT",
+  "lazy": true
+ },
+ {
+  "id": "png-to-ico",
+  "section": "01",
+  "tier": "A",
+  "status": "optional",
+  "role": "PNG->ICO (Node oriented; hand-written writer preferred)",
+  "license": "MIT"
+ },
+ {
+  "id": "tga-js",
+  "section": "01",
+  "tier": "A",
+  "status": "optional",
+  "role": "TGA decode (niche)",
+  "license": "MIT",
+  "stale": "2020"
+ },
+ {
+  "id": "pako",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "zlib in JS (dep of utif/upng)",
+  "license": "MIT AND Zlib"
+ },
+ {
+  "id": "fflate",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "ZIP/gzip, streaming",
+  "license": "MIT"
+ },
+ {
+  "id": "jszip",
+  "section": "01",
+  "tier": "A",
+  "status": "optional",
+  "role": "ZIP (use MIT option of MIT OR GPL-3.0-or-later)",
+  "license": "MIT OR GPL-3.0-or-later"
+ },
+ {
+  "id": "@resvg/resvg-wasm",
+  "section": "01",
+  "tier": "B",
+  "status": "optional",
+  "role": "High-fidelity SVG rasteriser",
+  "license": "MPL-2.0",
+  "lazy": true,
+  "flags": [
+   "extended-profile-only"
+  ]
+ },
+ {
+  "id": "canvg",
+  "section": "01",
+  "tier": "A",
+  "status": "optional",
+  "role": "SVG on canvas",
+  "license": "MIT"
+ },
+ {
+  "id": "vtracer-wasm",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "Raster->SVG (colour tracing)",
+  "license": "MIT (LICENSE file; no package.json licence field)",
+  "upstream": "visioncortex/vtracer MIT",
+  "risk": "single maintainer v0.1.0",
+  "lazy": true
+ },
+ {
+  "id": "imagetracerjs",
+  "section": "01",
+  "tier": "A",
+  "status": "optional",
+  "role": "Raster->SVG tiny",
+  "license": "Unlicense",
+  "stale": "2020"
+ },
+ {
+  "id": "pdfjs-dist",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "PDF render to canvas",
+  "license": "Apache-2.0",
+  "lazy": true
+ },
+ {
+  "id": "@cantoo/pdf-lib",
+  "section": "01",
+  "tier": "A",
+  "status": "optional",
+  "role": "PDF create/merge/split (maintained pdf-lib fork)",
+  "license": "MIT",
+  "lazy": true
+ },
+ {
+  "id": "file-type",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "Detect true file type by magic bytes",
+  "license": "MIT"
+ },
+ {
+  "id": "probe-image-size",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "Read dimensions/orientation without decode",
+  "license": "MIT"
+ },
+ {
+  "id": "image-size",
+  "section": "01",
+  "tier": "A",
+  "status": "optional",
+  "role": "Dimensions only",
+  "license": "MIT"
+ },
+ {
+  "id": "@imagemagick/magick-wasm",
+  "section": "01",
+  "tier": "A",
+  "status": "optional",
+  "role": "Long-tail formats pack (100+)",
+  "license": "Apache-2.0 + ImageMagick License",
+  "flags": [
+   "very-heavy-5.4MB-gz"
+  ],
+  "lazy": true
+ },
+ {
+  "id": "wasm-vips",
+  "section": "01",
+  "tier": "B",
+  "status": "optional",
+  "role": "Streaming big-image engine (Phase 3)",
+  "license": "MIT wrapper; libvips LGPL-3.0(+)",
+  "flags": [
+   "needs-COOP-COEP",
+   "early-development",
+   "extended-profile-only"
+  ],
+  "lazy": true
+ },
+ {
+  "id": "unpdf",
+  "section": "01",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "pdf.js wrapper",
+  "license": "MIT"
+ },
+ {
+  "id": "potrace",
+  "section": "01",
+  "tier": "X",
+  "status": "rejected",
+  "role": "Raster->SVG",
+  "license": "GPL-2.0",
+  "reason": "GPL"
+ },
+ {
+  "id": "heic2any",
+  "section": "01",
+  "tier": "X",
+  "status": "rejected",
+  "role": "HEIC decode",
+  "license": "MIT label; bundles libheif (LGPL) in minified single file",
+  "reason": "un-swappable LGPL, stale 2023"
+ },
+ {
+  "id": "heic-to",
+  "section": "01",
+  "tier": "X",
+  "status": "rejected",
+  "role": "HEIC decode",
+  "license": "LGPL-3.0",
+  "reason": "3MB single-file bundle, not replaceable"
+ },
+ {
+  "id": "@saschazar/wasm-heif",
+  "section": "01",
+  "tier": "X",
+  "status": "rejected",
+  "role": "HEIC decode",
+  "license": "MIT label; libheif/libde265 inside",
+  "reason": "stale 2021, bundles LGPL"
+ },
+ {
+  "id": "@abasb75/openjpeg",
+  "section": "01",
+  "tier": "X",
+  "status": "rejected",
+  "role": "JPEG2000",
+  "license": null,
+  "reason": "no licence declared/shipped"
+ },
+ {
+  "id": "libraw-wasm",
+  "section": "01",
+  "tier": "X",
+  "status": "rejected",
+  "role": "RAW decode",
+  "license": "ISC wrapper",
+  "reason": "no upstream licence files in tarball; heavier than colorhythm build"
+ },
+ {
+  "id": "jimp",
+  "section": "01",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "Pure-JS image lib",
+  "license": "MIT",
+  "reason": "slow for big images; superseded by WASM codecs"
+ },
+ {
+  "id": "jspdf",
+  "section": "01",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "PDF generation",
+  "license": "MIT",
+  "reason": "31MB unpacked / 265KB gz; custom writer or pdf-lib fork better"
+ },
+ {
+  "id": "pdfkit",
+  "section": "01",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "PDF generation",
+  "license": "MIT",
+  "reason": "Node-first; no advantage"
+ },
+ {
+  "id": "pngjs",
+  "section": "01",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "PNG pure JS",
+  "license": "MIT",
+  "reason": "superseded by WASM"
+ },
+ {
+  "id": "jpeg-js",
+  "section": "01",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "JPEG pure JS",
+  "license": "BSD-3-Clause",
+  "reason": "superseded by mozjpeg wasm"
+ },
+ {
+  "id": "bmp-js",
+  "section": "01",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "BMP",
+  "license": "MIT",
+  "reason": "2018; bmp-ts preferred"
+ },
+ {
+  "id": "upng-js",
+  "section": "01",
+  "tier": "A",
+  "status": "recommended",
+  "role": "APNG enc/dec (see section 05) and lossy PNG quantise (see 02)",
+  "license": "MIT",
+  "stale": "2017"
+ },
+ {
+  "id": "gif-encoder-2",
+  "section": "01",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "GIF encode",
+  "license": "Unlicense",
+  "reason": "see section 05"
+ },
+ {
+  "id": "omggif",
+  "section": "01",
+  "tier": "A",
+  "status": "see-05",
+  "role": "GIF decode/encode",
+  "license": "MIT"
+ }
 ]

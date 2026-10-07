@@ -51,6 +51,11 @@ Additional rules applied:
 - **Data licences** are checked too (map data, city lists, presets): CC-BY / CC0 / ODbL-with-attribution are acceptable and flagged.
 - **Fonts** used for generated images must be OFL / Apache / similar (never system fonts that are not redistributable).
 
+### Build profiles (added after the parallel research review — see `11`)
+- **Strict-permissive:** Tier A only (no LGPL/MPL/CDDL). Default for the MVP.
+- **Extended:** Tier A + Tier B packs after legal review (LGPL kept as separate replaceable files).
+Both stances are legitimate readings of "commercially allowed": LGPL/MPL *do* permit commercial use, but the packaging obligations in a bundled JS/APK app are debated, so the conservative profile avoids them entirely.
+
 ### Patent flag (separate from copyright licence)
 
 A permissive code licence does **not** grant patent rights for video/image *codecs*. Codecs with active patent pools (HEVC/H.265 → HEIC, H.264, AAC) are flagged **`PATENT-FLAG`** wherever they appear. HEVC patents are administered through pools (e.g. Access Advance, which states it licenses "hardware and consumer software") [verified-search: https://accessadvance.com/?p=151]. This research cannot say how that applies to a free app that ships a software HEVC *decoder*; see `01-format-conversion.md` §HEIC for the mitigation (use the OS decoder on Android) and treat it as a **legal question to resolve before launch**.

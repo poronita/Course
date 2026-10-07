@@ -251,7 +251,8 @@
    "status": "optional",
    "flags": [
     "legal-review",
-    "very-heavy-7.6MB-gz"
+    "very-heavy-7.6MB-gz",
+    "extended-profile-only"
    ],
    "notes": [],
    "declaredLicense": "Apache-2.0 wrapper; ExifTool = Perl Artistic OR GPL; ships Perl",
@@ -288,7 +289,8 @@
    "tier": "B",
    "status": "recommended",
    "flags": [
-    "choose-CDDL"
+    "choose-CDDL",
+    "extended-profile-only"
    ],
    "notes": [],
    "declaredLicense": "MIT wrapper; LibRaw LGPL-2.1 OR CDDL-1.0 (choose CDDL)",
@@ -950,7 +952,7 @@
     "01"
    ],
    "roles": [
-    "JPEG XL enc/dec (beta)"
+    "JPEG XL enc/dec (experimental; NO lossless-JPEG-transcode API in wrapper)"
    ],
    "tier": "A",
    "status": "recommended",
@@ -1170,7 +1172,7 @@
     "01"
    ],
    "roles": [
-    "WebP enc/dec (has target_size)"
+    "WebP enc/dec (has target_size); static only — NO animation API"
    ],
    "tier": "A",
    "status": "recommended",
@@ -1250,7 +1252,8 @@
    "tier": "B",
    "status": "optional",
    "flags": [
-    "LGPL-separate-wasm"
+    "LGPL-separate-wasm",
+    "extended-profile-only"
    ],
    "notes": [],
    "declaredLicense": "LGPL-2.1",
@@ -1297,7 +1300,8 @@
    "tier": "B",
    "status": "optional",
    "flags": [
-    "verify-embedded-licence"
+    "verify-embedded-licence",
+    "extended-profile-only"
    ],
    "notes": [],
    "declaredLicense": "MPL-2.0 wrapper; embedded libavcodec licence unstated",
@@ -1343,7 +1347,9 @@
    ],
    "tier": "B",
    "status": "optional",
-   "flags": [],
+   "flags": [
+    "extended-profile-only"
+   ],
    "notes": [],
    "declaredLicense": "MPL-2.0 wrapper; libFLAC",
    "lazy": true,
@@ -1389,7 +1395,8 @@
    "tier": "B",
    "status": "optional",
    "flags": [
-    "LGPL-inside"
+    "LGPL-inside",
+    "extended-profile-only"
    ],
    "notes": [],
    "declaredLicense": "MPL-2.0 wrapper; LAME LGPL",
@@ -1583,7 +1590,9 @@
    ],
    "tier": "B",
    "status": "optional",
-   "flags": [],
+   "flags": [
+    "extended-profile-only"
+   ],
    "notes": [],
    "declaredLicense": "MPL-2.0",
    "lazy": true,
@@ -2205,7 +2214,9 @@
    ],
    "tier": "A",
    "status": "optional",
-   "flags": [],
+   "flags": [
+    "strict-profile-video"
+   ],
    "notes": [],
    "declaredLicense": "BSD-3-Clause",
    "version": "0.5.7",
@@ -3728,7 +3739,9 @@
    ],
    "tier": "B",
    "status": "optional",
-   "flags": [],
+   "flags": [
+    "extended-profile-only"
+   ],
    "notes": [],
    "declaredLicense": "MPL-2.0",
    "version": "4.46.0",
@@ -5551,7 +5564,8 @@
    "status": "recommended",
    "flags": [
     "PATENT-FLAG",
-    "LGPL-separate-wasm"
+    "LGPL-separate-wasm",
+    "extended-profile-only"
    ],
    "notes": [],
    "declaredLicense": "LGPL-3.0",
@@ -5729,7 +5743,9 @@
    ],
    "tier": "B",
    "status": "recommended",
-   "flags": [],
+   "flags": [
+    "extended-profile-only"
+   ],
    "notes": [],
    "declaredLicense": "MPL-2.0 (upstream states free for closed-source commercial use)",
    "lazy": true,
@@ -5902,13 +5918,15 @@
     "05"
    ],
    "roles": [
-    "MP4 muxer"
+    "MP4 muxer — used by STRICT profile (deprecated but MIT/functional)"
    ],
    "tier": "A",
-   "status": "not-needed",
-   "flags": [],
+   "status": "optional",
+   "flags": [
+    "strict-profile-video"
+   ],
    "notes": [
-    "reason: DEPRECATED -> mediabunny"
+    "risk: deprecated upstream; wrap behind an interface so mediabunny can replace it in Extended"
    ],
    "declaredLicense": "MIT",
    "version": "5.2.2",
@@ -5984,11 +6002,13 @@
     "05"
    ],
    "roles": [
-    "MP4 demux/mux JS (BSD)"
+    "MP4 demux (BSD-3) — STRICT-profile video path with WebCodecs"
    ],
    "tier": "A",
    "status": "optional",
-   "flags": [],
+   "flags": [
+    "strict-profile-video"
+   ],
    "notes": [],
    "declaredLicense": "BSD-3-Clause",
    "version": "2.4.1",
@@ -8260,7 +8280,7 @@
     "01"
    ],
    "roles": [
-    "TIFF enc/dec multi-page"
+    "TIFF enc/dec multi-page; RAW (DNG/CR2/NEF): previews + sensor data only, no RGBA develop (README)"
    ],
    "tier": "A",
    "status": "recommended",
@@ -8465,7 +8485,8 @@
    "status": "optional",
    "flags": [
     "needs-COOP-COEP",
-    "early-development"
+    "early-development",
+    "extended-profile-only"
    ],
    "notes": [],
    "declaredLicense": "MIT wrapper; libvips LGPL-3.0(+)",
@@ -8631,13 +8652,15 @@
     "05"
    ],
    "roles": [
-    "WebM muxer"
+    "WebM muxer — used by STRICT profile (deprecated but MIT/functional)"
    ],
    "tier": "A",
-   "status": "not-needed",
-   "flags": [],
+   "status": "optional",
+   "flags": [
+    "strict-profile-video"
+   ],
    "notes": [
-    "reason: DEPRECATED -> mediabunny"
+    "risk: deprecated upstream; wrap behind an interface so mediabunny can replace it in Extended"
    ],
    "declaredLicense": "MIT",
    "version": "5.1.4",

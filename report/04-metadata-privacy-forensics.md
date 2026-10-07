@@ -215,6 +215,7 @@ Stage 1: exact (`size` + `SHA-256`). Stage 2: **dHash 64-bit** on a 9×8 graysca
 
 ### B. Privacy
 6. **Privacy Scan → Clean & Share:** traffic-light report; per-item toggles; **Android share-target** ("Share → Clean → back to WhatsApp/Gmail"); setting "**Always strip location when sharing**".
+6a. **Privacy-Shield copy** *(from the parallel research)*: on drop, immediately show concrete findings — *"GPS location detected: <nearest city, country>"*, *"Device: <model>"*, *"Taken: <relative time>"* — then a single **Sanitise** button; keep an **"also re-encode (paranoid)"** toggle (drops everything incl. embedded thumbnails/maker notes at the cost of JPEG re-compression).
 7. **Global "Privacy defaults"** applied by every tool's exporter (strip GPS by default, keep date optional).
 8. **Redaction suite:** solid boxes / **irreversible** heavy-mosaic / blur with **"flatten & strip"**; warning that light blur/pixelation can be reversible; one-tap **hide QR/barcodes** (detected with the decoder in §07, not AI); manual only for faces/text (AI excluded).
 9. **KYC-safe sharing (India-relevant):** diagonal tiled watermark "For <Purpose> only · <Recipient> · <Date>" + masked-digit helper (user selects the digits) → export JPEG ≤ N KB (chains with `02`/`03` presets). *Idea — validate demand.*
