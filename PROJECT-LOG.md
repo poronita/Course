@@ -72,7 +72,19 @@ Image Swiss Knife is a free, ad-supported image toolkit, offered as a website an
   4. **Info bubbles:** each function gets a small (i) bubble whose detailed text loads with the page, so crawlers can read it. Build everything once for both web and Android.
   5. **Characters first:** design 8 mascot characters as one HTML motion-graphic file, choose one, then update the app mockup.
   6. **Keep a record of the chat.** That record is this file.
-- **Delivered so far:** this log and `design/character-lab.html` (8 mascot candidates).
+- **Delivered:** this log and `design/character-lab.html`, the Mascot Casting Room, with 8 interactive candidates:
+  1. Pip Prime: a red knife-handle body with a tool-flipping blade quiff.
+  2. Blink: a camera-lens cyclops whose shutter blades blink.
+  3. Snip: a crab with scissor claws.
+  4. Moxie: a cat whose tail is a multi-tool.
+  5. Hoot: an owl with lens eyes and blade ear tufts.
+  6. Dot: the app-icon squircle with a face and a steel corner, which morphs into tools.
+  7. Alpi: an alpine ibex with knife-blade horns and a red scarf.
+  8. Nib: a hedgehog with blade spines that spins as the loader.
+
+  Each candidate has 10 moods, follows the pointer, reacts to pokes, and is shown in recognition tests and a silhouette line-up.
+- **Published:** https://claude.ai/artifact/A8heE81CL3ugiLSfBp7F4Z
+- **Note:** a usage limit interrupted the first attempt. The drafts were kept, then reviewed and polished after the reset.
 - **Next:** the owner picks a character. Then update the Pip Pro mockup with the new mascot, the reward and badge system, and the SEO page structure.
 
 ## SEO plan (D9), first draft for the next round
