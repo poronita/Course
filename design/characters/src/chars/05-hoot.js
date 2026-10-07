@@ -4,11 +4,11 @@ CAST.register({
   concept: 'Hoot is a calm, clever owl who checks every pixel. Its eyes are two steel camera lenses. Its ear tufts are two folded blades. It feels like a good tool: quick, exact and quietly proud.',
   signature: 'Two steel lens-eyes with aperture pupils, and ear tufts shaped like folded blades. Its move: a fast full head swivel, a lens zoom with a glint, then a sharp "found it" point.',
   why: ['Two blades and two lenses read at any size.', 'Owls mean smart and watchful, which suits a careful tool.', 'The lens eyes act out every mood: they dilate, focus and zoom.'],
-  risks: ['Owl mascots are common, so the blades and lenses must stay bold.', 'The face has many parts, so the irises blur at tiny sizes.'],
+  risks: ['Owl mascots are common, so the blades and lenses must stay bold.', 'The face has many parts, so the irises blur at tiny sizes.', 'The blade tufts can read as horns in silhouette.'],
   voice: 'Found it. Your photo is sharp now.',
   scores: { memorable: 4, stylish: 4, expressive: 4, small: 4, fit: 5 },
   palette: ['#E5322B', '#2A2D34', '#C9CED6', '#F3E9DE', '#F2A93B'],
-  bg: '#3d2124', iconBg: '#24272d', icon: { viewBox: '76 14 248 248' },
+  bg: '#3d2124', iconBg: '#24272d', icon: { viewBox: '86 24 228 228' },
   build(g, A) {
     const { lerp, clamp, seg, ease } = A;
     const SM = A.small;
@@ -20,7 +20,7 @@ CAST.register({
     A.grad('steel', [[0, '#ffffff'], [0.3, '#a9b0ba'], [0.5, '#eef1f4'], [0.72, '#6f7782'], [1, '#d3d8de']], { x1: 0.15, y1: 0, x2: 0.85, y2: 1 });
     A.grad('lens', [[0, '#2b303a'], [0.7, '#0e1015'], [1, '#050608']], { radial: true, cx: 0.45, cy: 0.4, r: 0.6 });
     A.grad('iris', [[0, '#ffe7a0'], [0.4, '#f6b13c'], [0.85, '#d9661c'], [1, '#9c3a10']], { radial: true });
-    A.grad('lid', [[0, '#3d414a'], [1, '#22252b']]);
+    A.grad('lid', [[0, '#f0483e'], [0.6, '#c9241e'], [1, '#8a140f']]);
     A.grad('belly', [[0, '#fffbf5'], [0.6, '#f3e9de'], [1, '#d8c5b2']], { radial: true, cx: 0.45, cy: 0.28, r: 0.8 });
     A.grad('blade', [[0, '#7d848e'], [0.38, '#f4f6f8'], [0.55, '#c6ccd3'], [1, '#6c737d']], { x1: 0, y1: 0, x2: 1, y2: 0.15 });
     A.grad('gold', [[0, '#fff2b8'], [0.45, '#f6bb42'], [1, '#b06c14']], { radial: true, cx: 0.38, cy: 0.3, r: 0.8 });
@@ -34,10 +34,12 @@ CAST.register({
     const star = (r) => `M0 ${-r}Q${r * 0.14} ${-r * 0.14} ${r} 0Q${r * 0.14} ${r * 0.14} 0 ${r}Q${-r * 0.14} ${r * 0.14} ${-r} 0Q${-r * 0.14} ${-r * 0.14} 0 ${-r}Z`;
 
     /* ---------- layers ---------- */
-    const shadow = A.el('ellipse', { cx: 200, cy: 346, rx: 86, ry: 11, fill: '#000', opacity: 0.32 }, g);
-    const arcs = A.el('g', { opacity: 0 }, g);       // speed blur behind
-    const root = A.el('g', {}, g);
-    const fx = A.el('g', {}, g);
+    /* world: one static scale about the feet so jumps and tufts keep headroom */
+    const world = A.el('g', { transform: 'translate(200 344) scale(0.9) translate(-200 -344)' }, g);
+    const shadow = A.el('ellipse', { cx: 200, cy: 346, rx: 86, ry: 11, fill: '#000', opacity: 0.32 }, world);
+    const arcs = A.el('g', { opacity: 0 }, world);       // speed blur behind
+    const root = A.el('g', {}, world);
+    const fx = A.el('g', {}, world);
 
     /* feet */
     const feet = A.el('g', {}, root);
@@ -59,6 +61,8 @@ CAST.register({
     A.el('rect', { x: 100, y: 200, width: 200, height: 46, fill: A.url('occl') }, bodyIn);
     A.el('path', { d: BODY, fill: 'none', stroke: A.url('rim'), 'stroke-width': 4 }, body);
 
+    /* wings behind the head (raised) and in front of it (across the body or face) */
+    const wingBack = A.el('g', {}, root);
     /* head */
     const head = A.el('g', {}, root);
     const tufts = A.el('g', {}, head);
@@ -72,6 +76,9 @@ CAST.register({
     };
     const tuftL = mkTuft(), tuftR = mkTuft();
     const HEAD = 'M200 66C270 66 306 106 306 156C306 206 264 234 200 234C136 234 94 206 94 156C94 106 130 66 200 66Z';
+    /* cheek ruffs: two swept feather points each side, the owl read in silhouette */
+    const RUFF = 'M110 158C102 176 94 190 80 202C94 204 102 200 108 197C102 210 96 218 88 228C106 228 122 218 134 202Z';
+    for (const mir of [false, true]) A.el('path', { d: RUFF, fill: A.url('redB'), stroke: '#7d1310', 'stroke-width': 1.2, 'stroke-linejoin': 'round', transform: mir ? 'translate(400 0) scale(-1 1)' : '' }, head);
     A.el('path', { d: HEAD, fill: A.url('red') }, head);
     if (!SM) A.el('path', { d: 'M150 84Q200 70 250 84', fill: 'none', stroke: '#ffffff', 'stroke-width': 5, 'stroke-linecap': 'round', opacity: 0.18 }, head);
     A.el('path', { d: HEAD, fill: 'none', stroke: A.url('rim'), 'stroke-width': 4 }, head);
@@ -107,6 +114,7 @@ CAST.register({
       if (!SM) A.el('path', { d: `M${cx - 30} ${cy + 8}A31 31 0 0 0 ${cx + 6} ${cy + 30}`, fill: 'none', stroke: '#9fd0ff', 'stroke-width': 2, opacity: 0.25, 'stroke-linecap': 'round' }, inner);
       E.lidB = A.el('path', { fill: A.url('lid'), stroke: '#f3e9de', 'stroke-width': 2.4 }, inner);
       E.lidT = A.el('path', { fill: A.url('lid'), stroke: '#f3e9de', 'stroke-width': 2.4 }, inner);
+      if (!SM) A.el('path', { d: `M${cx - 27} ${cy - 12}A29 29 0 0 1 ${cx + 12} ${cy - 27}A33 33 0 0 0 ${cx - 27} ${cy - 12}Z`, fill: '#ffffff', opacity: 0.22 }, inner);
       E.shim = A.el('circle', { cx, cy, r: 41, fill: 'none', stroke: '#ffffff', 'stroke-width': 3.2, 'stroke-dasharray': '26 232', 'stroke-linecap': 'round', opacity: 0 }, E.g);
       E.flash = A.el('path', { d: star(16), fill: '#fff', opacity: 0 }, E.g);
       return E;
@@ -114,8 +122,9 @@ CAST.register({
     const eL = eye(158, 158), eR = eye(242, 158);
     /* beak */
     const beakG = A.el('g', {}, face);
-    const mouth = A.el('ellipse', { cx: 200, cy: 206, rx: 7, ry: 0, fill: '#3a0d08' }, beakG);
-    const beakLo = A.el('path', { d: 'M193 204Q200 216 207 204Q203 210 200 211Q197 210 193 204Z', fill: '#c47d18' }, beakG);
+    const mouth = A.el('ellipse', { cx: 200, cy: 210, rx: 9, ry: 0, fill: '#3a0d08' }, beakG);
+    const tongue = A.el('ellipse', { cx: 200, cy: 214, rx: 5.5, ry: 0, fill: '#e8636b' }, beakG);
+    const beakLo = A.el('path', { d: 'M191 202Q200 228 209 202Q205 213 200 216Q195 213 191 202Z', fill: '#d58a1f', stroke: '#8a4c0c', 'stroke-width': 1 }, beakG);
     A.el('path', { d: 'M188 186Q200 178 212 186Q210 202 200 218Q190 202 188 186Z', fill: A.url('beak'), stroke: '#8a4c0c', 'stroke-width': 1.2 }, beakG);
     A.el('path', { d: 'M193 187Q200 183 206 187', fill: 'none', stroke: '#fff', 'stroke-width': 1.8, opacity: 0.6, 'stroke-linecap': 'round' }, beakG);
     /* brows */
@@ -124,9 +133,10 @@ CAST.register({
     const browR = A.el('path', { d: BROW, fill: '#f3e9de' }, face);
 
     /* wings */
+    const wingFront = A.el('g', {}, root);
     const WING = 'M116 208C94 218 82 252 86 288C88 306 96 320 106 330L110 316L117 327L120 312L126 318C136 290 138 244 116 208Z';
     const mkWing = (mir) => {
-      const w = A.el('g', {}, root);
+      const w = A.el('g', {}, wingBack);
       const inner = A.el('g', mir ? { transform: 'translate(400 0) scale(-1 1)' } : {}, w);
       A.el('path', { d: WING, fill: A.url('wing'), stroke: '#121316', 'stroke-width': 1.2 }, inner);
       A.el('path', { d: 'M112 230C100 254 98 282 104 306M121 236C115 262 114 290 116 310', fill: 'none', stroke: '#8a919c', 'stroke-width': 1.4, opacity: 0.45 }, inner);
@@ -146,13 +156,26 @@ CAST.register({
     const mcid = A.id('medal'); const mcp = A.el('clipPath', { id: mcid }, A.defs); A.el('circle', { cx: 0, cy: 66, r: 32 }, mcp);
     const shineG = A.el('g', { 'clip-path': `url(#${mcid})` }, medal);
     const shine = A.el('rect', { x: -10, y: 20, width: 14, height: 100, fill: '#fff', opacity: 0.75 }, shineG);
-    const medalTip = A.el('ellipse', { cx: 0, cy: -2, rx: 9, ry: 7, fill: '#2a2d34' }, medal); // wing tip grip
+    A.el('path', { d: 'M-7 -6L7 -6L5 4L-5 4Z', fill: '#8f1511' }, medal); // ribbon knot under the wing tip
 
     /* fx: speed arcs */
     for (const [r, a0, a1, w] of [[122, -150, -40, 6], [134, -130, -60, 4], [112, 200, 300, 4]]) {
       const p0 = [200 + r * Math.cos(a0 * Math.PI / 180), 150 + r * Math.sin(a0 * Math.PI / 180)], p1 = [200 + r * Math.cos(a1 * Math.PI / 180), 150 + r * Math.sin(a1 * Math.PI / 180)];
       A.el('path', { d: `M${p0[0]} ${p0[1]}A${r} ${r} 0 0 1 ${p1[0]} ${p1[1]}`, fill: 'none', stroke: '#ffe9e2', 'stroke-width': w, 'stroke-linecap': 'round', opacity: 0.55 }, arcs);
     }
+    /* working: a photo card held in both wings, scanned by the lenses */
+    const card = A.el('g', {}, fx);
+    const beams = A.el('g', {}, card);
+    A.grad('beam', [[0, '#ffe2a0', 0.05], [1, '#ffd88a', 0.5]]);
+    const beamL = A.el('path', { fill: A.url('beam') }, beams), beamR = A.el('path', { fill: A.url('beam') }, beams);
+    A.el('rect', { x: -44, y: -32, width: 88, height: 64, rx: 7, fill: '#f6f1ea', stroke: '#2a2d34', 'stroke-width': 2.4 }, card);
+    A.el('rect', { x: -37, y: -25, width: 74, height: 50, rx: 3, fill: '#3b5b7a' }, card);
+    A.el('circle', { cx: 18, cy: -10, r: 7, fill: '#f6bb42' }, card);
+    A.el('path', { d: 'M-37 25L-14 -4L2 14L12 4L37 25Z', fill: '#26384b' }, card);
+    const ccid = A.id('card'); const ccp = A.el('clipPath', { id: ccid }, A.defs); A.el('rect', { x: -37, y: -25, width: 74, height: 50, rx: 3 }, ccp);
+    const scanG = A.el('g', { 'clip-path': `url(#${ccid})` }, card);
+    const scanDone = A.el('rect', { x: -37, y: -25, width: 74, height: 0, fill: '#ffe6a6', opacity: 0.22 }, scanG);
+    const scanLine = A.el('rect', { x: -40, y: -1.5, width: 80, height: 3, fill: '#ffe6a6' }, scanG);
     /* location pin */
     const pin = A.el('g', {}, fx);
     const ping = [0, 1].map(() => A.el('ellipse', { cx: 0, cy: 0, rx: 10, ry: 3.5, fill: 'none', stroke: '#f6bb42', 'stroke-width': 2 }, pin));
@@ -162,9 +185,10 @@ CAST.register({
     /* sparkles */
     const sparks = [[0, 0], [0, 0], [0, 0], [0, 0]].map(() => A.el('path', { d: star(9), fill: '#fff4cf' }, fx));
     /* confetti */
+    const confG = A.el('g', {}, world); world.insertBefore(confG, root);
     const cr = A.rng(55), conf = [];
     const cc = ['#e5322b', '#f6bb42', '#d3d8de', '#f3e9de', '#ff7262'];
-    if (true) for (let i = 0; i < (SM ? 8 : 22); i++) conf.push({ el: A.el('rect', { x: -4, y: -2.2, width: 8, height: 4.4, rx: 1, fill: cc[i % 5] }, fx), vx: (cr() - 0.5) * 300, vy: -(200 + cr() * 170), sp: (cr() - 0.5) * 1400, off: cr() * 1.4 });
+    if (true) for (let i = 0; i < (SM ? 8 : 22); i++) conf.push({ el: A.el('rect', { x: -5, y: -2.6, width: 10, height: 5.2, rx: 1.2, fill: cc[i % 5] }, confG), vx: (cr() < 0.5 ? -1 : 1) * (70 + cr() * 150), vy: -(200 + cr() * 170), sp: (cr() - 0.5) * 1400, off: cr() * 1.4 });
     /* zzz */
     const zs = [0, 1, 2].map(() => A.el('text', { x: 0, y: 0, 'font-family': 'system-ui, sans-serif', 'font-weight': 900, 'font-size': 22, fill: '#f3e9de', text: 'z' }, fx));
     /* thought dots */
@@ -172,10 +196,13 @@ CAST.register({
     /* dizzy / grumble stars */
     const dstars = [0, 1, 2].map(() => A.el('path', { d: star(8), fill: '#f6bb42' }, fx));
     /* loose feathers on poke */
-    const feathers = [0, 1, 2].map(i => A.el('path', { d: 'M0 -9Q6 -2 0 9Q-6 -2 0 -9Z', fill: i === 1 ? '#2a2d34' : '#e5322b' }, fx));
+    const feathers = [0, 1, 2].map(i => { const f = A.el('g', {}, fx); A.el('path', { d: 'M0 -11Q7 -3 1 10Q-6 -1 0 -11Z', fill: ['#f3e9de', '#4a4f59', '#ff7a6a'][i], stroke: '#000', 'stroke-opacity': 0.25, 'stroke-width': 0.8 }, f); A.el('path', { d: 'M0 -9Q1 0 1 13', fill: 'none', stroke: '#000', 'stroke-opacity': 0.35, 'stroke-width': 1 }, f); return f; });
+    /* startle burst on poke */
+    const burst = A.el('g', { stroke: '#ffe9e2', 'stroke-width': 5, 'stroke-linecap': 'round', fill: 'none' }, fx);
+    const burstL = [-150, -125, -100, -80, -55, -30].map(a => A.el('line', { x1: 0, y1: 0, x2: 0, y2: 0, 'data-a': a }, burst));
 
     /* ---------- mood parameters ---------- */
-    const D = { lTL: 0.1, lTR: 0.1, lBL: 0.04, lBR: 0.04, bAL: 7, bAR: 7, bYL: 0, bYR: 0, pup: 1, lzL: 1, lzR: 1, tfL: 0, tfR: 0, beak: 0, wL: 4, wR: 4, tilt: 0, hx: 0, hy: 0, y: 0, sx: 1, sy: 1, gx: 0, gy: 0, gw: 1, spin: 0, shim: 0, knurl: 0 };
+    const D = { lTL: 0.16, lTR: 0.16, lBL: 0.05, lBR: 0.05, bAL: -2, bAR: -2, bYL: 0, bYR: 0, pup: 1, lzL: 1, lzR: 1, tfL: 0, tfR: 0, beak: 0, wL: 4, wR: 4, tilt: 0, hx: 0, hy: 0, y: 0, sx: 1, sy: 1, gx: 0, gy: 0, gw: 1, spin: 0, shim: 0, knurl: 0 };
     const SIG = 3.9;
     function params(m, mt, t) {
       const p = Object.assign({}, D);
@@ -184,7 +211,7 @@ CAST.register({
         p.tilt = fid * 7; p.tfR = fid * 0.7 + A.wobble(f - 4.8, 18, 5) * 0.3 * (f > 4.8 ? 1 : 0); p.bAR = 7 - fid * 12; p.bYR = -fid * 4;
       } else if (m === 'happy') {
         const b = Math.abs(Math.sin(mt * 5.2));
-        Object.assign(p, { lTL: 0.02, lTR: 0.02, lBL: 0.5, lBR: 0.5, bAL: -10, bAR: -10, bYL: -5, bYR: -5, pup: 1.18, tfL: 0.45 + Math.sin(mt * 10.4) * 0.15, tfR: 0.45 - Math.sin(mt * 10.4) * 0.15, beak: 0.3, wL: 22 + b * 16, wR: 22 + b * 16, y: -b * 13, sy: 1 + (b - 0.5) * 0.04, sx: 1 - (b - 0.5) * 0.03, tilt: Math.sin(mt * 2.6) * 4 });
+        Object.assign(p, { lTL: 0.02, lTR: 0.02, lBL: 0.56, lBR: 0.56, bAL: -12, bAR: -12, bYL: -6, bYR: -6, pup: 1.18, tfL: 0.45 + Math.sin(mt * 10.4) * 0.15, tfR: 0.45 - Math.sin(mt * 10.4) * 0.15, beak: 0.55 + 0.15 * Math.sin(mt * 10.4), wL: 22 + b * 16, wR: 22 + b * 16, y: -b * 13, sy: 1 + (b - 0.5) * 0.04, sx: 1 - (b - 0.5) * 0.03, tilt: Math.sin(mt * 2.6) * 4 });
       } else if (m === 'wink') {
         const k = ease.outBack(seg(mt, 0, 0.3));
         Object.assign(p, { lTL: lerp(0.1, 1, k), lBL: 0.25, lTR: 0.04, lBR: 0.32, bAL: 12, bYL: 5, bAR: -16, bYR: -9, tilt: 7 * k, tfL: -0.45 * k, tfR: 0.6 * k, beak: 0.15, pup: 1.12, gx: 0.15, gw: 0.5, wR: 4 + 26 * k, hx: 3 });
@@ -193,19 +220,19 @@ CAST.register({
         Object.assign(p, { lTL: 0, lTR: 0, lBL: 0, lBR: 0, bAL: -18, bAR: -18, bYL: -13, bYR: -13, pup: 0.5, lzL: 1.12, lzR: 1.12, tfL: 1 + w * 0.4, tfR: 1 + w * 0.4, beak: 0.75, wL: 44 + w * 10, wR: 44 + w * 10, y: -16 * hop, hy: -4 * hop, sy: 1 + 0.07 * hop - 0.05 * Math.max(0, w), sx: 1 - 0.05 * hop, gw: 0.2 });
       } else if (m === 'thinking') {
         const k = ease.out(seg(mt, 0, 0.5)), tap = Math.max(0, Math.sin(mt * 7)) * seg(mt, 0.6, 0.8);
-        Object.assign(p, { gx: 0.75, gy: -0.85, gw: 0.15, lTL: 0.22, lTR: 0.22, bAL: -12, bYL: -9, bAR: 12, bYR: 2, tilt: 6 * k, tfL: -0.15, tfR: 0.75, wL: lerp(4, -100, k) + tap * 6, pup: 1.05, hx: 2 });
+        Object.assign(p, { gx: 0.75, gy: -0.85, gw: 0.15, lTL: 0.22, lTR: 0.22, bAL: -12, bYL: -9, bAR: 12, bYR: 2, tilt: 6 * k, tfL: -0.15, tfR: 0.75, wL: lerp(4, -82, k) + tap * 6, pup: 1.05, hx: 2 });
       } else if (m === 'working') {
-        const sc = Math.sin(mt * 2.4), foc = 0.5 + 0.5 * Math.cos(mt * 4.8);
-        Object.assign(p, { gx: sc * 0.95, gy: 0.12, gw: 0.15, lTL: 0.3, lTR: 0.3, lBL: 0.12, lBR: 0.12, bAL: 13, bAR: 13, bYL: 3, bYR: 3, pup: 0.7 + 0.35 * foc, lzL: 1 + 0.04 * foc, lzR: 1 + 0.04 * foc, hx: sc * 6, tilt: sc * 3, tfL: 0.35 + Math.max(0, Math.sin(mt * 9)) * 0.15, tfR: 0.35, shim: 1, knurl: mt * 90, wL: 10, wR: 10 });
+        const sc = Math.sin(mt * 1.2), scan = 0.5 - 0.5 * Math.cos(mt * 2.4), foc = 0.5 + 0.5 * Math.cos(mt * 4.8);
+        Object.assign(p, { gx: sc * 0.3, gy: lerp(0.45, 1, scan), gw: 0.15, lTL: 0.3, lTR: 0.3, lBL: 0.12, lBR: 0.12, bAL: 13, bAR: 13, bYL: 3, bYR: 3, pup: 0.7 + 0.35 * foc, lzL: 1 + 0.04 * foc, lzR: 1 + 0.04 * foc, hx: sc * 3, hy: 2 + scan * 4, tilt: sc * 2, tfL: 0.35 + Math.max(0, Math.sin(mt * 9)) * 0.15, tfR: 0.35, shim: 1, knurl: mt * 90, wL: -42 + Math.sin(mt * 2.4) * 2, wR: -42 - Math.sin(mt * 2.4) * 2 });
       } else if (m === 'celebrate') {
         const ph = (mt % 1.0) / 1.0, air = Math.sin(ph * Math.PI), land = A.wobble(ph < 0.5 ? 9 : ph - 0.0, 14, 7);
-        Object.assign(p, { lTL: 0.02, lTR: 0.02, lBL: 0.5, lBR: 0.5, bAL: -12, bAR: -12, bYL: -7, bYR: -7, pup: 1.2, beak: 0.85, tfL: 1 - air * 0.5, tfR: 1 - air * 0.5, wL: 130 + Math.sin(mt * 18) * 14, wR: 130 + Math.sin(mt * 18) * 14, y: -48 * air, sy: 1 + 0.08 * air - (ph < 0.12 ? 0.07 * (1 - ph / 0.12) : 0), sx: 1 - 0.05 * air + (ph < 0.12 ? 0.05 * (1 - ph / 0.12) : 0), hy: -3 * air });
+        Object.assign(p, { lTL: 0.02, lTR: 0.02, lBL: 0.5, lBR: 0.5, bAL: -12, bAR: -12, bYL: -7, bYR: -7, pup: 1.2, beak: 0.85, tfL: 1 - air * 0.5, tfR: 1 - air * 0.5, wL: 130 + Math.sin(mt * 18) * 14, wR: 130 + Math.sin(mt * 18) * 14, y: -24 * air, sy: 1 + 0.04 * air - (ph < 0.12 ? 0.07 * (1 - ph / 0.12) : 0), sx: 1 - 0.05 * air + (ph < 0.12 ? 0.05 * (1 - ph / 0.12) : 0), hy: -3 * air });
       } else if (m === 'sleepy') {
         const sw = Math.sin(t * 0.9), nod = Math.max(0, Math.sin(t * 0.9 - 1));
         Object.assign(p, { lTL: 0.74 + nod * 0.2, lTR: 0.78 + nod * 0.2, lBL: 0.12, lBR: 0.12, bAL: -8, bAR: -8, bYL: 5, bYR: 5, pup: 1.25, tfL: -0.95, tfR: -0.85, tilt: sw * 8, hy: nod * 5, gw: 0.1, gy: 0.3, beak: Math.max(0, Math.sin(t * 0.45)) * 0.35, sx: 1 + Math.sin(t * 1.4) * 0.012, sy: 1 - Math.sin(t * 1.4) * 0.012, wL: -4, wR: -4 });
       } else if (m === 'levelup') {
         const k = ease.outBack(seg(mt, 0, 0.55));
-        Object.assign(p, { lTL: 0.03, lTR: 0.03, lBL: 0.38, lBR: 0.38, bAL: -6, bAR: -10, bYL: -3, bYR: -6, pup: 1.15, tfL: 0.9, tfR: 0.9, beak: 0.3, wR: lerp(4, 152, k), wL: 18, tilt: -4 * k, gx: 0.5, gy: -0.15, gw: 0.3, sx: 1 + 0.03 * k, sy: 1 + 0.02 * k, y: -6 * k });
+        Object.assign(p, { lTL: 0.03, lTR: 0.03, lBL: 0.38, lBR: 0.38, bAL: -6, bAR: -10, bYL: -3, bYR: -6, pup: 1.15, tfL: 0.9, tfR: 0.9, beak: 0.3, wR: lerp(4, 138, k), wL: 18, tilt: -4 * k, gx: 0.5, gy: -0.15, gw: 0.3, sx: 1 + 0.03 * k, sy: 1 + 0.02 * k, y: -6 * k });
       } else if (m === 'signature') {
         const T = mt % SIG;
         const ant = seg(T, 0, 0.18) * (1 - seg(T, 0.18, 0.3));
@@ -234,8 +261,8 @@ CAST.register({
       const eb = Math.min(eb0, e + 1000), kb = kB;
       A.attr(E.lidT, { d: `M${cx - 46} ${cy - 52}L${cx + 46} ${cy - 52}L${cx + 46} ${e.toFixed(1)}Q${cx} ${(e + 2 * kT).toFixed(1)} ${cx - 46} ${e.toFixed(1)}Z` });
       // when the top lid closes, tuck the lower lid under it so one clean lash line shows
-      const ebt = top > 0.85 ? Math.max(eb, e + 2 * kT * 0.5 + 6) : eb;
-      A.attr(E.lidB, { d: `M${cx - 46} ${cy + 52}L${cx + 46} ${cy + 52}L${cx + 46} ${ebt.toFixed(1)}Q${cx} ${(ebt - 2 * kb).toFixed(1)} ${cx - 46} ${ebt.toFixed(1)}Z` });
+      const c = seg(top, 0.72, 0.98), ebt = lerp(eb, Math.min(eb, e + 0.5), c), kbe = lerp(kb, -kT, c);
+      A.attr(E.lidB, { d: `M${cx - 46} ${cy + 52}L${cx + 46} ${cy + 52}L${cx + 46} ${ebt.toFixed(1)}Q${cx} ${(ebt - 2 * kbe).toFixed(1)} ${cx - 46} ${ebt.toFixed(1)}Z` });
     };
 
     return {
@@ -305,7 +332,7 @@ CAST.register({
           A.attr(E.glint, { transform: `translate(${(ox * 0.2).toFixed(2)} ${(oy * 0.2).toFixed(2)})` });
           A.attr(E.pupil, { d: hex(E.cx, E.cy, 11 * clamp(P.pup, 0.35, 1.5), 30 + P.pup * 40 + (P.knurl * 0.2)) });
           const top = clamp(Math.max(lt, blink)), bot = clamp(lb);
-          lidPaths(E, top, bot, top > 0.85 ? 7 : 5 + 4 * top, 9 + 4 * bot);
+          lidPaths(E, top, bot, top > 0.85 ? 7 : 5 + 4 * top, 9 + 22 * bot);
           A.tf(E.knurl, 0, 0, P.knurl * side, 1, 1, E.cx, E.cy);
           A.op(E.shim, P.shim * (0.55 + 0.35 * Math.sin(s.t * 6 + i)));
           A.tf(E.shim, 0, 0, s.t * 260 * side + i * 90, 1, 1, E.cx, E.cy);
@@ -318,13 +345,17 @@ CAST.register({
         const sigW = mw(s, 'signature');
         const T = s.mt % SIG;
         const fl = s.mood === 'signature' ? Math.sin(seg(T, 1.1, 1.45) * Math.PI) : 0;
-        [eL, eR].forEach((E, i) => { A.op(E.flash, fl); A.tf(E.flash, E.cx + 26, E.cy - 26, T * 200 + i * 40, 0.4 + fl, 0.4 + fl, 0, 0); });
+        [eL, eR].forEach((E, i) => { A.op(E.flash, fl); A.tf(E.flash, E.cx + 26, E.cy - 26, T * 200 + i * 40, 0.3 + 0.7 * fl, 0.3 + 0.7 * fl, 0, 0); });
         /* beak */
-        A.attr(mouth, { ry: (P.beak * 9).toFixed(2), cy: 206 + P.beak * 3 });
-        A.attr(beakLo, { transform: `translate(0 ${(P.beak * 10).toFixed(2)})` });
+        const bk = clamp(P.beak, 0, 1.2);
+        A.attr(mouth, { ry: bk * 10, cy: 211 + bk * 8, rx: 8 + bk * 2 });
+        A.attr(tongue, { ry: bk * 4, cy: 213 + bk * 13 });
+        A.attr(beakLo, { transform: `translate(0 ${(bk * 15).toFixed(2)})` });
 
         /* wings: positive = raised outward */
         const flapL = wb * 10 * (st > 0.01 ? 1 : 0), flapR = -flapL;
+        const layer = (w, a) => { const par = a < -35 ? wingFront : wingBack; if (w.parentNode !== par) par.appendChild(w); };
+        layer(wingL, P.wL); layer(wingR, P.wR);
         A.tf(wingL, 0, 0, P.wL + flapL + L.breathe * 1.5, 1, 1, 116, 214);
         A.tf(wingR, 0, 0, -(P.wR + flapR + L.breathe * 1.5), 1, 1, 284, 214);
 
@@ -335,7 +366,7 @@ CAST.register({
           const th = -(P.wR) * Math.PI / 180, vx = 10, vy = 110;
           const tx = 284 + vx * Math.cos(th) - vy * Math.sin(th), ty = 214 + vx * Math.sin(th) + vy * Math.cos(th);
           const swing = (s.mood === 'levelup' ? A.wobble(s.mt - 0.35, 6, 1.8) * 22 : 0) + Math.sin(s.t * 2.2) * 3;
-          A.tf(medal, tx, ty, swing, lvW, lvW, 0, 0);
+          A.tf(medal, tx, ty, swing, lvW * 1.15, lvW * 1.15, 0, 0);
           const sw = (s.mt % 1.8) / 1.8;
           A.attr(shine, { transform: `translate(${lerp(-60, 60, ease.inOut(clamp(sw * 1.6)))} 0) rotate(25 0 66)` });
         }
@@ -351,10 +382,24 @@ CAST.register({
         conf.forEach(c => {
           if (celW < 0.02) { A.op(c.el, 0); return; }
           const tt = (s.mt + c.off) % 1.5;
-          const x = 200 + c.vx * tt, y = 130 + c.vy * tt + 320 * tt * tt;
+          const x = 200 + c.vx * 1.3 * tt, y = 110 + c.vy * tt + 320 * tt * tt;
           A.op(c.el, celW * (1 - seg(tt, 1.1, 1.5)));
           A.tf(c.el, x, y, c.sp * tt, 1, Math.cos(tt * 9 + c.off * 5), 0, 0);
         });
+        /* working card + scan */
+        const wkW = mw(s, 'working');
+        A.show(card, wkW > 0.02);
+        if (wkW > 0.02) {
+          const scan = s.mood === 'working' ? 0.5 - 0.5 * Math.cos(s.mt * 2.4) : 0;
+          const cx = 200, cy = 300 + P.y + Math.sin(s.t * 2.4) * 1.5;
+          A.tf(card, cx, cy, Math.sin(s.t * 1.2) * 2, wkW, wkW, 0, 0);
+          const sy = -25 + scan * 50;
+          A.attr(scanLine, { y: sy - 1.5 }); A.attr(scanDone, { height: scan * 50 });
+          const ey = 158 - cy;
+          A.attr(beamL, { d: `M${-50} ${ey + 30}L${-36} ${sy}L${8} ${sy}L${-34} ${ey + 32}Z` });
+          A.attr(beamR, { d: `M${50} ${ey + 30}L${36} ${sy}L${-8} ${sy}L${34} ${ey + 32}Z` });
+          A.op(beams, 0.6 + 0.4 * Math.sin(s.t * 12));
+        }
         /* location pin (signature found-it) */
         const pinS = s.mood === 'signature' ? ease.outBack(seg(T, 1.7, 2.0)) * (1 - seg(T, 3.3, 3.6)) * s.blend : 0;
         A.show(pin, pinS > 0.01);
@@ -380,6 +425,10 @@ CAST.register({
           A.op(e, shy * (0.6 + 0.4 * Math.sin(s.t * 8 + i)));
           A.tf(e, 200 + Math.cos(a) * 92, 46 + Math.sin(a) * 14 + P.y, s.t * 200, 0.9, 0.9, 0, 0);
         });
+        /* startle burst */
+        const bq = pk < 0.45 ? pk / 0.45 : 1;
+        A.op(burst, bq < 1 ? (1 - bq) * clamp(pk * 40) : 0);
+        if (bq < 1) burstL.forEach((l, i) => { const a = (+l.getAttribute('data-a')) * Math.PI / 180, r0 = 128 + ease.out(bq) * 26, r1 = r0 + 18 * (1 - bq) + 4; A.attr(l, { x1: 200 + Math.cos(a) * r0, y1: 168 + Math.sin(a) * r0 + P.y, x2: 200 + Math.cos(a) * r1, y2: 168 + Math.sin(a) * r1 + P.y }); });
         /* loose feathers after a poke */
         feathers.forEach((f, i) => {
           const q = pk < 1.4 ? pk / 1.4 : 1;
