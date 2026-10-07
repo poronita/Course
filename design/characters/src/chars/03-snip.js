@@ -9,7 +9,7 @@ CAST.register({
   voice: 'Snip snip. Your crop is ready.',
   scores: { memorable: 4, stylish: 4, expressive: 4, small: 4, fit: 5 },
   palette: ['#E5322B', '#8E1610', '#D7DEE6', '#2B3038', '#F5C542'],
-  bg: '#2a3a46', iconBg: '#fdeee6', icon: { viewBox: '36 60 328 328' },
+  bg: '#2a3a46', iconBg: '#fdeee6', icon: { viewBox: '38 60 324 324' },
 
   build(g, A) {
     const S = A.small, L = A.lerp, C = A.clamp, E = A.ease, seg = A.seg;
@@ -47,49 +47,75 @@ CAST.register({
     const rays = A.el('g', {}, glowG);
     for (let i = 0; i < 12; i++) A.el('path', { d: 'M -5 -40 L 0 -130 L 5 -40 Z', fill: '#ffe08a', opacity: 0.35, transform: `rotate(${i * 30})` }, rays);
 
-    /* legs */
+    /* legs: tapered gunmetal segments, drawn as filled quads every frame */
+    A.grad('leg', [[0, '#5d6672'], [0.5, '#323943'], [1, '#191c22']], { x1: 0, y1: 0, x2: 0, y2: 1 });
+    A.grad('limb', [[0, '#ff6a55'], [0.5, '#e0291e'], [1, '#9c150e']]);
+    A.grad('belly', [[0, '#4a525d'], [0.6, '#2a2f37'], [1, '#15181d']]);
+    A.grad('palm', [[0, '#ff8a72'], [0.35, '#f03a2c'], [0.75, '#c11f16'], [1, '#7c0e09']], { radial: true, cx: 0.36, cy: 0.3, r: 0.8 });
+    A.grad('iris', [[0, '#5b6f86'], [0.55, '#2b3747'], [1, '#0e1218']], { radial: true, cx: 0.45, cy: 0.62, r: 0.6 });
+    A.grad('spec', [[0, '#ffffff', 0.85], [1, '#ffffff', 0]], { radial: true });
     const legsG = A.el('g', {}, root);
-    const HIPS = [[156, 292], [138, 288], [121, 280]];
-    const FEET = [[140, 342], [112, 340], [88, 334]];
+    const HIPS = [[166, 296], [144, 292], [124, 284]];
+    const KNEES = [[132, 302], [100, 294], [72, 280]];
+    const FEET = [[128, 344], [94, 342], [62, 336]];
     const legs = [];
     for (const side of [-1, 1]) for (let i = 0; i < 3; i++) {
-      const p = A.el('path', { fill: 'none', stroke: '#252a31', 'stroke-width': 8 - i * 0.7, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, legsG);
-      const h = S ? null : A.el('path', { fill: 'none', stroke: '#626b77', 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: 0.7, transform: 'translate(-1 -1.6)' }, legsG);
-      legs.push({ p, h, side, i });
+      const sh = A.el('path', { fill: A.url('leg'), stroke: '#121418', 'stroke-width': 1.8, 'stroke-linejoin': 'round' }, legsG);
+      const th = A.el('path', { fill: A.url('leg'), stroke: '#121418', 'stroke-width': 1.8, 'stroke-linejoin': 'round' }, legsG);
+      const hl = S ? null : A.el('path', { fill: 'none', stroke: '#8d97a3', 'stroke-width': 1.6, 'stroke-linecap': 'round', opacity: 0.75 }, legsG);
+      const kn = A.el('circle', { r: 5, fill: A.url('screw'), stroke: '#121418', 'stroke-width': 1.4 }, legsG);
+      legs.push({ sh, th, hl, kn, side, i });
     }
+    const quad = (ax, ay, bx, by, w0, w1) => {
+      const dx = bx - ax, dy = by - ay, l = Math.hypot(dx, dy) || 1, nx = -dy / l, ny = dx / l;
+      const f = v => v.toFixed(1);
+      return `M${f(ax + nx * w0)} ${f(ay + ny * w0)} L${f(bx + nx * w1)} ${f(by + ny * w1)} L${f(bx - nx * w1)} ${f(by - ny * w1)} L${f(ax - nx * w0)} ${f(ay - ny * w0)} Z`;
+    };
 
-    /* arms (behind shell) */
+    /* arms: red tubes with a dark outline (behind the shell) */
     const arms = [0, 1].map(() => ({
-      a: A.el('path', { fill: 'none', stroke: '#252a31', 'stroke-width': 13, 'stroke-linecap': 'round' }, root),
-      h: S ? null : A.el('path', { fill: 'none', stroke: '#646d79', 'stroke-width': 3, 'stroke-linecap': 'round', opacity: 0.75, transform: 'translate(-1.5 -2.5)' }, root),
+      o: A.el('path', { fill: 'none', stroke: '#330705', 'stroke-width': 16, 'stroke-linecap': 'round' }, root),
+      a: A.el('path', { fill: 'none', stroke: '#d8281d', 'stroke-width': 11, 'stroke-linecap': 'round' }, root),
+      h: S ? null : A.el('path', { fill: 'none', stroke: '#ff9a86', 'stroke-width': 2.6, 'stroke-linecap': 'round', opacity: 0.8, transform: 'translate(-1.5 -2.5)' }, root),
     }));
 
-    /* eye stalks */
+    /* eye stalks: red tubes */
     const stalks = [0, 1].map(() => ({
-      a: A.el('path', { fill: 'none', stroke: '#252a31', 'stroke-width': 9, 'stroke-linecap': 'round' }, root),
-      h: S ? null : A.el('path', { fill: 'none', stroke: '#6a7380', 'stroke-width': 2.4, 'stroke-linecap': 'round', opacity: 0.8, transform: 'translate(-2 0)' }, root),
+      o: A.el('path', { fill: 'none', stroke: '#330705', 'stroke-width': 11, 'stroke-linecap': 'round' }, root),
+      a: A.el('path', { fill: 'none', stroke: '#d8281d', 'stroke-width': 6.5, 'stroke-linecap': 'round' }, root),
+      h: S ? null : A.el('path', { fill: 'none', stroke: '#ff9f8c', 'stroke-width': 1.8, 'stroke-linecap': 'round', opacity: 0.85, transform: 'translate(-1.6 0)' }, root),
     }));
 
-    /* shell: a pocket-knife handle */
+    /* shell: a domed carapace cut like a pocket-knife scale, on a gunmetal under-lip */
     const shellG = A.el('g', {}, root);
-    const SHELL = 'M 122 207 C 160 198 240 198 278 207 C 300 212 309 231 309 254 C 309 280 296 299 274 299 L 126 299 C 104 299 91 280 91 254 C 91 231 100 212 122 207 Z';
+    const SHELL = 'M 200 194 C 252 194 293 203 313 224 C 320 232 318 246 309 258 C 293 283 256 302 200 302 C 144 302 107 283 91 258 C 82 246 80 232 87 224 C 107 203 148 194 200 194 Z';
+    A.el('path', { d: SHELL, fill: A.url('belly'), stroke: '#121418', 'stroke-width': 2.4, transform: 'translate(200 304) scale(0.9 1) translate(-200 -295)' }, shellG);
+    if (!S) A.el('path', { d: 'M 146 304 C 170 310 230 310 254 304', fill: 'none', stroke: '#8d97a3', 'stroke-width': 1.6, 'stroke-linecap': 'round', opacity: 0.55 }, shellG);
     const scId = A.id('shellclip');
     A.el('path', { d: SHELL }, A.el('clipPath', { id: scId }, A.defs));
     A.el('path', { d: SHELL, fill: A.url('shell') }, shellG);
     const sIn = A.el('g', { 'clip-path': `url(#${scId})` }, shellG);
-    A.el('rect', { x: 86, y: 195, width: 33, height: 112, fill: A.url('steelV') }, sIn);
-    A.el('rect', { x: 281, y: 195, width: 33, height: 112, fill: A.url('steelV') }, sIn);
-    A.el('path', { d: 'M119 198 V306 M281 198 V306', stroke: '#3f0906', 'stroke-width': 2.4, opacity: 0.7 }, sIn);
-    A.el('ellipse', { cx: 200, cy: 310, rx: 132, ry: 24, fill: '#3e0604', opacity: 0.28 }, sIn);
-    A.el('path', { d: 'M126 217 C 166 206 234 206 274 217 C 264 228 238 231 200 231 C 162 231 136 228 126 217 Z', fill: A.url('gloss'), opacity: 0.8 }, sIn);
-    if (!S) A.el('path', { d: SHELL, fill: 'none', stroke: A.url('bevel'), 'stroke-width': 2.4, transform: 'translate(200 253) scale(0.9 0.82) translate(-200 -253)' }, sIn);
-    A.el('path', { d: SHELL, fill: 'none', stroke: A.url('shellRim'), 'stroke-width': 6 }, sIn);
-    A.el('path', { d: SHELL, fill: 'none', stroke: '#330705', 'stroke-width': 2.6 }, shellG);
-    for (const x of [136, 264]) {
-      A.el('circle', { cx: x, cy: 255, r: 7.5, fill: A.url('screw'), stroke: '#560a07', 'stroke-width': 1.8 }, shellG);
-      if (!S) A.el('circle', { cx: x - 2.2, cy: 252.8, r: 2, fill: '#fff', opacity: 0.9 }, shellG);
+    // steel bolsters on the shoulder points
+    const BOL_L = 'M 60 180 L 112 180 C 104 214 104 252 118 320 L 60 320 Z';
+    A.el('path', { d: BOL_L, fill: A.url('steelV') }, sIn);
+    A.el('path', { d: BOL_L, fill: A.url('steelV'), transform: 'translate(400 0) scale(-1 1)' }, sIn);
+    A.el('path', { d: 'M 112 180 C 104 214 104 252 118 320 M 288 180 C 296 214 296 252 282 320', fill: 'none', stroke: '#3f0906', 'stroke-width': 2.4, opacity: 0.75 }, sIn);
+    if (!S) A.el('path', { d: 'M 115 182 C 107 214 107 252 121 320 M 285 182 C 293 214 293 252 279 320', fill: 'none', stroke: '#ffb3a6', 'stroke-width': 1.4, opacity: 0.55 }, sIn);
+    // ambient occlusion low, a dome sheen high, and a crisp specular
+    A.el('ellipse', { cx: 200, cy: 318, rx: 140, ry: 34, fill: '#3e0604', opacity: 0.3 }, sIn);
+    A.el('path', { d: 'M 120 214 C 160 201 240 201 280 214 C 268 228 240 233 200 233 C 160 233 132 228 120 214 Z', fill: A.url('gloss'), opacity: 0.62 }, sIn);
+    if (!S) {
+      A.el('ellipse', { cx: 160, cy: 210, rx: 18, ry: 4.2, fill: '#fff', opacity: 0.85, transform: 'rotate(-8 160 210)' }, sIn);
+      A.el('circle', { cx: 186, cy: 206, r: 2.2, fill: '#fff', opacity: 0.8 }, sIn);
+      A.el('path', { d: SHELL, fill: 'none', stroke: A.url('bevel'), 'stroke-width': 2.2, opacity: 0.8, transform: 'translate(200 250) scale(0.9 0.84) translate(-200 -250)' }, sIn);
     }
-    const blush = [164, 236].map(x => A.el('ellipse', { cx: x, cy: 276, rx: 11, ry: 5.5, fill: '#ff9a8a', opacity: 0 }, shellG));
+    A.el('path', { d: SHELL, fill: 'none', stroke: A.url('shellRim'), 'stroke-width': 7 }, sIn);
+    A.el('path', { d: SHELL, fill: 'none', stroke: '#330705', 'stroke-width': 2.6 }, shellG);
+    for (const x of [138, 262]) {
+      A.el('circle', { cx: x, cy: 252, r: 7, fill: A.url('screw'), stroke: '#560a07', 'stroke-width': 1.8 }, shellG);
+      if (!S) A.el('circle', { cx: x - 2.2, cy: 249.8, r: 1.9, fill: '#fff', opacity: 0.9 }, shellG);
+    }
+    const blush = [160, 240].map(x => A.el('ellipse', { cx: x, cy: 274, rx: 12, ry: 5.5, fill: '#ff9a8a', opacity: 0 }, shellG));
 
     /* mouth with clipped tongue */
     const mouthG = A.el('g', {}, shellG);
@@ -105,7 +131,7 @@ CAST.register({
     A.el('circle', { cx: 0, cy: 0, r: 37, fill: A.url('gold'), stroke: '#7d4c05', 'stroke-width': 2.4 }, medalG);
     A.el('circle', { cx: 0, cy: 0, r: 29, fill: 'none', stroke: A.url('goldRim'), 'stroke-width': 3 }, medalG);
     A.el('circle', { cx: 0, cy: 0, r: 29, fill: 'none', stroke: '#8f5806', 'stroke-width': 1, opacity: 0.6, transform: 'translate(0.8 1)' }, medalG);
-    A.el('text', { x: 0, y: 7.5, 'text-anchor': 'middle', 'font-family': 'system-ui, -apple-system, Segoe UI, sans-serif', 'font-weight': 900, 'font-size': 21, fill: '#7a4304', 'letter-spacing': 0.5, text: 'LV 8' }, medalG);
+    A.el('text', { x: 0, y: 7.5, 'text-anchor': 'middle', 'font-family': 'system-ui, -apple-system, Segoe UI, sans-serif', 'font-weight': 900, 'font-size': 21, fill: '#5e3302', 'letter-spacing': 0.5, text: 'LV 8' }, medalG);
     A.el('text', { x: -0.6, y: 6.3, 'text-anchor': 'middle', 'font-family': 'system-ui, -apple-system, Segoe UI, sans-serif', 'font-weight': 900, 'font-size': 21, fill: '#fff4c8', opacity: 0.55, 'letter-spacing': 0.5, text: 'LV 8' }, medalG);
     const mdId = A.id('medalclip');
     A.el('circle', { cx: 0, cy: 0, r: 37 }, A.el('clipPath', { id: mdId }, A.defs));
@@ -113,43 +139,62 @@ CAST.register({
     const shine = A.el('rect', { x: -7, y: -60, width: 13, height: 120, fill: '#fff', opacity: 0.75 }, shineWrap);
 
     /* eyes on stalks */
+    const ER = 22;
     const eyes = [0, 1].map(k => {
       const eg = A.el('g', {}, root);
-      A.el('circle', { cx: 0, cy: 0, r: 21, fill: A.url('sclera') }, eg);
+      A.el('circle', { cx: 0, cy: 1.5, r: ER + 2.5, fill: '#330705' }, eg);
+      A.el('circle', { cx: 0, cy: 0, r: ER, fill: A.url('sclera') }, eg);
       const pupil = A.el('g', {}, eg);
-      A.el('circle', { cx: 0, cy: 0, r: 12, fill: '#16181d' }, pupil);
-      if (!S) A.el('circle', { cx: 0, cy: 0, r: 9.5, fill: 'none', stroke: '#33404f', 'stroke-width': 2 }, pupil);
-      A.el('circle', { cx: -4.2, cy: -4.4, r: 4, fill: '#fff' }, pupil);
-      if (!S) A.el('circle', { cx: 4, cy: 4.2, r: 1.8, fill: '#fff', opacity: 0.85 }, pupil);
+      A.el('circle', { cx: 0, cy: 0, r: 12.5, fill: A.url('iris') }, pupil);
+      A.el('circle', { cx: 0, cy: 0, r: 7, fill: '#0b0d10' }, pupil);
+      if (!S) A.el('circle', { cx: 0, cy: 0, r: 11.8, fill: 'none', stroke: '#0b0d10', 'stroke-width': 1.4, opacity: 0.8 }, pupil);
+      A.el('ellipse', { cx: -4.6, cy: -4.8, rx: 4.4, ry: 3.8, fill: '#fff' }, pupil);
+      if (!S) A.el('circle', { cx: 4.4, cy: 4.6, r: 1.7, fill: '#fff', opacity: 0.85 }, pupil);
       const cid = A.id('eyeclip' + k);
-      A.el('circle', { cx: 0, cy: 0, r: 21.3 }, A.el('clipPath', { id: cid }, A.defs));
+      A.el('circle', { cx: 0, cy: 0, r: ER + 0.3 }, A.el('clipPath', { id: cid }, A.defs));
       const lidWrap = A.el('g', { 'clip-path': `url(#${cid})` }, eg);
+      if (!S) A.el('path', { d: 'M -24 -24 A 30 30 0 0 1 24 -24 L 24 -16 A 30 22 0 0 0 -24 -16 Z', fill: '#000', opacity: 0.08 }, lidWrap);
       const up = A.el('g', {}, lidWrap);
-      A.el('rect', { x: -28, y: -56, width: 56, height: 56, fill: A.url('lid') }, up);
-      A.el('path', { d: 'M -28 0 H 28', stroke: '#4a0805', 'stroke-width': 3 }, up);
+      A.el('rect', { x: -30, y: -58, width: 60, height: 58, fill: A.url('lid') }, up);
+      A.el('path', { d: 'M -30 0 H 30', stroke: '#4a0805', 'stroke-width': 3.2 }, up);
+      if (!S) A.el('path', { d: 'M -14 -5 H 10', stroke: '#ffb0a2', 'stroke-width': 1.6, 'stroke-linecap': 'round', opacity: 0.7 }, up);
       const low = A.el('circle', { cx: 0, cy: 60, r: 30, fill: '#d42a1f', stroke: '#4a0805', 'stroke-width': 3 }, lidWrap);
-      A.el('circle', { cx: 0, cy: 0, r: 21, fill: 'none', stroke: '#26110f', 'stroke-width': 2.6 }, eg);
-      const brow = A.el('path', { d: 'M -12 2.5 Q 0 -4.5 12 2.5', fill: 'none', stroke: '#1f2328', 'stroke-width': 7, 'stroke-linecap': 'round' }, eg);
+      if (!S) A.el('path', { d: 'M 8 -18 A 20 20 0 0 1 19 -4', fill: 'none', stroke: '#fff', 'stroke-width': 2.2, 'stroke-linecap': 'round', opacity: 0.55 }, eg);
+      const brow = A.el('path', { d: 'M -14 3.5 Q 0 -6.5 14 3.5 Q 0 -1 -14 3.5 Z', fill: '#1f2328', stroke: '#1f2328', 'stroke-width': 4.2, 'stroke-linejoin': 'round' }, eg);
       return { eg, pupil, up, low, brow };
     });
 
-    /* scissor claws */
-    const BLADE_A = 'M 1.5 12 C -8 12 -14 3 -14 -15 C -14 -43 -8 -67 1.5 -92 Z';
-    const BLADE_B = 'M -1.5 12 C 8 12 14 3 14 -15 C 14 -43 8 -67 -1.5 -92 Z';
+    /* anger mark for the grumpy reaction */
+    const anger = A.el('g', { opacity: 0 }, root);
+    for (let i = 0; i < 4; i++) A.el('path', { d: 'M 3 -12 Q 3 -3 12 -3', fill: 'none', stroke: '#fff', 'stroke-width': 7, 'stroke-linecap': 'round', transform: `rotate(${i * 90})` }, anger);
+    for (let i = 0; i < 4; i++) A.el('path', { d: 'M 3 -12 Q 3 -3 12 -3', fill: 'none', stroke: '#e5322b', 'stroke-width': 3.6, 'stroke-linecap': 'round', transform: `rotate(${i * 90})` }, anger);
+
+    const STAR4 = 'M0 -10 C 1 -2 2 -1 10 0 C 2 1 1 2 0 10 C -1 2 -2 1 -10 0 C -2 -1 -1 -2 0 -10 Z';
+    /* scissor claws: a glossy red palm, a steel ferrule and two bevelled blades on a pivot screw */
+    const BLADE_A = 'M 1.5 10 C -9.5 10 -16 1 -16 -16 C -16 -44 -9 -68 1.5 -94 Z';
+    const BLADE_B = 'M -1.5 10 C 9.5 10 16 1 16 -16 C 16 -44 9 -68 -1.5 -94 Z';
     const claws = [0, 1].map(() => {
       const cg = A.el('g', {}, root);
-      A.el('path', { d: 'M -14 6 C -17 22 -14 36 -11 47 L 11 47 C 14 36 17 22 14 6 C 6 0 -6 0 -14 6 Z', fill: A.url('cuff'), stroke: '#330705', 'stroke-width': 2.2 }, cg);
-      if (!S) A.el('path', { d: 'M -8.5 11 C -10.5 20 -10 29 -8 36', fill: 'none', stroke: '#fff', 'stroke-width': 2.6, opacity: 0.5, 'stroke-linecap': 'round' }, cg);
-      A.el('rect', { x: -12, y: 40, width: 24, height: 9, rx: 3, fill: A.url('steelV'), stroke: '#2b313a', 'stroke-width': 1.5 }, cg);
-      const bB = A.el('g', {}, cg);
-      A.el('path', { d: BLADE_B, fill: A.url('bladeB'), stroke: '#262c35', 'stroke-width': 1.8, 'stroke-linejoin': 'round' }, bB);
-      const bA = A.el('g', {}, cg);
-      A.el('path', { d: BLADE_A, fill: A.url('bladeA'), stroke: '#262c35', 'stroke-width': 1.8, 'stroke-linejoin': 'round' }, bA);
-      if (!S) A.el('path', { d: 'M -1.6 6 L -1.6 -80', stroke: '#fff', 'stroke-width': 1.3, opacity: 0.9 }, bA);
-      if (!S) A.el('path', { d: 'M -10.5 -12 C -10.5 -36 -6.5 -58 -2 -76', fill: 'none', stroke: '#fff', 'stroke-width': 1.6, opacity: 0.55, 'stroke-linecap': 'round' }, bA);
-      A.el('circle', { cx: 0, cy: 0, r: 7, fill: A.url('screw'), stroke: '#262c35', 'stroke-width': 1.6 }, cg);
-      const slot = A.el('path', { d: 'M -4 0 H 4', stroke: '#4a5361', 'stroke-width': 1.6, 'stroke-linecap': 'round' }, cg);
-      return { cg, bA, bB, slot };
+      A.el('path', { d: 'M -10 50 C -25 42 -30 16 -21 0 C -14 -11 14 -11 21 0 C 30 16 25 42 10 50 Z', fill: A.url('palm'), stroke: '#330705', 'stroke-width': 2.4 }, cg);
+      if (!S) {
+        A.el('path', { d: 'M -16 8 C -19 18 -17 30 -11 38', fill: 'none', stroke: '#fff', 'stroke-width': 3, opacity: 0.55, 'stroke-linecap': 'round' }, cg);
+        A.el('path', { d: 'M 22 10 C 24 22 20 36 11 45', fill: 'none', stroke: '#ffc2b5', 'stroke-width': 2, opacity: 0.6, 'stroke-linecap': 'round' }, cg);
+      }
+      A.el('rect', { x: -11, y: 44, width: 22, height: 9, rx: 3.5, fill: A.url('steelV'), stroke: '#2b313a', 'stroke-width': 1.5 }, cg);
+      const bW = A.el('g', S ? { transform: 'scale(1.45 1.05)' } : {}, cg);
+      const bB = A.el('g', {}, bW);
+      A.el('path', { d: BLADE_B, fill: A.url('bladeB'), stroke: '#20252d', 'stroke-width': 1.8, 'stroke-linejoin': 'round' }, bB);
+      if (!S) A.el('path', { d: 'M -1.5 4 L -1.5 -88 C 2 -70 5 -42 5 -16 C 5 -6 3 0 -1.5 4 Z', fill: '#e9eef3', opacity: 0.45 }, bB);
+      const bA = A.el('g', {}, bW);
+      A.el('path', { d: BLADE_A, fill: A.url('bladeA'), stroke: '#20252d', 'stroke-width': 1.8, 'stroke-linejoin': 'round' }, bA);
+      if (!S) {
+        A.el('path', { d: 'M 1.5 4 L 1.5 -88 C -2 -70 -5 -42 -5 -16 C -5 -6 -3 0 1.5 4 Z', fill: '#ffffff', opacity: 0.55 }, bA);
+        A.el('path', { d: 'M -12 -14 C -12 -38 -7.5 -60 -2.5 -78', fill: 'none', stroke: '#fff', 'stroke-width': 1.8, opacity: 0.6, 'stroke-linecap': 'round' }, bA);
+      }
+      const glint = S ? null : A.el('path', { d: STAR4, fill: '#fff', opacity: 0 }, bA);
+      A.el('circle', { cx: 0, cy: 0, r: 7.2, fill: A.url('screw'), stroke: '#20252d', 'stroke-width': 1.6 }, cg);
+      const slot = A.el('path', { d: 'M -4 0 H 4', stroke: '#4a5361', 'stroke-width': 1.7, 'stroke-linecap': 'round' }, cg);
+      return { cg, bA, bB, slot, glint };
     });
 
     /* in-body effects: the cut frame, thought bubble, sparkles */
@@ -197,10 +242,10 @@ CAST.register({
     const BASE = {
       x: 0, y: 0, r: 0, sx: 1, sy: 1, walk: 0,
       ext: 0, lean: 0, etilt: 0,
-      uL: 0.16, uR: 0.16, tilt: 0, lL: 0.1, lR: 0.1,
+      uL: 0.14, uR: 0.14, tilt: 0, lL: 0.04, lR: 0.04,
       bLy: 0, bRy: 0, bLr: 0, bRr: 0,
       gx: 0, gy: 0, gw: 1, ps: 1,
-      mw: 11, mc: 6, mo: 0, mx: 0, mr: 0, blush: 0.25,
+      mw: 12.5, mc: 6.5, mo: 0, mx: 0, mr: 0, blush: 0.25,
       ...REST,
     };
     // Frame corners for the crop pose.
@@ -218,7 +263,7 @@ CAST.register({
         case 'happy': {
           const b = Math.abs(Math.sin(mt * 6));
           p.y = -10 * b; p.sy = 1 + 0.03 * b; p.sx = 1 - 0.02 * b;
-          p.mw = 15; p.mc = 12; p.mo = 7; p.lL = p.lR = 0.48; p.uL = p.uR = 0.05; p.bLy = p.bRy = -5; p.bLr = p.bRr = -4; p.blush = 0.75;
+          p.mw = 15; p.mc = 12; p.mo = 7; p.lL = p.lR = 0.64; p.uL = p.uR = 0.02; p.bLy = p.bRy = -5; p.bLr = p.bRr = -4; p.blush = 0.75;
           p.lr = -26 - 6 * b; p.rr = 26 + 6 * b; p.lo = p.ro = 26 + 22 * b; p.ly = p.ry = 182; p.ext = 4 + 4 * b;
           break;
         }
@@ -238,11 +283,10 @@ CAST.register({
           break;
         }
         case 'thinking': {
-          const tap = Math.sin(mt * 7) * (Math.sin(mt * 1.3) > -0.2 ? 1 : 0);
           p.r = -3; p.gx = 0.7; p.gy = -0.85; p.gw = 0.25; p.ext = 4; p.lean = 4; p.etilt = 6;
           p.uL = 0.28; p.uR = 0.12; p.bRy = -8; p.bRr = -10; p.bLy = 2; p.bLr = 8;
           p.mw = 7; p.mc = -1; p.mo = 0; p.mx = 7; p.mr = 10;
-          p.lx = 108; p.ly = 304; p.lr = 70 + 4 * tap; p.lo = 6;
+          const scr = Math.sin(mt * 16) * (Math.sin(mt * 1.3) > -0.2 ? 1 : 0); p.lx = 104; p.ly = 210; p.lr = 33 + 4 * scr; p.lo = 6 + 4 * Math.abs(scr); p.rr = 22; p.ro = 22 + 6 * Math.sin(mt * 2);
           break;
         }
         case 'working': {
@@ -258,9 +302,9 @@ CAST.register({
         case 'celebrate': {
           const ph = (mt % 0.9) / 0.9, h = Math.sin(ph * Math.PI);
           const land = ph < 0.12 ? 1 - ph / 0.12 : 0;
-          p.y = -48 * h; p.sy = 1 + 0.1 * h - 0.1 * land; p.sx = 1 - 0.06 * h + 0.08 * land;
-          p.mw = 16; p.mc = 14; p.mo = 12; p.lL = p.lR = 0.5; p.uL = p.uR = 0.04; p.bLy = p.bRy = -8; p.bLr = p.bRr = -6; p.blush = 0.85; p.ext = 8 * h;
-          p.lx = 70; p.rx = 330; p.ly = p.ry = 160 - 10 * h; p.lr = -30 - 10 * h; p.rr = 30 + 10 * h; p.lo = p.ro = 55 + 20 * Math.sin(mt * 14);
+          p.y = -40 * h; p.sy = 1 + 0.1 * h - 0.1 * land; p.sx = 1 - 0.06 * h + 0.08 * land;
+          p.mw = 16; p.mc = 14; p.mo = 12; p.lL = p.lR = 0.62; p.uL = p.uR = 0.04; p.bLy = p.bRy = -8; p.bLr = p.bRr = -6; p.blush = 0.85; p.ext = 8 * h;
+          p.lx = 70; p.rx = 330; p.ly = p.ry = 172 - 6 * h; p.lr = -30 - 10 * h; p.rr = 30 + 10 * h; p.lo = p.ro = 55 + 20 * Math.sin(mt * 14);
           p.walk = 0.3 * h; p.gw = 0.3;
           break;
         }
@@ -275,10 +319,10 @@ CAST.register({
         case 'levelup': {
           const up = E.outBack(seg(mt, 0, 0.5));
           p.y = -3 * Math.sin(mt * 4); p.sy = 1.02;
-          p.mw = 15; p.mc = 13; p.mo = 9; p.lL = p.lR = 0.36; p.uL = p.uR = 0.04; p.bLy = p.bRy = -6; p.bLr = p.bRr = -5; p.blush = 0.65;
+          p.mw = 15; p.mc = 13; p.mo = 9; p.lL = p.lR = 0.5; p.uL = p.uR = 0.04; p.bLy = p.bRy = -6; p.bLr = p.bRr = -5; p.blush = 0.65;
           const look = seg(mt, 0.2, 0.8); p.gy = L(-0.9, 0, look); p.gw = L(0, 0.4, look);
-          p.lx = L(74, 124, up); p.ly = L(190, 170, up); p.lr = L(-16, 37, up); p.lo = 12;
-          p.rx = L(326, 276, up); p.ry = L(190, 170, up); p.rr = L(16, -37, up); p.ro = 12;
+          p.lx = L(74, 118, up); p.ly = L(190, 172, up); p.lr = L(-16, 26, up); p.lo = L(16, 22, up);
+          p.rx = L(326, 282, up); p.ry = L(190, 172, up); p.rr = L(16, -26, up); p.ro = L(16, 22, up);
           break;
         }
         case 'signature': {
@@ -296,8 +340,8 @@ CAST.register({
           const k = E.inOut(seg(T, 0.72, 0.92)) * (1 - E.inOut(seg(T, 1.7, 1.98)));
           const snips = Math.max(bump(T, 1.0, 0.09), bump(T, 1.22, 0.09));
           const cOpen = 90 * (1 - 0.92 * snips);
-          p.lx = L(74, FX0, k); p.ly = L(186, FY1, k); p.lr = L(-16, 45, k); p.lo = L(clack, cOpen, k);
-          p.rx = L(326, FX1, k); p.ry = L(186, FY1, k); p.rr = L(16, -45, k); p.ro = L(clack, cOpen, k);
+          p.lx = L(74, FX0, k); p.ly = L(186, FY1, k); p.lr = L(-16, -12, k); p.lo = L(clack, cOpen, k);
+          p.rx = L(326, FX1, k); p.ry = L(186, FY1, k); p.rr = L(16, 12, k); p.ro = L(clack, cOpen, k);
           p.y += -6 * k; p.ext = 6 * k;
           p.bLy = p.bRy = -5 * k; p.mc = L(9, 11, k); p.mo = L(3, 5, k); p.gw = L(p.gw, 0, k); p.gx = L(p.gx, 0, k);
           const wk = Math.min(seg(T, 1.36, 1.44), 1 - seg(T, 1.62, 1.7));
@@ -323,6 +367,7 @@ CAST.register({
         const t = s.t, mt = s.mt, Lf = A.life(t, 3);
         const look = s.look || { x: 0, y: 0 };
         let P = pose(s.mood, mt, t);
+        const P0x = P.x, P0y = P.y, P0r = P.r;
         if (s.prev && s.prev !== s.mood && s.blend < 1) P = lerpPose(pose(s.prev, mt + 3, t), P, E.inOut(s.blend));
 
         /* life */
@@ -340,10 +385,13 @@ CAST.register({
             P.uL = L(P.uL, -0.08, st); P.uR = L(P.uR, -0.08, st); P.lL = L(P.lL, 0, st); P.lR = L(P.lR, 0, st);
             P.bLy -= 9 * st; P.bRy -= 9 * st; P.bLr = L(P.bLr, -12, st); P.bRr = L(P.bRr, -12, st);
             P.mo = L(P.mo, 11, st); P.mw = L(P.mw, 8, st); P.mc = L(P.mc, 0, st); P.mr = L(P.mr, 0, st);
-            P.ext += 14 * st; P.ps = L(P.ps, 0.68, st); P.gw = L(P.gw, 0.2, st);
-            const snap = pk < 0.12 ? 0 : 1;
-            P.lo = L(P.lo, 75 * snap, st); P.ro = L(P.ro, 75 * snap, st);
-            P.y -= 10 * Math.sin(C(pk / 0.35) * Math.PI);
+            // eyes duck into the shell on impact, then pop up and quiver
+            P.ext += pk < 0.07 ? -22 * (pk / 0.07) : L(-22, 18, E.outBack(C((pk - 0.07) / 0.18))) * Math.exp(-(pk - 0.07) * 1.6);
+            P.ps = L(P.ps, 0.62, st); P.gw = L(P.gw, 0.2, st);
+            const snap = pk < 0.1 ? 0 : 1;
+            P.lo = L(P.lo, 80 * snap, st); P.ro = L(P.ro, 80 * snap, st);
+            P.lr = L(P.lr, -34, st); P.rr = L(P.rr, 34, st); P.ly -= 22 * st; P.ry -= 22 * st; P.lx -= 8 * st; P.rx += 8 * st;
+            P.y -= 14 * Math.sin(C((pk - 0.06) / 0.4) * Math.PI);
           }
         }
         let grump = 0;
@@ -355,7 +403,7 @@ CAST.register({
           P.mw = L(P.mw, 10, gk); P.mc = L(P.mc, -7, gk); P.mo = L(P.mo, 1.5, gk); P.mr = L(P.mr, 0, gk); P.blush = L(P.blush, 1, gk);
           P.lo = L(P.lo, 10 + 40 * Math.abs(Math.sin(t * 19)), gk); P.ro = L(P.ro, 10 + 40 * Math.abs(Math.sin(t * 19 + 1.2)), gk);
           P.lr = L(P.lr, -28, gk); P.rr = L(P.rr, 28, gk); P.ly = L(P.ly, 176, gk); P.ry = L(P.ry, 176, gk);
-          P.x += Math.sin(t * 46) * 2.2 * gk; P.gw = L(P.gw, 0.1, gk); P.gx = L(P.gx, 0, gk); P.gy = L(P.gy, 0, gk);
+          P.x += Math.sin(t * 46) * 2.2 * gk; P.walk = Math.max(P.walk, 0.7 * gk); P.y -= 3 * Math.abs(Math.sin(t * 19)) * gk; P.ext -= 6 * gk; P.gw = L(P.gw, 0.1, gk); P.gx = L(P.gx, 0, gk); P.gy = L(P.gy, 0, gk);
         }
 
         /* body */
@@ -365,15 +413,19 @@ CAST.register({
         A.attr(shadow, { rx: 124 * (1 - 0.35 * air), cx: 200 + P.x, opacity: 1 - 0.45 * air });
 
         /* legs */
-        const wph = t * 19;
+        const wph = t * 19, splay = C(P.sx - 1, -0.1, 0.2) * 60;
         for (const lg of legs) {
-          const [hx0, hy] = HIPS[lg.i], [fx0, fy0] = FEET[lg.i];
-          const hx = lg.side < 0 ? hx0 : 400 - hx0, fxb = lg.side < 0 ? fx0 : 400 - fx0;
-          const ph = wph + lg.i * 2.1 + (lg.side > 0 ? Math.PI : 0);
-          const fx = fxb + P.walk * 8 * Math.sin(ph), fy = fy0 - P.walk * 8 * Math.max(0, Math.cos(ph)) + air * 6;
-          const kx = L(hx, fx, 0.62) + lg.side * 9, ky = Math.min(hy, fy) - 10 - lg.i * 2;
-          const d = `M${hx.toFixed(1)} ${hy} L${kx.toFixed(1)} ${ky.toFixed(1)} L${fx.toFixed(1)} ${fy.toFixed(1)}`;
-          lg.p.setAttribute('d', d); if (lg.h) lg.h.setAttribute('d', d);
+          const sd = lg.side, mx = v => (sd < 0 ? v : 400 - v);
+          const [hx0, hy] = HIPS[lg.i], [kx0, ky0] = KNEES[lg.i], [fx0, fy0] = FEET[lg.i];
+          const ph = wph + lg.i * 2.1 + (sd > 0 ? Math.PI : 0);
+          const lift = P.walk * 9 * Math.max(0, Math.cos(ph));
+          const fx = mx(fx0 - splay * (1 + lg.i * 0.3)) + P.walk * 8 * Math.sin(ph), fy = fy0 - lift + air * 4;
+          const kx = mx(kx0 - splay * 0.6), ky = ky0 - lift * 0.7 - air * 6 + (P.sy - 1) * 30;
+          const hx = mx(hx0);
+          lg.th.setAttribute('d', quad(hx, hy, kx, ky, 6.5, 5));
+          lg.sh.setAttribute('d', quad(kx, ky, fx, fy, 5, 1.4));
+          A.attr(lg.kn, { cx: kx, cy: ky });
+          if (lg.hl) lg.hl.setAttribute('d', `M${(kx - sd * 1.5).toFixed(1)} ${(ky + 4).toFixed(1)} L${L(kx, fx, 0.7).toFixed(1)} ${L(ky, fy, 0.7).toFixed(1)}`);
         }
 
         /* claws and arms */
@@ -383,23 +435,36 @@ CAST.register({
           A.tf(c.cg, px, py, r, m, 1);
           A.tf(c.bA, 0, 0, -C(o, -4, 120) / 2); A.tf(c.bB, 0, 0, C(o, -4, 120) / 2);
           A.tf(c.slot, 0, 0, 30 + o * 0.6);
-          const wx = px - 46 * Math.sin(r * D2R), wy = py + 46 * Math.cos(r * D2R);
-          const sx = k === 0 ? 112 : 288, sy = 262, dir = k === 0 ? -1 : 1;
+          const wx = px - 50 * Math.sin(r * D2R), wy = py + 50 * Math.cos(r * D2R);
+          const sx = k === 0 ? 112 : 288, sy = 258, dir = k === 0 ? -1 : 1;
           const cx = (sx + wx) / 2 + dir * 16, cy = (sy + wy) / 2 + 14;
           const d = `M${sx} ${sy} Q${cx.toFixed(1)} ${cy.toFixed(1)} ${wx.toFixed(1)} ${wy.toFixed(1)}`;
-          arms[k].a.setAttribute('d', d); if (arms[k].h) arms[k].h.setAttribute('d', d);
+          arms[k].o.setAttribute('d', d); arms[k].a.setAttribute('d', d); if (arms[k].h) arms[k].h.setAttribute('d', d);
+          if (c.glint) {
+            const gp = ((t * 0.55 + k * 0.37) % 2.6) / 0.6;
+            A.tf(c.glint, -6, L(-12, -80, C(gp)), gp * 120, 0.9 * Math.sin(C(gp) * Math.PI));
+            A.op(c.glint, gp < 1 ? 0.95 : 0);
+          }
         });
 
-        /* eyes */
+        /* eyes (stalks lag behind the body, and spring after a poke) */
+        const Pp = pose(s.mood, mt - 0.1, t - 0.1);
+        let lagX = C((Pp.x - P0x) * 0.7 + (Pp.r - P0r) * 1.4, -12, 12), lagY = C((Pp.y - P0y) * 0.5, -10, 10);
+        if (pk < 2) { const w2 = A.wobble(pk - 0.05, 13, 4.2); lagX += w2 * 10; lagY += Math.abs(w2) * 5; }
+        if (grump > 0) lagX += Math.sin(t * 46 + 1) * 1.5 * grump;
+        A.op(anger, grump * (S ? 0 : 1));
         const gx = C(look.x * P.gw + P.gx, -1, 1), gy = C(look.y * P.gw + P.gy, -1, 1);
         [[172, 186, 0], [228, 214, 1]].forEach(([ex0, bx, k]) => {
           const e = eyes[k], side = k === 0 ? -1 : 1;
           const ex = ex0 + P.lean + look.x * 5 * P.gw + side * Math.max(0, P.ext) * 0.15, ey = 156 - P.ext + look.y * 3 * P.gw;
-          const by = 212;
-          stalks[k].a.setAttribute('d', `M${bx} ${by} Q${(bx + ex) / 2 + side * 2} ${((by + ey) / 2 + 6).toFixed(1)} ${ex.toFixed(1)} ${ey.toFixed(1)}`);
-          if (stalks[k].h) stalks[k].h.setAttribute('d', stalks[k].a.getAttribute('d'));
-          A.tf(e.eg, ex, ey, P.etilt + side * 2);
-          A.tf(e.pupil, gx * 7.5, gy * 6.5, 0, P.ps, P.ps);
+          const by = 214;
+          const ex2 = ex + lagX, ey2 = ey + lagY;
+          const sdp = `M${bx} ${by} Q${((bx + ex) / 2 + side * 2).toFixed(1)} ${((by + ey) / 2 + 6).toFixed(1)} ${ex2.toFixed(1)} ${ey2.toFixed(1)}`;
+          stalks[k].o.setAttribute('d', sdp); stalks[k].a.setAttribute('d', sdp);
+          if (stalks[k].h) stalks[k].h.setAttribute('d', sdp);
+          A.tf(e.eg, ex2, ey2, P.etilt + side * 2 + lagX * 1.2);
+          if (k === 1) A.tf(anger, ex2 + 26, ey2 - 30, 10 * Math.sin(t * 9), 0.8 + 0.25 * Math.abs(Math.sin(t * 9)));
+          A.tf(e.pupil, gx * 8, gy * 7, 0, P.ps, P.ps);
           const l = C(k === 0 ? P.lL : P.lR, 0, 1);
           let u = k === 0 ? P.uL : P.uR;
           const uMeet = (42 - 30 * l) / 42 + 0.03;
@@ -408,7 +473,7 @@ CAST.register({
           A.tf(e.up, 0, -21 + 42 * u, k === 0 ? P.tilt : -P.tilt);
           A.attr(e.low, { cy: 21 - 30 * l + 30 });
           const brY = (k === 0 ? P.bLy : P.bRy), brR = (k === 0 ? P.bLr : P.bRr);
-          A.tf(e.brow, 0, -33 + brY, k === 0 ? brR : -brR);
+          A.tf(e.brow, 0, -31 + brY, k === 0 ? brR : -brR);
         });
 
         /* mouth */
@@ -429,7 +494,7 @@ CAST.register({
         const lvIn = isLv ? E.outBack(seg(mt, 0, 0.5)) : 0;
         A.show(medalG, isLv); A.show(glowG, isLv);
         if (isLv) {
-          const my = L(240, 96, lvIn) + 3 * Math.sin(mt * 4);
+          const my = L(240, 88, lvIn) + 3 * Math.sin(mt * 4);
           A.tf(medalG, 200, my, 6 * Math.sin(mt * 2.2), 0.4 + 0.6 * lvIn);
           A.tf(glowG, 200 + P.x, my + P.y, 0, 0.3 + 0.7 * lvIn);
           A.op(glowG, bl * (0.8 + 0.2 * Math.sin(mt * 5)));
