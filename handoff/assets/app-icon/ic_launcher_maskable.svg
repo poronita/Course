@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108" role="img">
+  <title>Image Swiss Knife app icon (Turkish blue)</title>
+  <defs>
+    <linearGradient id="isk-mask-dark-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#137391"/><stop offset=".55" stop-color="#0C5A72"/><stop offset="1" stop-color="#083D50"/></linearGradient>
+    <radialGradient id="isk-mask-dark-disc" cx=".4" cy=".3" r=".85"><stop offset="0" stop-color="#0F6A84"/><stop offset="1" stop-color="#0A4A60"/></radialGradient>
+    <clipPath id="isk-mask-dark-clip"><circle cx="54" cy="54" r="41"/></clipPath>
+  </defs>
+  <rect width="108" height="108" fill="url(#isk-mask-dark-bg)"/>
+  <circle cx="54" cy="54" r="41" fill="url(#isk-mask-dark-disc)"/>
+  <g clip-path="url(#isk-mask-dark-clip)">
+    <svg x="-13.121" y="4.403" width="132.258" height="132.258" viewBox="0 0 400 400" overflow="visible">
+        <defs>
+          <linearGradient id="pip-dark-appicon-body" x1="0.15" y1="0" x2="0.7" y2="1">
+            <stop offset="0" stop-color="#5CD0E6" stop-opacity="1"/>
+            <stop offset="0.45" stop-color="#1B8CA8" stop-opacity="1"/>
+            <stop offset="1" stop-color="#0C5A72" stop-opacity="1"/>
+          </linearGradient>
+          <radialGradient id="pip-dark-appicon-shade" cx="0.38" cy="0.32" r="0.78" fx="0.38" fy="0.32">
+            <stop offset="0" stop-color="#000" stop-opacity="0"/>
+            <stop offset="0.72" stop-color="#000" stop-opacity="0"/>
+            <stop offset="1" stop-color="#04283A" stop-opacity="0.45"/>
+          </radialGradient>
+          <linearGradient id="pip-dark-appicon-bevel" x1="0" y1="0" x2="0.8" y2="0.9">
+            <stop offset="0" stop-color="#fff" stop-opacity="0.7"/>
+            <stop offset="0.45" stop-color="#fff" stop-opacity="0.08"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="pip-dark-appicon-rim" x1="0" y1="0.3" x2="1" y2="0.5">
+            <stop offset="0" stop-color="#CDF3F8" stop-opacity="0"/>
+            <stop offset="0.78" stop-color="#CDF3F8" stop-opacity="0"/>
+            <stop offset="1" stop-color="#E3F8FB" stop-opacity="0.95"/>
+          </linearGradient>
+          <linearGradient id="pip-dark-appicon-spec" x1="0" y1="0" x2="0.9" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity="0.85"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="pip-dark-appicon-steel" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#FBFCFE" stop-opacity="1"/>
+            <stop offset="0.35" stop-color="#C9CFD8" stop-opacity="1"/>
+            <stop offset="0.55" stop-color="#E9ECF1" stop-opacity="1"/>
+            <stop offset="0.8" stop-color="#9AA2B0" stop-opacity="1"/>
+            <stop offset="1" stop-color="#C7CDD6" stop-opacity="1"/>
+          </linearGradient>
+          <linearGradient id="pip-dark-appicon-steelX" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#8C95A4" stop-opacity="1"/>
+            <stop offset="0.3" stop-color="#F3F5F8" stop-opacity="1"/>
+            <stop offset="0.5" stop-color="#C2C8D2" stop-opacity="1"/>
+            <stop offset="0.72" stop-color="#EEF1F5" stop-opacity="1"/>
+            <stop offset="1" stop-color="#7E8797" stop-opacity="1"/>
+          </linearGradient>
+          <linearGradient id="pip-dark-appicon-grind" x1="0" y1="0" x2="1" y2="0.2">
+            <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+            <stop offset="1" stop-color="#C8CED8" stop-opacity="1"/>
+          </linearGradient>
+          <radialGradient id="pip-dark-appicon-rivet" cx="0.35" cy="0.3" r="0.75" fx="0.35" fy="0.3">
+            <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+            <stop offset="0.45" stop-color="#C9CFD8" stop-opacity="1"/>
+            <stop offset="1" stop-color="#6F7889" stop-opacity="1"/>
+          </radialGradient>
+          <radialGradient id="pip-dark-appicon-sclera" cx="0.45" cy="0.38" r="0.7" fx="0.45" fy="0.38">
+            <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+            <stop offset="0.75" stop-color="#F3F1F4" stop-opacity="1"/>
+            <stop offset="1" stop-color="#D9D3DC" stop-opacity="1"/>
+          </radialGradient>
+          <radialGradient id="pip-dark-appicon-iris" cx="0.5" cy="0.62" r="0.6" fx="0.5" fy="0.62">
+            <stop offset="0" stop-color="#7FD7FF" stop-opacity="1"/>
+            <stop offset="0.45" stop-color="#2F7BD0" stop-opacity="1"/>
+            <stop offset="0.85" stop-color="#1B2E73" stop-opacity="1"/>
+            <stop offset="1" stop-color="#121A45" stop-opacity="1"/>
+          </radialGradient>
+          <linearGradient id="pip-dark-appicon-feet" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3A3E58" stop-opacity="1"/>
+            <stop offset="1" stop-color="#14162A" stop-opacity="1"/>
+          </linearGradient>
+          <linearGradient id="pip-dark-appicon-lidT" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#26A3BF" stop-opacity="1"/>
+            <stop offset="0.85" stop-color="#2299B5" stop-opacity="1"/>
+            <stop offset="1" stop-color="#147A94" stop-opacity="1"/>
+          </linearGradient>
+          <linearGradient id="pip-dark-appicon-lidB" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#126F88" stop-opacity="1"/>
+            <stop offset="0.12" stop-color="#2299B5" stop-opacity="1"/>
+            <stop offset="1" stop-color="#1F93AE" stop-opacity="1"/>
+          </linearGradient>
+          <clipPath id="pip-dark-appicon-bladeClip">
+            <path d="M14 10V-50Q16 -92 -18 -122Q-27 -84 -17 -44L-17 10Z"/>
+          </clipPath>
+          <clipPath id="pip-dark-appicon-eye0">
+            <ellipse rx="22" ry="26"/>
+          </clipPath>
+          <clipPath id="pip-dark-appicon-lid0">
+            <ellipse rx="26.5" ry="30.5"/>
+          </clipPath>
+          <clipPath id="pip-dark-appicon-eye1">
+            <ellipse rx="22" ry="26"/>
+          </clipPath>
+          <clipPath id="pip-dark-appicon-lid1">
+            <ellipse rx="26.5" ry="30.5"/>
+          </clipPath>
+          <clipPath id="pip-dark-appicon-mouth">
+            <path d="M-17 -9Q0 4.95 17 -9Q0 27 -17 -9Z"/>
+          </clipPath>
+        </defs>
+        <g>
+          <g/>
+          <g transform="translate(200.00 345.00) rotate(0.07) scale(1.0356 0.9570) translate(-200 -345)">
+            <g transform="translate(286.00 284.00) rotate(2.80) scale(1.0000 1.0000) translate(-286 -284)">
+              <path d="M278 282Q292 280 294 292" fill="none" stroke="#4E5668" stroke-width="6" stroke-linecap="round"/>
+              <path d="M278 282Q292 280 294 292" fill="none" stroke="url(#pip-dark-appicon-steelX)" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="294" cy="309" r="15" fill="none" stroke="#4E5668" stroke-width="7.5"/>
+              <circle cx="294" cy="309" r="15" fill="none" stroke="url(#pip-dark-appicon-steelX)" stroke-width="4"/>
+              <path d="M282 302A14 14 0 0 1 292 294.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+            </g>
+            <g transform="translate(212.00 140.00) rotate(35.61) scale(1.0000 1.0000) translate(0 0)">
+              <path d="M-7 10V-36Q-7 -46 3 -46Q12 -46 12 -38Q12 -33 6 -31L2 -29V-24L8 -22V10Z" fill="url(#pip-dark-appicon-steelX)" stroke="#4E5668" stroke-width="2.6" stroke-linejoin="round"/>
+              <path d="M-3 6V-36Q-3 -42 3 -42" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+            </g>
+            <g transform="translate(212.00 140.00) rotate(-19.35) scale(1.0000 1.0000) translate(0 0)">
+              <g>
+                <path d="M14 10V-50Q16 -92 -18 -122Q-27 -84 -17 -44L-17 10Z" fill="url(#pip-dark-appicon-steelX)" stroke="#4E5668" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M-17 10L-17 -44Q-27 -84 -18 -122Q-12 -88 -5 -50L-5 10Z" fill="url(#pip-dark-appicon-grind)" opacity="0.9"/>
+                <path d="M-5 6V-50Q-10 -88 -17 -120" fill="none" stroke="#8D96A6" stroke-width="1.4" opacity="0.8"/>
+                <path d="M7 -30Q9 -40 7 -50" fill="none" stroke="#6A7385" stroke-width="3.2" stroke-linecap="round" opacity="0.6"/>
+                <path d="M9 4V-50Q10 -82 -8 -106" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+                <g clip-path="url(#pip-dark-appicon-bladeClip)">
+                  <rect x="-30" y="-130" width="60" height="14" fill="#fff" opacity="0.85" transform="rotate(-30)"/>
+                </g>
+              </g>
+            </g>
+            <g>
+              <ellipse cx="172" cy="339" rx="22" ry="10" fill="url(#pip-dark-appicon-feet)"/>
+              <ellipse cx="168" cy="335" rx="10" ry="3" fill="#fff" opacity="0.18"/>
+              <ellipse cx="228" cy="339" rx="22" ry="10" fill="url(#pip-dark-appicon-feet)"/>
+              <ellipse cx="224" cy="335" rx="10" ry="3" fill="#fff" opacity="0.18"/>
+            </g>
+            <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+              <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="url(#pip-dark-appicon-body)"/>
+              <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="url(#pip-dark-appicon-shade)"/>
+              <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="none" stroke="url(#pip-dark-appicon-bevel)" stroke-width="5" transform="translate(200 232) scale(.94) translate(-200 -232)"/>
+              <path d="M270 288Q270 326 232 328" fill="none" stroke="#052E3E" stroke-width="5" stroke-linecap="round" opacity="0.28"/>
+              <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="none" stroke="url(#pip-dark-appicon-rim)" stroke-width="4"/>
+              <path d="M136 196Q140 156 176 140Q156 162 150 198Q146 208 136 196Z" fill="url(#pip-dark-appicon-spec)" opacity="0.75"/>
+              <ellipse cx="186" cy="140" rx="5" ry="3.2" fill="#fff" opacity="0.8" transform="rotate(-14 186 140)"/>
+              <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="none" stroke="#073A4C" stroke-width="3.2"/>
+              <g>
+                <rect x="118" y="266" width="164" height="25" rx="8" fill="url(#pip-dark-appicon-steel)" stroke="#4E5668" stroke-width="2.6"/>
+                <path d="M126 274H274M124 279H276M126 284H274" stroke="#6F7889" stroke-opacity="0.22" stroke-width="0.9"/>
+                <rect x="124" y="268.5" width="152" height="4" rx="2" fill="#fff" opacity="0.75"/>
+                <path d="M124 293H276" stroke="#052E3E" stroke-width="3" opacity="0.3"/>
+                <circle cx="140" cy="279" r="6.5" fill="url(#pip-dark-appicon-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+                <circle cx="138" cy="277" r="1.6" fill="#fff"/>
+                <circle cx="260" cy="279" r="6.5" fill="url(#pip-dark-appicon-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+                <circle cx="258" cy="277" r="1.6" fill="#fff"/>
+                <rect x="186" y="276" width="22" height="7" rx="3.5" fill="none" stroke="#6F7889" stroke-width="1.6" opacity="0.8"/>
+                <path d="M204 276L212 268.5Q213.5 267.5 213.5 269L209 276" fill="none" stroke="#6F7889" stroke-width="1.6" opacity="0.8" stroke-linejoin="round"/>
+              </g>
+              <ellipse cx="150" cy="236" rx="12" ry="6.5" fill="#8EE0EE" opacity="0.450"/>
+              <ellipse cx="250" cy="236" rx="12" ry="6.5" fill="#8EE0EE" opacity="0.450"/>
+              <g transform="translate(171.00 201.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                <ellipse rx="25.5" ry="29.5" fill="#052E3E" opacity="0.35" cy="1.5"/>
+                <g clip-path="url(#pip-dark-appicon-eye0)">
+                  <rect x="-26" y="-30" width="52" height="60" fill="url(#pip-dark-appicon-sclera)"/>
+                  <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                    <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                      <circle r="14.5" fill="url(#pip-dark-appicon-iris)"/>
+                      <circle r="14.5" fill="none" stroke="#0E1338" stroke-width="2.2"/>
+                      <circle r="7" fill="#070A1E"/>
+                      <path d="M-9 6A11 11 0 0 0 9 6" stroke="#9DE6FF" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+                    </g>
+                    <ellipse cx="-5" cy="-6" rx="5" ry="5.8" fill="#fff"/>
+                    <circle cx="5.5" cy="5" r="2.2" fill="#fff" opacity="0.9"/>
+                  </g>
+                  <ellipse cy="-22" rx="22" ry="8" fill="#03212F" opacity="0.12"/>
+                </g>
+                <ellipse rx="22" ry="26" fill="none" stroke="#021A26" stroke-width="2.6"/>
+                <g clip-path="url(#pip-dark-appicon-lid0)">
+                  <path fill="url(#pip-dark-appicon-lidT)" d="M-32 -34H32V-23.84Q0 -15.064 -32 -23.84Z"/>
+                  <path fill="url(#pip-dark-appicon-lidB)" d="M-32 34H32V11.36Q0 -7.952000000000002 -32 11.36Z"/>
+                </g>
+                <path fill="none" stroke="#021A26" stroke-width="3.4" stroke-linecap="round" opacity="1.000" d="M-11.936900770300474 -22.84Q0 -14.064 11.936900770300474 -22.84"/>
+                <path fill="none" stroke="#021A26" stroke-width="2.8" stroke-linecap="round" opacity="1.000" d="M-23 12.36Q0 -8.952000000000002 23 12.36"/>
+              </g>
+              <g transform="translate(229.00 201.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                <ellipse rx="25.5" ry="29.5" fill="#052E3E" opacity="0.35" cy="1.5"/>
+                <g clip-path="url(#pip-dark-appicon-eye1)">
+                  <rect x="-26" y="-30" width="52" height="60" fill="url(#pip-dark-appicon-sclera)"/>
+                  <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                    <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                      <circle r="14.5" fill="url(#pip-dark-appicon-iris)"/>
+                      <circle r="14.5" fill="none" stroke="#0E1338" stroke-width="2.2"/>
+                      <circle r="7" fill="#070A1E"/>
+                      <path d="M-9 6A11 11 0 0 0 9 6" stroke="#9DE6FF" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+                    </g>
+                    <ellipse cx="-5" cy="-6" rx="5" ry="5.8" fill="#fff"/>
+                    <circle cx="5.5" cy="5" r="2.2" fill="#fff" opacity="0.9"/>
+                  </g>
+                  <ellipse cy="-22" rx="22" ry="8" fill="#03212F" opacity="0.12"/>
+                </g>
+                <ellipse rx="22" ry="26" fill="none" stroke="#021A26" stroke-width="2.6"/>
+                <g clip-path="url(#pip-dark-appicon-lid1)">
+                  <path fill="url(#pip-dark-appicon-lidT)" d="M-32 -34H32V-23.84Q0 -15.064 -32 -23.84Z"/>
+                  <path fill="url(#pip-dark-appicon-lidB)" d="M-32 34H32V11.36Q0 -7.952000000000002 -32 11.36Z"/>
+                </g>
+                <path fill="none" stroke="#021A26" stroke-width="3.4" stroke-linecap="round" opacity="1.000" d="M-11.936900770300474 -22.84Q0 -14.064 11.936900770300474 -22.84"/>
+                <path fill="none" stroke="#021A26" stroke-width="2.8" stroke-linecap="round" opacity="1.000" d="M-23 12.36Q0 -8.952000000000002 23 12.36"/>
+              </g>
+              <path d="M-15 4Q-2 -7 15 2" fill="none" stroke="#1E2036" stroke-width="7.5" stroke-linecap="round" transform="translate(169.00 157.00) rotate(-3.00) scale(1.0000 1.0000) translate(0 0)"/>
+              <path d="M-15 2Q2 -7 15 4" fill="none" stroke="#1E2036" stroke-width="7.5" stroke-linecap="round" transform="translate(231.00 157.00) rotate(3.00) scale(1.0000 1.0000) translate(0 0)"/>
+              <g transform="translate(200.00 246.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                <path fill="#03212F" stroke="#021A26" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round" d="M-17 -9Q0 4.95 17 -9Q0 27 -17 -9Z"/>
+                <g clip-path="url(#pip-dark-appicon-mouth)">
+                  <rect x="-17" width="60" height="5" fill="#fff" y="-5.025" opacity="1.000"/>
+                  <ellipse fill="#FF7A86" cx="0" cy="10" rx="9.35" ry="5" opacity="1.000"/>
+                </g>
+              </g>
+              <ellipse cx="208" cy="149" rx="26" ry="7" fill="#04283A" opacity="0.28"/>
+            </g>
+            <g>
+              <path d="M150 150A76 76 0 0 1 250 150" fill="none" stroke="#4E5668" stroke-width="8" stroke-linecap="round"/>
+              <path d="M150 150A76 76 0 0 1 250 150" fill="none" stroke="url(#pip-dark-appicon-steel)" stroke-width="4.5" stroke-linecap="round"/>
+              <circle cx="212" cy="140" r="12" fill="#4E5668"/>
+              <circle cx="212" cy="140" r="8.5" fill="url(#pip-dark-appicon-rivet)" stroke="#4E5668" stroke-width="2"/>
+              <circle cx="209.5" cy="137.5" r="2.2" fill="#fff"/>
+            </g>
+          </g>
+          <g/>
+        </g>
+          </svg>
+  </g>
+  <circle cx="54" cy="54" r="40.6" fill="none" stroke="#9FE6F4" stroke-opacity=".35" stroke-width=".8"/>
+</svg>

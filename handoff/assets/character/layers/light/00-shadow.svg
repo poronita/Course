@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <radialGradient id="pip-light-00-shadow-shadow" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g>
+    <ellipse cx="200" cy="350" rx="92" ry="13" fill="url(#pip-light-00-shadow-shadow)" opacity="1" transform="translate(200.00 350.00) rotate(0.00) scale(1.0000 1.0000) translate(-200 -350)"/>
+  </g>
+</svg>

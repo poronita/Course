@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/colors.xml: LIGHT (creamy white) theme, the day theme. Set AppCompatDelegate night mode to YES to make dark the app default -->
+<resources>
+    <!-- UI tokens -->
+    <color name="isk_bg">#F8F1E0</color><!-- Screen background -->
+    <color name="isk_s1">#FFFCF4</color><!-- Surface 1: cards, pills, side bar -->
+    <color name="isk_s2">#F0E6CE</color><!-- Surface 2: raised or selected surface -->
+    <color name="isk_ink">#18272D</color><!-- Primary text -->
+    <color name="isk_mut">#5A6B6F</color><!-- Muted (secondary) text and icons -->
+    <color name="isk_line">#29463719</color><!-- Hairlines and borders (translucent) -->
+    <color name="isk_ac">#0E7C99</color><!-- Accent: buttons, links, active states -->
+    <color name="isk_ac2">#14A0C2</color><!-- Accent light: gradient top, highlights, links on dark -->
+    <color name="isk_ac_ink">#FFFFFF</color><!-- Text or icon colour on top of the accent -->
+    <color name="isk_gold">#E0A21B</color><!-- Gold: XP ring, streak, level and reward highlights -->
+    <color name="isk_gold2">#FFD66B</color><!-- Gold light: gradient top for gold chips -->
+    <color name="isk_good">#12875A</color><!-- Success -->
+    <color name="isk_warn">#C97A0B</color><!-- Warning -->
+    <color name="isk_card">#FFFCF4</color><!-- Card, bubble and toast background -->
+    <color name="isk_glow">#400E7C99</color><!-- Soft accent glow behind screens and buttons (translucent) -->
+
+    <!-- Pip colour ramp (follows the theme) -->
+    <color name="isk_pip_body_base">#F3E8CF</color>
+    <color name="isk_pip_body_lid_a">#F6ECD7</color>
+    <color name="isk_pip_body_lid_b">#FAF2E0</color>
+    <color name="isk_pip_body_lid_c">#F4EAD3</color>
+    <color name="isk_pip_highlight_top">#FFFCF2</color>
+    <color name="isk_pip_highlight_arm">#FFF9EC</color>
+    <color name="isk_pip_highlight_cheek">#FFF6E4</color>
+    <color name="isk_pip_highlight_glint">#FFFDF6</color>
+    <color name="isk_pip_shade_body_end">#D2BF95</color>
+    <color name="isk_pip_shade_arm_end">#DAC89E</color>
+    <color name="isk_pip_shade_ribbon_dark">#DCCAA4</color>
+    <color name="isk_pip_shade_lid_edge">#E8DAB9</color>
+    <color name="isk_pip_shade_lid_low">#E0D0AA</color>
+    <color name="isk_pip_shade_misc">#D6C398</color>
+    <color name="isk_pip_rim_a">#FFFFFF</color>
+    <color name="isk_pip_rim_b">#FFFFFF</color>
+    <color name="isk_pip_rim_c">#FFFFFF</color>
+    <color name="isk_pip_shadow_outline">#8C7550</color>
+    <color name="isk_pip_shadow_deep">#6F5A3C</color>
+    <color name="isk_pip_shadow_deeper">#5E4B31</color>
+    <color name="isk_pip_shadow_mouth">#4F3F29</color>
+    <color name="isk_pip_shadow_lash_soft">#4F3F29</color>
+    <color name="isk_pip_shadow_lash">#3D2F1E</color>
+    <color name="isk_pip_shadow_mouth_line">#3D2F1E</color>
+    <color name="isk_pip_shadow_stage">#EFE5CC</color>
+
+    <!-- Pip constants (same in both themes) -->
+    <color name="isk_pip_ink">#1E2036</color>
+    <color name="isk_pip_steel_outline">#4E5668</color>
+    <color name="isk_pip_steel_hi">#FBFCFE</color>
+    <color name="isk_pip_steel_mid">#C9CFD8</color>
+    <color name="isk_pip_steel_lo">#9AA2B0</color>
+    <color name="isk_pip_steel_engrave">#6F7889</color>
+    <color name="isk_pip_mitt_a">#FFFFFF</color>
+    <color name="isk_pip_mitt_b">#E3D9CF</color>
+    <color name="isk_pip_mitt_outline">#8E6F66</color>
+    <color name="isk_pip_foot_a">#3A3E58</color>
+    <color name="isk_pip_foot_b">#14162A</color>
+    <color name="isk_pip_sclera_a">#FFFFFF</color>
+    <color name="isk_pip_sclera_b">#D9D3DC</color>
+    <color name="isk_pip_iris_a">#7FD7FF</color>
+    <color name="isk_pip_iris_b">#2F7BD0</color>
+    <color name="isk_pip_iris_c">#1B2E73</color>
+    <color name="isk_pip_iris_d">#121A45</color>
+    <color name="isk_pip_pupil">#070A1E</color>
+    <color name="isk_pip_gold_a">#FFF3B8</color>
+    <color name="isk_pip_gold_b">#FFC94A</color>
+    <color name="isk_pip_gold_c">#C7810E</color>
+    <color name="isk_pip_gold_rim_a">#FFE9A0</color>
+    <color name="isk_pip_gold_rim_b">#B06E07</color>
+    <color name="isk_pip_flame_top">#FFD45A</color>
+    <color name="isk_pip_flame_bottom">#FF6A2B</color>
+    <color name="isk_pip_light_outline">#7B6443</color>
+
+    <!-- Badge tiers (same in both themes) -->
+    <color name="isk_tier_bronze_light">#F6C9A0</color>
+    <color name="isk_tier_bronze_mid">#C98A52</color>
+    <color name="isk_tier_bronze_dark">#7A4516</color>
+    <color name="isk_tier_bronze_icon">#4A2A0C</color>
+    <color name="isk_tier_silver_light">#FAFCFE</color>
+    <color name="isk_tier_silver_mid">#C3CED9</color>
+    <color name="isk_tier_silver_dark">#6B7888</color>
+    <color name="isk_tier_silver_icon">#2F3B49</color>
+    <color name="isk_tier_gold_light">#FFF3B0</color>
+    <color name="isk_tier_gold_mid">#FFC94A</color>
+    <color name="isk_tier_gold_dark">#B97A08</color>
+    <color name="isk_tier_gold_icon">#5A3A00</color>
+</resources>

@@ -1,0 +1,4445 @@
+{
+ "transitions": [
+  {
+   "id": "tr-iris",
+   "name": "Iris open",
+   "desc": "A circle grows from the exact tap point and reveals the next screen.",
+   "ms": 600,
+   "sfx": "whoosh:up:0.5",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-wipe",
+   "name": "Blade wipe",
+   "desc": "The new screen slides in behind a shiny steel edge, like a blade passing over.",
+   "ms": 550,
+   "sfx": "whoosh:right:0.45",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-curtain",
+   "name": "Curtain split",
+   "desc": "The old screen splits down the middle and slides out to both sides.",
+   "ms": 650,
+   "sfx": "whoosh:split:0.55",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-blinds",
+   "name": "Venetian blinds",
+   "desc": "Eight vertical slats rotate to show the new screen.",
+   "ms": 700,
+   "sfx": "click:ratchet:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-pixel-bloom",
+   "name": "Pixel bloom",
+   "desc": "Square pixels pop up in random order until the new screen is complete.",
+   "ms": 750,
+   "sfx": "pop:cascade:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-diamond",
+   "name": "Diamond open",
+   "desc": "A diamond-shaped window opens from the centre.",
+   "ms": 600,
+   "sfx": "whoosh:up:0.5",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-zoom-through",
+   "name": "Zoom through",
+   "desc": "The old screen zooms past the camera while the new one settles from slightly large.",
+   "ms": 600,
+   "sfx": "whoosh:rise:0.55",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-card-flip",
+   "name": "3D card flip",
+   "desc": "The screen flips like a card around a vertical axis.",
+   "ms": 650,
+   "sfx": "paper:flip:0.5",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-push-parallax",
+   "name": "Parallax push",
+   "desc": "The new screen pushes the old one away, background layers move at different speeds.",
+   "ms": 500,
+   "sfx": "whoosh:left:0.4",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-drop-bounce",
+   "name": "Drop and bounce",
+   "desc": "The new screen drops from above, squashes, and bounces once.",
+   "ms": 700,
+   "sfx": "thud:bounce:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-blade-swing",
+   "name": "Blade swing",
+   "desc": "The new screen swings out from a hinge like a pocket-knife blade opening, with a click at the end.",
+   "ms": 650,
+   "sfx": "mech:snap:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-shutter",
+   "name": "Camera shutter",
+   "desc": "Seven shutter blades close over the old screen and open on the new one.",
+   "ms": 600,
+   "sfx": "click:shutter:0.5",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-film-roll",
+   "name": "Film-strip roll",
+   "desc": "The old screen rolls up like a film strip and the new one rolls in.",
+   "ms": 750,
+   "sfx": "mech:reel:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-page-curl",
+   "name": "Page curl",
+   "desc": "The corner of the old screen curls back to reveal the new one.",
+   "ms": 700,
+   "sfx": "paper:curl:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-ripple",
+   "name": "Water ripple",
+   "desc": "A ripple spreads from the tap and bends the old screen into the new one.",
+   "ms": 800,
+   "sfx": "water:ripple:0.75",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-glitch",
+   "name": "Glitch slice",
+   "desc": "Horizontal slices slide sideways with a quick colour split, then settle.",
+   "ms": 450,
+   "sfx": "glitch:short:0.4",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-liquid",
+   "name": "Liquid morph",
+   "desc": "The tapped button melts into a blob that spreads and becomes the new screen.",
+   "ms": 800,
+   "sfx": "water:blob:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-ink",
+   "name": "Ink splash",
+   "desc": "Ink splashes from the tap and floods the screen, then the new screen shows through.",
+   "ms": 800,
+   "sfx": "water:splash:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-confetti-sweep",
+   "name": "Confetti sweep",
+   "desc": "A wave of confetti sweeps across and leaves the new screen behind it.",
+   "ms": 750,
+   "sfx": "sparkle:sweep:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-clock-wipe",
+   "name": "Clock wipe",
+   "desc": "A clock hand sweeps around and reveals the new screen behind it.",
+   "ms": 700,
+   "sfx": "click:tickrun:0.65",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-spiral",
+   "name": "Spiral twist",
+   "desc": "The old screen twists into a spiral and the new one unwinds.",
+   "ms": 800,
+   "sfx": "whoosh:spiral:0.75",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-gooey",
+   "name": "Gooey merge",
+   "desc": "Blobs of colour merge like liquid metal and become the new screen.",
+   "ms": 800,
+   "sfx": "water:blob:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-shatter",
+   "name": "Shatter and assemble",
+   "desc": "The old screen cracks into tiles that fly away while the new tiles fly in.",
+   "ms": 850,
+   "sfx": "glitch:shatter:0.8",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-mosaic",
+   "name": "Mosaic resolve",
+   "desc": "The new screen starts as big blocks and sharpens to full resolution.",
+   "ms": 700,
+   "sfx": "pop:cascade:0.65",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-sunrise",
+   "name": "Sunrise sweep",
+   "desc": "A band of warm light sweeps up the screen and the new screen glows in.",
+   "ms": 800,
+   "sfx": "arp:up:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-card-shuffle",
+   "name": "Card shuffle",
+   "desc": "The old screen becomes a card, shuffles into a deck, and the new card is dealt on top.",
+   "ms": 800,
+   "sfx": "paper:shuffle:0.75",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-portal",
+   "name": "Tummy portal",
+   "desc": "A round portal opens from Pip's tummy and the new screen grows out of it.",
+   "ms": 800,
+   "sfx": "magic:portal:0.75",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-pip-pull",
+   "name": "Pip pulls the screen",
+   "desc": "Pip runs across the screen pulling the new screen behind him like a curtain.",
+   "ms": 900,
+   "sfx": "voice:whee:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-unzip",
+   "name": "Unzip",
+   "desc": "A zipper runs down the screen and the new screen is behind it.",
+   "ms": 700,
+   "sfx": "zip:down:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-peel",
+   "name": "Sticker peel",
+   "desc": "The old screen peels off like a sticker from one corner.",
+   "ms": 700,
+   "sfx": "paper:peel:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-tool-flip",
+   "name": "Tool flip",
+   "desc": "Pip's blade quiff flips to the tool's icon, the icon scales up to fill the screen and becomes the new page.",
+   "ms": 800,
+   "sfx": "mech:snap:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-vortex",
+   "name": "Vortex",
+   "desc": "The old screen is sucked into a point and the new one blooms from the same point.",
+   "ms": 850,
+   "sfx": "whoosh:suck:0.8",
+   "cat": "transition"
+  }
+ ],
+ "downloads": [
+  {
+   "id": "dl-tray-drop",
+   "name": "Drop into tray",
+   "desc": "The result card drops into a tray at the bottom and the tray bounces.",
+   "ms": 900,
+   "sfx": "thud:soft:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-paper-plane",
+   "name": "Paper plane",
+   "desc": "The result folds into a paper plane and glides to the gallery icon.",
+   "ms": 1100,
+   "sfx": "paper:fold:0.6",
+   "cat": "download"
+  },
+  {
+   "id": "dl-confetti-cannon",
+   "name": "Confetti cannon",
+   "desc": "Two cannons from the bottom corners fire confetti over the result.",
+   "ms": 1500,
+   "sfx": "pop:cannon:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-coin-shower",
+   "name": "Coin shower",
+   "desc": "XP coins rain down and fly into the XP bar.",
+   "ms": 1400,
+   "sfx": "coin:shower:1.0",
+   "cat": "download"
+  },
+  {
+   "id": "dl-curve-to-gallery",
+   "name": "Curve to gallery",
+   "desc": "The thumbnail shrinks and travels along a curve into the gallery icon, which wiggles.",
+   "ms": 900,
+   "sfx": "whoosh:suck:0.6",
+   "cat": "download"
+  },
+  {
+   "id": "dl-stamp",
+   "name": "SAVED stamp",
+   "desc": "A big SAVED stamp slams on the result with a small shockwave.",
+   "ms": 800,
+   "sfx": "stamp:hit:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-zip-pack",
+   "name": "Zip pack",
+   "desc": "Several files squeeze together and a zipper closes them into one bundle.",
+   "ms": 1000,
+   "sfx": "zip:up:0.8",
+   "cat": "download"
+  },
+  {
+   "id": "dl-mailbox",
+   "name": "Mailbox",
+   "desc": "The thumbnail flies into a mailbox, the flag lifts.",
+   "ms": 1000,
+   "sfx": "thud:soft:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-safe-lock",
+   "name": "Safe lock",
+   "desc": "A shield with a padlock closes over the file. Used for privacy jobs.",
+   "ms": 1000,
+   "sfx": "mech:lock:0.7",
+   "cat": "download"
+  },
+  {
+   "id": "dl-gift-box",
+   "name": "Gift box",
+   "desc": "The result is wrapped in a ribbon and the box opens to show it.",
+   "ms": 1200,
+   "sfx": "magic:reveal:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-rocket",
+   "name": "Rocket launch",
+   "desc": "The result sits in a small rocket that blasts off to the share target.",
+   "ms": 1200,
+   "sfx": "riser:rocket:1.0",
+   "cat": "download"
+  },
+  {
+   "id": "dl-balloon-pop",
+   "name": "Balloon pop",
+   "desc": "A balloon carries the result up, then pops into confetti.",
+   "ms": 1200,
+   "sfx": "pop:balloon:0.8",
+   "cat": "download"
+  },
+  {
+   "id": "dl-sparkle-sweep",
+   "name": "Sparkle sweep",
+   "desc": "A diagonal shine sweeps across the thumbnail and sparkles pop.",
+   "ms": 900,
+   "sfx": "sparkle:sweep:0.7",
+   "cat": "download"
+  },
+  {
+   "id": "dl-ring-pop",
+   "name": "Ring close and pop",
+   "desc": "The progress ring closes, flashes, and a check mark bursts out of it.",
+   "ms": 800,
+   "sfx": "chime:ok:0.6",
+   "cat": "download"
+  },
+  {
+   "id": "dl-check-draw",
+   "name": "Ink check",
+   "desc": "A thick check mark draws itself with an ink stroke.",
+   "ms": 700,
+   "sfx": "chime:ok:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-polaroid",
+   "name": "Polaroid print",
+   "desc": "The result prints out like an instant photo and slowly develops.",
+   "ms": 1400,
+   "sfx": "mech:print:1.1",
+   "cat": "download"
+  },
+  {
+   "id": "dl-vault",
+   "name": "Vault door",
+   "desc": "A round vault door closes with spinning bolts. Used for location removal.",
+   "ms": 1300,
+   "sfx": "mech:vault:1.0",
+   "cat": "download"
+  },
+  {
+   "id": "dl-pip-catch",
+   "name": "Pip catches it",
+   "desc": "Pip jumps and catches the result in both hands and holds it up.",
+   "ms": 1000,
+   "sfx": "voice:yay:0.6",
+   "cat": "download"
+  },
+  {
+   "id": "dl-slot-roll",
+   "name": "Number reel",
+   "desc": "The final size digits roll like a slot machine and lock into place.",
+   "ms": 1100,
+   "sfx": "click:reel:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-fireworks",
+   "name": "Fireworks",
+   "desc": "Three fireworks burst behind the result.",
+   "ms": 1800,
+   "sfx": "pop:firework:1.2",
+   "cat": "download"
+  },
+  {
+   "id": "dl-bubbles",
+   "name": "Bubble float",
+   "desc": "Bubbles lift the result up and pop one by one.",
+   "ms": 1200,
+   "sfx": "pop:bubbles:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-magnet",
+   "name": "Magnet pull",
+   "desc": "A magnet pulls the file onto the Save button, small sparks fly.",
+   "ms": 800,
+   "sfx": "click:magnet:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-drill",
+   "name": "Arrow drill",
+   "desc": "A download arrow drills down through the card into the tray.",
+   "ms": 800,
+   "sfx": "whoosh:down:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-stack-tidy",
+   "name": "Stack and tidy",
+   "desc": "Loose results stack into a neat pile and straighten up.",
+   "ms": 900,
+   "sfx": "paper:shuffle:0.7",
+   "cat": "download"
+  },
+  {
+   "id": "dl-lightning",
+   "name": "Lightning snap",
+   "desc": "A quick flash and a lightning bolt strike the Save button. Used for very fast jobs.",
+   "ms": 600,
+   "sfx": "zap:strike:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-wax-seal",
+   "name": "Wax seal",
+   "desc": "A wax seal stamps the result. Used for cleaned and private files.",
+   "ms": 900,
+   "sfx": "stamp:wax:0.6",
+   "cat": "download"
+  },
+  {
+   "id": "dl-origami-crane",
+   "name": "Origami crane",
+   "desc": "The result folds into a crane and flies off the screen.",
+   "ms": 1300,
+   "sfx": "paper:fold:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-floppy",
+   "name": "Floppy stamp",
+   "desc": "A retro floppy-disk icon stamps onto the result in pixels.",
+   "ms": 800,
+   "sfx": "beep:retro:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-mini-chest",
+   "name": "Mini chest",
+   "desc": "A tiny chest pops up, opens, and the result rises out of it.",
+   "ms": 1200,
+   "sfx": "magic:reveal:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-glow-badge",
+   "name": "Glow badge",
+   "desc": "A soft glow pulses around the result and a ribbon unrolls with the file size.",
+   "ms": 900,
+   "sfx": "arp:up:0.7",
+   "cat": "download"
+  }
+ ],
+ "bars": [
+  {
+   "id": "bar-streams",
+   "name": "Converging streams",
+   "desc": "Several mini bars race at different speeds then merge into one.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-liquid",
+   "name": "Liquid fill",
+   "desc": "A wavy liquid fills the track and sloshes.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-orbit",
+   "name": "Orbit",
+   "desc": "Little dots orbit a ring that fills as they gather.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-tiles",
+   "name": "Tile flip",
+   "desc": "A grid of tiles flips to the accent colour in random order.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-comet",
+   "name": "Comets",
+   "desc": "Comets race along the rail and dive into a bright head.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-warp",
+   "name": "Warp",
+   "desc": "Stars streak outward faster as progress grows.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-pip-runs",
+   "name": "Pip runs",
+   "desc": "Tiny Pip runs along the bar and leaves a coloured trail.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-blade-slice",
+   "name": "Blade slice",
+   "desc": "A blade slices the photo into strips that slide together into one.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-zipper",
+   "name": "Zipper",
+   "desc": "The bar is a zipper that closes as progress grows.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-gears",
+   "name": "Gears",
+   "desc": "Small gears spin and all feed one big gear.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-fireflies",
+   "name": "Fireflies",
+   "desc": "Fireflies swarm toward the end of the bar.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-segments",
+   "name": "Charging segments",
+   "desc": "Segments light up like a battery and the last one pulses.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  }
+ ],
+ "services": [
+  {
+   "id": "compress",
+   "name": "Compress and target size",
+   "actions": [
+    {
+     "id": "ac-cmp-press",
+     "name": "Photo press",
+     "desc": "Pip hugs the photo and squeezes it like an accordion until it is small.",
+     "ms": 2200,
+     "sfx": "squish:press:0.6",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cmp-belt",
+     "name": "Belt tightening",
+     "desc": "Pip tightens his belt a notch at a time while the photo gets slimmer.",
+     "ms": 2400,
+     "sfx": "mech:ratchet:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cmp-vacuum",
+     "name": "Vacuum seal",
+     "desc": "Pip sucks the air out of a bag holding the photo until it hugs the photo.",
+     "ms": 2400,
+     "sfx": "whoosh:suck:0.9",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cmp-dough",
+     "name": "Kneading",
+     "desc": "Pip kneads the photo like dough and it folds smaller each time.",
+     "ms": 2200,
+     "sfx": "squish:knead:0.6",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cmp-roller",
+     "name": "Tiny steamroller",
+     "desc": "Pip drives a toy steamroller over the photo and the file size drops.",
+     "ms": 2600,
+     "sfx": "rumble:engine:1.0",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cmp-stomp",
+     "name": "Grape stomp",
+     "desc": "Pip jumps up and down on a pile of pixels and juice squirts out.",
+     "ms": 2200,
+     "sfx": "squish:stomp:0.7",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cmp-balloon",
+     "name": "Balloon deflate",
+     "desc": "Pip holds a balloon labelled MB. It deflates with a raspberry noise to KB.",
+     "ms": 2200,
+     "sfx": "air:deflate:0.9",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cmp-weights",
+     "name": "Weight lifting",
+     "desc": "Pip lifts a heavy weight labelled MB. It gets lighter every rep and ends as a feather.",
+     "ms": 2600,
+     "sfx": "voice:effort:0.7",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cmp-fold",
+     "name": "Origami fold",
+     "desc": "Pip folds the photo into a smaller and smaller square.",
+     "ms": 2200,
+     "sfx": "paper:fold:0.7",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cmp-squeeze",
+     "name": "Orange squeeze",
+     "desc": "Pip squeezes a pixel orange and the extra bytes drip out.",
+     "ms": 2200,
+     "sfx": "water:drip:0.8",
+     "cat": "action"
+    }
+   ]
+  },
+  {
+   "id": "resize",
+   "name": "Resize and crop",
+   "actions": [
+    {
+     "id": "ac-crp-snip",
+     "name": "Snip frame",
+     "desc": "Pip snips a frame out of the air with his blade and the photo slides inside.",
+     "ms": 2000,
+     "sfx": "mech:snap:0.4",
+     "cat": "action"
+    },
+    {
+     "id": "ac-crp-tape",
+     "name": "Measuring tape",
+     "desc": "Pip pulls a tape across the photo and nods at the exact numbers.",
+     "ms": 2200,
+     "sfx": "mech:tape:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-crp-hammer",
+     "name": "Hammer the frame",
+     "desc": "Pip hammers four nails into a wooden frame around the photo.",
+     "ms": 2400,
+     "sfx": "thud:nail:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-crp-chalk",
+     "name": "Chalk line",
+     "desc": "Pip snaps a chalk line along the crop edge and blows the dust.",
+     "ms": 2000,
+     "sfx": "whoosh:snap:0.4",
+     "cat": "action"
+    },
+    {
+     "id": "ac-crp-laser",
+     "name": "Laser cut",
+     "desc": "Pip cuts the crop outline with a tiny laser, sparks fly.",
+     "ms": 2400,
+     "sfx": "laser:cut:1.0",
+     "cat": "action"
+    },
+    {
+     "id": "ac-crp-cookie",
+     "name": "Cookie cutter",
+     "desc": "Pip presses a cookie cutter on the photo and lifts out the crop.",
+     "ms": 2000,
+     "sfx": "squish:stomp:0.5",
+     "cat": "action"
+    },
+    {
+     "id": "ac-crp-chisel",
+     "name": "Sculptor chisel",
+     "desc": "Pip chips away the extra photo with a chisel until the frame shape is left.",
+     "ms": 2400,
+     "sfx": "thud:nail:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-crp-wall",
+     "name": "Hang on wall",
+     "desc": "Pip hangs the cropped photo on a wall and straightens it with a squint.",
+     "ms": 2400,
+     "sfx": "thud:soft:0.5",
+     "cat": "action"
+    },
+    {
+     "id": "ac-crp-saw",
+     "name": "Carpenter saw",
+     "desc": "Pip saws along the line, a tiny sawdust cloud puffs.",
+     "ms": 2200,
+     "sfx": "mech:saw:0.9",
+     "cat": "action"
+    },
+    {
+     "id": "ac-crp-pinch",
+     "name": "Stretch and pinch",
+     "desc": "Pip stretches the photo with both hands and pinches to the right size.",
+     "ms": 2000,
+     "sfx": "squish:press:0.5",
+     "cat": "action"
+    }
+   ]
+  },
+  {
+   "id": "convert",
+   "name": "Convert formats",
+   "actions": [
+    {
+     "id": "ac-cnv-juggle",
+     "name": "Format juggling",
+     "desc": "Pip juggles JPG, PNG and WebP blocks and catches only the one you chose.",
+     "ms": 2400,
+     "sfx": "magic:juggle:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cnv-hat",
+     "name": "Magic hat",
+     "desc": "Pip taps a hat with a wand and the photo comes out in the new format.",
+     "ms": 2400,
+     "sfx": "magic:reveal:0.9",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cnv-blender",
+     "name": "Blender",
+     "desc": "Pip drops the photo in a blender and pours out a new format.",
+     "ms": 2400,
+     "sfx": "rumble:engine:0.9",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cnv-curtain",
+     "name": "Costume change",
+     "desc": "The photo steps behind a curtain, Pip counts to three, it steps out in a new outfit.",
+     "ms": 2400,
+     "sfx": "magic:reveal:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cnv-tennis",
+     "name": "Format rally",
+     "desc": "Pip hits the photo like a tennis ball between two format boxes.",
+     "ms": 2200,
+     "sfx": "click:racket:0.6",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cnv-chameleon",
+     "name": "Chameleon",
+     "desc": "Pip changes colour from the old format colour to the new format colour.",
+     "ms": 2200,
+     "sfx": "magic:morph:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cnv-conveyor",
+     "name": "Conveyor belt",
+     "desc": "Pip stands at a conveyor belt and stamps each file on its way.",
+     "ms": 2400,
+     "sfx": "mech:belt:0.9",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cnv-translate",
+     "name": "Translator",
+     "desc": "Pip wears a headset and translates between two format flags.",
+     "ms": 2200,
+     "sfx": "voice:babble:0.9",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cnv-wheel",
+     "name": "Pottery wheel",
+     "desc": "The photo spins on a pottery wheel and Pip shapes it into the new format.",
+     "ms": 2400,
+     "sfx": "water:blob:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-cnv-shift",
+     "name": "Shape-shifter",
+     "desc": "Pip flips through his own tools and the photo copies each shape.",
+     "ms": 2200,
+     "sfx": "mech:snap:0.6",
+     "cat": "action"
+    }
+   ]
+  },
+  {
+   "id": "privacy",
+   "name": "Privacy, location and metadata",
+   "actions": [
+    {
+     "id": "ac-prv-detective",
+     "name": "Detective",
+     "desc": "Pip puts on a hat and checks the photo with a magnifier.",
+     "ms": 2200,
+     "sfx": "voice:hmm:0.7",
+     "cat": "action"
+    },
+    {
+     "id": "ac-prv-radar",
+     "name": "Radar",
+     "desc": "A radar sweeps around Pip until a pin blips on the photo.",
+     "ms": 2200,
+     "sfx": "beep:radar:1.0",
+     "cat": "action"
+    },
+    {
+     "id": "ac-prv-map",
+     "name": "Treasure map",
+     "desc": "Pip unfolds a map and puts his finger on the place the photo was taken.",
+     "ms": 2200,
+     "sfx": "paper:flip:0.6",
+     "cat": "action"
+    },
+    {
+     "id": "ac-prv-eraser",
+     "name": "Eraser",
+     "desc": "Pip rubs a big eraser over the location tag until it is gone.",
+     "ms": 2200,
+     "sfx": "squish:knead:0.6",
+     "cat": "action"
+    },
+    {
+     "id": "ac-prv-scissors",
+     "name": "Cut the thread",
+     "desc": "The location is a thread tied to the photo. Pip snips it.",
+     "ms": 2000,
+     "sfx": "mech:snap:0.4",
+     "cat": "action"
+    },
+    {
+     "id": "ac-prv-sponge",
+     "name": "Sponge wash",
+     "desc": "Pip scrubs the photo with a sponge and little data bubbles float away.",
+     "ms": 2400,
+     "sfx": "water:bubbles:0.9",
+     "cat": "action"
+    },
+    {
+     "id": "ac-prv-vacuum",
+     "name": "Dust vacuum",
+     "desc": "Pip vacuums dust clouds labelled EXIF and GPS.",
+     "ms": 2400,
+     "sfx": "rumble:engine:0.9",
+     "cat": "action"
+    },
+    {
+     "id": "ac-prv-shades",
+     "name": "Spy shades",
+     "desc": "Pip puts on shades, looks left and right, and slips the photo into a folder.",
+     "ms": 2000,
+     "sfx": "beep:retro:0.4",
+     "cat": "action"
+    },
+    {
+     "id": "ac-prv-ninja",
+     "name": "Ninja hide",
+     "desc": "Pip hides behind the photo and peeks, then gives a thumbs up.",
+     "ms": 2200,
+     "sfx": "whoosh:left:0.4",
+     "cat": "action"
+    },
+    {
+     "id": "ac-prv-lock",
+     "name": "Padlock polish",
+     "desc": "Pip polishes a padlock until it shines, then clicks it shut.",
+     "ms": 2200,
+     "sfx": "mech:lock:0.7",
+     "cat": "action"
+    }
+   ]
+  },
+  {
+   "id": "video",
+   "name": "Video, GIF and animation",
+   "actions": [
+    {
+     "id": "ac-vid-clapper",
+     "name": "Clapper board",
+     "desc": "Pip snaps a clapper board shut and shouts action.",
+     "ms": 2000,
+     "sfx": "click:clap:0.4",
+     "cat": "action"
+    },
+    {
+     "id": "ac-vid-projector",
+     "name": "Projector crank",
+     "desc": "Pip cranks an old projector and frames flicker on the wall.",
+     "ms": 2600,
+     "sfx": "mech:reel:1.0",
+     "cat": "action"
+    },
+    {
+     "id": "ac-vid-flipbook",
+     "name": "Flip book",
+     "desc": "Pip flips a flip-book with his thumb, the frames run past.",
+     "ms": 2400,
+     "sfx": "paper:flip:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-vid-popcorn",
+     "name": "Popcorn",
+     "desc": "Pip eats popcorn while the video is processed and catches a kernel in his mouth.",
+     "ms": 2400,
+     "sfx": "pop:cascade:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-vid-dj",
+     "name": "DJ scratch",
+     "desc": "Pip scratches the timeline like a record.",
+     "ms": 2400,
+     "sfx": "glitch:scratch:0.7",
+     "cat": "action"
+    },
+    {
+     "id": "ac-vid-scissors",
+     "name": "Timeline trim",
+     "desc": "Pip snips the timeline at both ends and the middle part glows.",
+     "ms": 2200,
+     "sfx": "mech:snap:0.4",
+     "cat": "action"
+    },
+    {
+     "id": "ac-vid-juggle",
+     "name": "Frame juggling",
+     "desc": "Pip juggles tiny frames, one after another, and drops none.",
+     "ms": 2400,
+     "sfx": "magic:juggle:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-vid-surf",
+     "name": "Wave surfing",
+     "desc": "Pip surfs a wave made of the video frames.",
+     "ms": 2600,
+     "sfx": "water:ripple:1.0",
+     "cat": "action"
+    },
+    {
+     "id": "ac-vid-fast",
+     "name": "Fast forward",
+     "desc": "Pip runs in fast forward with speed lines and a blur.",
+     "ms": 2200,
+     "sfx": "whoosh:right:0.6",
+     "cat": "action"
+    },
+    {
+     "id": "ac-vid-boomerang",
+     "name": "Boomerang",
+     "desc": "Pip throws a boomerang that carries the clip and catches it as it comes back.",
+     "ms": 2400,
+     "sfx": "whoosh:spiral:0.8",
+     "cat": "action"
+    }
+   ]
+  },
+  {
+   "id": "utilities",
+   "name": "QR, colour, icons and SVG",
+   "actions": [
+    {
+     "id": "ac-utl-laser",
+     "name": "QR laser",
+     "desc": "Pip scans a QR code with a red laser from his eyes and it beeps.",
+     "ms": 2200,
+     "sfx": "beep:radar:0.7",
+     "cat": "action"
+    },
+    {
+     "id": "ac-utl-palette",
+     "name": "Paint palette",
+     "desc": "Pip holds a palette and dabs the colours he found in the photo.",
+     "ms": 2200,
+     "sfx": "water:drip:0.7",
+     "cat": "action"
+    },
+    {
+     "id": "ac-utl-pixels",
+     "name": "Pixel builder",
+     "desc": "Pip places pixel blocks one by one to build a QR code or icon.",
+     "ms": 2400,
+     "sfx": "pop:cascade:0.9",
+     "cat": "action"
+    },
+    {
+     "id": "ac-utl-stamp",
+     "name": "Icon stamp",
+     "desc": "Pip stamps the same icon in many sizes.",
+     "ms": 2200,
+     "sfx": "stamp:hit:0.4",
+     "cat": "action"
+    },
+    {
+     "id": "ac-utl-rainbow",
+     "name": "Rainbow painter",
+     "desc": "Pip paints a rainbow gradient with a wide brush.",
+     "ms": 2400,
+     "sfx": "magic:glide:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-utl-dropper",
+     "name": "Eyedropper",
+     "desc": "Pip uses a big eyedropper on the photo and drips the colour into a cup.",
+     "ms": 2000,
+     "sfx": "water:drip:0.6",
+     "cat": "action"
+    },
+    {
+     "id": "ac-utl-pen",
+     "name": "Calligraphy pen",
+     "desc": "Pip draws an SVG path with a calligraphy pen and the line smooths itself.",
+     "ms": 2400,
+     "sfx": "paper:pen:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-utl-checker",
+     "name": "Barcode checker",
+     "desc": "Pip runs a barcode under a scanner and it beeps happily.",
+     "ms": 2000,
+     "sfx": "beep:retro:0.5",
+     "cat": "action"
+    },
+    {
+     "id": "ac-utl-magic",
+     "name": "Colour magician",
+     "desc": "Pip pulls colour ribbons out of his sleeve, like a magician.",
+     "ms": 2200,
+     "sfx": "magic:reveal:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-utl-mosaic",
+     "name": "Mosaic maker",
+     "desc": "Pip sticks tiles on a wall and steps back to see the picture.",
+     "ms": 2400,
+     "sfx": "click:tickrun:0.8",
+     "cat": "action"
+    }
+   ]
+  },
+  {
+   "id": "batch",
+   "name": "Batch, gallery cleaner and duplicates",
+   "actions": [
+    {
+     "id": "ac-bat-broom",
+     "name": "Broom sweep",
+     "desc": "Pip sweeps a pile of photos into a neat pile.",
+     "ms": 2200,
+     "sfx": "paper:shuffle:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-bat-memory",
+     "name": "Matching cards",
+     "desc": "Pip plays a memory game and flips two matching cards for duplicates.",
+     "ms": 2200,
+     "sfx": "click:racket:0.5",
+     "cat": "action"
+    },
+    {
+     "id": "ac-bat-sort",
+     "name": "Recycling sort",
+     "desc": "Pip drops photos into three coloured bins.",
+     "ms": 2400,
+     "sfx": "thud:soft:0.5",
+     "cat": "action"
+    },
+    {
+     "id": "ac-bat-librarian",
+     "name": "Librarian stamps",
+     "desc": "Pip stamps each photo and files it in a drawer.",
+     "ms": 2400,
+     "sfx": "stamp:hit:0.4",
+     "cat": "action"
+    },
+    {
+     "id": "ac-bat-crane",
+     "name": "Container ship",
+     "desc": "Pip drives a little crane that loads photos on a ship.",
+     "ms": 2600,
+     "sfx": "mech:belt:1.0",
+     "cat": "action"
+    },
+    {
+     "id": "ac-bat-assembly",
+     "name": "Assembly line",
+     "desc": "Photos roll past Pip, he checks each one and nods.",
+     "ms": 2400,
+     "sfx": "mech:belt:0.9",
+     "cat": "action"
+    },
+    {
+     "id": "ac-bat-juggle",
+     "name": "Many hands",
+     "desc": "Pip grows four arms for a second and handles many photos at once.",
+     "ms": 2200,
+     "sfx": "magic:morph:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-bat-counter",
+     "name": "Counting",
+     "desc": "Pip counts photos on his fingers and runs out of fingers.",
+     "ms": 2200,
+     "sfx": "voice:babble:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-bat-conductor",
+     "name": "Conductor",
+     "desc": "Pip conducts a row of photos like an orchestra.",
+     "ms": 2400,
+     "sfx": "arp:up:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-bat-spring",
+     "name": "Spring cleaning",
+     "desc": "Pip opens a window, dusts the shelf and the room sparkles.",
+     "ms": 2400,
+     "sfx": "sparkle:sweep:0.8",
+     "cat": "action"
+    }
+   ]
+  },
+  {
+   "id": "exam",
+   "name": "Exam kits and ID photos",
+   "actions": [
+    {
+     "id": "ac-exm-cap",
+     "name": "Graduation cap",
+     "desc": "Pip puts on a graduation cap and straightens the tassel.",
+     "ms": 2000,
+     "sfx": "voice:hmm:0.5",
+     "cat": "action"
+    },
+    {
+     "id": "ac-exm-checklist",
+     "name": "Checklist",
+     "desc": "Pip ticks each requirement on a clipboard, one by one.",
+     "ms": 2400,
+     "sfx": "click:tickrun:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-exm-rule",
+     "name": "Rule check",
+     "desc": "Pip measures the photo with a ruler against the exam rule and nods.",
+     "ms": 2200,
+     "sfx": "mech:tape:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-exm-sign",
+     "name": "Signature",
+     "desc": "Pip signs a tiny signature strip with a flourish.",
+     "ms": 2200,
+     "sfx": "paper:pen:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-exm-stamp",
+     "name": "Official stamp",
+     "desc": "Pip stamps the photo with a round approved stamp.",
+     "ms": 2000,
+     "sfx": "stamp:hit:0.5",
+     "cat": "action"
+    },
+    {
+     "id": "ac-exm-clock",
+     "name": "Deadline clock",
+     "desc": "Pip looks at a wall clock, relaxes, and says there is time.",
+     "ms": 2000,
+     "sfx": "beep:retro:0.5",
+     "cat": "action"
+    },
+    {
+     "id": "ac-exm-bag",
+     "name": "Pack the bag",
+     "desc": "Pip packs photo, signature and thumb print into a school bag and zips it.",
+     "ms": 2200,
+     "sfx": "zip:up:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-exm-study",
+     "name": "Study desk",
+     "desc": "Pip sits at a desk with a lamp and flips a book.",
+     "ms": 2200,
+     "sfx": "paper:flip:0.7",
+     "cat": "action"
+    },
+    {
+     "id": "ac-exm-pencil",
+     "name": "Pencil tap",
+     "desc": "Pip taps a pencil on his head while he calculates the size.",
+     "ms": 2000,
+     "sfx": "click:racket:0.5",
+     "cat": "action"
+    },
+    {
+     "id": "ac-exm-medal",
+     "name": "Pass medal",
+     "desc": "Pip hangs a small medal on the finished kit.",
+     "ms": 2000,
+     "sfx": "chime:ok:0.6",
+     "cat": "action"
+    }
+   ]
+  },
+  {
+   "id": "idle",
+   "name": "Waiting, idle and any tool",
+   "actions": [
+    {
+     "id": "ac-idl-comic",
+     "name": "Reading",
+     "desc": "Pip reads a comic and giggles at the right moment.",
+     "ms": 3200,
+     "sfx": "voice:giggle:0.6",
+     "cat": "action"
+    },
+    {
+     "id": "ac-idl-yoyo",
+     "name": "Yo-yo",
+     "desc": "Pip plays with a yo-yo made from his keyring.",
+     "ms": 3000,
+     "sfx": "whoosh:left:0.4",
+     "cat": "action"
+    },
+    {
+     "id": "ac-idl-juggle",
+     "name": "Bolt juggling",
+     "desc": "Pip juggles three bolts and drops one, then shrugs.",
+     "ms": 3000,
+     "sfx": "magic:juggle:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-idl-stretch",
+     "name": "Stretch",
+     "desc": "Pip stretches his arms and legs and a joint clicks.",
+     "ms": 3000,
+     "sfx": "click:ratchet:0.5",
+     "cat": "action"
+    },
+    {
+     "id": "ac-idl-yawn",
+     "name": "Yawn",
+     "desc": "Pip yawns and his blade droops, then he shakes himself awake.",
+     "ms": 3200,
+     "sfx": "voice:yawn:1.0",
+     "cat": "action"
+    },
+    {
+     "id": "ac-idl-polish",
+     "name": "Blade polish",
+     "desc": "Pip polishes his blade quiff with a cloth and checks his reflection.",
+     "ms": 3000,
+     "sfx": "sparkle:sweep:0.6",
+     "cat": "action"
+    },
+    {
+     "id": "ac-idl-pushups",
+     "name": "Push-ups",
+     "desc": "Pip does push-ups and counts to five.",
+     "ms": 3200,
+     "sfx": "voice:effort:0.7",
+     "cat": "action"
+    },
+    {
+     "id": "ac-idl-watch",
+     "name": "Watch check",
+     "desc": "Pip checks a wrist watch he does not have.",
+     "ms": 2400,
+     "sfx": "voice:hmm:0.6",
+     "cat": "action"
+    },
+    {
+     "id": "ac-idl-dance",
+     "name": "Little dance",
+     "desc": "Pip dances in place with the keyring swinging.",
+     "ms": 3200,
+     "sfx": "arp:up:0.8",
+     "cat": "action"
+    },
+    {
+     "id": "ac-idl-nap",
+     "name": "Cat nap",
+     "desc": "Pip sits down, closes his eyes and snores softly, a Z floats up.",
+     "ms": 4000,
+     "sfx": "voice:snore:1.2",
+     "cat": "action"
+    }
+   ]
+  }
+ ],
+ "celebrations": [
+  {
+   "id": "ce-backflip",
+   "name": "Backflip",
+   "desc": "Pip does a backflip and lands with a pose.",
+   "ms": 1400,
+   "sfx": "voice:yay:0.6",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-cannon-hold",
+   "name": "Cannon hold",
+   "desc": "Pip holds a confetti cannon and fires it.",
+   "ms": 1500,
+   "sfx": "pop:cannon:0.9",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-victory-dance",
+   "name": "Victory dance",
+   "desc": "Pip does a happy dance with arms up.",
+   "ms": 2200,
+   "sfx": "arp:up:0.9",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-tool-fan",
+   "name": "Tool fan",
+   "desc": "All his tools fan out behind him like a peacock.",
+   "ms": 1800,
+   "sfx": "mech:snap:0.8",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-high-five",
+   "name": "Self high-five",
+   "desc": "Pip high-fives himself and gets a spark.",
+   "ms": 1200,
+   "sfx": "click:clap:0.4",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-moonwalk",
+   "name": "Moonwalk",
+   "desc": "Pip moonwalks across the screen.",
+   "ms": 2000,
+   "sfx": "voice:whee:0.7",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-tornado",
+   "name": "Spin tornado",
+   "desc": "Pip spins like a tornado and stops dizzy but smiling.",
+   "ms": 1600,
+   "sfx": "whoosh:spiral:0.9",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-rocket-jump",
+   "name": "Rocket jump",
+   "desc": "Pip jumps so high he leaves the screen and falls back.",
+   "ms": 1800,
+   "sfx": "riser:rocket:1.0",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-trophy-lift",
+   "name": "Trophy lift",
+   "desc": "A trophy appears and Pip lifts it over his head.",
+   "ms": 1800,
+   "sfx": "chime:ok:0.7",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-air-guitar",
+   "name": "Air guitar",
+   "desc": "Pip plays an air guitar solo with his blade.",
+   "ms": 2000,
+   "sfx": "arp:up:0.9",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-pompoms",
+   "name": "Cheerleader",
+   "desc": "Pip shakes two pom-poms made from tiny blades.",
+   "ms": 2000,
+   "sfx": "sparkle:sweep:0.8",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-juggle-tools",
+   "name": "Tool juggle",
+   "desc": "Pip juggles scissors, magnifier and a crop corner.",
+   "ms": 2000,
+   "sfx": "magic:juggle:0.8",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-mic-drop",
+   "name": "Mic drop",
+   "desc": "Pip drops his blade like a mic and walks away.",
+   "ms": 1600,
+   "sfx": "thud:soft:0.6",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-disco",
+   "name": "Disco",
+   "desc": "A disco ball drops and Pip strikes a pose.",
+   "ms": 2200,
+   "sfx": "arp:up:0.9",
+   "cat": "celebrate"
+  }
+ ],
+ "levelups": [
+  {
+   "id": "lv-ascend",
+   "name": "Ascend",
+   "desc": "Pip rises on a column of light holding the new level medal.",
+   "ms": 3000,
+   "sfx": "fanfare:big:2.0",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-power-up",
+   "name": "Power up",
+   "desc": "Pip grows giant for a second, flexes, then shrinks back with the medal.",
+   "ms": 2800,
+   "sfx": "riser:power:1.6",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-evolution",
+   "name": "Evolution flash",
+   "desc": "A white silhouette flashes and Pip returns with a new accessory.",
+   "ms": 3000,
+   "sfx": "magic:morph:1.6",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-ladder",
+   "name": "Ladder climb",
+   "desc": "Pip climbs a ladder of level numbers and rings a bell at the top.",
+   "ms": 3200,
+   "sfx": "arp:up:1.6",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-rocket",
+   "name": "Rocket boost",
+   "desc": "Pip straps a rocket on his back and blasts to the next level.",
+   "ms": 3000,
+   "sfx": "riser:rocket:1.6",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-gold-blade",
+   "name": "Golden blade",
+   "desc": "His blade turns solid gold one section at a time.",
+   "ms": 3000,
+   "sfx": "sparkle:sweep:1.4",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-crown",
+   "name": "Crown drop",
+   "desc": "A tiny crown drops on his blade and he balances it.",
+   "ms": 2600,
+   "sfx": "fanfare:small:1.2",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-leap",
+   "name": "Stair leap",
+   "desc": "Pip leaps from one glowing step to the next and lands on the new level.",
+   "ms": 2800,
+   "sfx": "voice:whee:0.9",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-transform",
+   "name": "Tool transform",
+   "desc": "All tools unfold and spin around Pip, then fold back.",
+   "ms": 3200,
+   "sfx": "mech:snap:1.4",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-medal-bite",
+   "name": "Medal bite",
+   "desc": "Pip bites the medal to test it, then smiles and holds it up.",
+   "ms": 2400,
+   "sfx": "voice:yay:0.8",
+   "cat": "levelup"
+  }
+ ],
+ "badges": [
+  {
+   "id": "bd-drop",
+   "name": "Badge drop",
+   "desc": "The badge drops from above and Pip catches it.",
+   "ms": 1800,
+   "sfx": "chime:ok:0.8",
+   "cat": "badge"
+  },
+  {
+   "id": "bd-shine",
+   "name": "Shine reveal",
+   "desc": "The badge appears under a spotlight with a shine sweep.",
+   "ms": 1800,
+   "sfx": "sparkle:sweep:0.8",
+   "cat": "badge"
+  },
+  {
+   "id": "bd-stamp",
+   "name": "Pin on chest",
+   "desc": "Pip pins the badge on his belt.",
+   "ms": 1800,
+   "sfx": "stamp:hit:0.4",
+   "cat": "badge"
+  },
+  {
+   "id": "bd-spin",
+   "name": "Coin spin",
+   "desc": "The badge spins like a coin and settles.",
+   "ms": 1800,
+   "sfx": "coin:spin:0.8",
+   "cat": "badge"
+  },
+  {
+   "id": "bd-rare",
+   "name": "Rare badge",
+   "desc": "Gold flash, camera shake, big cheer. Used for gold-tier badges.",
+   "ms": 2600,
+   "sfx": "fanfare:small:1.4",
+   "cat": "badge"
+  }
+ ],
+ "streaks": [
+  {
+   "id": "st-flame",
+   "name": "Flame grows",
+   "desc": "The streak flame grows a size and Pip warms his hands.",
+   "ms": 1500,
+   "sfx": "air:flame:0.8",
+   "cat": "streak"
+  },
+  {
+   "id": "st-calendar",
+   "name": "Calendar tick",
+   "desc": "A calendar page flips and the new day gets a stamp.",
+   "ms": 1500,
+   "sfx": "paper:flip:0.5",
+   "cat": "streak"
+  },
+  {
+   "id": "st-save",
+   "name": "Streak saved",
+   "desc": "A shield saves a streak that was about to break.",
+   "ms": 1500,
+   "sfx": "chime:ok:0.7",
+   "cat": "streak"
+  },
+  {
+   "id": "st-lost",
+   "name": "Streak lost",
+   "desc": "The flame flickers out and Pip gives it a small hug.",
+   "ms": 1800,
+   "sfx": "voice:sad:0.8",
+   "cat": "streak"
+  }
+ ],
+ "errors": [
+  {
+   "id": "er-sad",
+   "name": "Sad droop",
+   "desc": "Pip droops, the blade bends, a small cloud rains on him.",
+   "ms": 2200,
+   "sfx": "voice:sad:1.0",
+   "cat": "error"
+  },
+  {
+   "id": "er-confused",
+   "name": "Confused",
+   "desc": "Pip scratches his head and question marks float up.",
+   "ms": 2000,
+   "sfx": "voice:hmm:0.8",
+   "cat": "error"
+  },
+  {
+   "id": "er-facepalm",
+   "name": "Facepalm",
+   "desc": "Pip covers his face with one hand and peeks through the fingers.",
+   "ms": 1800,
+   "sfx": "thud:soft:0.4",
+   "cat": "error"
+  },
+  {
+   "id": "er-uhoh",
+   "name": "Uh-oh",
+   "desc": "Pip's eyes go wide and a sweat drop slides down.",
+   "ms": 1600,
+   "sfx": "voice:uhoh:0.6",
+   "cat": "error"
+  },
+  {
+   "id": "er-shrug",
+   "name": "Shrug",
+   "desc": "Pip shrugs and holds out his empty hands.",
+   "ms": 1600,
+   "sfx": "voice:hmm:0.5",
+   "cat": "error"
+  },
+  {
+   "id": "er-dizzy",
+   "name": "Dizzy",
+   "desc": "Stars circle his head.",
+   "ms": 2000,
+   "sfx": "voice:dizzy:0.9",
+   "cat": "error"
+  }
+ ],
+ "eggs": [
+  {
+   "id": "eg-sneeze",
+   "name": "Sneeze",
+   "desc": "A dust bunny makes Pip sneeze, his blade flicks.",
+   "ms": 1400,
+   "sfx": "voice:sneeze:0.6",
+   "cat": "egg"
+  },
+  {
+   "id": "eg-hiccup",
+   "name": "Hiccup",
+   "desc": "Pip hiccups and a tiny bolt pops out.",
+   "ms": 1600,
+   "sfx": "voice:hiccup:0.7",
+   "cat": "egg"
+  },
+  {
+   "id": "eg-sing",
+   "name": "Humming",
+   "desc": "Pip hums while notes float up.",
+   "ms": 3000,
+   "sfx": "arp:up:1.2",
+   "cat": "egg"
+  },
+  {
+   "id": "eg-peek",
+   "name": "Peek-a-boo",
+   "desc": "Pip hides behind the screen edge and peeks back in.",
+   "ms": 2200,
+   "sfx": "voice:whee:0.5",
+   "cat": "egg"
+  },
+  {
+   "id": "eg-snow",
+   "name": "Snow day",
+   "desc": "In winter, Pip shivers and wears a scarf.",
+   "ms": 3000,
+   "sfx": "voice:brr:0.9",
+   "cat": "egg"
+  }
+ ],
+ "zones": [
+  {
+   "id": "tummy",
+   "name": "Tummy",
+   "tap": "Opens the tools menu (radial, 6 tools). Pip giggles. Three different giggles are picked at random.",
+   "dwell": "Pip looks down, pats his tummy and says hmm (1.5 s), then the radial menu peeks open halfway as a hint (3 s)."
+  },
+  {
+   "id": "blade",
+   "name": "Blade quiff",
+   "tap": "The blade flips to another tool (scissors, magnifier, crop corner, clapper). Plays a click.",
+   "dwell": "Pip crosses his eyes to look at his blade (1 s). Press and hold while he is standing still (0.6 s) = PICK UP (see below)."
+  },
+  {
+   "id": "eyes",
+   "name": "Eyes",
+   "tap": "He blinks hard and says ouch, or winks. Three variants.",
+   "dwell": "Eyes follow the pointer closely, pupils get big (1 s), then he leans in until he is almost cross-eyed (3 s), then he blinks and pushes the pointer away (5 s)."
+  },
+  {
+   "id": "mouth",
+   "name": "Mouth",
+   "tap": "He sticks out his tongue, blows a raspberry, or tries to bite the pointer. Three variants.",
+   "dwell": "He opens his mouth and waits (1.5 s), tries to nibble the pointer (3 s), then makes a funny face and pretends to be full (6 s)."
+  },
+  {
+   "id": "ears",
+   "name": "Shoulder rivets (his \"ears\")",
+   "tap": "The knob rings like a bell and his head wobbles. Left and right give different notes.",
+   "dwell": "The knob twitches (1 s), he tilts his head toward it (2.5 s), then he wiggles it to say stop (5 s)."
+  },
+  {
+   "id": "hands",
+   "name": "Hands (left and right)",
+   "tap": "Left: high-five. Right: handshake. Both with a small spark.",
+   "dwell": "He holds out the hand and waits (1.5 s), taps his foot (3 s), then shrugs and puts it down (5 s)."
+  },
+  {
+   "id": "legs",
+   "name": "Feet",
+   "tap": "He hops, kicks, or stomps. Three variants, small dust puff.",
+   "dwell": "He wiggles his toes (1 s), giggles because it tickles (2 s). After 2.5 s steady, the pointer turns into a MINI MAGIC CARPET (see below)."
+  },
+  {
+   "id": "belt",
+   "name": "Belt",
+   "tap": "The belt buckle clicks and he shows his tool count.",
+   "dwell": "He sucks in his tummy and says tight."
+  },
+  {
+   "id": "tail",
+   "name": "Keyring tail",
+   "tap": "The keyring spins like a propeller and Pip turns with it.",
+   "dwell": "He chases his own tail slowly (2 s) and gets dizzy (5 s)."
+  },
+  {
+   "id": "background",
+   "name": "Space around Pip",
+   "tap": "Pip looks at the tap and waves. Double tap makes him jump toward it.",
+   "dwell": "He follows the pointer with his eyes, then loses interest and starts an idle action (8 s)."
+  }
+ ],
+ "gestures": [
+  {
+   "id": "pickup",
+   "name": "Pick up by the blade",
+   "how": "Press and hold the blade quiff for 0.6 s while Pip is standing still (not mid-action).",
+   "result": "Pip is lifted by the blade, his feet dangle and swing like a pendulum, eyes go wide, he squeals. He follows the pointer with physics (spring and pendulum). Fast moves make him fly sideways with the legs trailing. Release = he falls with gravity, squashes on landing, bounces twice, stars circle his head. A fast flick = he flies away, bounces off the screen edges and comes to rest. Dropping on a tool tile or the Save button counts as a tap on it."
+  },
+  {
+   "id": "carpet",
+   "name": "Magic carpet",
+   "how": "Keep the pointer (or a held finger) on a foot, still, for 2.5 s.",
+   "result": "The cursor turns into a small flying carpet with tassels. The carpet slides under Pip, lifts him, and he sits cross-legged on it. The carpet follows the pointer with a delay, banks into turns, and the keyring tail trails behind. Desktop: the real cursor is replaced by the carpet. Touch: the carpet appears under the held finger. Sudden jerk (pointer speed above 2500 px per second change in under 80 ms) or any click or tap: the carpet bursts into threads and sparkles, Pip falls, squashes, shakes it off and says oops. Lifting a held finger gently lands the carpet softly and it folds away."
+  },
+  {
+   "id": "shake",
+   "name": "Shake the phone",
+   "how": "Device shake (accelerometer) on Android; fast pointer shake on the web.",
+   "result": "Pip gets dizzy and loose bolts fall out. 3 shakes in 5 s and he says stop."
+  },
+  {
+   "id": "tickle",
+   "name": "Tickle swipe",
+   "how": "Swipe quickly across his tummy three times.",
+   "result": "He laughs uncontrollably and falls over."
+  },
+  {
+   "id": "multi",
+   "name": "Rapid taps",
+   "how": "Three or more taps within 2 s anywhere on Pip.",
+   "result": "He gets dizzy, spiral eyes, stars. Five taps and he pretends to be annoyed and turns his back."
+  },
+  {
+   "id": "sleep",
+   "name": "Long idle",
+   "how": "No touch for 45 s.",
+   "result": "He yawns and falls asleep (Z letters). Any touch wakes him with a small start."
+  },
+  {
+   "id": "longpress-bg",
+   "name": "Press and hold the background",
+   "how": "Hold anywhere that is not Pip for 1 s.",
+   "result": "Pip walks over and sits next to the finger."
+  }
+ ],
+ "ui": [
+  {
+   "id": "ui-tap",
+   "name": "Button tap",
+   "desc": "A soft wooden tick.",
+   "ms": 80,
+   "sfx": "click:soft:0.08",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-select",
+   "name": "Select",
+   "desc": "A short two-note rise.",
+   "ms": 120,
+   "sfx": "arp:up:0.12",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-toggle-on",
+   "name": "Switch on",
+   "desc": "A short upward blip.",
+   "ms": 120,
+   "sfx": "beep:retro:0.1",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-toggle-off",
+   "name": "Switch off",
+   "desc": "A short downward blip.",
+   "ms": 120,
+   "sfx": "beep:down:0.1",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-back",
+   "name": "Back",
+   "desc": "A soft downward swish.",
+   "ms": 150,
+   "sfx": "whoosh:down:0.15",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-open-sheet",
+   "name": "Open sheet",
+   "desc": "A short upward swish.",
+   "ms": 200,
+   "sfx": "whoosh:up:0.2",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-close-sheet",
+   "name": "Close sheet",
+   "desc": "A short downward swish.",
+   "ms": 200,
+   "sfx": "whoosh:down:0.2",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-error",
+   "name": "Error",
+   "desc": "Two low soft notes.",
+   "ms": 300,
+   "sfx": "beep:down:0.3",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-success",
+   "name": "Success",
+   "desc": "A bright two-note chime.",
+   "ms": 400,
+   "sfx": "chime:ok:0.4",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-menu-open",
+   "name": "Radial menu opens",
+   "desc": "Six quick pops in a ring.",
+   "ms": 350,
+   "sfx": "pop:cascade:0.35",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-menu-pick",
+   "name": "Radial menu pick",
+   "desc": "A satisfying click-pop.",
+   "ms": 200,
+   "sfx": "pop:soft:0.2",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-drop-file",
+   "name": "File dropped",
+   "desc": "A paper thud.",
+   "ms": 300,
+   "sfx": "thud:soft:0.3",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-camera",
+   "name": "Photo picked",
+   "desc": "A soft shutter.",
+   "ms": 250,
+   "sfx": "click:shutter:0.25",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-copy",
+   "name": "Copied",
+   "desc": "A tiny blip.",
+   "ms": 120,
+   "sfx": "beep:retro:0.1",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-share",
+   "name": "Share sheet",
+   "desc": "A swoosh up.",
+   "ms": 300,
+   "sfx": "whoosh:up:0.3",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-warning",
+   "name": "Warning",
+   "desc": "A hollow double note.",
+   "ms": 400,
+   "sfx": "beep:down:0.4",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-process-start",
+   "name": "Job starts",
+   "desc": "A rising riser.",
+   "ms": 500,
+   "sfx": "riser:soft:0.5",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-process-done",
+   "name": "Job done",
+   "desc": "A chime and a click.",
+   "ms": 500,
+   "sfx": "chime:ok:0.5",
+   "cat": "ui"
+  }
+ ],
+ "game": [
+  {
+   "id": "gm-xp-tick",
+   "name": "XP tick",
+   "desc": "A small coin tick as the XP bar fills (rate limited).",
+   "ms": 90,
+   "sfx": "coin:tick:0.09",
+   "cat": "game"
+  },
+  {
+   "id": "gm-xp-gain",
+   "name": "XP gained",
+   "desc": "A bright coin ping with the +XP text.",
+   "ms": 400,
+   "sfx": "coin:shower:0.4",
+   "cat": "game"
+  },
+  {
+   "id": "gm-quest-done",
+   "name": "Quest done",
+   "desc": "A tick box sound with a sparkle.",
+   "ms": 600,
+   "sfx": "chime:ok:0.6",
+   "cat": "game"
+  },
+  {
+   "id": "gm-all-quests",
+   "name": "All quests done",
+   "desc": "A rising arpeggio.",
+   "ms": 900,
+   "sfx": "arp:up:0.9",
+   "cat": "game"
+  },
+  {
+   "id": "gm-chest-shake",
+   "name": "Chest shakes",
+   "desc": "A wooden rattle.",
+   "ms": 700,
+   "sfx": "thud:bounce:0.7",
+   "cat": "game"
+  },
+  {
+   "id": "gm-chest-open",
+   "name": "Chest opens",
+   "desc": "A creak, a burst and a magic glide.",
+   "ms": 1200,
+   "sfx": "magic:reveal:1.2",
+   "cat": "game"
+  },
+  {
+   "id": "gm-award",
+   "name": "Award appears",
+   "desc": "A shiny reveal.",
+   "ms": 1000,
+   "sfx": "fanfare:small:1.0",
+   "cat": "game"
+  },
+  {
+   "id": "gm-rank-up",
+   "name": "Rank up",
+   "desc": "A short fanfare.",
+   "ms": 1400,
+   "sfx": "fanfare:small:1.4",
+   "cat": "game"
+  },
+  {
+   "id": "gm-locked",
+   "name": "Locked item tapped",
+   "desc": "A dull knock and a tiny shake.",
+   "ms": 300,
+   "sfx": "thud:soft:0.3",
+   "cat": "game"
+  },
+  {
+   "id": "gm-trophy",
+   "name": "Trophy added",
+   "desc": "A heavy shiny clink.",
+   "ms": 900,
+   "sfx": "chime:ok:0.9",
+   "cat": "game"
+  },
+  {
+   "id": "gm-skin-unlock",
+   "name": "Skin unlocked",
+   "desc": "A magic swish and a ping.",
+   "ms": 1100,
+   "sfx": "magic:morph:1.1",
+   "cat": "game"
+  },
+  {
+   "id": "gm-daily-open",
+   "name": "Daily bonus",
+   "desc": "A friendly hello jingle.",
+   "ms": 900,
+   "sfx": "arp:up:0.9",
+   "cat": "game"
+  }
+ ],
+ "voice": [
+  {
+   "id": "vx-hello",
+   "name": "Hello",
+   "desc": "A cheerful hello chirp when the app opens.",
+   "ms": 700,
+   "sfx": "voice:happy:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-hmm",
+   "name": "Hmm",
+   "desc": "A thinking hum.",
+   "ms": 700,
+   "sfx": "voice:hmm:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-wow",
+   "name": "Wow",
+   "desc": "A surprised rising chirp.",
+   "ms": 600,
+   "sfx": "voice:wow:0.6",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-yay",
+   "name": "Yay",
+   "desc": "A short happy cheer.",
+   "ms": 700,
+   "sfx": "voice:yay:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-ouch",
+   "name": "Ouch",
+   "desc": "A squeaky ouch.",
+   "ms": 500,
+   "sfx": "voice:ouch:0.5",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-giggle1",
+   "name": "Giggle 1",
+   "desc": "A quick giggle.",
+   "ms": 700,
+   "sfx": "voice:giggle:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-giggle2",
+   "name": "Giggle 2",
+   "desc": "A longer giggle.",
+   "ms": 900,
+   "sfx": "voice:giggle:0.9",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-giggle3",
+   "name": "Giggle 3",
+   "desc": "A snort giggle.",
+   "ms": 800,
+   "sfx": "voice:ticklish:0.8",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-oops",
+   "name": "Oops",
+   "desc": "A falling oops.",
+   "ms": 600,
+   "sfx": "voice:oops:0.6",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-squeal",
+   "name": "Squeal",
+   "desc": "A short squeal when lifted.",
+   "ms": 700,
+   "sfx": "voice:squeal:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-whee",
+   "name": "Whee",
+   "desc": "A flying whee.",
+   "ms": 900,
+   "sfx": "voice:whee:0.9",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-sleepy",
+   "name": "Sleepy",
+   "desc": "A yawn into a snore.",
+   "ms": 1400,
+   "sfx": "voice:yawn:1.4",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-raspberry",
+   "name": "Raspberry",
+   "desc": "A wet raspberry.",
+   "ms": 700,
+   "sfx": "air:deflate:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-nibble",
+   "name": "Nibble",
+   "desc": "A chomp chomp.",
+   "ms": 600,
+   "sfx": "voice:chomp:0.6",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-grumble",
+   "name": "Grumble",
+   "desc": "An annoyed grumble.",
+   "ms": 700,
+   "sfx": "voice:grumble:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-cheer-big",
+   "name": "Big cheer",
+   "desc": "A longer cheer for big wins.",
+   "ms": 1200,
+   "sfx": "voice:cheer:1.2",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-sad",
+   "name": "Sad",
+   "desc": "A soft sad whine.",
+   "ms": 900,
+   "sfx": "voice:sad:0.9",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-ring-l",
+   "name": "Ear bell left",
+   "desc": "A bell note.",
+   "ms": 600,
+   "sfx": "chime:bellL:0.6",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-ring-r",
+   "name": "Ear bell right",
+   "desc": "A higher bell note.",
+   "ms": 600,
+   "sfx": "chime:bellR:0.6",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-carpet-on",
+   "name": "Carpet appears",
+   "desc": "A magic swish.",
+   "ms": 900,
+   "sfx": "magic:glide:0.9",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-carpet-fly",
+   "name": "Carpet flight loop",
+   "desc": "A soft airy loop.",
+   "ms": 1200,
+   "sfx": "air:loop:1.2",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-carpet-burst",
+   "name": "Carpet bursts",
+   "desc": "A pop and a rip.",
+   "ms": 700,
+   "sfx": "pop:balloon:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-pickup",
+   "name": "Picked up",
+   "desc": "A short lift squeak.",
+   "ms": 500,
+   "sfx": "voice:squeal:0.5",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-drop",
+   "name": "Dropped",
+   "desc": "A drop thud and a boing.",
+   "ms": 900,
+   "sfx": "thud:bounce:0.9",
+   "cat": "voice"
+  }
+ ],
+ "soundCategories": [
+  {
+   "id": "ui",
+   "name": "Buttons and menus",
+   "cats": [
+    "ui"
+   ]
+  },
+  {
+   "id": "transitions",
+   "name": "Screen transitions",
+   "cats": [
+    "transition"
+   ]
+  },
+  {
+   "id": "completion",
+   "name": "Save and completion effects",
+   "cats": [
+    "download"
+   ]
+  },
+  {
+   "id": "progress",
+   "name": "Progress bars",
+   "cats": [
+    "bar"
+   ]
+  },
+  {
+   "id": "actions",
+   "name": "Pip at work (tool actions)",
+   "cats": [
+    "action"
+   ]
+  },
+  {
+   "id": "cheers",
+   "name": "Celebrations, level-ups, badges and streaks",
+   "cats": [
+    "celebrate",
+    "levelup",
+    "badge",
+    "streak"
+   ]
+  },
+  {
+   "id": "reactions",
+   "name": "Pip reactions, errors and surprises",
+   "cats": [
+    "error",
+    "egg",
+    "voice"
+   ]
+  },
+  {
+   "id": "game",
+   "name": "XP, quests, chest and awards",
+   "cats": [
+    "game"
+   ]
+  }
+ ],
+ "all": [
+  {
+   "id": "tr-iris",
+   "name": "Iris open",
+   "desc": "A circle grows from the exact tap point and reveals the next screen.",
+   "ms": 600,
+   "sfx": "whoosh:up:0.5",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-wipe",
+   "name": "Blade wipe",
+   "desc": "The new screen slides in behind a shiny steel edge, like a blade passing over.",
+   "ms": 550,
+   "sfx": "whoosh:right:0.45",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-curtain",
+   "name": "Curtain split",
+   "desc": "The old screen splits down the middle and slides out to both sides.",
+   "ms": 650,
+   "sfx": "whoosh:split:0.55",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-blinds",
+   "name": "Venetian blinds",
+   "desc": "Eight vertical slats rotate to show the new screen.",
+   "ms": 700,
+   "sfx": "click:ratchet:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-pixel-bloom",
+   "name": "Pixel bloom",
+   "desc": "Square pixels pop up in random order until the new screen is complete.",
+   "ms": 750,
+   "sfx": "pop:cascade:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-diamond",
+   "name": "Diamond open",
+   "desc": "A diamond-shaped window opens from the centre.",
+   "ms": 600,
+   "sfx": "whoosh:up:0.5",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-zoom-through",
+   "name": "Zoom through",
+   "desc": "The old screen zooms past the camera while the new one settles from slightly large.",
+   "ms": 600,
+   "sfx": "whoosh:rise:0.55",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-card-flip",
+   "name": "3D card flip",
+   "desc": "The screen flips like a card around a vertical axis.",
+   "ms": 650,
+   "sfx": "paper:flip:0.5",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-push-parallax",
+   "name": "Parallax push",
+   "desc": "The new screen pushes the old one away, background layers move at different speeds.",
+   "ms": 500,
+   "sfx": "whoosh:left:0.4",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-drop-bounce",
+   "name": "Drop and bounce",
+   "desc": "The new screen drops from above, squashes, and bounces once.",
+   "ms": 700,
+   "sfx": "thud:bounce:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-blade-swing",
+   "name": "Blade swing",
+   "desc": "The new screen swings out from a hinge like a pocket-knife blade opening, with a click at the end.",
+   "ms": 650,
+   "sfx": "mech:snap:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-shutter",
+   "name": "Camera shutter",
+   "desc": "Seven shutter blades close over the old screen and open on the new one.",
+   "ms": 600,
+   "sfx": "click:shutter:0.5",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-film-roll",
+   "name": "Film-strip roll",
+   "desc": "The old screen rolls up like a film strip and the new one rolls in.",
+   "ms": 750,
+   "sfx": "mech:reel:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-page-curl",
+   "name": "Page curl",
+   "desc": "The corner of the old screen curls back to reveal the new one.",
+   "ms": 700,
+   "sfx": "paper:curl:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-ripple",
+   "name": "Water ripple",
+   "desc": "A ripple spreads from the tap and bends the old screen into the new one.",
+   "ms": 800,
+   "sfx": "water:ripple:0.75",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-glitch",
+   "name": "Glitch slice",
+   "desc": "Horizontal slices slide sideways with a quick colour split, then settle.",
+   "ms": 450,
+   "sfx": "glitch:short:0.4",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-liquid",
+   "name": "Liquid morph",
+   "desc": "The tapped button melts into a blob that spreads and becomes the new screen.",
+   "ms": 800,
+   "sfx": "water:blob:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-ink",
+   "name": "Ink splash",
+   "desc": "Ink splashes from the tap and floods the screen, then the new screen shows through.",
+   "ms": 800,
+   "sfx": "water:splash:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-confetti-sweep",
+   "name": "Confetti sweep",
+   "desc": "A wave of confetti sweeps across and leaves the new screen behind it.",
+   "ms": 750,
+   "sfx": "sparkle:sweep:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-clock-wipe",
+   "name": "Clock wipe",
+   "desc": "A clock hand sweeps around and reveals the new screen behind it.",
+   "ms": 700,
+   "sfx": "click:tickrun:0.65",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-spiral",
+   "name": "Spiral twist",
+   "desc": "The old screen twists into a spiral and the new one unwinds.",
+   "ms": 800,
+   "sfx": "whoosh:spiral:0.75",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-gooey",
+   "name": "Gooey merge",
+   "desc": "Blobs of colour merge like liquid metal and become the new screen.",
+   "ms": 800,
+   "sfx": "water:blob:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-shatter",
+   "name": "Shatter and assemble",
+   "desc": "The old screen cracks into tiles that fly away while the new tiles fly in.",
+   "ms": 850,
+   "sfx": "glitch:shatter:0.8",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-mosaic",
+   "name": "Mosaic resolve",
+   "desc": "The new screen starts as big blocks and sharpens to full resolution.",
+   "ms": 700,
+   "sfx": "pop:cascade:0.65",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-sunrise",
+   "name": "Sunrise sweep",
+   "desc": "A band of warm light sweeps up the screen and the new screen glows in.",
+   "ms": 800,
+   "sfx": "arp:up:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-card-shuffle",
+   "name": "Card shuffle",
+   "desc": "The old screen becomes a card, shuffles into a deck, and the new card is dealt on top.",
+   "ms": 800,
+   "sfx": "paper:shuffle:0.75",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-portal",
+   "name": "Tummy portal",
+   "desc": "A round portal opens from Pip's tummy and the new screen grows out of it.",
+   "ms": 800,
+   "sfx": "magic:portal:0.75",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-pip-pull",
+   "name": "Pip pulls the screen",
+   "desc": "Pip runs across the screen pulling the new screen behind him like a curtain.",
+   "ms": 900,
+   "sfx": "voice:whee:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-unzip",
+   "name": "Unzip",
+   "desc": "A zipper runs down the screen and the new screen is behind it.",
+   "ms": 700,
+   "sfx": "zip:down:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-peel",
+   "name": "Sticker peel",
+   "desc": "The old screen peels off like a sticker from one corner.",
+   "ms": 700,
+   "sfx": "paper:peel:0.6",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-tool-flip",
+   "name": "Tool flip",
+   "desc": "Pip's blade quiff flips to the tool's icon, the icon scales up to fill the screen and becomes the new page.",
+   "ms": 800,
+   "sfx": "mech:snap:0.7",
+   "cat": "transition"
+  },
+  {
+   "id": "tr-vortex",
+   "name": "Vortex",
+   "desc": "The old screen is sucked into a point and the new one blooms from the same point.",
+   "ms": 850,
+   "sfx": "whoosh:suck:0.8",
+   "cat": "transition"
+  },
+  {
+   "id": "dl-tray-drop",
+   "name": "Drop into tray",
+   "desc": "The result card drops into a tray at the bottom and the tray bounces.",
+   "ms": 900,
+   "sfx": "thud:soft:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-paper-plane",
+   "name": "Paper plane",
+   "desc": "The result folds into a paper plane and glides to the gallery icon.",
+   "ms": 1100,
+   "sfx": "paper:fold:0.6",
+   "cat": "download"
+  },
+  {
+   "id": "dl-confetti-cannon",
+   "name": "Confetti cannon",
+   "desc": "Two cannons from the bottom corners fire confetti over the result.",
+   "ms": 1500,
+   "sfx": "pop:cannon:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-coin-shower",
+   "name": "Coin shower",
+   "desc": "XP coins rain down and fly into the XP bar.",
+   "ms": 1400,
+   "sfx": "coin:shower:1.0",
+   "cat": "download"
+  },
+  {
+   "id": "dl-curve-to-gallery",
+   "name": "Curve to gallery",
+   "desc": "The thumbnail shrinks and travels along a curve into the gallery icon, which wiggles.",
+   "ms": 900,
+   "sfx": "whoosh:suck:0.6",
+   "cat": "download"
+  },
+  {
+   "id": "dl-stamp",
+   "name": "SAVED stamp",
+   "desc": "A big SAVED stamp slams on the result with a small shockwave.",
+   "ms": 800,
+   "sfx": "stamp:hit:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-zip-pack",
+   "name": "Zip pack",
+   "desc": "Several files squeeze together and a zipper closes them into one bundle.",
+   "ms": 1000,
+   "sfx": "zip:up:0.8",
+   "cat": "download"
+  },
+  {
+   "id": "dl-mailbox",
+   "name": "Mailbox",
+   "desc": "The thumbnail flies into a mailbox, the flag lifts.",
+   "ms": 1000,
+   "sfx": "thud:soft:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-safe-lock",
+   "name": "Safe lock",
+   "desc": "A shield with a padlock closes over the file. Used for privacy jobs.",
+   "ms": 1000,
+   "sfx": "mech:lock:0.7",
+   "cat": "download"
+  },
+  {
+   "id": "dl-gift-box",
+   "name": "Gift box",
+   "desc": "The result is wrapped in a ribbon and the box opens to show it.",
+   "ms": 1200,
+   "sfx": "magic:reveal:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-rocket",
+   "name": "Rocket launch",
+   "desc": "The result sits in a small rocket that blasts off to the share target.",
+   "ms": 1200,
+   "sfx": "riser:rocket:1.0",
+   "cat": "download"
+  },
+  {
+   "id": "dl-balloon-pop",
+   "name": "Balloon pop",
+   "desc": "A balloon carries the result up, then pops into confetti.",
+   "ms": 1200,
+   "sfx": "pop:balloon:0.8",
+   "cat": "download"
+  },
+  {
+   "id": "dl-sparkle-sweep",
+   "name": "Sparkle sweep",
+   "desc": "A diagonal shine sweeps across the thumbnail and sparkles pop.",
+   "ms": 900,
+   "sfx": "sparkle:sweep:0.7",
+   "cat": "download"
+  },
+  {
+   "id": "dl-ring-pop",
+   "name": "Ring close and pop",
+   "desc": "The progress ring closes, flashes, and a check mark bursts out of it.",
+   "ms": 800,
+   "sfx": "chime:ok:0.6",
+   "cat": "download"
+  },
+  {
+   "id": "dl-check-draw",
+   "name": "Ink check",
+   "desc": "A thick check mark draws itself with an ink stroke.",
+   "ms": 700,
+   "sfx": "chime:ok:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-polaroid",
+   "name": "Polaroid print",
+   "desc": "The result prints out like an instant photo and slowly develops.",
+   "ms": 1400,
+   "sfx": "mech:print:1.1",
+   "cat": "download"
+  },
+  {
+   "id": "dl-vault",
+   "name": "Vault door",
+   "desc": "A round vault door closes with spinning bolts. Used for location removal.",
+   "ms": 1300,
+   "sfx": "mech:vault:1.0",
+   "cat": "download"
+  },
+  {
+   "id": "dl-pip-catch",
+   "name": "Pip catches it",
+   "desc": "Pip jumps and catches the result in both hands and holds it up.",
+   "ms": 1000,
+   "sfx": "voice:yay:0.6",
+   "cat": "download"
+  },
+  {
+   "id": "dl-slot-roll",
+   "name": "Number reel",
+   "desc": "The final size digits roll like a slot machine and lock into place.",
+   "ms": 1100,
+   "sfx": "click:reel:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-fireworks",
+   "name": "Fireworks",
+   "desc": "Three fireworks burst behind the result.",
+   "ms": 1800,
+   "sfx": "pop:firework:1.2",
+   "cat": "download"
+  },
+  {
+   "id": "dl-bubbles",
+   "name": "Bubble float",
+   "desc": "Bubbles lift the result up and pop one by one.",
+   "ms": 1200,
+   "sfx": "pop:bubbles:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-magnet",
+   "name": "Magnet pull",
+   "desc": "A magnet pulls the file onto the Save button, small sparks fly.",
+   "ms": 800,
+   "sfx": "click:magnet:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-drill",
+   "name": "Arrow drill",
+   "desc": "A download arrow drills down through the card into the tray.",
+   "ms": 800,
+   "sfx": "whoosh:down:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-stack-tidy",
+   "name": "Stack and tidy",
+   "desc": "Loose results stack into a neat pile and straighten up.",
+   "ms": 900,
+   "sfx": "paper:shuffle:0.7",
+   "cat": "download"
+  },
+  {
+   "id": "dl-lightning",
+   "name": "Lightning snap",
+   "desc": "A quick flash and a lightning bolt strike the Save button. Used for very fast jobs.",
+   "ms": 600,
+   "sfx": "zap:strike:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-wax-seal",
+   "name": "Wax seal",
+   "desc": "A wax seal stamps the result. Used for cleaned and private files.",
+   "ms": 900,
+   "sfx": "stamp:wax:0.6",
+   "cat": "download"
+  },
+  {
+   "id": "dl-origami-crane",
+   "name": "Origami crane",
+   "desc": "The result folds into a crane and flies off the screen.",
+   "ms": 1300,
+   "sfx": "paper:fold:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-floppy",
+   "name": "Floppy stamp",
+   "desc": "A retro floppy-disk icon stamps onto the result in pixels.",
+   "ms": 800,
+   "sfx": "beep:retro:0.5",
+   "cat": "download"
+  },
+  {
+   "id": "dl-mini-chest",
+   "name": "Mini chest",
+   "desc": "A tiny chest pops up, opens, and the result rises out of it.",
+   "ms": 1200,
+   "sfx": "magic:reveal:0.9",
+   "cat": "download"
+  },
+  {
+   "id": "dl-glow-badge",
+   "name": "Glow badge",
+   "desc": "A soft glow pulses around the result and a ribbon unrolls with the file size.",
+   "ms": 900,
+   "sfx": "arp:up:0.7",
+   "cat": "download"
+  },
+  {
+   "id": "bar-streams",
+   "name": "Converging streams",
+   "desc": "Several mini bars race at different speeds then merge into one.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-liquid",
+   "name": "Liquid fill",
+   "desc": "A wavy liquid fills the track and sloshes.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-orbit",
+   "name": "Orbit",
+   "desc": "Little dots orbit a ring that fills as they gather.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-tiles",
+   "name": "Tile flip",
+   "desc": "A grid of tiles flips to the accent colour in random order.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-comet",
+   "name": "Comets",
+   "desc": "Comets race along the rail and dive into a bright head.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-warp",
+   "name": "Warp",
+   "desc": "Stars streak outward faster as progress grows.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-pip-runs",
+   "name": "Pip runs",
+   "desc": "Tiny Pip runs along the bar and leaves a coloured trail.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-blade-slice",
+   "name": "Blade slice",
+   "desc": "A blade slices the photo into strips that slide together into one.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-zipper",
+   "name": "Zipper",
+   "desc": "The bar is a zipper that closes as progress grows.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-gears",
+   "name": "Gears",
+   "desc": "Small gears spin and all feed one big gear.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-fireflies",
+   "name": "Fireflies",
+   "desc": "Fireflies swarm toward the end of the bar.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "bar-segments",
+   "name": "Charging segments",
+   "desc": "Segments light up like a battery and the last one pulses.",
+   "ms": 0,
+   "sfx": "tick:soft:0.2",
+   "cat": "bar"
+  },
+  {
+   "id": "ac-cmp-press",
+   "name": "Photo press",
+   "desc": "Pip hugs the photo and squeezes it like an accordion until it is small.",
+   "ms": 2200,
+   "sfx": "squish:press:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cmp-belt",
+   "name": "Belt tightening",
+   "desc": "Pip tightens his belt a notch at a time while the photo gets slimmer.",
+   "ms": 2400,
+   "sfx": "mech:ratchet:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cmp-vacuum",
+   "name": "Vacuum seal",
+   "desc": "Pip sucks the air out of a bag holding the photo until it hugs the photo.",
+   "ms": 2400,
+   "sfx": "whoosh:suck:0.9",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cmp-dough",
+   "name": "Kneading",
+   "desc": "Pip kneads the photo like dough and it folds smaller each time.",
+   "ms": 2200,
+   "sfx": "squish:knead:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cmp-roller",
+   "name": "Tiny steamroller",
+   "desc": "Pip drives a toy steamroller over the photo and the file size drops.",
+   "ms": 2600,
+   "sfx": "rumble:engine:1.0",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cmp-stomp",
+   "name": "Grape stomp",
+   "desc": "Pip jumps up and down on a pile of pixels and juice squirts out.",
+   "ms": 2200,
+   "sfx": "squish:stomp:0.7",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cmp-balloon",
+   "name": "Balloon deflate",
+   "desc": "Pip holds a balloon labelled MB. It deflates with a raspberry noise to KB.",
+   "ms": 2200,
+   "sfx": "air:deflate:0.9",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cmp-weights",
+   "name": "Weight lifting",
+   "desc": "Pip lifts a heavy weight labelled MB. It gets lighter every rep and ends as a feather.",
+   "ms": 2600,
+   "sfx": "voice:effort:0.7",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cmp-fold",
+   "name": "Origami fold",
+   "desc": "Pip folds the photo into a smaller and smaller square.",
+   "ms": 2200,
+   "sfx": "paper:fold:0.7",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cmp-squeeze",
+   "name": "Orange squeeze",
+   "desc": "Pip squeezes a pixel orange and the extra bytes drip out.",
+   "ms": 2200,
+   "sfx": "water:drip:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-crp-snip",
+   "name": "Snip frame",
+   "desc": "Pip snips a frame out of the air with his blade and the photo slides inside.",
+   "ms": 2000,
+   "sfx": "mech:snap:0.4",
+   "cat": "action"
+  },
+  {
+   "id": "ac-crp-tape",
+   "name": "Measuring tape",
+   "desc": "Pip pulls a tape across the photo and nods at the exact numbers.",
+   "ms": 2200,
+   "sfx": "mech:tape:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-crp-hammer",
+   "name": "Hammer the frame",
+   "desc": "Pip hammers four nails into a wooden frame around the photo.",
+   "ms": 2400,
+   "sfx": "thud:nail:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-crp-chalk",
+   "name": "Chalk line",
+   "desc": "Pip snaps a chalk line along the crop edge and blows the dust.",
+   "ms": 2000,
+   "sfx": "whoosh:snap:0.4",
+   "cat": "action"
+  },
+  {
+   "id": "ac-crp-laser",
+   "name": "Laser cut",
+   "desc": "Pip cuts the crop outline with a tiny laser, sparks fly.",
+   "ms": 2400,
+   "sfx": "laser:cut:1.0",
+   "cat": "action"
+  },
+  {
+   "id": "ac-crp-cookie",
+   "name": "Cookie cutter",
+   "desc": "Pip presses a cookie cutter on the photo and lifts out the crop.",
+   "ms": 2000,
+   "sfx": "squish:stomp:0.5",
+   "cat": "action"
+  },
+  {
+   "id": "ac-crp-chisel",
+   "name": "Sculptor chisel",
+   "desc": "Pip chips away the extra photo with a chisel until the frame shape is left.",
+   "ms": 2400,
+   "sfx": "thud:nail:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-crp-wall",
+   "name": "Hang on wall",
+   "desc": "Pip hangs the cropped photo on a wall and straightens it with a squint.",
+   "ms": 2400,
+   "sfx": "thud:soft:0.5",
+   "cat": "action"
+  },
+  {
+   "id": "ac-crp-saw",
+   "name": "Carpenter saw",
+   "desc": "Pip saws along the line, a tiny sawdust cloud puffs.",
+   "ms": 2200,
+   "sfx": "mech:saw:0.9",
+   "cat": "action"
+  },
+  {
+   "id": "ac-crp-pinch",
+   "name": "Stretch and pinch",
+   "desc": "Pip stretches the photo with both hands and pinches to the right size.",
+   "ms": 2000,
+   "sfx": "squish:press:0.5",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cnv-juggle",
+   "name": "Format juggling",
+   "desc": "Pip juggles JPG, PNG and WebP blocks and catches only the one you chose.",
+   "ms": 2400,
+   "sfx": "magic:juggle:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cnv-hat",
+   "name": "Magic hat",
+   "desc": "Pip taps a hat with a wand and the photo comes out in the new format.",
+   "ms": 2400,
+   "sfx": "magic:reveal:0.9",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cnv-blender",
+   "name": "Blender",
+   "desc": "Pip drops the photo in a blender and pours out a new format.",
+   "ms": 2400,
+   "sfx": "rumble:engine:0.9",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cnv-curtain",
+   "name": "Costume change",
+   "desc": "The photo steps behind a curtain, Pip counts to three, it steps out in a new outfit.",
+   "ms": 2400,
+   "sfx": "magic:reveal:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cnv-tennis",
+   "name": "Format rally",
+   "desc": "Pip hits the photo like a tennis ball between two format boxes.",
+   "ms": 2200,
+   "sfx": "click:racket:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cnv-chameleon",
+   "name": "Chameleon",
+   "desc": "Pip changes colour from the old format colour to the new format colour.",
+   "ms": 2200,
+   "sfx": "magic:morph:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cnv-conveyor",
+   "name": "Conveyor belt",
+   "desc": "Pip stands at a conveyor belt and stamps each file on its way.",
+   "ms": 2400,
+   "sfx": "mech:belt:0.9",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cnv-translate",
+   "name": "Translator",
+   "desc": "Pip wears a headset and translates between two format flags.",
+   "ms": 2200,
+   "sfx": "voice:babble:0.9",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cnv-wheel",
+   "name": "Pottery wheel",
+   "desc": "The photo spins on a pottery wheel and Pip shapes it into the new format.",
+   "ms": 2400,
+   "sfx": "water:blob:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-cnv-shift",
+   "name": "Shape-shifter",
+   "desc": "Pip flips through his own tools and the photo copies each shape.",
+   "ms": 2200,
+   "sfx": "mech:snap:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-prv-detective",
+   "name": "Detective",
+   "desc": "Pip puts on a hat and checks the photo with a magnifier.",
+   "ms": 2200,
+   "sfx": "voice:hmm:0.7",
+   "cat": "action"
+  },
+  {
+   "id": "ac-prv-radar",
+   "name": "Radar",
+   "desc": "A radar sweeps around Pip until a pin blips on the photo.",
+   "ms": 2200,
+   "sfx": "beep:radar:1.0",
+   "cat": "action"
+  },
+  {
+   "id": "ac-prv-map",
+   "name": "Treasure map",
+   "desc": "Pip unfolds a map and puts his finger on the place the photo was taken.",
+   "ms": 2200,
+   "sfx": "paper:flip:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-prv-eraser",
+   "name": "Eraser",
+   "desc": "Pip rubs a big eraser over the location tag until it is gone.",
+   "ms": 2200,
+   "sfx": "squish:knead:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-prv-scissors",
+   "name": "Cut the thread",
+   "desc": "The location is a thread tied to the photo. Pip snips it.",
+   "ms": 2000,
+   "sfx": "mech:snap:0.4",
+   "cat": "action"
+  },
+  {
+   "id": "ac-prv-sponge",
+   "name": "Sponge wash",
+   "desc": "Pip scrubs the photo with a sponge and little data bubbles float away.",
+   "ms": 2400,
+   "sfx": "water:bubbles:0.9",
+   "cat": "action"
+  },
+  {
+   "id": "ac-prv-vacuum",
+   "name": "Dust vacuum",
+   "desc": "Pip vacuums dust clouds labelled EXIF and GPS.",
+   "ms": 2400,
+   "sfx": "rumble:engine:0.9",
+   "cat": "action"
+  },
+  {
+   "id": "ac-prv-shades",
+   "name": "Spy shades",
+   "desc": "Pip puts on shades, looks left and right, and slips the photo into a folder.",
+   "ms": 2000,
+   "sfx": "beep:retro:0.4",
+   "cat": "action"
+  },
+  {
+   "id": "ac-prv-ninja",
+   "name": "Ninja hide",
+   "desc": "Pip hides behind the photo and peeks, then gives a thumbs up.",
+   "ms": 2200,
+   "sfx": "whoosh:left:0.4",
+   "cat": "action"
+  },
+  {
+   "id": "ac-prv-lock",
+   "name": "Padlock polish",
+   "desc": "Pip polishes a padlock until it shines, then clicks it shut.",
+   "ms": 2200,
+   "sfx": "mech:lock:0.7",
+   "cat": "action"
+  },
+  {
+   "id": "ac-vid-clapper",
+   "name": "Clapper board",
+   "desc": "Pip snaps a clapper board shut and shouts action.",
+   "ms": 2000,
+   "sfx": "click:clap:0.4",
+   "cat": "action"
+  },
+  {
+   "id": "ac-vid-projector",
+   "name": "Projector crank",
+   "desc": "Pip cranks an old projector and frames flicker on the wall.",
+   "ms": 2600,
+   "sfx": "mech:reel:1.0",
+   "cat": "action"
+  },
+  {
+   "id": "ac-vid-flipbook",
+   "name": "Flip book",
+   "desc": "Pip flips a flip-book with his thumb, the frames run past.",
+   "ms": 2400,
+   "sfx": "paper:flip:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-vid-popcorn",
+   "name": "Popcorn",
+   "desc": "Pip eats popcorn while the video is processed and catches a kernel in his mouth.",
+   "ms": 2400,
+   "sfx": "pop:cascade:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-vid-dj",
+   "name": "DJ scratch",
+   "desc": "Pip scratches the timeline like a record.",
+   "ms": 2400,
+   "sfx": "glitch:scratch:0.7",
+   "cat": "action"
+  },
+  {
+   "id": "ac-vid-scissors",
+   "name": "Timeline trim",
+   "desc": "Pip snips the timeline at both ends and the middle part glows.",
+   "ms": 2200,
+   "sfx": "mech:snap:0.4",
+   "cat": "action"
+  },
+  {
+   "id": "ac-vid-juggle",
+   "name": "Frame juggling",
+   "desc": "Pip juggles tiny frames, one after another, and drops none.",
+   "ms": 2400,
+   "sfx": "magic:juggle:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-vid-surf",
+   "name": "Wave surfing",
+   "desc": "Pip surfs a wave made of the video frames.",
+   "ms": 2600,
+   "sfx": "water:ripple:1.0",
+   "cat": "action"
+  },
+  {
+   "id": "ac-vid-fast",
+   "name": "Fast forward",
+   "desc": "Pip runs in fast forward with speed lines and a blur.",
+   "ms": 2200,
+   "sfx": "whoosh:right:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-vid-boomerang",
+   "name": "Boomerang",
+   "desc": "Pip throws a boomerang that carries the clip and catches it as it comes back.",
+   "ms": 2400,
+   "sfx": "whoosh:spiral:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-utl-laser",
+   "name": "QR laser",
+   "desc": "Pip scans a QR code with a red laser from his eyes and it beeps.",
+   "ms": 2200,
+   "sfx": "beep:radar:0.7",
+   "cat": "action"
+  },
+  {
+   "id": "ac-utl-palette",
+   "name": "Paint palette",
+   "desc": "Pip holds a palette and dabs the colours he found in the photo.",
+   "ms": 2200,
+   "sfx": "water:drip:0.7",
+   "cat": "action"
+  },
+  {
+   "id": "ac-utl-pixels",
+   "name": "Pixel builder",
+   "desc": "Pip places pixel blocks one by one to build a QR code or icon.",
+   "ms": 2400,
+   "sfx": "pop:cascade:0.9",
+   "cat": "action"
+  },
+  {
+   "id": "ac-utl-stamp",
+   "name": "Icon stamp",
+   "desc": "Pip stamps the same icon in many sizes.",
+   "ms": 2200,
+   "sfx": "stamp:hit:0.4",
+   "cat": "action"
+  },
+  {
+   "id": "ac-utl-rainbow",
+   "name": "Rainbow painter",
+   "desc": "Pip paints a rainbow gradient with a wide brush.",
+   "ms": 2400,
+   "sfx": "magic:glide:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-utl-dropper",
+   "name": "Eyedropper",
+   "desc": "Pip uses a big eyedropper on the photo and drips the colour into a cup.",
+   "ms": 2000,
+   "sfx": "water:drip:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-utl-pen",
+   "name": "Calligraphy pen",
+   "desc": "Pip draws an SVG path with a calligraphy pen and the line smooths itself.",
+   "ms": 2400,
+   "sfx": "paper:pen:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-utl-checker",
+   "name": "Barcode checker",
+   "desc": "Pip runs a barcode under a scanner and it beeps happily.",
+   "ms": 2000,
+   "sfx": "beep:retro:0.5",
+   "cat": "action"
+  },
+  {
+   "id": "ac-utl-magic",
+   "name": "Colour magician",
+   "desc": "Pip pulls colour ribbons out of his sleeve, like a magician.",
+   "ms": 2200,
+   "sfx": "magic:reveal:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-utl-mosaic",
+   "name": "Mosaic maker",
+   "desc": "Pip sticks tiles on a wall and steps back to see the picture.",
+   "ms": 2400,
+   "sfx": "click:tickrun:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-bat-broom",
+   "name": "Broom sweep",
+   "desc": "Pip sweeps a pile of photos into a neat pile.",
+   "ms": 2200,
+   "sfx": "paper:shuffle:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-bat-memory",
+   "name": "Matching cards",
+   "desc": "Pip plays a memory game and flips two matching cards for duplicates.",
+   "ms": 2200,
+   "sfx": "click:racket:0.5",
+   "cat": "action"
+  },
+  {
+   "id": "ac-bat-sort",
+   "name": "Recycling sort",
+   "desc": "Pip drops photos into three coloured bins.",
+   "ms": 2400,
+   "sfx": "thud:soft:0.5",
+   "cat": "action"
+  },
+  {
+   "id": "ac-bat-librarian",
+   "name": "Librarian stamps",
+   "desc": "Pip stamps each photo and files it in a drawer.",
+   "ms": 2400,
+   "sfx": "stamp:hit:0.4",
+   "cat": "action"
+  },
+  {
+   "id": "ac-bat-crane",
+   "name": "Container ship",
+   "desc": "Pip drives a little crane that loads photos on a ship.",
+   "ms": 2600,
+   "sfx": "mech:belt:1.0",
+   "cat": "action"
+  },
+  {
+   "id": "ac-bat-assembly",
+   "name": "Assembly line",
+   "desc": "Photos roll past Pip, he checks each one and nods.",
+   "ms": 2400,
+   "sfx": "mech:belt:0.9",
+   "cat": "action"
+  },
+  {
+   "id": "ac-bat-juggle",
+   "name": "Many hands",
+   "desc": "Pip grows four arms for a second and handles many photos at once.",
+   "ms": 2200,
+   "sfx": "magic:morph:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-bat-counter",
+   "name": "Counting",
+   "desc": "Pip counts photos on his fingers and runs out of fingers.",
+   "ms": 2200,
+   "sfx": "voice:babble:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-bat-conductor",
+   "name": "Conductor",
+   "desc": "Pip conducts a row of photos like an orchestra.",
+   "ms": 2400,
+   "sfx": "arp:up:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-bat-spring",
+   "name": "Spring cleaning",
+   "desc": "Pip opens a window, dusts the shelf and the room sparkles.",
+   "ms": 2400,
+   "sfx": "sparkle:sweep:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-exm-cap",
+   "name": "Graduation cap",
+   "desc": "Pip puts on a graduation cap and straightens the tassel.",
+   "ms": 2000,
+   "sfx": "voice:hmm:0.5",
+   "cat": "action"
+  },
+  {
+   "id": "ac-exm-checklist",
+   "name": "Checklist",
+   "desc": "Pip ticks each requirement on a clipboard, one by one.",
+   "ms": 2400,
+   "sfx": "click:tickrun:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-exm-rule",
+   "name": "Rule check",
+   "desc": "Pip measures the photo with a ruler against the exam rule and nods.",
+   "ms": 2200,
+   "sfx": "mech:tape:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-exm-sign",
+   "name": "Signature",
+   "desc": "Pip signs a tiny signature strip with a flourish.",
+   "ms": 2200,
+   "sfx": "paper:pen:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-exm-stamp",
+   "name": "Official stamp",
+   "desc": "Pip stamps the photo with a round approved stamp.",
+   "ms": 2000,
+   "sfx": "stamp:hit:0.5",
+   "cat": "action"
+  },
+  {
+   "id": "ac-exm-clock",
+   "name": "Deadline clock",
+   "desc": "Pip looks at a wall clock, relaxes, and says there is time.",
+   "ms": 2000,
+   "sfx": "beep:retro:0.5",
+   "cat": "action"
+  },
+  {
+   "id": "ac-exm-bag",
+   "name": "Pack the bag",
+   "desc": "Pip packs photo, signature and thumb print into a school bag and zips it.",
+   "ms": 2200,
+   "sfx": "zip:up:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-exm-study",
+   "name": "Study desk",
+   "desc": "Pip sits at a desk with a lamp and flips a book.",
+   "ms": 2200,
+   "sfx": "paper:flip:0.7",
+   "cat": "action"
+  },
+  {
+   "id": "ac-exm-pencil",
+   "name": "Pencil tap",
+   "desc": "Pip taps a pencil on his head while he calculates the size.",
+   "ms": 2000,
+   "sfx": "click:racket:0.5",
+   "cat": "action"
+  },
+  {
+   "id": "ac-exm-medal",
+   "name": "Pass medal",
+   "desc": "Pip hangs a small medal on the finished kit.",
+   "ms": 2000,
+   "sfx": "chime:ok:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-idl-comic",
+   "name": "Reading",
+   "desc": "Pip reads a comic and giggles at the right moment.",
+   "ms": 3200,
+   "sfx": "voice:giggle:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-idl-yoyo",
+   "name": "Yo-yo",
+   "desc": "Pip plays with a yo-yo made from his keyring.",
+   "ms": 3000,
+   "sfx": "whoosh:left:0.4",
+   "cat": "action"
+  },
+  {
+   "id": "ac-idl-juggle",
+   "name": "Bolt juggling",
+   "desc": "Pip juggles three bolts and drops one, then shrugs.",
+   "ms": 3000,
+   "sfx": "magic:juggle:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-idl-stretch",
+   "name": "Stretch",
+   "desc": "Pip stretches his arms and legs and a joint clicks.",
+   "ms": 3000,
+   "sfx": "click:ratchet:0.5",
+   "cat": "action"
+  },
+  {
+   "id": "ac-idl-yawn",
+   "name": "Yawn",
+   "desc": "Pip yawns and his blade droops, then he shakes himself awake.",
+   "ms": 3200,
+   "sfx": "voice:yawn:1.0",
+   "cat": "action"
+  },
+  {
+   "id": "ac-idl-polish",
+   "name": "Blade polish",
+   "desc": "Pip polishes his blade quiff with a cloth and checks his reflection.",
+   "ms": 3000,
+   "sfx": "sparkle:sweep:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-idl-pushups",
+   "name": "Push-ups",
+   "desc": "Pip does push-ups and counts to five.",
+   "ms": 3200,
+   "sfx": "voice:effort:0.7",
+   "cat": "action"
+  },
+  {
+   "id": "ac-idl-watch",
+   "name": "Watch check",
+   "desc": "Pip checks a wrist watch he does not have.",
+   "ms": 2400,
+   "sfx": "voice:hmm:0.6",
+   "cat": "action"
+  },
+  {
+   "id": "ac-idl-dance",
+   "name": "Little dance",
+   "desc": "Pip dances in place with the keyring swinging.",
+   "ms": 3200,
+   "sfx": "arp:up:0.8",
+   "cat": "action"
+  },
+  {
+   "id": "ac-idl-nap",
+   "name": "Cat nap",
+   "desc": "Pip sits down, closes his eyes and snores softly, a Z floats up.",
+   "ms": 4000,
+   "sfx": "voice:snore:1.2",
+   "cat": "action"
+  },
+  {
+   "id": "ce-backflip",
+   "name": "Backflip",
+   "desc": "Pip does a backflip and lands with a pose.",
+   "ms": 1400,
+   "sfx": "voice:yay:0.6",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-cannon-hold",
+   "name": "Cannon hold",
+   "desc": "Pip holds a confetti cannon and fires it.",
+   "ms": 1500,
+   "sfx": "pop:cannon:0.9",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-victory-dance",
+   "name": "Victory dance",
+   "desc": "Pip does a happy dance with arms up.",
+   "ms": 2200,
+   "sfx": "arp:up:0.9",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-tool-fan",
+   "name": "Tool fan",
+   "desc": "All his tools fan out behind him like a peacock.",
+   "ms": 1800,
+   "sfx": "mech:snap:0.8",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-high-five",
+   "name": "Self high-five",
+   "desc": "Pip high-fives himself and gets a spark.",
+   "ms": 1200,
+   "sfx": "click:clap:0.4",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-moonwalk",
+   "name": "Moonwalk",
+   "desc": "Pip moonwalks across the screen.",
+   "ms": 2000,
+   "sfx": "voice:whee:0.7",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-tornado",
+   "name": "Spin tornado",
+   "desc": "Pip spins like a tornado and stops dizzy but smiling.",
+   "ms": 1600,
+   "sfx": "whoosh:spiral:0.9",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-rocket-jump",
+   "name": "Rocket jump",
+   "desc": "Pip jumps so high he leaves the screen and falls back.",
+   "ms": 1800,
+   "sfx": "riser:rocket:1.0",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-trophy-lift",
+   "name": "Trophy lift",
+   "desc": "A trophy appears and Pip lifts it over his head.",
+   "ms": 1800,
+   "sfx": "chime:ok:0.7",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-air-guitar",
+   "name": "Air guitar",
+   "desc": "Pip plays an air guitar solo with his blade.",
+   "ms": 2000,
+   "sfx": "arp:up:0.9",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-pompoms",
+   "name": "Cheerleader",
+   "desc": "Pip shakes two pom-poms made from tiny blades.",
+   "ms": 2000,
+   "sfx": "sparkle:sweep:0.8",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-juggle-tools",
+   "name": "Tool juggle",
+   "desc": "Pip juggles scissors, magnifier and a crop corner.",
+   "ms": 2000,
+   "sfx": "magic:juggle:0.8",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-mic-drop",
+   "name": "Mic drop",
+   "desc": "Pip drops his blade like a mic and walks away.",
+   "ms": 1600,
+   "sfx": "thud:soft:0.6",
+   "cat": "celebrate"
+  },
+  {
+   "id": "ce-disco",
+   "name": "Disco",
+   "desc": "A disco ball drops and Pip strikes a pose.",
+   "ms": 2200,
+   "sfx": "arp:up:0.9",
+   "cat": "celebrate"
+  },
+  {
+   "id": "lv-ascend",
+   "name": "Ascend",
+   "desc": "Pip rises on a column of light holding the new level medal.",
+   "ms": 3000,
+   "sfx": "fanfare:big:2.0",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-power-up",
+   "name": "Power up",
+   "desc": "Pip grows giant for a second, flexes, then shrinks back with the medal.",
+   "ms": 2800,
+   "sfx": "riser:power:1.6",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-evolution",
+   "name": "Evolution flash",
+   "desc": "A white silhouette flashes and Pip returns with a new accessory.",
+   "ms": 3000,
+   "sfx": "magic:morph:1.6",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-ladder",
+   "name": "Ladder climb",
+   "desc": "Pip climbs a ladder of level numbers and rings a bell at the top.",
+   "ms": 3200,
+   "sfx": "arp:up:1.6",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-rocket",
+   "name": "Rocket boost",
+   "desc": "Pip straps a rocket on his back and blasts to the next level.",
+   "ms": 3000,
+   "sfx": "riser:rocket:1.6",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-gold-blade",
+   "name": "Golden blade",
+   "desc": "His blade turns solid gold one section at a time.",
+   "ms": 3000,
+   "sfx": "sparkle:sweep:1.4",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-crown",
+   "name": "Crown drop",
+   "desc": "A tiny crown drops on his blade and he balances it.",
+   "ms": 2600,
+   "sfx": "fanfare:small:1.2",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-leap",
+   "name": "Stair leap",
+   "desc": "Pip leaps from one glowing step to the next and lands on the new level.",
+   "ms": 2800,
+   "sfx": "voice:whee:0.9",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-transform",
+   "name": "Tool transform",
+   "desc": "All tools unfold and spin around Pip, then fold back.",
+   "ms": 3200,
+   "sfx": "mech:snap:1.4",
+   "cat": "levelup"
+  },
+  {
+   "id": "lv-medal-bite",
+   "name": "Medal bite",
+   "desc": "Pip bites the medal to test it, then smiles and holds it up.",
+   "ms": 2400,
+   "sfx": "voice:yay:0.8",
+   "cat": "levelup"
+  },
+  {
+   "id": "bd-drop",
+   "name": "Badge drop",
+   "desc": "The badge drops from above and Pip catches it.",
+   "ms": 1800,
+   "sfx": "chime:ok:0.8",
+   "cat": "badge"
+  },
+  {
+   "id": "bd-shine",
+   "name": "Shine reveal",
+   "desc": "The badge appears under a spotlight with a shine sweep.",
+   "ms": 1800,
+   "sfx": "sparkle:sweep:0.8",
+   "cat": "badge"
+  },
+  {
+   "id": "bd-stamp",
+   "name": "Pin on chest",
+   "desc": "Pip pins the badge on his belt.",
+   "ms": 1800,
+   "sfx": "stamp:hit:0.4",
+   "cat": "badge"
+  },
+  {
+   "id": "bd-spin",
+   "name": "Coin spin",
+   "desc": "The badge spins like a coin and settles.",
+   "ms": 1800,
+   "sfx": "coin:spin:0.8",
+   "cat": "badge"
+  },
+  {
+   "id": "bd-rare",
+   "name": "Rare badge",
+   "desc": "Gold flash, camera shake, big cheer. Used for gold-tier badges.",
+   "ms": 2600,
+   "sfx": "fanfare:small:1.4",
+   "cat": "badge"
+  },
+  {
+   "id": "st-flame",
+   "name": "Flame grows",
+   "desc": "The streak flame grows a size and Pip warms his hands.",
+   "ms": 1500,
+   "sfx": "air:flame:0.8",
+   "cat": "streak"
+  },
+  {
+   "id": "st-calendar",
+   "name": "Calendar tick",
+   "desc": "A calendar page flips and the new day gets a stamp.",
+   "ms": 1500,
+   "sfx": "paper:flip:0.5",
+   "cat": "streak"
+  },
+  {
+   "id": "st-save",
+   "name": "Streak saved",
+   "desc": "A shield saves a streak that was about to break.",
+   "ms": 1500,
+   "sfx": "chime:ok:0.7",
+   "cat": "streak"
+  },
+  {
+   "id": "st-lost",
+   "name": "Streak lost",
+   "desc": "The flame flickers out and Pip gives it a small hug.",
+   "ms": 1800,
+   "sfx": "voice:sad:0.8",
+   "cat": "streak"
+  },
+  {
+   "id": "er-sad",
+   "name": "Sad droop",
+   "desc": "Pip droops, the blade bends, a small cloud rains on him.",
+   "ms": 2200,
+   "sfx": "voice:sad:1.0",
+   "cat": "error"
+  },
+  {
+   "id": "er-confused",
+   "name": "Confused",
+   "desc": "Pip scratches his head and question marks float up.",
+   "ms": 2000,
+   "sfx": "voice:hmm:0.8",
+   "cat": "error"
+  },
+  {
+   "id": "er-facepalm",
+   "name": "Facepalm",
+   "desc": "Pip covers his face with one hand and peeks through the fingers.",
+   "ms": 1800,
+   "sfx": "thud:soft:0.4",
+   "cat": "error"
+  },
+  {
+   "id": "er-uhoh",
+   "name": "Uh-oh",
+   "desc": "Pip's eyes go wide and a sweat drop slides down.",
+   "ms": 1600,
+   "sfx": "voice:uhoh:0.6",
+   "cat": "error"
+  },
+  {
+   "id": "er-shrug",
+   "name": "Shrug",
+   "desc": "Pip shrugs and holds out his empty hands.",
+   "ms": 1600,
+   "sfx": "voice:hmm:0.5",
+   "cat": "error"
+  },
+  {
+   "id": "er-dizzy",
+   "name": "Dizzy",
+   "desc": "Stars circle his head.",
+   "ms": 2000,
+   "sfx": "voice:dizzy:0.9",
+   "cat": "error"
+  },
+  {
+   "id": "eg-sneeze",
+   "name": "Sneeze",
+   "desc": "A dust bunny makes Pip sneeze, his blade flicks.",
+   "ms": 1400,
+   "sfx": "voice:sneeze:0.6",
+   "cat": "egg"
+  },
+  {
+   "id": "eg-hiccup",
+   "name": "Hiccup",
+   "desc": "Pip hiccups and a tiny bolt pops out.",
+   "ms": 1600,
+   "sfx": "voice:hiccup:0.7",
+   "cat": "egg"
+  },
+  {
+   "id": "eg-sing",
+   "name": "Humming",
+   "desc": "Pip hums while notes float up.",
+   "ms": 3000,
+   "sfx": "arp:up:1.2",
+   "cat": "egg"
+  },
+  {
+   "id": "eg-peek",
+   "name": "Peek-a-boo",
+   "desc": "Pip hides behind the screen edge and peeks back in.",
+   "ms": 2200,
+   "sfx": "voice:whee:0.5",
+   "cat": "egg"
+  },
+  {
+   "id": "eg-snow",
+   "name": "Snow day",
+   "desc": "In winter, Pip shivers and wears a scarf.",
+   "ms": 3000,
+   "sfx": "voice:brr:0.9",
+   "cat": "egg"
+  },
+  {
+   "id": "ui-tap",
+   "name": "Button tap",
+   "desc": "A soft wooden tick.",
+   "ms": 80,
+   "sfx": "click:soft:0.08",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-select",
+   "name": "Select",
+   "desc": "A short two-note rise.",
+   "ms": 120,
+   "sfx": "arp:up:0.12",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-toggle-on",
+   "name": "Switch on",
+   "desc": "A short upward blip.",
+   "ms": 120,
+   "sfx": "beep:retro:0.1",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-toggle-off",
+   "name": "Switch off",
+   "desc": "A short downward blip.",
+   "ms": 120,
+   "sfx": "beep:down:0.1",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-back",
+   "name": "Back",
+   "desc": "A soft downward swish.",
+   "ms": 150,
+   "sfx": "whoosh:down:0.15",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-open-sheet",
+   "name": "Open sheet",
+   "desc": "A short upward swish.",
+   "ms": 200,
+   "sfx": "whoosh:up:0.2",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-close-sheet",
+   "name": "Close sheet",
+   "desc": "A short downward swish.",
+   "ms": 200,
+   "sfx": "whoosh:down:0.2",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-error",
+   "name": "Error",
+   "desc": "Two low soft notes.",
+   "ms": 300,
+   "sfx": "beep:down:0.3",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-success",
+   "name": "Success",
+   "desc": "A bright two-note chime.",
+   "ms": 400,
+   "sfx": "chime:ok:0.4",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-menu-open",
+   "name": "Radial menu opens",
+   "desc": "Six quick pops in a ring.",
+   "ms": 350,
+   "sfx": "pop:cascade:0.35",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-menu-pick",
+   "name": "Radial menu pick",
+   "desc": "A satisfying click-pop.",
+   "ms": 200,
+   "sfx": "pop:soft:0.2",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-drop-file",
+   "name": "File dropped",
+   "desc": "A paper thud.",
+   "ms": 300,
+   "sfx": "thud:soft:0.3",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-camera",
+   "name": "Photo picked",
+   "desc": "A soft shutter.",
+   "ms": 250,
+   "sfx": "click:shutter:0.25",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-copy",
+   "name": "Copied",
+   "desc": "A tiny blip.",
+   "ms": 120,
+   "sfx": "beep:retro:0.1",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-share",
+   "name": "Share sheet",
+   "desc": "A swoosh up.",
+   "ms": 300,
+   "sfx": "whoosh:up:0.3",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-warning",
+   "name": "Warning",
+   "desc": "A hollow double note.",
+   "ms": 400,
+   "sfx": "beep:down:0.4",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-process-start",
+   "name": "Job starts",
+   "desc": "A rising riser.",
+   "ms": 500,
+   "sfx": "riser:soft:0.5",
+   "cat": "ui"
+  },
+  {
+   "id": "ui-process-done",
+   "name": "Job done",
+   "desc": "A chime and a click.",
+   "ms": 500,
+   "sfx": "chime:ok:0.5",
+   "cat": "ui"
+  },
+  {
+   "id": "gm-xp-tick",
+   "name": "XP tick",
+   "desc": "A small coin tick as the XP bar fills (rate limited).",
+   "ms": 90,
+   "sfx": "coin:tick:0.09",
+   "cat": "game"
+  },
+  {
+   "id": "gm-xp-gain",
+   "name": "XP gained",
+   "desc": "A bright coin ping with the +XP text.",
+   "ms": 400,
+   "sfx": "coin:shower:0.4",
+   "cat": "game"
+  },
+  {
+   "id": "gm-quest-done",
+   "name": "Quest done",
+   "desc": "A tick box sound with a sparkle.",
+   "ms": 600,
+   "sfx": "chime:ok:0.6",
+   "cat": "game"
+  },
+  {
+   "id": "gm-all-quests",
+   "name": "All quests done",
+   "desc": "A rising arpeggio.",
+   "ms": 900,
+   "sfx": "arp:up:0.9",
+   "cat": "game"
+  },
+  {
+   "id": "gm-chest-shake",
+   "name": "Chest shakes",
+   "desc": "A wooden rattle.",
+   "ms": 700,
+   "sfx": "thud:bounce:0.7",
+   "cat": "game"
+  },
+  {
+   "id": "gm-chest-open",
+   "name": "Chest opens",
+   "desc": "A creak, a burst and a magic glide.",
+   "ms": 1200,
+   "sfx": "magic:reveal:1.2",
+   "cat": "game"
+  },
+  {
+   "id": "gm-award",
+   "name": "Award appears",
+   "desc": "A shiny reveal.",
+   "ms": 1000,
+   "sfx": "fanfare:small:1.0",
+   "cat": "game"
+  },
+  {
+   "id": "gm-rank-up",
+   "name": "Rank up",
+   "desc": "A short fanfare.",
+   "ms": 1400,
+   "sfx": "fanfare:small:1.4",
+   "cat": "game"
+  },
+  {
+   "id": "gm-locked",
+   "name": "Locked item tapped",
+   "desc": "A dull knock and a tiny shake.",
+   "ms": 300,
+   "sfx": "thud:soft:0.3",
+   "cat": "game"
+  },
+  {
+   "id": "gm-trophy",
+   "name": "Trophy added",
+   "desc": "A heavy shiny clink.",
+   "ms": 900,
+   "sfx": "chime:ok:0.9",
+   "cat": "game"
+  },
+  {
+   "id": "gm-skin-unlock",
+   "name": "Skin unlocked",
+   "desc": "A magic swish and a ping.",
+   "ms": 1100,
+   "sfx": "magic:morph:1.1",
+   "cat": "game"
+  },
+  {
+   "id": "gm-daily-open",
+   "name": "Daily bonus",
+   "desc": "A friendly hello jingle.",
+   "ms": 900,
+   "sfx": "arp:up:0.9",
+   "cat": "game"
+  },
+  {
+   "id": "vx-hello",
+   "name": "Hello",
+   "desc": "A cheerful hello chirp when the app opens.",
+   "ms": 700,
+   "sfx": "voice:happy:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-hmm",
+   "name": "Hmm",
+   "desc": "A thinking hum.",
+   "ms": 700,
+   "sfx": "voice:hmm:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-wow",
+   "name": "Wow",
+   "desc": "A surprised rising chirp.",
+   "ms": 600,
+   "sfx": "voice:wow:0.6",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-yay",
+   "name": "Yay",
+   "desc": "A short happy cheer.",
+   "ms": 700,
+   "sfx": "voice:yay:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-ouch",
+   "name": "Ouch",
+   "desc": "A squeaky ouch.",
+   "ms": 500,
+   "sfx": "voice:ouch:0.5",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-giggle1",
+   "name": "Giggle 1",
+   "desc": "A quick giggle.",
+   "ms": 700,
+   "sfx": "voice:giggle:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-giggle2",
+   "name": "Giggle 2",
+   "desc": "A longer giggle.",
+   "ms": 900,
+   "sfx": "voice:giggle:0.9",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-giggle3",
+   "name": "Giggle 3",
+   "desc": "A snort giggle.",
+   "ms": 800,
+   "sfx": "voice:ticklish:0.8",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-oops",
+   "name": "Oops",
+   "desc": "A falling oops.",
+   "ms": 600,
+   "sfx": "voice:oops:0.6",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-squeal",
+   "name": "Squeal",
+   "desc": "A short squeal when lifted.",
+   "ms": 700,
+   "sfx": "voice:squeal:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-whee",
+   "name": "Whee",
+   "desc": "A flying whee.",
+   "ms": 900,
+   "sfx": "voice:whee:0.9",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-sleepy",
+   "name": "Sleepy",
+   "desc": "A yawn into a snore.",
+   "ms": 1400,
+   "sfx": "voice:yawn:1.4",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-raspberry",
+   "name": "Raspberry",
+   "desc": "A wet raspberry.",
+   "ms": 700,
+   "sfx": "air:deflate:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-nibble",
+   "name": "Nibble",
+   "desc": "A chomp chomp.",
+   "ms": 600,
+   "sfx": "voice:chomp:0.6",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-grumble",
+   "name": "Grumble",
+   "desc": "An annoyed grumble.",
+   "ms": 700,
+   "sfx": "voice:grumble:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-cheer-big",
+   "name": "Big cheer",
+   "desc": "A longer cheer for big wins.",
+   "ms": 1200,
+   "sfx": "voice:cheer:1.2",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-sad",
+   "name": "Sad",
+   "desc": "A soft sad whine.",
+   "ms": 900,
+   "sfx": "voice:sad:0.9",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-ring-l",
+   "name": "Ear bell left",
+   "desc": "A bell note.",
+   "ms": 600,
+   "sfx": "chime:bellL:0.6",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-ring-r",
+   "name": "Ear bell right",
+   "desc": "A higher bell note.",
+   "ms": 600,
+   "sfx": "chime:bellR:0.6",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-carpet-on",
+   "name": "Carpet appears",
+   "desc": "A magic swish.",
+   "ms": 900,
+   "sfx": "magic:glide:0.9",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-carpet-fly",
+   "name": "Carpet flight loop",
+   "desc": "A soft airy loop.",
+   "ms": 1200,
+   "sfx": "air:loop:1.2",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-carpet-burst",
+   "name": "Carpet bursts",
+   "desc": "A pop and a rip.",
+   "ms": 700,
+   "sfx": "pop:balloon:0.7",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-pickup",
+   "name": "Picked up",
+   "desc": "A short lift squeak.",
+   "ms": 500,
+   "sfx": "voice:squeal:0.5",
+   "cat": "voice"
+  },
+  {
+   "id": "vx-drop",
+   "name": "Dropped",
+   "desc": "A drop thud and a boing.",
+   "ms": 900,
+   "sfx": "thud:bounce:0.9",
+   "cat": "voice"
+  }
+ ]
+}

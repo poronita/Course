@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <linearGradient id="pip-light-93-arm-right-arm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFF9EC" stop-opacity="1"/>
+      <stop offset="1" stop-color="#DAC89E" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g>
+        <g transform="matrix(-1 0 0 1 400 0)">
+          <g transform="translate(131.00 240.00) rotate(10.00) scale(1.0000 1.0000) translate(0 0)">
+            <rect x="-8.5" y="-8" width="17" height="44" rx="8.5" fill="url(#pip-light-93-arm-right-arm)" stroke="#8C7550" stroke-width="2.6"/>
+            <path d="M-3.5 6V26" stroke="#fff" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

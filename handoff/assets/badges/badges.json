@@ -1,0 +1,106 @@
+{
+ "tiers": {
+  "bronze": [
+   "#F6C9A0",
+   "#C98A52",
+   "#7A4516",
+   "#4A2A0C"
+  ],
+  "silver": [
+   "#FAFCFE",
+   "#C3CED9",
+   "#6B7888",
+   "#2F3B49"
+  ],
+  "gold": [
+   "#FFF3B0",
+   "#FFC94A",
+   "#B97A08",
+   "#5A3A00"
+  ]
+ },
+ "badges": [
+  {
+   "file": "svg/badge-feather-weight.svg",
+   "name": "Feather Weight",
+   "icon": "shrink",
+   "tier": "bronze"
+  },
+  {
+   "file": "svg/badge-perfect-square.svg",
+   "name": "Perfect Square",
+   "icon": "crop",
+   "tier": "bronze"
+  },
+  {
+   "file": "svg/badge-privacy-guard.svg",
+   "name": "Privacy Guard",
+   "icon": "shield",
+   "tier": "silver"
+  },
+  {
+   "file": "svg/badge-loop-master.svg",
+   "name": "Loop Master",
+   "icon": "film",
+   "tier": "bronze"
+  },
+  {
+   "file": "svg/badge-streak-12.svg",
+   "name": "Streak 12",
+   "icon": "star",
+   "tier": "gold"
+  },
+  {
+   "file": "svg/badge-early-bird.svg",
+   "name": "Early Bird",
+   "icon": "sparkle",
+   "tier": "silver"
+  },
+  {
+   "file": "svg/badge-format-hopper.svg",
+   "name": "Format Hopper",
+   "icon": "convert",
+   "tier": "bronze"
+  },
+  {
+   "file": "svg/badge-super-fan.svg",
+   "name": "Super Fan",
+   "icon": "heart",
+   "tier": "gold"
+  }
+ ],
+ "files": [
+  "badge-feather-weight.svg",
+  "badge-perfect-square.svg",
+  "badge-privacy-guard.svg",
+  "badge-loop-master.svg",
+  "badge-streak-12.svg",
+  "badge-early-bird.svg",
+  "badge-format-hopper.svg",
+  "badge-super-fan.svg",
+  "medal-bronze-blank.svg",
+  "medal-silver-blank.svg",
+  "medal-gold-blank.svg",
+  "medal-locked-bronze.svg",
+  "medal-locked-silver.svg",
+  "medal-locked-gold.svg",
+  "level-medal.svg",
+  "level-medal-light.svg",
+  "level-medal-text.svg",
+  "ribbon.svg",
+  "ribbon-light.svg",
+  "trophy.svg",
+  "skin-gold-blade.svg",
+  "flame.svg",
+  "chest-closed.svg",
+  "chest-open.svg",
+  "chest-closed-light.svg",
+  "chest-open-light.svg",
+  "coin-xp.svg",
+  "crown.svg",
+  "rank-badge-craftsman.svg",
+  "rank-badge-craftsman-shape.svg",
+  "rank-badge-artisan.svg",
+  "rank-badge-artisan-shape.svg"
+ ]
+}

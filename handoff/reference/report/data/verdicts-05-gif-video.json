@@ -1,0 +1,375 @@
+[
+ {
+  "id": "mediabunny",
+  "section": "05",
+  "tier": "B",
+  "status": "recommended",
+  "role": "Media toolkit: demux/mux/transcode/trim (WebCodecs)",
+  "license": "MPL-2.0 (upstream states free for closed-source commercial use)",
+  "lazy": true,
+  "flags": [
+   "extended-profile-only"
+  ]
+ },
+ {
+  "id": "@mediabunny/mp3-encoder",
+  "section": "05",
+  "tier": "B",
+  "status": "optional",
+  "role": "MP3 encoder (LAME wasm, LGPL inside)",
+  "license": "MPL-2.0 wrapper; LAME LGPL",
+  "flags": [
+   "LGPL-inside",
+   "extended-profile-only"
+  ],
+  "lazy": true
+ },
+ {
+  "id": "@mediabunny/aac-encoder",
+  "section": "05",
+  "tier": "B",
+  "status": "optional",
+  "role": "AAC-LC encoder (libavcodec wasm)",
+  "license": "MPL-2.0 wrapper; embedded libavcodec licence unstated",
+  "flags": [
+   "verify-embedded-licence",
+   "extended-profile-only"
+  ],
+  "lazy": true
+ },
+ {
+  "id": "@mediabunny/flac-encoder",
+  "section": "05",
+  "tier": "B",
+  "status": "optional",
+  "role": "FLAC encoder",
+  "license": "MPL-2.0 wrapper; libFLAC",
+  "lazy": true,
+  "flags": [
+   "extended-profile-only"
+  ]
+ },
+ {
+  "id": "mp4box",
+  "section": "05",
+  "tier": "A",
+  "status": "optional",
+  "role": "MP4 demux (BSD-3) — STRICT-profile video path with WebCodecs",
+  "license": "BSD-3-Clause",
+  "flags": [
+   "strict-profile-video"
+  ]
+ },
+ {
+  "id": "@webav/mp4box.js",
+  "section": "05",
+  "tier": "A",
+  "status": "optional",
+  "role": "mp4box fork",
+  "license": "BSD-3-Clause",
+  "flags": [
+   "strict-profile-video"
+  ]
+ },
+ {
+  "id": "libavjs-webcodecs-polyfill",
+  "section": "05",
+  "tier": "A",
+  "status": "optional",
+  "role": "WebCodecs polyfill for old WebViews",
+  "license": "0BSD"
+ },
+ {
+  "id": "@libav.js/variant-webcodecs",
+  "section": "05",
+  "tier": "B",
+  "status": "optional",
+  "role": "libav.js build for polyfill (VP8/VP9/AV1/Opus class)",
+  "license": "LGPL-2.1",
+  "flags": [
+   "LGPL-separate-wasm",
+   "extended-profile-only"
+  ],
+  "lazy": true
+ },
+ {
+  "id": "gifenc",
+  "section": "05",
+  "tier": "A",
+  "status": "recommended",
+  "role": "GIF encoder (fast, tiny)",
+  "license": "MIT",
+  "stale": "2021"
+ },
+ {
+  "id": "image-q",
+  "section": "05",
+  "tier": "A",
+  "status": "recommended",
+  "role": "palette quantise + dithering for GIF",
+  "license": "MIT"
+ },
+ {
+  "id": "gifuct-js",
+  "section": "05",
+  "tier": "A",
+  "status": "recommended",
+  "role": "GIF decode",
+  "license": "MIT",
+  "stale": "2021"
+ },
+ {
+  "id": "omggif",
+  "section": "05",
+  "tier": "A",
+  "status": "optional",
+  "role": "GIF enc/dec low-level",
+  "license": "MIT",
+  "stale": "2019"
+ },
+ {
+  "id": "modern-gif",
+  "section": "05",
+  "tier": "A",
+  "status": "optional",
+  "role": "GIF enc/dec with worker",
+  "license": "MIT"
+ },
+ {
+  "id": "ts-gif",
+  "section": "05",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "GIF enc/dec",
+  "license": "MIT",
+  "risk": "young"
+ },
+ {
+  "id": "gif.js",
+  "section": "05",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "GIF encoder",
+  "license": "MIT",
+  "stale": "2016"
+ },
+ {
+  "id": "gif-encoder-2",
+  "section": "05",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "GIF encoder",
+  "license": "Unlicense",
+  "stale": "2019"
+ },
+ {
+  "id": "upng-js",
+  "section": "05",
+  "tier": "A",
+  "status": "recommended",
+  "role": "APNG enc/dec + lossy palette",
+  "license": "MIT",
+  "stale": "2017"
+ },
+ {
+  "id": "apng-js",
+  "section": "05",
+  "tier": "A",
+  "status": "optional",
+  "role": "APNG parse/play",
+  "license": "MIT"
+ },
+ {
+  "id": "wasm-webp",
+  "section": "05",
+  "tier": "A",
+  "status": "recommended",
+  "role": "Animated WebP encode+decode (libwebp wasm)",
+  "license": "MIT wrapper; libwebp BSD-3 (add notice)",
+  "risk": "v0.1.0; test",
+  "lazy": true
+ },
+ {
+  "id": "@stacksjs/ts-webp",
+  "section": "05",
+  "tier": "A",
+  "status": "optional",
+  "role": "pure-TS WebP codec, anim decode",
+  "license": "MIT",
+  "risk": "young"
+ },
+ {
+  "id": "fix-webm-duration",
+  "section": "05",
+  "tier": "A",
+  "status": "optional",
+  "role": "fix MediaRecorder WebM duration",
+  "license": "MIT"
+ },
+ {
+  "id": "ts-ebml",
+  "section": "05",
+  "tier": "A",
+  "status": "optional",
+  "role": "EBML tools for WebM",
+  "license": "MIT"
+ },
+ {
+  "id": "mediainfo.js",
+  "section": "05",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "media info wasm (956KB gz)",
+  "license": "BSD-2-Clause"
+ },
+ {
+  "id": "mp4-muxer",
+  "section": "05",
+  "tier": "A",
+  "status": "optional",
+  "role": "MP4 muxer — used by STRICT profile (deprecated but MIT/functional)",
+  "license": "MIT",
+  "risk": "deprecated upstream; wrap behind an interface so mediabunny can replace it in Extended",
+  "flags": [
+   "strict-profile-video"
+  ]
+ },
+ {
+  "id": "webm-muxer",
+  "section": "05",
+  "tier": "A",
+  "status": "optional",
+  "role": "WebM muxer — used by STRICT profile (deprecated but MIT/functional)",
+  "license": "MIT",
+  "risk": "deprecated upstream; wrap behind an interface so mediabunny can replace it in Extended",
+  "flags": [
+   "strict-profile-video"
+  ]
+ },
+ {
+  "id": "mp4-wasm",
+  "section": "05",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "MP4 mux/demux wasm",
+  "license": "MIT",
+  "stale": "2021"
+ },
+ {
+  "id": "wasm-media-encoders",
+  "section": "05",
+  "tier": "X",
+  "status": "rejected",
+  "role": "MP3/Opus/Vorbis wasm encoders",
+  "license": "MIT label; includes LAME (LGPL) unclear handling",
+  "reason": "unclear embedded licences; 282KB gz"
+ },
+ {
+  "id": "@ffmpeg/ffmpeg",
+  "section": "05",
+  "tier": "A",
+  "status": "not-needed",
+  "role": "ffmpeg.wasm wrapper",
+  "license": "MIT",
+  "reason": "core is GPL"
+ },
+ {
+  "id": "@ffmpeg/core",
+  "section": "05",
+  "tier": "X",
+  "status": "rejected",
+  "role": "ffmpeg.wasm core",
+  "license": "GPL-2.0-or-later",
+  "reason": "GPL; 31MB wasm / 10MB gz"
+ },
+ {
+  "id": "@ffmpeg/core-mt",
+  "section": "05",
+  "tier": "X",
+  "status": "rejected",
+  "role": "ffmpeg.wasm multithread core",
+  "license": "GPL-2.0-or-later",
+  "reason": "GPL"
+ },
+ {
+  "id": "gifsicle-wasm",
+  "section": "05",
+  "tier": "X",
+  "status": "rejected",
+  "role": "GIF optimiser",
+  "license": "GPL-2.0-only",
+  "reason": "GPL"
+ },
+ {
+  "id": "gifsicle-wasm-browser",
+  "section": "05",
+  "tier": "X",
+  "status": "rejected",
+  "role": "GIF optimiser",
+  "license": "MIT label; bundles gifsicle (GPL-2.0)",
+  "reason": "effective GPL"
+ },
+ {
+  "id": "@wordpress/video-conversion",
+  "section": "05",
+  "tier": "X",
+  "status": "rejected",
+  "role": "client-side video conversion",
+  "license": "GPL-2.0-or-later",
+  "reason": "GPL"
+ },
+ {
+  "id": "gifski",
+  "section": "05",
+  "tier": "X",
+  "status": "rejected",
+  "role": "high quality GIF encoder",
+  "license": "AGPL-3.0",
+  "reason": "AGPL"
+ },
+ {
+  "id": "gifski-lite",
+  "section": "05",
+  "tier": "X",
+  "status": "rejected",
+  "role": "gifski wasm",
+  "license": "AGPL-3.0",
+  "reason": "AGPL"
+ },
+ {
+  "id": "web-demuxer",
+  "section": "05",
+  "tier": "X",
+  "status": "rejected",
+  "role": "demuxer wasm",
+  "license": null,
+  "reason": "no licence"
+ },
+ {
+  "id": "lamejs",
+  "section": "05",
+  "tier": "X",
+  "status": "rejected",
+  "role": "MP3 encoder JS",
+  "license": "LGPL-3.0",
+  "reason": "LGPL JS; hard to comply"
+ },
+ {
+  "id": "@breezystack/lamejs",
+  "section": "05",
+  "tier": "X",
+  "status": "rejected",
+  "role": "MP3 encoder JS",
+  "license": "LGPL-3.0",
+  "reason": "LGPL JS"
+ },
+ {
+  "id": "libav.js",
+  "section": "05",
+  "tier": "B",
+  "status": "not-needed",
+  "role": "ffmpeg libs wasm (variants)",
+  "license": "LGPL-2.1",
+  "reason": "use only the webcodecs variant if needed"
+ }
+]

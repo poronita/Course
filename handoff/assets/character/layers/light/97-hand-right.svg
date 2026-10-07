@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <linearGradient id="pip-light-97-hand-right-mitt" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#E3D9CF" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g>
+        <g transform="matrix(-1 0 0 1 400 0)">
+          <g transform="translate(131.00 240.00) rotate(10.00) scale(1.0000 1.0000) translate(0 0)">
+            <g transform="translate(0.00 34.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+              <g>
+                <ellipse cx="-10.5" cy="3" rx="5" ry="8" fill="url(#pip-light-97-hand-right-mitt)" stroke="#8E6F66" stroke-width="2" transform="rotate(28 -10.5 3)"/>
+                <path d="M-11 6Q-12 22 0 23Q12 22 11 6Q11 -6 0 -6Q-11 -6 -11 6Z" fill="url(#pip-light-97-hand-right-mitt)" stroke="#8E6F66" stroke-width="2"/>
+                <path d="M-4 1Q-6 10 -3 16" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.9"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

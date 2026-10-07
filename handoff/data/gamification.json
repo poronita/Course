@@ -1,0 +1,697 @@
+{
+ "xpPerJob": [
+  [
+   "convert",
+   "Convert a file",
+   25
+  ],
+  [
+   "compress",
+   "Compress or hit a target size",
+   40
+  ],
+  [
+   "resize",
+   "Resize or crop",
+   30
+  ],
+  [
+   "privacy",
+   "Check, edit or remove metadata or location",
+   50
+  ],
+  [
+   "video",
+   "Video, GIF or animation job",
+   60
+  ],
+  [
+   "utility",
+   "QR, colour, icon, SVG, barcode",
+   25
+  ],
+  [
+   "batch",
+   "Batch job, per file (cap 100 per job)",
+   5
+  ],
+  [
+   "exam",
+   "Exam kit (all files in one go)",
+   80
+  ]
+ ],
+ "xpRules": {
+  "firstJobOfDay": 20,
+  "streakBonusPerDay": 5,
+  "streakBonusCapDays": 10,
+  "badgeBronze": 25,
+  "badgeSilver": 50,
+  "badgeGold": 100,
+  "questDone": 30,
+  "allQuestsChest": true,
+  "repeatDecay": [
+   {
+    "upTo": 3,
+    "factor": 1
+   },
+   {
+    "upTo": 8,
+    "factor": 0.5
+   },
+   {
+    "upTo": 1000000000,
+    "factor": 0.1
+   }
+  ],
+  "repeatDecayNote": "Per tool per local day. Stops people farming XP by repeating the same tiny job.",
+  "dailyCap": 600
+ },
+ "levelFormula": "need(L) = 50 * L + 150",
+ "ranks": [
+  [
+   1,
+   2,
+   "Rookie"
+  ],
+  [
+   3,
+   4,
+   "Tinkerer"
+  ],
+  [
+   5,
+   6,
+   "Fixer"
+  ],
+  [
+   7,
+   7,
+   "Craftsman"
+  ],
+  [
+   8,
+   9,
+   "Artisan"
+  ],
+  [
+   10,
+   14,
+   "Maker"
+  ],
+  [
+   15,
+   19,
+   "Expert"
+  ],
+  [
+   20,
+   29,
+   "Master"
+  ],
+  [
+   30,
+   999,
+   "Legend"
+  ]
+ ],
+ "streakRules": [
+  "A streak day is a local calendar day with at least one finished job. Use the device time zone; the day changes at 00:00 local time.",
+  "Travel or daylight-saving changes never break a streak: compare calendar dates, not 24-hour gaps.",
+  "One free \"streak shield\" per week. If a day is missed and a shield is available the streak survives and the shield is used (show the st-save reaction). Shields cannot be bought.",
+  "Streak milestones: 3, 7, 14, 30, 60, 100, 200, 365 days give a badge and a chest."
+ ],
+ "questRules": [
+  "Three quests per local day, picked from the pool with a seeded random generator (seed = date + install id) so the same day gives the same quests after an app restart.",
+  "Never pick two quests for the same tool. Prefer tools the user has used least. Never give a quest the device cannot do (for example, video quests on a device without video support).",
+  "Finishing a quest gives +30 XP and a tick animation. Finishing all three opens the Daily Chest (one chest per day)."
+ ],
+ "quests": [
+  [
+   "q-shrink-1",
+   "Shrink a photo",
+   "compress",
+   1
+  ],
+  [
+   "q-crop-1",
+   "Crop a photo",
+   "resize",
+   1
+  ],
+  [
+   "q-privacy-1",
+   "Remove a location",
+   "privacy",
+   1
+  ],
+  [
+   "q-gif-1",
+   "Make a GIF",
+   "video",
+   1
+  ],
+  [
+   "q-convert-1",
+   "Convert one file",
+   "convert",
+   1
+  ],
+  [
+   "q-qr-1",
+   "Make a QR code",
+   "utility",
+   1
+  ],
+  [
+   "q-exam-1",
+   "Build an exam kit",
+   "exam",
+   1
+  ],
+  [
+   "q-batch-5",
+   "Process 5 photos in one go",
+   "batch",
+   5
+  ],
+  [
+   "q-three-tools",
+   "Use 3 different tools",
+   "any",
+   3
+  ],
+  [
+   "q-info",
+   "Open the (i) info on a tool",
+   "ui",
+   1
+  ],
+  [
+   "q-pip-tap",
+   "Tap Pip's tummy and pick a tool",
+   "pip",
+   1
+  ],
+  [
+   "q-pip-pickup",
+   "Pick Pip up by his blade",
+   "pip",
+   1
+  ],
+  [
+   "q-share",
+   "Share a result",
+   "any",
+   1
+  ],
+  [
+   "q-heic",
+   "Convert a HEIC photo to JPG",
+   "convert",
+   1
+  ],
+  [
+   "q-1kb",
+   "Compress a photo under 100 KB",
+   "compress",
+   1
+  ],
+  [
+   "q-square",
+   "Crop a photo to 1:1",
+   "resize",
+   1
+  ],
+  [
+   "q-video-trim",
+   "Trim a video",
+   "video",
+   1
+  ],
+  [
+   "q-palette",
+   "Get a colour palette from a photo",
+   "utility",
+   1
+  ],
+  [
+   "q-preset",
+   "Use a preset from the preset browser",
+   "resize",
+   1
+  ],
+  [
+   "q-save-5mb",
+   "Save 5 MB in one day",
+   "any",
+   5
+  ]
+ ],
+ "badges": [
+  [
+   "b-feather",
+   "Feather Weight",
+   "shrink",
+   "bronze",
+   "Finish 1 compress job."
+  ],
+  [
+   "b-feather2",
+   "Feather Weight II",
+   "shrink",
+   "silver",
+   "Finish 25 compress jobs."
+  ],
+  [
+   "b-feather3",
+   "Feather Weight III",
+   "shrink",
+   "gold",
+   "Finish 100 compress jobs."
+  ],
+  [
+   "b-square",
+   "Perfect Square",
+   "crop",
+   "bronze",
+   "Crop 1 photo to 1:1."
+  ],
+  [
+   "b-crop2",
+   "Sharp Eye",
+   "crop",
+   "silver",
+   "Finish 25 crop or resize jobs."
+  ],
+  [
+   "b-crop3",
+   "Master Cropper",
+   "crop",
+   "gold",
+   "Finish 100 crop or resize jobs."
+  ],
+  [
+   "b-guard",
+   "Privacy Guard",
+   "shield",
+   "silver",
+   "Remove location from 1 photo."
+  ],
+  [
+   "b-guard2",
+   "Privacy Guard II",
+   "shield",
+   "gold",
+   "Remove location or metadata from 50 photos."
+  ],
+  [
+   "b-detective",
+   "Location Detective",
+   "pin",
+   "bronze",
+   "Check where 5 photos were taken."
+  ],
+  [
+   "b-loop",
+   "Loop Master",
+   "film",
+   "bronze",
+   "Make 1 GIF."
+  ],
+  [
+   "b-loop2",
+   "Director",
+   "film",
+   "silver",
+   "Finish 25 video or GIF jobs."
+  ],
+  [
+   "b-loop3",
+   "Blockbuster",
+   "film",
+   "gold",
+   "Finish 100 video or GIF jobs."
+  ],
+  [
+   "b-hopper",
+   "Format Hopper",
+   "convert",
+   "bronze",
+   "Convert files into 5 different formats."
+  ],
+  [
+   "b-hopper2",
+   "Format Wizard",
+   "convert",
+   "silver",
+   "Convert 100 files."
+  ],
+  [
+   "b-heic",
+   "Apple Whisperer",
+   "convert",
+   "bronze",
+   "Convert 10 HEIC photos."
+  ],
+  [
+   "b-exam",
+   "Exam Ready",
+   "check",
+   "silver",
+   "Build 1 exam kit."
+  ],
+  [
+   "b-exam2",
+   "Top of the Class",
+   "check",
+   "gold",
+   "Build 10 exam kits."
+  ],
+  [
+   "b-qr",
+   "Code Cracker",
+   "qr",
+   "bronze",
+   "Make or scan 5 QR codes."
+  ],
+  [
+   "b-palette",
+   "Colour Spy",
+   "palette",
+   "bronze",
+   "Get 5 palettes from photos."
+  ],
+  [
+   "b-streak3",
+   "On a Roll",
+   "star",
+   "bronze",
+   "3-day streak."
+  ],
+  [
+   "b-streak7",
+   "Week Warrior",
+   "star",
+   "silver",
+   "7-day streak."
+  ],
+  [
+   "b-streak30",
+   "Habit Hero",
+   "star",
+   "gold",
+   "30-day streak."
+  ],
+  [
+   "b-streak100",
+   "Unstoppable",
+   "star",
+   "gold",
+   "100-day streak."
+  ],
+  [
+   "b-early",
+   "Early Bird",
+   "sparkle",
+   "silver",
+   "Finish a job before 7:00 local time."
+  ],
+  [
+   "b-night",
+   "Night Owl",
+   "sparkle",
+   "silver",
+   "Finish a job after 23:00 local time."
+  ],
+  [
+   "b-saver",
+   "Space Saver",
+   "save",
+   "bronze",
+   "Save 50 MB in total."
+  ],
+  [
+   "b-saver2",
+   "Space Hero",
+   "save",
+   "silver",
+   "Save 1 GB in total."
+  ],
+  [
+   "b-saver3",
+   "Space Legend",
+   "save",
+   "gold",
+   "Save 10 GB in total."
+  ],
+  [
+   "b-batch",
+   "Batch Boss",
+   "layers",
+   "silver",
+   "Process 50 files in one batch."
+  ],
+  [
+   "b-share",
+   "Sharer",
+   "share",
+   "bronze",
+   "Share 5 results."
+  ],
+  [
+   "b-explorer",
+   "Explorer",
+   "grid",
+   "silver",
+   "Use every tool group at least once."
+  ],
+  [
+   "b-curious",
+   "Curious Mind",
+   "search",
+   "bronze",
+   "Open the (i) info on 10 different tools."
+  ],
+  [
+   "b-pickup",
+   "Up, Up and Away",
+   "heart",
+   "bronze",
+   "Pick Pip up by his blade."
+  ],
+  [
+   "b-carpet",
+   "Magic Carpet Ride",
+   "heart",
+   "silver",
+   "Fly Pip on the carpet for 10 seconds."
+  ],
+  [
+   "b-oops",
+   "Oops!",
+   "heart",
+   "bronze",
+   "Burst the carpet."
+  ],
+  [
+   "b-tickle",
+   "Giggle Maker",
+   "heart",
+   "bronze",
+   "Tickle Pip 20 times."
+  ],
+  [
+   "b-friend",
+   "Best Friend",
+   "heart",
+   "gold",
+   "Find 10 different Pip reactions."
+  ],
+  [
+   "b-surprise",
+   "Surprise Hunter",
+   "sparkle",
+   "silver",
+   "See 20 different transition effects."
+  ],
+  [
+   "b-surprise2",
+   "Surprise Collector",
+   "sparkle",
+   "gold",
+   "See all 32 transition effects."
+  ],
+  [
+   "b-finish",
+   "Finish Line",
+   "sparkle",
+   "gold",
+   "See all 30 save effects."
+  ],
+  [
+   "b-offline",
+   "Off the Grid",
+   "globe",
+   "bronze",
+   "Finish a job in airplane mode."
+  ],
+  [
+   "b-level10",
+   "Double Digits",
+   "star",
+   "silver",
+   "Reach level 10."
+  ],
+  [
+   "b-level25",
+   "Quarter Century",
+   "star",
+   "gold",
+   "Reach level 25."
+  ],
+  [
+   "b-quests",
+   "Quest Keeper",
+   "check",
+   "silver",
+   "Finish all 3 daily quests 7 times."
+  ],
+  [
+   "b-chest",
+   "Treasure Hunter",
+   "gift",
+   "bronze",
+   "Open 10 daily chests."
+  ]
+ ],
+ "skins": [
+  [
+   "sk-gold-blade",
+   "Golden Blade",
+   "blade",
+   "Daily chest, first reward. Also level 8."
+  ],
+  [
+   "sk-party-hat",
+   "Party Hat",
+   "hat",
+   "Reach a 7-day streak."
+  ],
+  [
+   "sk-sunglasses",
+   "Cool Shades",
+   "face",
+   "Remove location from 10 photos."
+  ],
+  [
+   "sk-crown",
+   "Tiny Crown",
+   "hat",
+   "Reach level 15."
+  ],
+  [
+   "sk-headphones",
+   "Headphones",
+   "head",
+   "Make 10 GIFs."
+  ],
+  [
+   "sk-scarf",
+   "Red Scarf",
+   "neck",
+   "Open 5 chests."
+  ],
+  [
+   "sk-cape",
+   "Hero Cape",
+   "back",
+   "Reach a 30-day streak."
+  ],
+  [
+   "sk-wizard",
+   "Wizard Hat",
+   "hat",
+   "Convert 100 files."
+  ],
+  [
+   "sk-helmet",
+   "Astronaut Helmet",
+   "head",
+   "Save 1 GB in total."
+  ],
+  [
+   "sk-grad-cap",
+   "Graduation Cap",
+   "hat",
+   "Build 5 exam kits."
+  ],
+  [
+   "sk-snow",
+   "Winter Scarf",
+   "neck",
+   "Use the app in December or January."
+  ],
+  [
+   "sk-rainbow",
+   "Rainbow Keyring",
+   "tail",
+   "Finish all 3 daily quests 14 times."
+  ]
+ ],
+ "chestLoot": [
+  {
+   "id": "xp-small",
+   "weight": 40,
+   "text": "+50 XP"
+  },
+  {
+   "id": "xp-big",
+   "weight": 15,
+   "text": "+150 XP"
+  },
+  {
+   "id": "badge-bronze",
+   "weight": 10,
+   "text": "A surprise bronze badge, if one is still locked"
+  },
+  {
+   "id": "skin",
+   "weight": 20,
+   "text": "A Pip skin you do not own yet (falls back to XP when you own all)"
+  },
+  {
+   "id": "shield",
+   "weight": 10,
+   "text": "An extra streak shield (max 2 held)"
+  },
+  {
+   "id": "sticker",
+   "weight": 5,
+   "text": "A rare Pip sticker for the sticker album"
+  }
+ ],
+ "awards": [
+  [
+   "Weekly Fixer trophy",
+   "Awarded every Monday for the week before when the user finished at least 10 jobs. Shown in the trophy case with the week range."
+  ],
+  [
+   "Monthly Maker trophy",
+   "Awarded on the 1st for the month before when the user was active on at least 15 days."
+  ],
+  [
+   "Level medals",
+   "A medal for every 5th level (5, 10, 15 ...), shown with the level number."
+  ],
+  [
+   "Pip stickers",
+   "Collectible stickers of Pip reactions. A new sticker is unlocked the first time a reaction is seen (celebration, level-up, error or easter egg types)."
+  ]
+ ],
+ "localCopy": {
+  "short": "Your XP, badges and streaks are saved only on this device. We do not store them online.",
+  "long": "Your XP, levels, badges, streaks and awards are saved only on this device. We do not store them online and we cannot restore them. If you clear the app data, uninstall, or switch phones, they start again. You can save a backup file yourself in Settings and load it on another device.",
+  "firstRun": "Your rewards live on this phone only. Nothing is stored online."
+ }
+}

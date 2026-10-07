@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pip rig demo</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.4 system-ui, sans-serif; background: #10181b; color: #e8f6f8; }
+  header { padding: 14px 16px 6px; }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  p { margin: 0; opacity: .75; font-size: 13px; }
+  .stages { display: flex; flex-wrap: wrap; gap: 14px; padding: 12px 16px; }
+  .stage { flex: 1 1 300px; max-width: 520px; aspect-ratio: 1; border-radius: 18px; position: relative; overflow: hidden; touch-action: none; cursor: pointer; }
+  .stage.dark { background: radial-gradient(70% 60% at 80% 0%, rgba(43,179,209,.35), transparent 70%), #071A21; }
+  .stage.light { background: radial-gradient(70% 60% at 80% 0%, rgba(14,124,153,.25), transparent 70%), #F8F1E0; }
+  .stage .cast-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .stage.dark .cast-svg { filter: drop-shadow(0 12px 14px rgba(0,0,0,.4)); }
+  /* the thin warm outline the app uses on the creamy theme */
+  .stage.light .cast-svg { filter: drop-shadow(1.5px 0 0 #7b6443) drop-shadow(-1.5px 0 0 #7b6443) drop-shadow(0 1.5px 0 #7b6443) drop-shadow(0 -1.5px 0 #7b6443) drop-shadow(0 10px 8px rgba(90,70,30,.22)); }
+  .tag { position: absolute; left: 12px; top: 10px; font-size: 12px; opacity: .7; z-index: 2; }
+  .stage.light .tag { color: #18272D; }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px; padding: 4px 16px 18px; }
+  button { font: inherit; padding: 8px 14px; border-radius: 10px; border: 1px solid rgba(140,200,215,.35); background: #14394A; color: #e8f6f8; cursor: pointer; }
+  button.on { background: #2BB3D1; color: #03212B; border-color: #2BB3D1; font-weight: 700; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Pip Prime rig demo</h1>
+  <p>Pick a mood. Move the pointer and Pip's eyes follow. Click or tap a stage to poke him (click three times fast for dizzy).</p>
+</header>
+<div class="stages">
+  <div class="stage dark" id="stDark"><span class="tag">Turkish blue (dark theme)</span></div>
+  <div class="stage light" id="stLight"><span class="tag">Creamy white (light theme)</span></div>
+</div>
+<div class="bar" id="bar"></div>
+
+<script src="cast.js"></script>
+<script src="pip-dark.js"></script>
+<script src="pip-light.js"></script>
+<script>
+(() => {
+  const defs = { dark: CAST.chars.find(c => c.id === 'pip-dark'), light: CAST.chars.find(c => c.id === 'pip-light') };
+  const stages = [
+    { el: document.getElementById('stDark'), def: defs.dark },
+    { el: document.getElementById('stLight'), def: defs.light },
+  ];
+  /* one mounted rig per stage */
+  stages.forEach(s => { s.rig = CAST.mount(s.def, s.el); s.look = { x: 0, y: 0 }; s.target = { x: 0, y: 0 }; s.hover = false; s.pokes = []; });
+
+  /* mood state shared by both stages */
+  let mood = 'idle', prev = 'idle', moodStart = 0;
+  const now = () => performance.now() / 1000;
+  function setMood(m) { if (m === mood) return; prev = mood; mood = m; moodStart = now(); [...bar.children].forEach(b => b.classList.toggle('on', b.dataset.mood === m)); }
+
+  const bar = document.getElementById('bar');
+  CAST.MOODS.forEach(([id, label]) => {
+    const b = document.createElement('button'); b.textContent = label; b.dataset.mood = id;
+    if (id === mood) b.classList.add('on');
+    b.onclick = () => setMood(id); bar.appendChild(b);
+  });
+
+  /* pointer follow: look.x / look.y are -1..1 relative to the character centre */
+  addEventListener('pointermove', e => {
+    stages.forEach(s => {
+      const r = s.el.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height * 0.5;
+      s.target.x = Math.max(-1, Math.min(1, (e.clientX - cx) / (r.width * 0.5)));
+      s.target.y = Math.max(-1, Math.min(1, (e.clientY - cy) / (r.height * 0.5)));
+    });
+  });
+  addEventListener('pointerleave', () => stages.forEach(s => { s.target.x = 0; s.target.y = 0; }));
+  stages.forEach(s => {
+    s.el.addEventListener('pointerenter', () => s.hover = true);
+    s.el.addEventListener('pointerleave', () => s.hover = false);
+    s.el.addEventListener('pointerdown', () => s.pokes.push(now()));
+  });
+
+  function frame() {
+    const t = now();
+    stages.forEach(s => {
+      s.look.x += (s.target.x - s.look.x) * 0.18; s.look.y += (s.target.y - s.look.y) * 0.18;   // ease the gaze a little
+      s.pokes = s.pokes.filter(p => t - p < 6);
+      const last = s.pokes.length ? s.pokes[s.pokes.length - 1] : -1e9;
+      s.rig.update({
+        t, mood, prev, mt: t - moodStart,
+        blend: CAST.ease.out(CAST.clamp((t - moodStart) / 0.35)),
+        look: s.look, poke: t - last, pokes: s.pokes.filter(p => t - p < 2.5).length, hover: s.hover, small: false,
+      });
+    });
+    requestAnimationFrame(frame);
+  }
+  frame();
+  window.__demo = { setMood, stages };
+})();
+</script>
+</body>
+</html>

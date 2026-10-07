@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <linearGradient id="pip-light-10-keyring-steelX" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8C95A4" stop-opacity="1"/>
+      <stop offset="0.3" stop-color="#F3F5F8" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#C2C8D2" stop-opacity="1"/>
+      <stop offset="0.72" stop-color="#EEF1F5" stop-opacity="1"/>
+      <stop offset="1" stop-color="#7E8797" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g transform="translate(286.00 284.00) rotate(-3.11) scale(1.0000 1.0000) translate(-286 -284)">
+        <path d="M278 282Q292 280 294 292" fill="none" stroke="#4E5668" stroke-width="6" stroke-linecap="round"/>
+        <path d="M278 282Q292 280 294 292" fill="none" stroke="url(#pip-light-10-keyring-steelX)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="294" cy="309" r="15" fill="none" stroke="#4E5668" stroke-width="7.5"/>
+        <circle cx="294" cy="309" r="15" fill="none" stroke="url(#pip-light-10-keyring-steelX)" stroke-width="4"/>
+        <path d="M282 302A14 14 0 0 1 292 294.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+      </g>
+    </g>
+  </g>
+</svg>

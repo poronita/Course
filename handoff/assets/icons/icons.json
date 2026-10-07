@@ -1,0 +1,387 @@
+[
+ {
+  "name": "check",
+  "source": "engine",
+  "svg": "svg/check.svg",
+  "vectorDrawable": "vector-drawable/ic_check.xml",
+  "filled": false
+ },
+ {
+  "name": "shrink",
+  "source": "engine",
+  "svg": "svg/shrink.svg",
+  "vectorDrawable": "vector-drawable/ic_shrink.xml",
+  "filled": false
+ },
+ {
+  "name": "crop",
+  "source": "engine",
+  "svg": "svg/crop.svg",
+  "vectorDrawable": "vector-drawable/ic_crop.xml",
+  "filled": false
+ },
+ {
+  "name": "pin",
+  "source": "engine",
+  "svg": "svg/pin.svg",
+  "vectorDrawable": "vector-drawable/ic_pin.xml",
+  "filled": false
+ },
+ {
+  "name": "film",
+  "source": "engine",
+  "svg": "svg/film.svg",
+  "vectorDrawable": "vector-drawable/ic_film.xml",
+  "filled": false
+ },
+ {
+  "name": "convert",
+  "source": "engine",
+  "svg": "svg/convert.svg",
+  "vectorDrawable": "vector-drawable/ic_convert.xml",
+  "filled": false
+ },
+ {
+  "name": "grid",
+  "source": "engine",
+  "svg": "svg/grid.svg",
+  "vectorDrawable": "vector-drawable/ic_grid.xml",
+  "filled": false
+ },
+ {
+  "name": "share",
+  "source": "engine",
+  "svg": "svg/share.svg",
+  "vectorDrawable": "vector-drawable/ic_share.xml",
+  "filled": false
+ },
+ {
+  "name": "save",
+  "source": "engine",
+  "svg": "svg/save.svg",
+  "vectorDrawable": "vector-drawable/ic_save.xml",
+  "filled": false
+ },
+ {
+  "name": "back",
+  "source": "engine",
+  "svg": "svg/back.svg",
+  "vectorDrawable": "vector-drawable/ic_back.xml",
+  "filled": false
+ },
+ {
+  "name": "next",
+  "source": "engine",
+  "svg": "svg/next.svg",
+  "vectorDrawable": "vector-drawable/ic_next.xml",
+  "filled": false
+ },
+ {
+  "name": "shield",
+  "source": "engine",
+  "svg": "svg/shield.svg",
+  "vectorDrawable": "vector-drawable/ic_shield.xml",
+  "filled": false
+ },
+ {
+  "name": "play",
+  "source": "engine",
+  "svg": "svg/play.svg",
+  "vectorDrawable": "vector-drawable/ic_play.xml",
+  "filled": true
+ },
+ {
+  "name": "pause",
+  "source": "engine",
+  "svg": "svg/pause.svg",
+  "vectorDrawable": "vector-drawable/ic_pause.xml",
+  "filled": false
+ },
+ {
+  "name": "image",
+  "source": "engine",
+  "svg": "svg/image.svg",
+  "vectorDrawable": "vector-drawable/ic_image.xml",
+  "filled": false
+ },
+ {
+  "name": "video",
+  "source": "engine",
+  "svg": "svg/video.svg",
+  "vectorDrawable": "vector-drawable/ic_video.xml",
+  "filled": false
+ },
+ {
+  "name": "lock",
+  "source": "engine",
+  "svg": "svg/lock.svg",
+  "vectorDrawable": "vector-drawable/ic_lock.xml",
+  "filled": false
+ },
+ {
+  "name": "sparkle",
+  "source": "engine",
+  "svg": "svg/sparkle.svg",
+  "vectorDrawable": "vector-drawable/ic_sparkle.xml",
+  "filled": false
+ },
+ {
+  "name": "plus",
+  "source": "engine",
+  "svg": "svg/plus.svg",
+  "vectorDrawable": "vector-drawable/ic_plus.xml",
+  "filled": false
+ },
+ {
+  "name": "x",
+  "source": "engine",
+  "svg": "svg/x.svg",
+  "vectorDrawable": "vector-drawable/ic_x.xml",
+  "filled": false
+ },
+ {
+  "name": "scissors",
+  "source": "engine",
+  "svg": "svg/scissors.svg",
+  "vectorDrawable": "vector-drawable/ic_scissors.xml",
+  "filled": false
+ },
+ {
+  "name": "upload",
+  "source": "engine",
+  "svg": "svg/upload.svg",
+  "vectorDrawable": "vector-drawable/ic_upload.xml",
+  "filled": false
+ },
+ {
+  "name": "folder",
+  "source": "engine",
+  "svg": "svg/folder.svg",
+  "vectorDrawable": "vector-drawable/ic_folder.xml",
+  "filled": false
+ },
+ {
+  "name": "trash",
+  "source": "engine",
+  "svg": "svg/trash.svg",
+  "vectorDrawable": "vector-drawable/ic_trash.xml",
+  "filled": false
+ },
+ {
+  "name": "star",
+  "source": "engine",
+  "svg": "svg/star.svg",
+  "vectorDrawable": "vector-drawable/ic_star.xml",
+  "filled": false
+ },
+ {
+  "name": "heart",
+  "source": "engine",
+  "svg": "svg/heart.svg",
+  "vectorDrawable": "vector-drawable/ic_heart.xml",
+  "filled": false
+ },
+ {
+  "name": "search",
+  "source": "engine",
+  "svg": "svg/search.svg",
+  "vectorDrawable": "vector-drawable/ic_search.xml",
+  "filled": false
+ },
+ {
+  "name": "layers",
+  "source": "engine",
+  "svg": "svg/layers.svg",
+  "vectorDrawable": "vector-drawable/ic_layers.xml",
+  "filled": false
+ },
+ {
+  "name": "clock",
+  "source": "engine",
+  "svg": "svg/clock.svg",
+  "vectorDrawable": "vector-drawable/ic_clock.xml",
+  "filled": false
+ },
+ {
+  "name": "phone",
+  "source": "engine",
+  "svg": "svg/phone.svg",
+  "vectorDrawable": "vector-drawable/ic_phone.xml",
+  "filled": false
+ },
+ {
+  "name": "globe",
+  "source": "engine",
+  "svg": "svg/globe.svg",
+  "vectorDrawable": "vector-drawable/ic_globe.xml",
+  "filled": false
+ },
+ {
+  "name": "eye",
+  "source": "engine",
+  "svg": "svg/eye.svg",
+  "vectorDrawable": "vector-drawable/ic_eye.xml",
+  "filled": false
+ },
+ {
+  "name": "eyeoff",
+  "source": "engine",
+  "svg": "svg/eyeoff.svg",
+  "vectorDrawable": "vector-drawable/ic_eyeoff.xml",
+  "filled": false
+ },
+ {
+  "name": "menu",
+  "source": "engine",
+  "svg": "svg/menu.svg",
+  "vectorDrawable": "vector-drawable/ic_menu.xml",
+  "filled": false
+ },
+ {
+  "name": "home",
+  "source": "engine",
+  "svg": "svg/home.svg",
+  "vectorDrawable": "vector-drawable/ic_home.xml",
+  "filled": false
+ },
+ {
+  "name": "settings",
+  "source": "engine",
+  "svg": "svg/settings.svg",
+  "vectorDrawable": "vector-drawable/ic_settings.xml",
+  "filled": false
+ },
+ {
+  "name": "wand",
+  "source": "engine",
+  "svg": "svg/wand.svg",
+  "vectorDrawable": "vector-drawable/ic_wand.xml",
+  "filled": false
+ },
+ {
+  "name": "ruler",
+  "source": "engine",
+  "svg": "svg/ruler.svg",
+  "vectorDrawable": "vector-drawable/ic_ruler.xml",
+  "filled": false
+ },
+ {
+  "name": "palette",
+  "source": "engine",
+  "svg": "svg/palette.svg",
+  "vectorDrawable": "vector-drawable/ic_palette.xml",
+  "filled": false
+ },
+ {
+  "name": "download",
+  "source": "extra",
+  "svg": "svg/download.svg",
+  "vectorDrawable": "vector-drawable/ic_download.xml",
+  "filled": false
+ },
+ {
+  "name": "copy",
+  "source": "extra",
+  "svg": "svg/copy.svg",
+  "vectorDrawable": "vector-drawable/ic_copy.xml",
+  "filled": false
+ },
+ {
+  "name": "bell",
+  "source": "extra",
+  "svg": "svg/bell.svg",
+  "vectorDrawable": "vector-drawable/ic_bell.xml",
+  "filled": false
+ },
+ {
+  "name": "flame",
+  "source": "extra",
+  "svg": "svg/flame.svg",
+  "vectorDrawable": "vector-drawable/ic_flame.xml",
+  "filled": false
+ },
+ {
+  "name": "trophy",
+  "source": "extra",
+  "svg": "svg/trophy.svg",
+  "vectorDrawable": "vector-drawable/ic_trophy.xml",
+  "filled": false
+ },
+ {
+  "name": "chest",
+  "source": "extra",
+  "svg": "svg/chest.svg",
+  "vectorDrawable": "vector-drawable/ic_chest.xml",
+  "filled": false
+ },
+ {
+  "name": "medal",
+  "source": "extra",
+  "svg": "svg/medal.svg",
+  "vectorDrawable": "vector-drawable/ic_medal.xml",
+  "filled": false
+ },
+ {
+  "name": "qr",
+  "source": "extra",
+  "svg": "svg/qr.svg",
+  "vectorDrawable": "vector-drawable/ic_qr.xml",
+  "filled": false
+ },
+ {
+  "name": "volume-on",
+  "source": "extra",
+  "svg": "svg/volume-on.svg",
+  "vectorDrawable": "vector-drawable/ic_volume_on.xml",
+  "filled": false
+ },
+ {
+  "name": "volume-off",
+  "source": "extra",
+  "svg": "svg/volume-off.svg",
+  "vectorDrawable": "vector-drawable/ic_volume_off.xml",
+  "filled": false
+ },
+ {
+  "name": "vibrate",
+  "source": "extra",
+  "svg": "svg/vibrate.svg",
+  "vectorDrawable": "vector-drawable/ic_vibrate.xml",
+  "filled": false
+ },
+ {
+  "name": "sliders",
+  "source": "extra",
+  "svg": "svg/sliders.svg",
+  "vectorDrawable": "vector-drawable/ic_sliders.xml",
+  "filled": false
+ },
+ {
+  "name": "gift",
+  "source": "extra",
+  "svg": "svg/gift.svg",
+  "vectorDrawable": "vector-drawable/ic_gift.xml",
+  "filled": false
+ },
+ {
+  "name": "camera",
+  "source": "extra",
+  "svg": "svg/camera.svg",
+  "vectorDrawable": "vector-drawable/ic_camera.xml",
+  "filled": false
+ },
+ {
+  "name": "undo",
+  "source": "extra",
+  "svg": "svg/undo.svg",
+  "vectorDrawable": "vector-drawable/ic_undo.xml",
+  "filled": false
+ },
+ {
+  "name": "info",
+  "source": "extra",
+  "svg": "svg/info.svg",
+  "vectorDrawable": "vector-drawable/ic_info.xml",
+  "filled": false
+ }
+]

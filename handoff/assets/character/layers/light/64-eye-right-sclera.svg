@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <radialGradient id="pip-light-64-eye-right-sclera-sclera" cx="0.45" cy="0.38" r="0.7" fx="0.45" fy="0.38">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.75" stop-color="#F3F1F4" stop-opacity="1"/>
+      <stop offset="1" stop-color="#D9D3DC" stop-opacity="1"/>
+    </radialGradient>
+    <clipPath id="pip-light-64-eye-right-sclera-eye1">
+      <ellipse rx="22" ry="26"/>
+    </clipPath>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+        <g transform="translate(229.00 201.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+          <ellipse rx="25.5" ry="29.5" fill="#6F5A3C" opacity="0.35" cy="1.5"/>
+          <g clip-path="url(#pip-light-64-eye-right-sclera-eye1)">
+            <rect x="-26" y="-30" width="52" height="60" fill="url(#pip-light-64-eye-right-sclera-sclera)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

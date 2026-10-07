@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <clipPath id="pip-light-80-mouth-mouth">
+      <path d="M-13 -4Q0 4 13 -4Q0 4 -13 -4Z"/>
+    </clipPath>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+        <g transform="translate(200.00 246.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+          <path fill="#4F3F29" stroke="#3D2F1E" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round" d="M-13 -4Q0 4 13 -4Q0 4 -13 -4Z"/>
+          <g clip-path="url(#pip-light-80-mouth-mouth)">
+            <rect x="-13" width="60" height="5" fill="#fff" y="-3" opacity="0.000"/>
+            <ellipse fill="#FF7A86" cx="0" cy="1" rx="7.15" ry="5" opacity="0.000"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

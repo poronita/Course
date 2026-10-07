@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <linearGradient id="pip-light-67-eye-right-lids-lidT" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAF2E0" stop-opacity="1"/>
+      <stop offset="0.85" stop-color="#F6ECD7" stop-opacity="1"/>
+      <stop offset="1" stop-color="#E8DAB9" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-light-67-eye-right-lids-lidB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E0D0AA" stop-opacity="1"/>
+      <stop offset="0.12" stop-color="#F6ECD7" stop-opacity="1"/>
+      <stop offset="1" stop-color="#F4EAD3" stop-opacity="1"/>
+    </linearGradient>
+    <clipPath id="pip-light-67-eye-right-lids-lid1">
+      <ellipse rx="26.5" ry="30.5"/>
+    </clipPath>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+        <g transform="translate(229.00 201.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+          <g clip-path="url(#pip-light-67-eye-right-lids-lid1)">
+            <path fill="url(#pip-light-67-eye-right-lids-lidT)" d="M-32 -34H32V-21.759999999999998Q0 -13.095999999999998 -32 -21.759999999999998Z"/>
+            <path fill="url(#pip-light-67-eye-right-lids-lidB)" d="M-32 34H32V28Q0 22 -32 28Z"/>
+          </g>
+          <path fill="none" stroke="#3D2F1E" stroke-width="3.4" stroke-linecap="round" opacity="1.000" d="M-14.298307592159292 -20.759999999999998Q0 -12.095999999999998 14.298307592159292 -20.759999999999998"/>
+          <path fill="none" stroke="#3D2F1E" stroke-width="2.8" stroke-linecap="round" opacity="0.000" d="M-1 29Q0 21 1 29"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

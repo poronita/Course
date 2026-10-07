@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 32" width="372" height="96" role="img">
+  <title>Craftsman rank badge</title>
+  <defs><linearGradient id="rank-craftsman" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FAFCFE"/><stop offset="1" stop-color="#C3CED9"/></linearGradient></defs>
+  <rect x="1" y="1" width="122" height="30" rx="15" fill="url(#rank-craftsman)" stroke="#9AA8B8" stroke-opacity=".6"/>
+  <g transform="translate(13 8.500) scale(.625)" fill="none" stroke="#2F3B49" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></g>
+  <text id="rank-name" x="36" y="21" font-family="'Hanken Grotesk',system-ui,sans-serif" font-weight="800" font-size="13" fill="#2F3B49">Craftsman</text>
+</svg>

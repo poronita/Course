@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <linearGradient id="pip-light-30-blade-quiff-steelX" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8C95A4" stop-opacity="1"/>
+      <stop offset="0.3" stop-color="#F3F5F8" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#C2C8D2" stop-opacity="1"/>
+      <stop offset="0.72" stop-color="#EEF1F5" stop-opacity="1"/>
+      <stop offset="1" stop-color="#7E8797" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-light-30-blade-quiff-grind" x1="0" y1="0" x2="1" y2="0.2">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8CED8" stop-opacity="1"/>
+    </linearGradient>
+    <clipPath id="pip-light-30-blade-quiff-bladeClip">
+      <path d="M14 10V-50Q16 -92 -18 -122Q-27 -84 -17 -44L-17 10Z"/>
+    </clipPath>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g transform="translate(212.00 140.00) rotate(-21.72) scale(1.0000 1.0000) translate(0 0)">
+        <g>
+          <path d="M14 10V-50Q16 -92 -18 -122Q-27 -84 -17 -44L-17 10Z" fill="url(#pip-light-30-blade-quiff-steelX)" stroke="#4E5668" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M-17 10L-17 -44Q-27 -84 -18 -122Q-12 -88 -5 -50L-5 10Z" fill="url(#pip-light-30-blade-quiff-grind)" opacity="0.9"/>
+          <path d="M-5 6V-50Q-10 -88 -17 -120" fill="none" stroke="#8D96A6" stroke-width="1.4" opacity="0.8"/>
+          <path d="M7 -30Q9 -40 7 -50" fill="none" stroke="#6A7385" stroke-width="3.2" stroke-linecap="round" opacity="0.6"/>
+          <path d="M9 4V-50Q10 -82 -8 -106" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+          <g clip-path="url(#pip-light-30-blade-quiff-bladeClip)">
+            <rect x="-30" y="-130" width="60" height="14" fill="#fff" opacity="0.85" transform="rotate(-30)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

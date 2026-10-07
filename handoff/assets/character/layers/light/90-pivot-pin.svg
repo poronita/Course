@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <linearGradient id="pip-light-90-pivot-pin-steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBFCFE" stop-opacity="1"/>
+      <stop offset="0.35" stop-color="#C9CFD8" stop-opacity="1"/>
+      <stop offset="0.55" stop-color="#E9ECF1" stop-opacity="1"/>
+      <stop offset="0.8" stop-color="#9AA2B0" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C7CDD6" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="pip-light-90-pivot-pin-rivet" cx="0.35" cy="0.3" r="0.75" fx="0.35" fy="0.3">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#C9CFD8" stop-opacity="1"/>
+      <stop offset="1" stop-color="#6F7889" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g>
+        <path d="M150 150A76 76 0 0 1 250 150" fill="none" stroke="#4E5668" stroke-width="8" stroke-linecap="round"/>
+        <path d="M150 150A76 76 0 0 1 250 150" fill="none" stroke="url(#pip-light-90-pivot-pin-steel)" stroke-width="4.5" stroke-linecap="round"/>
+        <circle cx="212" cy="140" r="12" fill="#4E5668"/>
+        <circle cx="212" cy="140" r="8.5" fill="url(#pip-light-90-pivot-pin-rivet)" stroke="#4E5668" stroke-width="2"/>
+        <circle cx="209.5" cy="137.5" r="2.2" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

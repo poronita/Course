@@ -1,0 +1,619 @@
+{
+ "_about": "Image Swiss Knife colour tokens. Source: .st-pp CSS in design/mockup/src/pip-prime.js, tint maps in design/mockup/tint.mjs. Dark = Turkish blue theme, light = creamy white theme.",
+ "android_prefix": "isk_",
+ "themes": {
+  "dark": {
+   "bg": {
+    "value": "#071A21",
+    "note": "Screen background"
+   },
+   "s1": {
+    "value": "#0E2A34",
+    "note": "Surface 1: cards, pills, side bar"
+   },
+   "s2": {
+    "value": "#14394A",
+    "note": "Surface 2: raised or selected surface"
+   },
+   "ink": {
+    "value": "#E8F6F8",
+    "note": "Primary text"
+   },
+   "mut": {
+    "value": "#8DB3BE",
+    "note": "Muted (secondary) text and icons"
+   },
+   "line": {
+    "value": "rgba(140,200,215,.18)",
+    "note": "Hairlines and borders (translucent)"
+   },
+   "ac": {
+    "value": "#2BB3D1",
+    "note": "Accent: buttons, links, active states"
+   },
+   "ac2": {
+    "value": "#6FD6EA",
+    "note": "Accent light: gradient top, highlights, links on dark"
+   },
+   "acInk": {
+    "value": "#03212B",
+    "note": "Text or icon colour on top of the accent"
+   },
+   "gold": {
+    "value": "#FFC94A",
+    "note": "Gold: XP ring, streak, level and reward highlights"
+   },
+   "gold2": {
+    "value": "#FFE08A",
+    "note": "Gold light: gradient top for gold chips"
+   },
+   "good": {
+    "value": "#3DDC97",
+    "note": "Success"
+   },
+   "warn": {
+    "value": "#FFB454",
+    "note": "Warning"
+   },
+   "card": {
+    "value": "#0E2A34",
+    "note": "Card, bubble and toast background"
+   },
+   "glow": {
+    "value": "rgba(43,179,209,.35)",
+    "note": "Soft accent glow behind screens and buttons (translucent)"
+   }
+  },
+  "light": {
+   "bg": {
+    "value": "#F8F1E0",
+    "note": "Screen background"
+   },
+   "s1": {
+    "value": "#FFFCF4",
+    "note": "Surface 1: cards, pills, side bar"
+   },
+   "s2": {
+    "value": "#F0E6CE",
+    "note": "Surface 2: raised or selected surface"
+   },
+   "ink": {
+    "value": "#18272D",
+    "note": "Primary text"
+   },
+   "mut": {
+    "value": "#5A6B6F",
+    "note": "Muted (secondary) text and icons"
+   },
+   "line": {
+    "value": "rgba(70,55,25,.16)",
+    "note": "Hairlines and borders (translucent)"
+   },
+   "ac": {
+    "value": "#0E7C99",
+    "note": "Accent: buttons, links, active states"
+   },
+   "ac2": {
+    "value": "#14A0C2",
+    "note": "Accent light: gradient top, highlights, links on dark"
+   },
+   "acInk": {
+    "value": "#fff",
+    "note": "Text or icon colour on top of the accent"
+   },
+   "gold": {
+    "value": "#E0A21B",
+    "note": "Gold: XP ring, streak, level and reward highlights"
+   },
+   "gold2": {
+    "value": "#FFD66B",
+    "note": "Gold light: gradient top for gold chips"
+   },
+   "good": {
+    "value": "#12875A",
+    "note": "Success"
+   },
+   "warn": {
+    "value": "#C97A0B",
+    "note": "Warning"
+   },
+   "card": {
+    "value": "#FFFCF4",
+    "note": "Card, bubble and toast background"
+   },
+   "glow": {
+    "value": "rgba(14,124,153,.25)",
+    "note": "Soft accent glow behind screens and buttons (translucent)"
+   }
+  }
+ },
+ "pip": {
+  "dark": {
+   "body_base": {
+    "hex": "#1B8CA8",
+    "source_red": "#E5322B",
+    "role": "body",
+    "note": "Main body colour, belt-less gradient middle, ribbon"
+   },
+   "body_lid_a": {
+    "hex": "#2299B5",
+    "source_red": "#EC4034",
+    "role": "body",
+    "note": "Eyelids (top lid, lower lid)"
+   },
+   "body_lid_b": {
+    "hex": "#26A3BF",
+    "source_red": "#EE4537",
+    "role": "body",
+    "note": "Top lid gradient start"
+   },
+   "body_lid_c": {
+    "hex": "#1F93AE",
+    "source_red": "#E8392E",
+    "role": "body",
+    "note": "Lower lid gradient end"
+   },
+   "highlight_top": {
+    "hex": "#5CD0E6",
+    "source_red": "#FF6B5C",
+    "role": "highlight",
+    "note": "Body gradient top-left"
+   },
+   "highlight_arm": {
+    "hex": "#52C6DD",
+    "source_red": "#FF5E50",
+    "role": "highlight",
+    "note": "Arm gradient start"
+   },
+   "highlight_cheek": {
+    "hex": "#8EE0EE",
+    "source_red": "#FF8E7A",
+    "role": "highlight",
+    "note": "Cheek blush"
+   },
+   "highlight_glint": {
+    "hex": "#B4EEF6",
+    "source_red": "#FFB1A6",
+    "role": "highlight",
+    "note": "Small glints on scissor grips and lid edge"
+   },
+   "shade_body_end": {
+    "hex": "#0C5A72",
+    "source_red": "#A9151A",
+    "role": "shade",
+    "note": "Body gradient bottom-right"
+   },
+   "shade_arm_end": {
+    "hex": "#0F6781",
+    "source_red": "#B8191C",
+    "role": "shade",
+    "note": "Arm gradient end"
+   },
+   "shade_ribbon_dark": {
+    "hex": "#126F88",
+    "source_red": "#C81F22",
+    "role": "shade",
+    "note": "Medal ribbon (back tail)"
+   },
+   "shade_lid_edge": {
+    "hex": "#147A94",
+    "source_red": "#D0312A",
+    "role": "shade",
+    "note": "Top lid gradient end"
+   },
+   "shade_lid_low": {
+    "hex": "#126F88",
+    "source_red": "#C42A24",
+    "role": "shade",
+    "note": "Lower lid gradient start"
+   },
+   "shade_misc": {
+    "hex": "#0D607A",
+    "source_red": "#B3181B",
+    "role": "shade",
+    "note": "Reserved shade, same family as arm_end"
+   },
+   "rim_a": {
+    "hex": "#CDF3F8",
+    "source_red": "#FFD2C4",
+    "role": "rim",
+    "note": "Rim light gradient stop"
+   },
+   "rim_b": {
+    "hex": "#E3F8FB",
+    "source_red": "#FFE6DC",
+    "role": "rim",
+    "note": "Rim light edge"
+   },
+   "rim_c": {
+    "hex": "#F0FCFD",
+    "source_red": "#FFF1EA",
+    "role": "rim",
+    "note": "Motion swoosh"
+   },
+   "shadow_outline": {
+    "hex": "#073A4C",
+    "source_red": "#7A1216",
+    "role": "shadow",
+    "note": "Body outline, arm outline, medal ribbon outline"
+   },
+   "shadow_deep": {
+    "hex": "#052E3E",
+    "source_red": "#5E0A0E",
+    "role": "shadow",
+    "note": "Belt shadow, eye socket shadow"
+   },
+   "shadow_deeper": {
+    "hex": "#04283A",
+    "source_red": "#4A0508",
+    "role": "shadow",
+    "note": "Inner shade at body edge, dome shadow"
+   },
+   "shadow_mouth": {
+    "hex": "#03212F",
+    "source_red": "#3B0A10",
+    "role": "shadow",
+    "note": "Mouth inside"
+   },
+   "shadow_lash_soft": {
+    "hex": "#03212F",
+    "source_red": "#3A0A10",
+    "role": "shadow",
+    "note": "Upper eye shade (12 percent)"
+   },
+   "shadow_lash": {
+    "hex": "#021A26",
+    "source_red": "#2A0A10",
+    "role": "shadow",
+    "note": "Eye outline and lashes"
+   },
+   "shadow_mouth_line": {
+    "hex": "#021A26",
+    "source_red": "#2A070C",
+    "role": "shadow",
+    "note": "Mouth outline"
+   },
+   "shadow_stage": {
+    "hex": "#0C2A36",
+    "source_red": "#3A1618",
+    "role": "shadow",
+    "note": "Stage background in the casting room (not used in the app)"
+   }
+  },
+  "light": {
+   "body_base": {
+    "hex": "#F3E8CF",
+    "source_red": "#E5322B",
+    "role": "body",
+    "note": "Main body colour, belt-less gradient middle, ribbon"
+   },
+   "body_lid_a": {
+    "hex": "#F6ECD7",
+    "source_red": "#EC4034",
+    "role": "body",
+    "note": "Eyelids (top lid, lower lid)"
+   },
+   "body_lid_b": {
+    "hex": "#FAF2E0",
+    "source_red": "#EE4537",
+    "role": "body",
+    "note": "Top lid gradient start"
+   },
+   "body_lid_c": {
+    "hex": "#F4EAD3",
+    "source_red": "#E8392E",
+    "role": "body",
+    "note": "Lower lid gradient end"
+   },
+   "highlight_top": {
+    "hex": "#FFFCF2",
+    "source_red": "#FF6B5C",
+    "role": "highlight",
+    "note": "Body gradient top-left"
+   },
+   "highlight_arm": {
+    "hex": "#FFF9EC",
+    "source_red": "#FF5E50",
+    "role": "highlight",
+    "note": "Arm gradient start"
+   },
+   "highlight_cheek": {
+    "hex": "#FFF6E4",
+    "source_red": "#FF8E7A",
+    "role": "highlight",
+    "note": "Cheek blush"
+   },
+   "highlight_glint": {
+    "hex": "#FFFDF6",
+    "source_red": "#FFB1A6",
+    "role": "highlight",
+    "note": "Small glints on scissor grips and lid edge"
+   },
+   "shade_body_end": {
+    "hex": "#D2BF95",
+    "source_red": "#A9151A",
+    "role": "shade",
+    "note": "Body gradient bottom-right"
+   },
+   "shade_arm_end": {
+    "hex": "#DAC89E",
+    "source_red": "#B8191C",
+    "role": "shade",
+    "note": "Arm gradient end"
+   },
+   "shade_ribbon_dark": {
+    "hex": "#DCCAA4",
+    "source_red": "#C81F22",
+    "role": "shade",
+    "note": "Medal ribbon (back tail)"
+   },
+   "shade_lid_edge": {
+    "hex": "#E8DAB9",
+    "source_red": "#D0312A",
+    "role": "shade",
+    "note": "Top lid gradient end"
+   },
+   "shade_lid_low": {
+    "hex": "#E0D0AA",
+    "source_red": "#C42A24",
+    "role": "shade",
+    "note": "Lower lid gradient start"
+   },
+   "shade_misc": {
+    "hex": "#D6C398",
+    "source_red": "#B3181B",
+    "role": "shade",
+    "note": "Reserved shade, same family as arm_end"
+   },
+   "rim_a": {
+    "hex": "#FFFFFF",
+    "source_red": "#FFD2C4",
+    "role": "rim",
+    "note": "Rim light gradient stop"
+   },
+   "rim_b": {
+    "hex": "#FFFFFF",
+    "source_red": "#FFE6DC",
+    "role": "rim",
+    "note": "Rim light edge"
+   },
+   "rim_c": {
+    "hex": "#FFFFFF",
+    "source_red": "#FFF1EA",
+    "role": "rim",
+    "note": "Motion swoosh"
+   },
+   "shadow_outline": {
+    "hex": "#8C7550",
+    "source_red": "#7A1216",
+    "role": "shadow",
+    "note": "Body outline, arm outline, medal ribbon outline"
+   },
+   "shadow_deep": {
+    "hex": "#6F5A3C",
+    "source_red": "#5E0A0E",
+    "role": "shadow",
+    "note": "Belt shadow, eye socket shadow"
+   },
+   "shadow_deeper": {
+    "hex": "#5E4B31",
+    "source_red": "#4A0508",
+    "role": "shadow",
+    "note": "Inner shade at body edge, dome shadow"
+   },
+   "shadow_mouth": {
+    "hex": "#4F3F29",
+    "source_red": "#3B0A10",
+    "role": "shadow",
+    "note": "Mouth inside"
+   },
+   "shadow_lash_soft": {
+    "hex": "#4F3F29",
+    "source_red": "#3A0A10",
+    "role": "shadow",
+    "note": "Upper eye shade (12 percent)"
+   },
+   "shadow_lash": {
+    "hex": "#3D2F1E",
+    "source_red": "#2A0A10",
+    "role": "shadow",
+    "note": "Eye outline and lashes"
+   },
+   "shadow_mouth_line": {
+    "hex": "#3D2F1E",
+    "source_red": "#2A070C",
+    "role": "shadow",
+    "note": "Mouth outline"
+   },
+   "shadow_stage": {
+    "hex": "#EFE5CC",
+    "source_red": "#3A1618",
+    "role": "shadow",
+    "note": "Stage background in the casting room (not used in the app)"
+   }
+  },
+  "constants": {
+   "ink": {
+    "hex": "#1E2036",
+    "note": "Dark ink: brows, clapper board, scissor grip edge"
+   },
+   "steel_outline": {
+    "hex": "#4E5668",
+    "note": "Steel outline"
+   },
+   "steel_hi": {
+    "hex": "#FBFCFE",
+    "note": "Steel highlight"
+   },
+   "steel_mid": {
+    "hex": "#C9CFD8",
+    "note": "Steel mid"
+   },
+   "steel_lo": {
+    "hex": "#9AA2B0",
+    "note": "Steel shadow"
+   },
+   "steel_engrave": {
+    "hex": "#6F7889",
+    "note": "Belt engraving"
+   },
+   "mitt_a": {
+    "hex": "#FFFFFF",
+    "note": "Glove top"
+   },
+   "mitt_b": {
+    "hex": "#E3D9CF",
+    "note": "Glove bottom"
+   },
+   "mitt_outline": {
+    "hex": "#8E6F66",
+    "note": "Glove outline"
+   },
+   "foot_a": {
+    "hex": "#3A3E58",
+    "note": "Foot top"
+   },
+   "foot_b": {
+    "hex": "#14162A",
+    "note": "Foot bottom"
+   },
+   "sclera_a": {
+    "hex": "#FFFFFF",
+    "note": "Eye white centre"
+   },
+   "sclera_b": {
+    "hex": "#D9D3DC",
+    "note": "Eye white edge"
+   },
+   "iris_a": {
+    "hex": "#7FD7FF",
+    "note": "Iris centre"
+   },
+   "iris_b": {
+    "hex": "#2F7BD0",
+    "note": "Iris"
+   },
+   "iris_c": {
+    "hex": "#1B2E73",
+    "note": "Iris edge"
+   },
+   "iris_d": {
+    "hex": "#121A45",
+    "note": "Iris rim"
+   },
+   "pupil": {
+    "hex": "#070A1E",
+    "note": "Pupil"
+   },
+   "gold_a": {
+    "hex": "#FFF3B8",
+    "note": "Medal gold highlight"
+   },
+   "gold_b": {
+    "hex": "#FFC94A",
+    "note": "Medal gold"
+   },
+   "gold_c": {
+    "hex": "#C7810E",
+    "note": "Medal gold shade"
+   },
+   "gold_rim_a": {
+    "hex": "#FFE9A0",
+    "note": "Medal rim light"
+   },
+   "gold_rim_b": {
+    "hex": "#B06E07",
+    "note": "Medal rim dark"
+   },
+   "flame_top": {
+    "hex": "#FFD45A",
+    "note": "Streak flame top"
+   },
+   "flame_bottom": {
+    "hex": "#FF6A2B",
+    "note": "Streak flame bottom"
+   },
+   "light_outline": {
+    "hex": "#7B6443",
+    "note": "Thin warm outline drawn around Pip on the creamy theme"
+   }
+  }
+ },
+ "tiers": {
+  "bronze": {
+   "light": "#F6C9A0",
+   "mid": "#C98A52",
+   "dark": "#7A4516",
+   "icon": "#4A2A0C"
+  },
+  "silver": {
+   "light": "#FAFCFE",
+   "mid": "#C3CED9",
+   "dark": "#6B7888",
+   "icon": "#2F3B49"
+  },
+  "gold": {
+   "light": "#FFF3B0",
+   "mid": "#FFC94A",
+   "dark": "#B97A08",
+   "icon": "#5A3A00"
+  }
+ },
+ "tier_note": "light and mid make the badge gradient, dark is the lower gradient stop, icon is the stroke colour of the icon on the badge.",
+ "tint_maps": {
+  "dark": {
+   "E5322B": "1B8CA8",
+   "EC4034": "2299B5",
+   "EE4537": "26A3BF",
+   "E8392E": "1F93AE",
+   "D0312A": "147A94",
+   "C42A24": "126F88",
+   "FF6B5C": "5CD0E6",
+   "FF5E50": "52C6DD",
+   "FF8E7A": "8EE0EE",
+   "FFB1A6": "B4EEF6",
+   "A9151A": "0C5A72",
+   "B8191C": "0F6781",
+   "B3181B": "0D607A",
+   "C81F22": "126F88",
+   "7A1216": "073A4C",
+   "5E0A0E": "052E3E",
+   "4A0508": "04283A",
+   "3B0A10": "03212F",
+   "3A0A10": "03212F",
+   "2A0A10": "021A26",
+   "2A070C": "021A26",
+   "3A1618": "0C2A36",
+   "FFD2C4": "CDF3F8",
+   "FFE6DC": "E3F8FB",
+   "FFF1EA": "F0FCFD"
+  },
+  "light": {
+   "E5322B": "F3E8CF",
+   "EC4034": "F6ECD7",
+   "EE4537": "FAF2E0",
+   "E8392E": "F4EAD3",
+   "D0312A": "E8DAB9",
+   "C42A24": "E0D0AA",
+   "FF6B5C": "FFFCF2",
+   "FF5E50": "FFF9EC",
+   "FF8E7A": "FFF6E4",
+   "FFB1A6": "FFFDF6",
+   "A9151A": "D2BF95",
+   "B8191C": "DAC89E",
+   "B3181B": "D6C398",
+   "C81F22": "DCCAA4",
+   "7A1216": "8C7550",
+   "5E0A0E": "6F5A3C",
+   "4A0508": "5E4B31",
+   "3B0A10": "4F3F29",
+   "3A0A10": "4F3F29",
+   "2A0A10": "3D2F1E",
+   "2A070C": "3D2F1E",
+   "3A1618": "EFE5CC",
+   "FFD2C4": "FFFFFF",
+   "FFE6DC": "FFFFFF",
+   "FFF1EA": "FFFFFF"
+  }
+ }
+}

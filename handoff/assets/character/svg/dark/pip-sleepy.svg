@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <linearGradient id="pip-dark-sleepy-body" x1="0.15" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#5CD0E6" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#1B8CA8" stop-opacity="1"/>
+      <stop offset="1" stop-color="#0C5A72" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="pip-dark-sleepy-shade" cx="0.38" cy="0.32" r="0.78" fx="0.38" fy="0.32">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="0.72" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#04283A" stop-opacity="0.45"/>
+    </radialGradient>
+    <linearGradient id="pip-dark-sleepy-bevel" x1="0" y1="0" x2="0.8" y2="0.9">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.7"/>
+      <stop offset="0.45" stop-color="#fff" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pip-dark-sleepy-rim" x1="0" y1="0.3" x2="1" y2="0.5">
+      <stop offset="0" stop-color="#CDF3F8" stop-opacity="0"/>
+      <stop offset="0.78" stop-color="#CDF3F8" stop-opacity="0"/>
+      <stop offset="1" stop-color="#E3F8FB" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="pip-dark-sleepy-spec" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pip-dark-sleepy-arm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#52C6DD" stop-opacity="1"/>
+      <stop offset="1" stop-color="#0F6781" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-dark-sleepy-steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBFCFE" stop-opacity="1"/>
+      <stop offset="0.35" stop-color="#C9CFD8" stop-opacity="1"/>
+      <stop offset="0.55" stop-color="#E9ECF1" stop-opacity="1"/>
+      <stop offset="0.8" stop-color="#9AA2B0" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C7CDD6" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-dark-sleepy-steelX" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8C95A4" stop-opacity="1"/>
+      <stop offset="0.3" stop-color="#F3F5F8" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#C2C8D2" stop-opacity="1"/>
+      <stop offset="0.72" stop-color="#EEF1F5" stop-opacity="1"/>
+      <stop offset="1" stop-color="#7E8797" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-dark-sleepy-grind" x1="0" y1="0" x2="1" y2="0.2">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8CED8" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="pip-dark-sleepy-rivet" cx="0.35" cy="0.3" r="0.75" fx="0.35" fy="0.3">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#C9CFD8" stop-opacity="1"/>
+      <stop offset="1" stop-color="#6F7889" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="pip-dark-sleepy-sclera" cx="0.45" cy="0.38" r="0.7" fx="0.45" fy="0.38">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.75" stop-color="#F3F1F4" stop-opacity="1"/>
+      <stop offset="1" stop-color="#D9D3DC" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="pip-dark-sleepy-iris" cx="0.5" cy="0.62" r="0.6" fx="0.5" fy="0.62">
+      <stop offset="0" stop-color="#7FD7FF" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#2F7BD0" stop-opacity="1"/>
+      <stop offset="0.85" stop-color="#1B2E73" stop-opacity="1"/>
+      <stop offset="1" stop-color="#121A45" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="pip-dark-sleepy-mitt" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#E3D9CF" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-dark-sleepy-feet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A3E58" stop-opacity="1"/>
+      <stop offset="1" stop-color="#14162A" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="pip-dark-sleepy-shadow" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pip-dark-sleepy-lidT" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#26A3BF" stop-opacity="1"/>
+      <stop offset="0.85" stop-color="#2299B5" stop-opacity="1"/>
+      <stop offset="1" stop-color="#147A94" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-dark-sleepy-lidB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#126F88" stop-opacity="1"/>
+      <stop offset="0.12" stop-color="#2299B5" stop-opacity="1"/>
+      <stop offset="1" stop-color="#1F93AE" stop-opacity="1"/>
+    </linearGradient>
+    <clipPath id="pip-dark-sleepy-bladeClip">
+      <path d="M14 10V-50Q16 -92 -18 -122Q-27 -84 -17 -44L-17 10Z"/>
+    </clipPath>
+    <clipPath id="pip-dark-sleepy-eye0">
+      <ellipse rx="22" ry="26"/>
+    </clipPath>
+    <clipPath id="pip-dark-sleepy-lid0">
+      <ellipse rx="26.5" ry="30.5"/>
+    </clipPath>
+    <clipPath id="pip-dark-sleepy-eye1">
+      <ellipse rx="22" ry="26"/>
+    </clipPath>
+    <clipPath id="pip-dark-sleepy-lid1">
+      <ellipse rx="26.5" ry="30.5"/>
+    </clipPath>
+    <clipPath id="pip-dark-sleepy-mouth">
+      <path d="M-5 0Q0 -1.9297000397379553 5 0Q0 8.576444621057579 -5 0Z"/>
+    </clipPath>
+  </defs>
+  <g>
+    <ellipse cx="200" cy="350" rx="92" ry="13" fill="url(#pip-dark-sleepy-shadow)" opacity="1" transform="translate(200.00 350.00) rotate(0.00) scale(1.0000 1.0000) translate(-200 -350)"/>
+    <g/>
+    <g transform="translate(200.00 345.29) rotate(-0.36) scale(1.0027 0.9952) translate(-200 -345)">
+      <g transform="translate(286.00 284.00) rotate(0.17) scale(1.0000 1.0000) translate(-286 -284)">
+        <path d="M278 282Q292 280 294 292" fill="none" stroke="#4E5668" stroke-width="6" stroke-linecap="round"/>
+        <path d="M278 282Q292 280 294 292" fill="none" stroke="url(#pip-dark-sleepy-steelX)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="294" cy="309" r="15" fill="none" stroke="#4E5668" stroke-width="7.5"/>
+        <circle cx="294" cy="309" r="15" fill="none" stroke="url(#pip-dark-sleepy-steelX)" stroke-width="4"/>
+        <path d="M282 302A14 14 0 0 1 292 294.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+      </g>
+      <g transform="translate(212.00 140.00) rotate(79.98) scale(1.0000 1.0000) translate(0 0)">
+        <path d="M-7 10V-36Q-7 -46 3 -46Q12 -46 12 -38Q12 -33 6 -31L2 -29V-24L8 -22V10Z" fill="url(#pip-dark-sleepy-steelX)" stroke="#4E5668" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M-3 6V-36Q-3 -42 3 -42" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+      </g>
+      <g transform="translate(212.00 140.00) rotate(-99.50) scale(1.0000 1.0000) translate(0 0)">
+        <g>
+          <path d="M14 10V-50Q16 -92 -18 -122Q-27 -84 -17 -44L-17 10Z" fill="url(#pip-dark-sleepy-steelX)" stroke="#4E5668" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M-17 10L-17 -44Q-27 -84 -18 -122Q-12 -88 -5 -50L-5 10Z" fill="url(#pip-dark-sleepy-grind)" opacity="0.9"/>
+          <path d="M-5 6V-50Q-10 -88 -17 -120" fill="none" stroke="#8D96A6" stroke-width="1.4" opacity="0.8"/>
+          <path d="M7 -30Q9 -40 7 -50" fill="none" stroke="#6A7385" stroke-width="3.2" stroke-linecap="round" opacity="0.6"/>
+          <path d="M9 4V-50Q10 -82 -8 -106" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+          <g clip-path="url(#pip-dark-sleepy-bladeClip)">
+            <rect x="-30" y="-130" width="60" height="14" fill="#fff" opacity="0.85" transform="rotate(-30)"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <ellipse cx="172" cy="339" rx="22" ry="10" fill="url(#pip-dark-sleepy-feet)"/>
+        <ellipse cx="168" cy="335" rx="10" ry="3" fill="#fff" opacity="0.18"/>
+        <ellipse cx="228" cy="339" rx="22" ry="10" fill="url(#pip-dark-sleepy-feet)"/>
+        <ellipse cx="224" cy="335" rx="10" ry="3" fill="#fff" opacity="0.18"/>
+      </g>
+      <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+        <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="url(#pip-dark-sleepy-body)"/>
+        <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="url(#pip-dark-sleepy-shade)"/>
+        <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="none" stroke="url(#pip-dark-sleepy-bevel)" stroke-width="5" transform="translate(200 232) scale(.94) translate(-200 -232)"/>
+        <path d="M270 288Q270 326 232 328" fill="none" stroke="#052E3E" stroke-width="5" stroke-linecap="round" opacity="0.28"/>
+        <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="none" stroke="url(#pip-dark-sleepy-rim)" stroke-width="4"/>
+        <path d="M136 196Q140 156 176 140Q156 162 150 198Q146 208 136 196Z" fill="url(#pip-dark-sleepy-spec)" opacity="0.75"/>
+        <ellipse cx="186" cy="140" rx="5" ry="3.2" fill="#fff" opacity="0.8" transform="rotate(-14 186 140)"/>
+        <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="none" stroke="#073A4C" stroke-width="3.2"/>
+        <g>
+          <rect x="118" y="266" width="164" height="25" rx="8" fill="url(#pip-dark-sleepy-steel)" stroke="#4E5668" stroke-width="2.6"/>
+          <path d="M126 274H274M124 279H276M126 284H274" stroke="#6F7889" stroke-opacity="0.22" stroke-width="0.9"/>
+          <rect x="124" y="268.5" width="152" height="4" rx="2" fill="#fff" opacity="0.75"/>
+          <path d="M124 293H276" stroke="#052E3E" stroke-width="3" opacity="0.3"/>
+          <circle cx="140" cy="279" r="6.5" fill="url(#pip-dark-sleepy-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+          <circle cx="138" cy="277" r="1.6" fill="#fff"/>
+          <circle cx="260" cy="279" r="6.5" fill="url(#pip-dark-sleepy-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+          <circle cx="258" cy="277" r="1.6" fill="#fff"/>
+          <rect x="186" y="276" width="22" height="7" rx="3.5" fill="none" stroke="#6F7889" stroke-width="1.6" opacity="0.8"/>
+          <path d="M204 276L212 268.5Q213.5 267.5 213.5 269L209 276" fill="none" stroke="#6F7889" stroke-width="1.6" opacity="0.8" stroke-linejoin="round"/>
+        </g>
+        <ellipse cx="150" cy="236" rx="12" ry="6.5" fill="#8EE0EE" opacity="0.300"/>
+        <ellipse cx="250" cy="236" rx="12" ry="6.5" fill="#8EE0EE" opacity="0.300"/>
+        <g transform="translate(171.00 201.60) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+          <ellipse rx="25.5" ry="29.5" fill="#052E3E" opacity="0.35" cy="1.5"/>
+          <g clip-path="url(#pip-dark-sleepy-eye0)">
+            <rect x="-26" y="-30" width="52" height="60" fill="url(#pip-dark-sleepy-sclera)"/>
+            <g transform="translate(0.00 3.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+              <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                <circle r="14.5" fill="url(#pip-dark-sleepy-iris)"/>
+                <circle r="14.5" fill="none" stroke="#0E1338" stroke-width="2.2"/>
+                <circle r="7" fill="#070A1E"/>
+                <path d="M-9 6A11 11 0 0 0 9 6" stroke="#9DE6FF" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+              </g>
+              <ellipse cx="-5" cy="-6" rx="5" ry="5.8" fill="#fff"/>
+              <circle cx="5.5" cy="5" r="2.2" fill="#fff" opacity="0.9"/>
+            </g>
+            <ellipse cy="-22" rx="22" ry="8" fill="#03212F" opacity="0.12"/>
+          </g>
+          <ellipse rx="22" ry="26" fill="none" stroke="#021A26" stroke-width="2.6"/>
+          <g clip-path="url(#pip-dark-sleepy-lid0)">
+            <path fill="url(#pip-dark-sleepy-lidT)" d="M-32 -34H32V10.479999999999997Q0 17.407999999999998 -32 10.479999999999997Z"/>
+            <path fill="url(#pip-dark-sleepy-lidB)" d="M-32 34H32V21.759999999999998Q0 10.767999999999997 -32 21.759999999999998Z"/>
+          </g>
+          <path fill="none" stroke="#021A26" stroke-width="3.4" stroke-linecap="round" opacity="1.000" d="M-19.29990673552595 11.479999999999997Q0 18.407999999999998 19.29990673552595 11.479999999999997"/>
+          <path fill="none" stroke="#021A26" stroke-width="2.8" stroke-linecap="round" opacity="0.360" d="M-16.54630759215929 22.759999999999998Q0 9.767999999999997 16.54630759215929 22.759999999999998"/>
+        </g>
+        <g transform="translate(229.00 201.60) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+          <ellipse rx="25.5" ry="29.5" fill="#052E3E" opacity="0.35" cy="1.5"/>
+          <g clip-path="url(#pip-dark-sleepy-eye1)">
+            <rect x="-26" y="-30" width="52" height="60" fill="url(#pip-dark-sleepy-sclera)"/>
+            <g transform="translate(0.00 3.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+              <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                <circle r="14.5" fill="url(#pip-dark-sleepy-iris)"/>
+                <circle r="14.5" fill="none" stroke="#0E1338" stroke-width="2.2"/>
+                <circle r="7" fill="#070A1E"/>
+                <path d="M-9 6A11 11 0 0 0 9 6" stroke="#9DE6FF" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+              </g>
+              <ellipse cx="-5" cy="-6" rx="5" ry="5.8" fill="#fff"/>
+              <circle cx="5.5" cy="5" r="2.2" fill="#fff" opacity="0.9"/>
+            </g>
+            <ellipse cy="-22" rx="22" ry="8" fill="#03212F" opacity="0.12"/>
+          </g>
+          <ellipse rx="22" ry="26" fill="none" stroke="#021A26" stroke-width="2.6"/>
+          <g clip-path="url(#pip-dark-sleepy-lid1)">
+            <path fill="url(#pip-dark-sleepy-lidT)" d="M-32 -34H32V10.479999999999997Q0 17.407999999999998 -32 10.479999999999997Z"/>
+            <path fill="url(#pip-dark-sleepy-lidB)" d="M-32 34H32V21.759999999999998Q0 10.767999999999997 -32 21.759999999999998Z"/>
+          </g>
+          <path fill="none" stroke="#021A26" stroke-width="3.4" stroke-linecap="round" opacity="1.000" d="M-19.29990673552595 11.479999999999997Q0 18.407999999999998 19.29990673552595 11.479999999999997"/>
+          <path fill="none" stroke="#021A26" stroke-width="2.8" stroke-linecap="round" opacity="0.360" d="M-16.54630759215929 22.759999999999998Q0 9.767999999999997 16.54630759215929 22.759999999999998"/>
+        </g>
+        <path d="M-15 4Q-2 -7 15 2" fill="none" stroke="#1E2036" stroke-width="7.5" stroke-linecap="round" transform="translate(169.00 168.80) rotate(-7.00) scale(1.0000 1.0000) translate(0 0)"/>
+        <path d="M-15 2Q2 -7 15 4" fill="none" stroke="#1E2036" stroke-width="7.5" stroke-linecap="round" transform="translate(231.00 168.80) rotate(7.00) scale(1.0000 1.0000) translate(0 0)"/>
+        <g transform="translate(200.00 246.80) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+          <path fill="#03212F" stroke="#021A26" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round" d="M-5 0Q0 -1.9297000397379553 5 0Q0 8.576444621057579 -5 0Z"/>
+          <g clip-path="url(#pip-dark-sleepy-mouth)">
+            <rect x="-5" width="60" height="5" fill="#fff" y="-3.965" opacity="0.000"/>
+            <ellipse fill="#FF7A86" cx="0" cy="5.288" rx="2.75" ry="5" opacity="0.715"/>
+          </g>
+        </g>
+        <ellipse cx="208" cy="149" rx="26" ry="7" fill="#04283A" opacity="0.28"/>
+      </g>
+      <g>
+        <path d="M150 150A76 76 0 0 1 250 150" fill="none" stroke="#4E5668" stroke-width="8" stroke-linecap="round"/>
+        <path d="M150 150A76 76 0 0 1 250 150" fill="none" stroke="url(#pip-dark-sleepy-steel)" stroke-width="4.5" stroke-linecap="round"/>
+        <circle cx="212" cy="140" r="12" fill="#4E5668"/>
+        <circle cx="212" cy="140" r="8.5" fill="url(#pip-dark-sleepy-rivet)" stroke="#4E5668" stroke-width="2"/>
+        <circle cx="209.5" cy="137.5" r="2.2" fill="#fff"/>
+      </g>
+      <g>
+        <g transform="translate(131.00 240.00) rotate(4.00) scale(1.0000 1.0000) translate(0 0)">
+          <rect x="-8.5" y="-8" width="17" height="44" rx="8.5" fill="url(#pip-dark-sleepy-arm)" stroke="#073A4C" stroke-width="2.6"/>
+          <path d="M-3.5 6V26" stroke="#fff" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round"/>
+          <circle r="6.2" fill="url(#pip-dark-sleepy-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+          <circle cx="-1.6" cy="-1.6" r="1.5" fill="#fff"/>
+          <g transform="translate(0.00 34.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+            <g>
+              <ellipse cx="-10.5" cy="3" rx="5" ry="8" fill="url(#pip-dark-sleepy-mitt)" stroke="#8E6F66" stroke-width="2" transform="rotate(28 -10.5 3)"/>
+              <path d="M-11 6Q-12 22 0 23Q12 22 11 6Q11 -6 0 -6Q-11 -6 -11 6Z" fill="url(#pip-dark-sleepy-mitt)" stroke="#8E6F66" stroke-width="2"/>
+              <path d="M-4 1Q-6 10 -3 16" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.9"/>
+            </g>
+          </g>
+        </g>
+        <g transform="matrix(-1 0 0 1 400 0)">
+          <g transform="translate(131.00 240.00) rotate(4.00) scale(1.0000 1.0000) translate(0 0)">
+            <rect x="-8.5" y="-8" width="17" height="44" rx="8.5" fill="url(#pip-dark-sleepy-arm)" stroke="#073A4C" stroke-width="2.6"/>
+            <path d="M-3.5 6V26" stroke="#fff" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round"/>
+            <circle r="6.2" fill="url(#pip-dark-sleepy-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+            <circle cx="-1.6" cy="-1.6" r="1.5" fill="#fff"/>
+            <g transform="translate(0.00 34.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+              <g>
+                <ellipse cx="-10.5" cy="3" rx="5" ry="8" fill="url(#pip-dark-sleepy-mitt)" stroke="#8E6F66" stroke-width="2" transform="rotate(28 -10.5 3)"/>
+                <path d="M-11 6Q-12 22 0 23Q12 22 11 6Q11 -6 0 -6Q-11 -6 -11 6Z" fill="url(#pip-dark-sleepy-mitt)" stroke="#8E6F66" stroke-width="2"/>
+                <path d="M-4 1Q-6 10 -3 16" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.9"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g>
+      <path d="M287.05899999999997 118.514H293.899L287.05899999999997 126.794H294.25899999999996" fill="none" stroke="#F6F1EA" stroke-width="3.06" stroke-linejoin="miter" stroke-linecap="butt" opacity="0.707"/>
+      <path d="M292.668 85.514H301.788L292.668 96.554H302.26800000000003" fill="none" stroke="#F6F1EA" stroke-width="4.08" stroke-linejoin="miter" stroke-linecap="butt" opacity="0.966"/>
+      <path d="M304.224 52.513999999999996H315.62399999999997L304.224 66.314H316.224" fill="none" stroke="#F6F1EA" stroke-width="5.1" stroke-linejoin="miter" stroke-linecap="butt" opacity="0.259"/>
+    </g>
+  </g>
+</svg>

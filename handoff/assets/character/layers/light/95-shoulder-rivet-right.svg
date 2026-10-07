@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <radialGradient id="pip-light-95-shoulder-rivet-right-rivet" cx="0.35" cy="0.3" r="0.75" fx="0.35" fy="0.3">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#C9CFD8" stop-opacity="1"/>
+      <stop offset="1" stop-color="#6F7889" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g>
+        <g transform="matrix(-1 0 0 1 400 0)">
+          <g transform="translate(131.00 240.00) rotate(10.00) scale(1.0000 1.0000) translate(0 0)">
+            <circle r="6.2" fill="url(#pip-light-95-shoulder-rivet-right-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+            <circle cx="-1.6" cy="-1.6" r="1.5" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

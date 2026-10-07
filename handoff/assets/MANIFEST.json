@@ -1,0 +1,2518 @@
+{
+ "files": [
+  {
+   "path": "README.md",
+   "bytes": 4244
+  },
+  {
+   "path": "app-icon/ic_launcher_background-light.svg",
+   "bytes": 702
+  },
+  {
+   "path": "app-icon/ic_launcher_background.svg",
+   "bytes": 698
+  },
+  {
+   "path": "app-icon/ic_launcher_foreground-432.png",
+   "bytes": 67627
+  },
+  {
+   "path": "app-icon/ic_launcher_foreground-light-432.png",
+   "bytes": 72374
+  },
+  {
+   "path": "app-icon/ic_launcher_foreground-light.svg",
+   "bytes": 19149
+  },
+  {
+   "path": "app-icon/ic_launcher_foreground.svg",
+   "bytes": 17424
+  },
+  {
+   "path": "app-icon/ic_launcher_full-light.svg",
+   "bytes": 19225
+  },
+  {
+   "path": "app-icon/ic_launcher_full.svg",
+   "bytes": 17499
+  },
+  {
+   "path": "app-icon/ic_launcher_maskable-light.svg",
+   "bytes": 19225
+  },
+  {
+   "path": "app-icon/ic_launcher_maskable.svg",
+   "bytes": 17499
+  },
+  {
+   "path": "app-icon/ic_launcher_monochrome-432.png",
+   "bytes": 31876
+  },
+  {
+   "path": "app-icon/maskable-icon-1024-light.png",
+   "bytes": 532815
+  },
+  {
+   "path": "app-icon/maskable-icon-1024.png",
+   "bytes": 530616
+  },
+  {
+   "path": "app-icon/playstore-icon-512-light.png",
+   "bytes": 151840
+  },
+  {
+   "path": "app-icon/playstore-icon-512.png",
+   "bytes": 145675
+  },
+  {
+   "path": "app-icon/preview-launcher-192-light.png",
+   "bytes": 24427
+  },
+  {
+   "path": "app-icon/preview-launcher-192.png",
+   "bytes": 23667
+  },
+  {
+   "path": "badges/badges.json",
+   "bytes": 2009
+  },
+  {
+   "path": "badges/svg/badge-early-bird.svg",
+   "bytes": 1137
+  },
+  {
+   "path": "badges/svg/badge-feather-weight.svg",
+   "bytes": 1111
+  },
+  {
+   "path": "badges/svg/badge-format-hopper.svg",
+   "bytes": 1091
+  },
+  {
+   "path": "badges/svg/badge-loop-master.svg",
+   "bytes": 1149
+  },
+  {
+   "path": "badges/svg/badge-perfect-square.svg",
+   "bytes": 1120
+  },
+  {
+   "path": "badges/svg/badge-privacy-guard.svg",
+   "bytes": 1142
+  },
+  {
+   "path": "badges/svg/badge-streak-12.svg",
+   "bytes": 1115
+  },
+  {
+   "path": "badges/svg/badge-super-fan.svg",
+   "bytes": 1112
+  },
+  {
+   "path": "badges/svg/chest-closed-light.svg",
+   "bytes": 747
+  },
+  {
+   "path": "badges/svg/chest-closed.svg",
+   "bytes": 729
+  },
+  {
+   "path": "badges/svg/chest-open-light.svg",
+   "bytes": 1077
+  },
+  {
+   "path": "badges/svg/chest-open.svg",
+   "bytes": 1047
+  },
+  {
+   "path": "badges/svg/coin-xp.svg",
+   "bytes": 994
+  },
+  {
+   "path": "badges/svg/crown.svg",
+   "bytes": 1452
+  },
+  {
+   "path": "badges/svg/flame.svg",
+   "bytes": 562
+  },
+  {
+   "path": "badges/svg/level-medal-light.svg",
+   "bytes": 1284
+  },
+  {
+   "path": "badges/svg/level-medal-text.svg",
+   "bytes": 1279
+  },
+  {
+   "path": "badges/svg/level-medal.svg",
+   "bytes": 1280
+  },
+  {
+   "path": "badges/svg/medal-bronze-blank.svg",
+   "bytes": 873
+  },
+  {
+   "path": "badges/svg/medal-gold-blank.svg",
+   "bytes": 863
+  },
+  {
+   "path": "badges/svg/medal-locked-bronze.svg",
+   "bytes": 1160
+  },
+  {
+   "path": "badges/svg/medal-locked-gold.svg",
+   "bytes": 1150
+  },
+  {
+   "path": "badges/svg/medal-locked-silver.svg",
+   "bytes": 1160
+  },
+  {
+   "path": "badges/svg/medal-silver-blank.svg",
+   "bytes": 873
+  },
+  {
+   "path": "badges/svg/rank-badge-artisan-shape.svg",
+   "bytes": 665
+  },
+  {
+   "path": "badges/svg/rank-badge-artisan.svg",
+   "bytes": 813
+  },
+  {
+   "path": "badges/svg/rank-badge-craftsman-shape.svg",
+   "bytes": 671
+  },
+  {
+   "path": "badges/svg/rank-badge-craftsman.svg",
+   "bytes": 821
+  },
+  {
+   "path": "badges/svg/ribbon-light.svg",
+   "bytes": 364
+  },
+  {
+   "path": "badges/svg/ribbon.svg",
+   "bytes": 364
+  },
+  {
+   "path": "badges/svg/skin-gold-blade.svg",
+   "bytes": 623
+  },
+  {
+   "path": "badges/svg/trophy.svg",
+   "bytes": 803
+  },
+  {
+   "path": "character/layers/dark/00-shadow.svg",
+   "bytes": 620
+  },
+  {
+   "path": "character/layers/dark/10-keyring.svg",
+   "bytes": 1425
+  },
+  {
+   "path": "character/layers/dark/20-opener-nub.svg",
+   "bytes": 1153
+  },
+  {
+   "path": "character/layers/dark/30-blade-quiff.svg",
+   "bytes": 2098
+  },
+  {
+   "path": "character/layers/dark/40-foot-left.svg",
+   "bytes": 719
+  },
+  {
+   "path": "character/layers/dark/41-foot-right.svg",
+   "bytes": 721
+  },
+  {
+   "path": "character/layers/dark/50-body.svg",
+   "bytes": 2946
+  },
+  {
+   "path": "character/layers/dark/52-belt.svg",
+   "bytes": 2223
+  },
+  {
+   "path": "character/layers/dark/54-cheeks.svg",
+   "bytes": 561
+  },
+  {
+   "path": "character/layers/dark/60-eye-left-sclera.svg",
+   "bytes": 1203
+  },
+  {
+   "path": "character/layers/dark/61-eye-left-iris.svg",
+   "bytes": 1791
+  },
+  {
+   "path": "character/layers/dark/62-eye-left-rim.svg",
+   "bytes": 849
+  },
+  {
+   "path": "character/layers/dark/63-eye-left-lids.svg",
+   "bytes": 1870
+  },
+  {
+   "path": "character/layers/dark/64-eye-right-sclera.svg",
+   "bytes": 1207
+  },
+  {
+   "path": "character/layers/dark/65-eye-right-iris.svg",
+   "bytes": 1795
+  },
+  {
+   "path": "character/layers/dark/66-eye-right-rim.svg",
+   "bytes": 851
+  },
+  {
+   "path": "character/layers/dark/67-eye-right-lids.svg",
+   "bytes": 1876
+  },
+  {
+   "path": "character/layers/dark/70-brow-left.svg",
+   "bytes": 586
+  },
+  {
+   "path": "character/layers/dark/71-brow-right.svg",
+   "bytes": 585
+  },
+  {
+   "path": "character/layers/dark/80-mouth.svg",
+   "bytes": 1010
+  },
+  {
+   "path": "character/layers/dark/85-dome-shade.svg",
+   "bytes": 473
+  },
+  {
+   "path": "character/layers/dark/90-pivot-pin.svg",
+   "bytes": 1561
+  },
+  {
+   "path": "character/layers/dark/92-arm-left.svg",
+   "bytes": 905
+  },
+  {
+   "path": "character/layers/dark/93-arm-right.svg",
+   "bytes": 975
+  },
+  {
+   "path": "character/layers/dark/94-shoulder-rivet-left.svg",
+   "bytes": 930
+  },
+  {
+   "path": "character/layers/dark/95-shoulder-rivet-right.svg",
+   "bytes": 1000
+  },
+  {
+   "path": "character/layers/dark/96-hand-left.svg",
+   "bytes": 1251
+  },
+  {
+   "path": "character/layers/dark/97-hand-right.svg",
+   "bytes": 1332
+  },
+  {
+   "path": "character/layers/dark/index.json",
+   "bytes": 6105
+  },
+  {
+   "path": "character/layers/light/00-shadow.svg",
+   "bytes": 622
+  },
+  {
+   "path": "character/layers/light/05-outline.svg",
+   "bytes": 19808
+  },
+  {
+   "path": "character/layers/light/10-keyring.svg",
+   "bytes": 1428
+  },
+  {
+   "path": "character/layers/light/20-opener-nub.svg",
+   "bytes": 1155
+  },
+  {
+   "path": "character/layers/light/30-blade-quiff.svg",
+   "bytes": 2104
+  },
+  {
+   "path": "character/layers/light/40-foot-left.svg",
+   "bytes": 721
+  },
+  {
+   "path": "character/layers/light/41-foot-right.svg",
+   "bytes": 723
+  },
+  {
+   "path": "character/layers/light/50-body.svg",
+   "bytes": 2956
+  },
+  {
+   "path": "character/layers/light/52-belt.svg",
+   "bytes": 2228
+  },
+  {
+   "path": "character/layers/light/54-cheeks.svg",
+   "bytes": 561
+  },
+  {
+   "path": "character/layers/light/60-eye-left-sclera.svg",
+   "bytes": 1207
+  },
+  {
+   "path": "character/layers/light/61-eye-left-iris.svg",
+   "bytes": 1795
+  },
+  {
+   "path": "character/layers/light/62-eye-left-rim.svg",
+   "bytes": 851
+  },
+  {
+   "path": "character/layers/light/63-eye-left-lids.svg",
+   "bytes": 1876
+  },
+  {
+   "path": "character/layers/light/64-eye-right-sclera.svg",
+   "bytes": 1211
+  },
+  {
+   "path": "character/layers/light/65-eye-right-iris.svg",
+   "bytes": 1799
+  },
+  {
+   "path": "character/layers/light/66-eye-right-rim.svg",
+   "bytes": 853
+  },
+  {
+   "path": "character/layers/light/67-eye-right-lids.svg",
+   "bytes": 1882
+  },
+  {
+   "path": "character/layers/light/70-brow-left.svg",
+   "bytes": 586
+  },
+  {
+   "path": "character/layers/light/71-brow-right.svg",
+   "bytes": 585
+  },
+  {
+   "path": "character/layers/light/80-mouth.svg",
+   "bytes": 1012
+  },
+  {
+   "path": "character/layers/light/85-dome-shade.svg",
+   "bytes": 473
+  },
+  {
+   "path": "character/layers/light/90-pivot-pin.svg",
+   "bytes": 1565
+  },
+  {
+   "path": "character/layers/light/92-arm-left.svg",
+   "bytes": 907
+  },
+  {
+   "path": "character/layers/light/93-arm-right.svg",
+   "bytes": 977
+  },
+  {
+   "path": "character/layers/light/94-shoulder-rivet-left.svg",
+   "bytes": 932
+  },
+  {
+   "path": "character/layers/light/95-shoulder-rivet-right.svg",
+   "bytes": 1002
+  },
+  {
+   "path": "character/layers/light/96-hand-left.svg",
+   "bytes": 1254
+  },
+  {
+   "path": "character/layers/light/97-hand-right.svg",
+   "bytes": 1335
+  },
+  {
+   "path": "character/layers/light/index.json",
+   "bytes": 6283
+  },
+  {
+   "path": "character/layers/preview.html",
+   "bytes": 17228
+  },
+  {
+   "path": "character/png/dark/pip-celebrate-1024.png",
+   "bytes": 245827
+  },
+  {
+   "path": "character/png/dark/pip-celebrate-256.png",
+   "bytes": 32903
+  },
+  {
+   "path": "character/png/dark/pip-celebrate-512.png",
+   "bytes": 88843
+  },
+  {
+   "path": "character/png/dark/pip-happy-1024.png",
+   "bytes": 248749
+  },
+  {
+   "path": "character/png/dark/pip-happy-256.png",
+   "bytes": 32083
+  },
+  {
+   "path": "character/png/dark/pip-happy-512.png",
+   "bytes": 89446
+  },
+  {
+   "path": "character/png/dark/pip-idle-1024.png",
+   "bytes": 249026
+  },
+  {
+   "path": "character/png/dark/pip-idle-256.png",
+   "bytes": 31891
+  },
+  {
+   "path": "character/png/dark/pip-idle-512.png",
+   "bytes": 89421
+  },
+  {
+   "path": "character/png/dark/pip-idle-eyes-closed-1024.png",
+   "bytes": 223524
+  },
+  {
+   "path": "character/png/dark/pip-idle-eyes-closed-256.png",
+   "bytes": 28216
+  },
+  {
+   "path": "character/png/dark/pip-idle-eyes-closed-512.png",
+   "bytes": 79179
+  },
+  {
+   "path": "character/png/dark/pip-levelup-1024.png",
+   "bytes": 369963
+  },
+  {
+   "path": "character/png/dark/pip-levelup-256.png",
+   "bytes": 44615
+  },
+  {
+   "path": "character/png/dark/pip-levelup-512.png",
+   "bytes": 128458
+  },
+  {
+   "path": "character/png/dark/pip-mouth-open-1024.png",
+   "bytes": 248749
+  },
+  {
+   "path": "character/png/dark/pip-mouth-open-256.png",
+   "bytes": 32083
+  },
+  {
+   "path": "character/png/dark/pip-mouth-open-512.png",
+   "bytes": 89446
+  },
+  {
+   "path": "character/png/dark/pip-signature-1024.png",
+   "bytes": 251006
+  },
+  {
+   "path": "character/png/dark/pip-signature-256.png",
+   "bytes": 32856
+  },
+  {
+   "path": "character/png/dark/pip-signature-512.png",
+   "bytes": 90512
+  },
+  {
+   "path": "character/png/dark/pip-sleepy-1024.png",
+   "bytes": 204693
+  },
+  {
+   "path": "character/png/dark/pip-sleepy-256.png",
+   "bytes": 26089
+  },
+  {
+   "path": "character/png/dark/pip-sleepy-512.png",
+   "bytes": 72703
+  },
+  {
+   "path": "character/png/dark/pip-surprised-1024.png",
+   "bytes": 269959
+  },
+  {
+   "path": "character/png/dark/pip-surprised-256.png",
+   "bytes": 34606
+  },
+  {
+   "path": "character/png/dark/pip-surprised-512.png",
+   "bytes": 96725
+  },
+  {
+   "path": "character/png/dark/pip-thinking-1024.png",
+   "bytes": 267959
+  },
+  {
+   "path": "character/png/dark/pip-thinking-256.png",
+   "bytes": 34377
+  },
+  {
+   "path": "character/png/dark/pip-thinking-512.png",
+   "bytes": 95584
+  },
+  {
+   "path": "character/png/dark/pip-tool-clapper-1024.png",
+   "bytes": 251006
+  },
+  {
+   "path": "character/png/dark/pip-tool-clapper-256.png",
+   "bytes": 32856
+  },
+  {
+   "path": "character/png/dark/pip-tool-clapper-512.png",
+   "bytes": 90512
+  },
+  {
+   "path": "character/png/dark/pip-tool-crop-1024.png",
+   "bytes": 263426
+  },
+  {
+   "path": "character/png/dark/pip-tool-crop-256.png",
+   "bytes": 33980
+  },
+  {
+   "path": "character/png/dark/pip-tool-crop-512.png",
+   "bytes": 94368
+  },
+  {
+   "path": "character/png/dark/pip-tool-lens-1024.png",
+   "bytes": 277395
+  },
+  {
+   "path": "character/png/dark/pip-tool-lens-256.png",
+   "bytes": 35402
+  },
+  {
+   "path": "character/png/dark/pip-tool-lens-512.png",
+   "bytes": 98586
+  },
+  {
+   "path": "character/png/dark/pip-tool-scissors-1024.png",
+   "bytes": 261225
+  },
+  {
+   "path": "character/png/dark/pip-tool-scissors-256.png",
+   "bytes": 32965
+  },
+  {
+   "path": "character/png/dark/pip-tool-scissors-512.png",
+   "bytes": 92871
+  },
+  {
+   "path": "character/png/dark/pip-wink-1024.png",
+   "bytes": 262695
+  },
+  {
+   "path": "character/png/dark/pip-wink-256.png",
+   "bytes": 33208
+  },
+  {
+   "path": "character/png/dark/pip-wink-512.png",
+   "bytes": 92997
+  },
+  {
+   "path": "character/png/dark/pip-working-1024.png",
+   "bytes": 212302
+  },
+  {
+   "path": "character/png/dark/pip-working-256.png",
+   "bytes": 29303
+  },
+  {
+   "path": "character/png/dark/pip-working-512.png",
+   "bytes": 78966
+  },
+  {
+   "path": "character/png/light/pip-celebrate-1024.png",
+   "bytes": 275287
+  },
+  {
+   "path": "character/png/light/pip-celebrate-256.png",
+   "bytes": 39731
+  },
+  {
+   "path": "character/png/light/pip-celebrate-512.png",
+   "bytes": 105501
+  },
+  {
+   "path": "character/png/light/pip-happy-1024.png",
+   "bytes": 280087
+  },
+  {
+   "path": "character/png/light/pip-happy-256.png",
+   "bytes": 35671
+  },
+  {
+   "path": "character/png/light/pip-happy-512.png",
+   "bytes": 100229
+  },
+  {
+   "path": "character/png/light/pip-idle-1024.png",
+   "bytes": 282953
+  },
+  {
+   "path": "character/png/light/pip-idle-256.png",
+   "bytes": 35434
+  },
+  {
+   "path": "character/png/light/pip-idle-512.png",
+   "bytes": 101494
+  },
+  {
+   "path": "character/png/light/pip-idle-eyes-closed-1024.png",
+   "bytes": 251300
+  },
+  {
+   "path": "character/png/light/pip-idle-eyes-closed-256.png",
+   "bytes": 31458
+  },
+  {
+   "path": "character/png/light/pip-idle-eyes-closed-512.png",
+   "bytes": 89973
+  },
+  {
+   "path": "character/png/light/pip-levelup-1024.png",
+   "bytes": 400284
+  },
+  {
+   "path": "character/png/light/pip-levelup-256.png",
+   "bytes": 49942
+  },
+  {
+   "path": "character/png/light/pip-levelup-512.png",
+   "bytes": 144830
+  },
+  {
+   "path": "character/png/light/pip-mouth-open-1024.png",
+   "bytes": 280087
+  },
+  {
+   "path": "character/png/light/pip-mouth-open-256.png",
+   "bytes": 35671
+  },
+  {
+   "path": "character/png/light/pip-mouth-open-512.png",
+   "bytes": 100229
+  },
+  {
+   "path": "character/png/light/pip-signature-1024.png",
+   "bytes": 293831
+  },
+  {
+   "path": "character/png/light/pip-signature-256.png",
+   "bytes": 37526
+  },
+  {
+   "path": "character/png/light/pip-signature-512.png",
+   "bytes": 106276
+  },
+  {
+   "path": "character/png/light/pip-sleepy-1024.png",
+   "bytes": 200627
+  },
+  {
+   "path": "character/png/light/pip-sleepy-256.png",
+   "bytes": 28851
+  },
+  {
+   "path": "character/png/light/pip-sleepy-512.png",
+   "bytes": 78399
+  },
+  {
+   "path": "character/png/light/pip-surprised-1024.png",
+   "bytes": 285637
+  },
+  {
+   "path": "character/png/light/pip-surprised-256.png",
+   "bytes": 40000
+  },
+  {
+   "path": "character/png/light/pip-surprised-512.png",
+   "bytes": 109734
+  },
+  {
+   "path": "character/png/light/pip-thinking-1024.png",
+   "bytes": 271432
+  },
+  {
+   "path": "character/png/light/pip-thinking-256.png",
+   "bytes": 38441
+  },
+  {
+   "path": "character/png/light/pip-thinking-512.png",
+   "bytes": 104925
+  },
+  {
+   "path": "character/png/light/pip-tool-clapper-1024.png",
+   "bytes": 293831
+  },
+  {
+   "path": "character/png/light/pip-tool-clapper-256.png",
+   "bytes": 37526
+  },
+  {
+   "path": "character/png/light/pip-tool-clapper-512.png",
+   "bytes": 106276
+  },
+  {
+   "path": "character/png/light/pip-tool-crop-1024.png",
+   "bytes": 312318
+  },
+  {
+   "path": "character/png/light/pip-tool-crop-256.png",
+   "bytes": 38925
+  },
+  {
+   "path": "character/png/light/pip-tool-crop-512.png",
+   "bytes": 111936
+  },
+  {
+   "path": "character/png/light/pip-tool-lens-1024.png",
+   "bytes": 318195
+  },
+  {
+   "path": "character/png/light/pip-tool-lens-256.png",
+   "bytes": 39386
+  },
+  {
+   "path": "character/png/light/pip-tool-lens-512.png",
+   "bytes": 113981
+  },
+  {
+   "path": "character/png/light/pip-tool-scissors-1024.png",
+   "bytes": 308784
+  },
+  {
+   "path": "character/png/light/pip-tool-scissors-256.png",
+   "bytes": 37534
+  },
+  {
+   "path": "character/png/light/pip-tool-scissors-512.png",
+   "bytes": 109782
+  },
+  {
+   "path": "character/png/light/pip-wink-1024.png",
+   "bytes": 258833
+  },
+  {
+   "path": "character/png/light/pip-wink-256.png",
+   "bytes": 36125
+  },
+  {
+   "path": "character/png/light/pip-wink-512.png",
+   "bytes": 98778
+  },
+  {
+   "path": "character/png/light/pip-working-1024.png",
+   "bytes": 243087
+  },
+  {
+   "path": "character/png/light/pip-working-256.png",
+   "bytes": 34376
+  },
+  {
+   "path": "character/png/light/pip-working-512.png",
+   "bytes": 92994
+  },
+  {
+   "path": "character/rig/01-pip.js",
+   "bytes": 42496
+  },
+  {
+   "path": "character/rig/README.md",
+   "bytes": 2693
+  },
+  {
+   "path": "character/rig/cast.js",
+   "bytes": 5111
+  },
+  {
+   "path": "character/rig/demo.html",
+   "bytes": 4929
+  },
+  {
+   "path": "character/rig/pip-dark.js",
+   "bytes": 42610
+  },
+  {
+   "path": "character/rig/pip-light.js",
+   "bytes": 42613
+  },
+  {
+   "path": "character/rig/tint.mjs",
+   "bytes": 1376
+  },
+  {
+   "path": "character/svg/dark/pip-celebrate.svg",
+   "bytes": 23379
+  },
+  {
+   "path": "character/svg/dark/pip-happy.svg",
+   "bytes": 18372
+  },
+  {
+   "path": "character/svg/dark/pip-idle-eyes-closed.svg",
+   "bytes": 18840
+  },
+  {
+   "path": "character/svg/dark/pip-idle.svg",
+   "bytes": 18344
+  },
+  {
+   "path": "character/svg/dark/pip-levelup.svg",
+   "bytes": 23314
+  },
+  {
+   "path": "character/svg/dark/pip-mouth-open.svg",
+   "bytes": 18687
+  },
+  {
+   "path": "character/svg/dark/pip-signature.svg",
+   "bytes": 18189
+  },
+  {
+   "path": "character/svg/dark/pip-sleepy.svg",
+   "bytes": 19374
+  },
+  {
+   "path": "character/svg/dark/pip-surprised.svg",
+   "bytes": 18602
+  },
+  {
+   "path": "character/svg/dark/pip-thinking.svg",
+   "bytes": 18381
+  },
+  {
+   "path": "character/svg/dark/pip-tool-clapper.svg",
+   "bytes": 18366
+  },
+  {
+   "path": "character/svg/dark/pip-tool-crop.svg",
+   "bytes": 18038
+  },
+  {
+   "path": "character/svg/dark/pip-tool-lens.svg",
+   "bytes": 18349
+  },
+  {
+   "path": "character/svg/dark/pip-tool-scissors.svg",
+   "bytes": 19368
+  },
+  {
+   "path": "character/svg/dark/pip-wink.svg",
+   "bytes": 18467
+  },
+  {
+   "path": "character/svg/dark/pip-working.svg",
+   "bytes": 20671
+  },
+  {
+   "path": "character/svg/light/pip-celebrate.svg",
+   "bytes": 25075
+  },
+  {
+   "path": "character/svg/light/pip-happy.svg",
+   "bytes": 20004
+  },
+  {
+   "path": "character/svg/light/pip-idle-eyes-closed.svg",
+   "bytes": 20494
+  },
+  {
+   "path": "character/svg/light/pip-idle.svg",
+   "bytes": 19974
+  },
+  {
+   "path": "character/svg/light/pip-levelup.svg",
+   "bytes": 25032
+  },
+  {
+   "path": "character/svg/light/pip-mouth-open.svg",
+   "bytes": 20329
+  },
+  {
+   "path": "character/svg/light/pip-signature.svg",
+   "bytes": 19823
+  },
+  {
+   "path": "character/svg/light/pip-sleepy.svg",
+   "bytes": 21016
+  },
+  {
+   "path": "character/svg/light/pip-surprised.svg",
+   "bytes": 20246
+  },
+  {
+   "path": "character/svg/light/pip-thinking.svg",
+   "bytes": 20017
+  },
+  {
+   "path": "character/svg/light/pip-tool-clapper.svg",
+   "bytes": 20006
+  },
+  {
+   "path": "character/svg/light/pip-tool-crop.svg",
+   "bytes": 19667
+  },
+  {
+   "path": "character/svg/light/pip-tool-lens.svg",
+   "bytes": 19982
+  },
+  {
+   "path": "character/svg/light/pip-tool-scissors.svg",
+   "bytes": 21036
+  },
+  {
+   "path": "character/svg/light/pip-wink.svg",
+   "bytes": 20101
+  },
+  {
+   "path": "character/svg/light/pip-working.svg",
+   "bytes": 22349
+  },
+  {
+   "path": "icons/icons.json",
+   "bytes": 7929
+  },
+  {
+   "path": "icons/svg/back.svg",
+   "bytes": 218
+  },
+  {
+   "path": "icons/svg/bell.svg",
+   "bytes": 299
+  },
+  {
+   "path": "icons/svg/camera.svg",
+   "bytes": 326
+  },
+  {
+   "path": "icons/svg/check.svg",
+   "bytes": 226
+  },
+  {
+   "path": "icons/svg/chest.svg",
+   "bytes": 347
+  },
+  {
+   "path": "icons/svg/clock.svg",
+   "bytes": 254
+  },
+  {
+   "path": "icons/svg/convert.svg",
+   "bytes": 228
+  },
+  {
+   "path": "icons/svg/copy.svg",
+   "bytes": 336
+  },
+  {
+   "path": "icons/svg/crop.svg",
+   "bytes": 252
+  },
+  {
+   "path": "icons/svg/download.svg",
+   "bytes": 267
+  },
+  {
+   "path": "icons/svg/eye.svg",
+   "bytes": 307
+  },
+  {
+   "path": "icons/svg/eyeoff.svg",
+   "bytes": 331
+  },
+  {
+   "path": "icons/svg/film.svg",
+   "bytes": 299
+  },
+  {
+   "path": "icons/svg/flame.svg",
+   "bytes": 426
+  },
+  {
+   "path": "icons/svg/folder.svg",
+   "bytes": 277
+  },
+  {
+   "path": "icons/svg/gift.svg",
+   "bytes": 372
+  },
+  {
+   "path": "icons/svg/globe.svg",
+   "bytes": 309
+  },
+  {
+   "path": "icons/svg/grid.svg",
+   "bytes": 401
+  },
+  {
+   "path": "icons/svg/heart.svg",
+   "bytes": 271
+  },
+  {
+   "path": "icons/svg/home.svg",
+   "bytes": 250
+  },
+  {
+   "path": "icons/svg/image.svg",
+   "bytes": 305
+  },
+  {
+   "path": "icons/svg/info.svg",
+   "bytes": 284
+  },
+  {
+   "path": "icons/svg/layers.svg",
+   "bytes": 250
+  },
+  {
+   "path": "icons/svg/lock.svg",
+   "bytes": 280
+  },
+  {
+   "path": "icons/svg/medal.svg",
+   "bytes": 360
+  },
+  {
+   "path": "icons/svg/menu.svg",
+   "bytes": 227
+  },
+  {
+   "path": "icons/svg/next.svg",
+   "bytes": 216
+  },
+  {
+   "path": "icons/svg/palette.svg",
+   "bytes": 402
+  },
+  {
+   "path": "icons/svg/pause.svg",
+   "bytes": 219
+  },
+  {
+   "path": "icons/svg/phone.svg",
+   "bytes": 270
+  },
+  {
+   "path": "icons/svg/pin.svg",
+   "bytes": 299
+  },
+  {
+   "path": "icons/svg/play.svg",
+   "bytes": 237
+  },
+  {
+   "path": "icons/svg/plus.svg",
+   "bytes": 220
+  },
+  {
+   "path": "icons/svg/qr.svg",
+   "bytes": 460
+  },
+  {
+   "path": "icons/svg/ruler.svg",
+   "bytes": 294
+  },
+  {
+   "path": "icons/svg/save.svg",
+   "bytes": 233
+  },
+  {
+   "path": "icons/svg/scissors.svg",
+   "bytes": 313
+  },
+  {
+   "path": "icons/svg/search.svg",
+   "bytes": 253
+  },
+  {
+   "path": "icons/svg/settings.svg",
+   "bytes": 344
+  },
+  {
+   "path": "icons/svg/share.svg",
+   "bytes": 265
+  },
+  {
+   "path": "icons/svg/shield.svg",
+   "bytes": 282
+  },
+  {
+   "path": "icons/svg/shrink.svg",
+   "bytes": 243
+  },
+  {
+   "path": "icons/svg/sliders.svg",
+   "bytes": 348
+  },
+  {
+   "path": "icons/svg/sparkle.svg",
+   "bytes": 289
+  },
+  {
+   "path": "icons/svg/star.svg",
+   "bytes": 274
+  },
+  {
+   "path": "icons/svg/trash.svg",
+   "bytes": 238
+  },
+  {
+   "path": "icons/svg/trophy.svg",
+   "bytes": 326
+  },
+  {
+   "path": "icons/svg/undo.svg",
+   "bytes": 245
+  },
+  {
+   "path": "icons/svg/upload.svg",
+   "bytes": 232
+  },
+  {
+   "path": "icons/svg/vibrate.svg",
+   "bytes": 297
+  },
+  {
+   "path": "icons/svg/video.svg",
+   "bytes": 274
+  },
+  {
+   "path": "icons/svg/volume-off.svg",
+   "bytes": 272
+  },
+  {
+   "path": "icons/svg/volume-on.svg",
+   "bytes": 294
+  },
+  {
+   "path": "icons/svg/wand.svg",
+   "bytes": 243
+  },
+  {
+   "path": "icons/svg/x.svg",
+   "bytes": 224
+  },
+  {
+   "path": "icons/vector-drawable/ic_back.xml",
+   "bytes": 562
+  },
+  {
+   "path": "icons/vector-drawable/ic_bell.xml",
+   "bytes": 632
+  },
+  {
+   "path": "icons/vector-drawable/ic_camera.xml",
+   "bytes": 686
+  },
+  {
+   "path": "icons/vector-drawable/ic_check.xml",
+   "bytes": 571
+  },
+  {
+   "path": "icons/vector-drawable/ic_chest.xml",
+   "bytes": 703
+  },
+  {
+   "path": "icons/vector-drawable/ic_clock.xml",
+   "bytes": 610
+  },
+  {
+   "path": "icons/vector-drawable/ic_convert.xml",
+   "bytes": 576
+  },
+  {
+   "path": "icons/vector-drawable/ic_copy.xml",
+   "bytes": 746
+  },
+  {
+   "path": "icons/vector-drawable/ic_crop.xml",
+   "bytes": 596
+  },
+  {
+   "path": "icons/vector-drawable/ic_download.xml",
+   "bytes": 617
+  },
+  {
+   "path": "icons/vector-drawable/ic_eye.xml",
+   "bytes": 663
+  },
+  {
+   "path": "icons/vector-drawable/ic_eyeoff.xml",
+   "bytes": 679
+  },
+  {
+   "path": "icons/vector-drawable/ic_film.xml",
+   "bytes": 666
+  },
+  {
+   "path": "icons/vector-drawable/ic_flame.xml",
+   "bytes": 763
+  },
+  {
+   "path": "icons/vector-drawable/ic_folder.xml",
+   "bytes": 627
+  },
+  {
+   "path": "icons/vector-drawable/ic_gift.xml",
+   "bytes": 749
+  },
+  {
+   "path": "icons/vector-drawable/ic_globe.xml",
+   "bytes": 666
+  },
+  {
+   "path": "icons/vector-drawable/ic_grid.xml",
+   "bytes": 1020
+  },
+  {
+   "path": "icons/vector-drawable/ic_heart.xml",
+   "bytes": 622
+  },
+  {
+   "path": "icons/vector-drawable/ic_home.xml",
+   "bytes": 580
+  },
+  {
+   "path": "icons/vector-drawable/ic_image.xml",
+   "bytes": 676
+  },
+  {
+   "path": "icons/vector-drawable/ic_info.xml",
+   "bytes": 632
+  },
+  {
+   "path": "icons/vector-drawable/ic_layers.xml",
+   "bytes": 585
+  },
+  {
+   "path": "icons/vector-drawable/ic_lock.xml",
+   "bytes": 648
+  },
+  {
+   "path": "icons/vector-drawable/ic_medal.xml",
+   "bytes": 719
+  },
+  {
+   "path": "icons/vector-drawable/ic_menu.xml",
+   "bytes": 571
+  },
+  {
+   "path": "icons/vector-drawable/ic_next.xml",
+   "bytes": 561
+  },
+  {
+   "path": "icons/vector-drawable/ic_palette.xml",
+   "bytes": 802
+  },
+  {
+   "path": "icons/vector-drawable/ic_pause.xml",
+   "bytes": 564
+  },
+  {
+   "path": "icons/vector-drawable/ic_phone.xml",
+   "bytes": 674
+  },
+  {
+   "path": "icons/vector-drawable/ic_pin.xml",
+   "bytes": 654
+  },
+  {
+   "path": "icons/vector-drawable/ic_play.xml",
+   "bytes": 562
+  },
+  {
+   "path": "icons/vector-drawable/ic_plus.xml",
+   "bytes": 564
+  },
+  {
+   "path": "icons/vector-drawable/ic_qr.xml",
+   "bytes": 1001
+  },
+  {
+   "path": "icons/vector-drawable/ic_ruler.xml",
+   "bytes": 695
+  },
+  {
+   "path": "icons/vector-drawable/ic_save.xml",
+   "bytes": 578
+  },
+  {
+   "path": "icons/vector-drawable/ic_scissors.xml",
+   "bytes": 665
+  },
+  {
+   "path": "icons/vector-drawable/ic_search.xml",
+   "bytes": 603
+  },
+  {
+   "path": "icons/vector-drawable/ic_settings.xml",
+   "bytes": 695
+  },
+  {
+   "path": "icons/vector-drawable/ic_share.xml",
+   "bytes": 612
+  },
+  {
+   "path": "icons/vector-drawable/ic_shield.xml",
+   "bytes": 622
+  },
+  {
+   "path": "icons/vector-drawable/ic_shrink.xml",
+   "bytes": 590
+  },
+  {
+   "path": "icons/vector-drawable/ic_sliders.xml",
+   "bytes": 701
+  },
+  {
+   "path": "icons/vector-drawable/ic_sparkle.xml",
+   "bytes": 637
+  },
+  {
+   "path": "icons/vector-drawable/ic_star.xml",
+   "bytes": 626
+  },
+  {
+   "path": "icons/vector-drawable/ic_trash.xml",
+   "bytes": 584
+  },
+  {
+   "path": "icons/vector-drawable/ic_trophy.xml",
+   "bytes": 660
+  },
+  {
+   "path": "icons/vector-drawable/ic_undo.xml",
+   "bytes": 589
+  },
+  {
+   "path": "icons/vector-drawable/ic_upload.xml",
+   "bytes": 579
+  },
+  {
+   "path": "icons/vector-drawable/ic_vibrate.xml",
+   "bytes": 674
+  },
+  {
+   "path": "icons/vector-drawable/ic_video.xml",
+   "bytes": 644
+  },
+  {
+   "path": "icons/vector-drawable/ic_volume_off.xml",
+   "bytes": 608
+  },
+  {
+   "path": "icons/vector-drawable/ic_volume_on.xml",
+   "bytes": 629
+  },
+  {
+   "path": "icons/vector-drawable/ic_wand.xml",
+   "bytes": 587
+  },
+  {
+   "path": "icons/vector-drawable/ic_x.xml",
+   "bytes": 565
+  },
+  {
+   "path": "palette/colors-night.xml",
+   "bytes": 2950
+  },
+  {
+   "path": "palette/colors.json",
+   "bytes": 13760
+  },
+  {
+   "path": "palette/colors.xml",
+   "bytes": 4993
+  },
+  {
+   "path": "palette/tokens.css",
+   "bytes": 5940
+  },
+  {
+   "path": "palette/typography.md",
+   "bytes": 850
+  },
+  {
+   "path": "reference/pip-prime-mockup.html",
+   "bytes": 224743
+  },
+  {
+   "path": "sounds/README.md",
+   "bytes": 1365
+  },
+  {
+   "path": "sounds/_report.txt",
+   "bytes": 13987
+  },
+  {
+   "path": "sounds/ac-bat-assembly.ogg",
+   "bytes": 8079
+  },
+  {
+   "path": "sounds/ac-bat-broom.ogg",
+   "bytes": 9139
+  },
+  {
+   "path": "sounds/ac-bat-conductor.ogg",
+   "bytes": 6422
+  },
+  {
+   "path": "sounds/ac-bat-counter.ogg",
+   "bytes": 6834
+  },
+  {
+   "path": "sounds/ac-bat-crane.ogg",
+   "bytes": 8538
+  },
+  {
+   "path": "sounds/ac-bat-juggle.ogg",
+   "bytes": 7412
+  },
+  {
+   "path": "sounds/ac-bat-librarian.ogg",
+   "bytes": 4828
+  },
+  {
+   "path": "sounds/ac-bat-memory.ogg",
+   "bytes": 5122
+  },
+  {
+   "path": "sounds/ac-bat-sort.ogg",
+   "bytes": 4907
+  },
+  {
+   "path": "sounds/ac-bat-spring.ogg",
+   "bytes": 8125
+  },
+  {
+   "path": "sounds/ac-cmp-balloon.ogg",
+   "bytes": 8524
+  },
+  {
+   "path": "sounds/ac-cmp-belt.ogg",
+   "bytes": 8535
+  },
+  {
+   "path": "sounds/ac-cmp-dough.ogg",
+   "bytes": 6177
+  },
+  {
+   "path": "sounds/ac-cmp-fold.ogg",
+   "bytes": 7200
+  },
+  {
+   "path": "sounds/ac-cmp-press.ogg",
+   "bytes": 6347
+  },
+  {
+   "path": "sounds/ac-cmp-roller.ogg",
+   "bytes": 9430
+  },
+  {
+   "path": "sounds/ac-cmp-squeeze.ogg",
+   "bytes": 6520
+  },
+  {
+   "path": "sounds/ac-cmp-stomp.ogg",
+   "bytes": 6814
+  },
+  {
+   "path": "sounds/ac-cmp-vacuum.ogg",
+   "bytes": 7382
+  },
+  {
+   "path": "sounds/ac-cmp-weights.ogg",
+   "bytes": 6683
+  },
+  {
+   "path": "sounds/ac-cnv-blender.ogg",
+   "bytes": 10367
+  },
+  {
+   "path": "sounds/ac-cnv-chameleon.ogg",
+   "bytes": 7503
+  },
+  {
+   "path": "sounds/ac-cnv-conveyor.ogg",
+   "bytes": 8074
+  },
+  {
+   "path": "sounds/ac-cnv-curtain.ogg",
+   "bytes": 7419
+  },
+  {
+   "path": "sounds/ac-cnv-hat.ogg",
+   "bytes": 7820
+  },
+  {
+   "path": "sounds/ac-cnv-juggle.ogg",
+   "bytes": 7882
+  },
+  {
+   "path": "sounds/ac-cnv-shift.ogg",
+   "bytes": 6174
+  },
+  {
+   "path": "sounds/ac-cnv-tennis.ogg",
+   "bytes": 5796
+  },
+  {
+   "path": "sounds/ac-cnv-translate.ogg",
+   "bytes": 7627
+  },
+  {
+   "path": "sounds/ac-cnv-wheel.ogg",
+   "bytes": 7361
+  },
+  {
+   "path": "sounds/ac-crp-chalk.ogg",
+   "bytes": 5642
+  },
+  {
+   "path": "sounds/ac-crp-chisel.ogg",
+   "bytes": 6655
+  },
+  {
+   "path": "sounds/ac-crp-cookie.ogg",
+   "bytes": 5609
+  },
+  {
+   "path": "sounds/ac-crp-hammer.ogg",
+   "bytes": 5973
+  },
+  {
+   "path": "sounds/ac-crp-laser.ogg",
+   "bytes": 9051
+  },
+  {
+   "path": "sounds/ac-crp-pinch.ogg",
+   "bytes": 5906
+  },
+  {
+   "path": "sounds/ac-crp-saw.ogg",
+   "bytes": 8806
+  },
+  {
+   "path": "sounds/ac-crp-snip.ogg",
+   "bytes": 4737
+  },
+  {
+   "path": "sounds/ac-crp-tape.ogg",
+   "bytes": 10127
+  },
+  {
+   "path": "sounds/ac-crp-wall.ogg",
+   "bytes": 4775
+  },
+  {
+   "path": "sounds/ac-exm-bag.ogg",
+   "bytes": 9924
+  },
+  {
+   "path": "sounds/ac-exm-cap.ogg",
+   "bytes": 5430
+  },
+  {
+   "path": "sounds/ac-exm-checklist.ogg",
+   "bytes": 7452
+  },
+  {
+   "path": "sounds/ac-exm-clock.ogg",
+   "bytes": 5483
+  },
+  {
+   "path": "sounds/ac-exm-medal.ogg",
+   "bytes": 5499
+  },
+  {
+   "path": "sounds/ac-exm-pencil.ogg",
+   "bytes": 5091
+  },
+  {
+   "path": "sounds/ac-exm-rule.ogg",
+   "bytes": 10124
+  },
+  {
+   "path": "sounds/ac-exm-sign.ogg",
+   "bytes": 8868
+  },
+  {
+   "path": "sounds/ac-exm-stamp.ogg",
+   "bytes": 5098
+  },
+  {
+   "path": "sounds/ac-exm-study.ogg",
+   "bytes": 7367
+  },
+  {
+   "path": "sounds/ac-idl-comic.ogg",
+   "bytes": 6631
+  },
+  {
+   "path": "sounds/ac-idl-dance.ogg",
+   "bytes": 6167
+  },
+  {
+   "path": "sounds/ac-idl-juggle.ogg",
+   "bytes": 7924
+  },
+  {
+   "path": "sounds/ac-idl-nap.ogg",
+   "bytes": 11422
+  },
+  {
+   "path": "sounds/ac-idl-polish.ogg",
+   "bytes": 6963
+  },
+  {
+   "path": "sounds/ac-idl-pushups.ogg",
+   "bytes": 6856
+  },
+  {
+   "path": "sounds/ac-idl-stretch.ogg",
+   "bytes": 6388
+  },
+  {
+   "path": "sounds/ac-idl-watch.ogg",
+   "bytes": 5821
+  },
+  {
+   "path": "sounds/ac-idl-yawn.ogg",
+   "bytes": 7755
+  },
+  {
+   "path": "sounds/ac-idl-yoyo.ogg",
+   "bytes": 5457
+  },
+  {
+   "path": "sounds/ac-prv-detective.ogg",
+   "bytes": 6178
+  },
+  {
+   "path": "sounds/ac-prv-eraser.ogg",
+   "bytes": 6135
+  },
+  {
+   "path": "sounds/ac-prv-lock.ogg",
+   "bytes": 6151
+  },
+  {
+   "path": "sounds/ac-prv-map.ogg",
+   "bytes": 6810
+  },
+  {
+   "path": "sounds/ac-prv-ninja.ogg",
+   "bytes": 5476
+  },
+  {
+   "path": "sounds/ac-prv-radar.ogg",
+   "bytes": 6643
+  },
+  {
+   "path": "sounds/ac-prv-scissors.ogg",
+   "bytes": 4755
+  },
+  {
+   "path": "sounds/ac-prv-shades.ogg",
+   "bytes": 5211
+  },
+  {
+   "path": "sounds/ac-prv-sponge.ogg",
+   "bytes": 8338
+  },
+  {
+   "path": "sounds/ac-prv-vacuum.ogg",
+   "bytes": 8251
+  },
+  {
+   "path": "sounds/ac-utl-checker.ogg",
+   "bytes": 5592
+  },
+  {
+   "path": "sounds/ac-utl-dropper.ogg",
+   "bytes": 5764
+  },
+  {
+   "path": "sounds/ac-utl-laser.ogg",
+   "bytes": 5844
+  },
+  {
+   "path": "sounds/ac-utl-magic.ogg",
+   "bytes": 7558
+  },
+  {
+   "path": "sounds/ac-utl-mosaic.ogg",
+   "bytes": 7618
+  },
+  {
+   "path": "sounds/ac-utl-palette.ogg",
+   "bytes": 6072
+  },
+  {
+   "path": "sounds/ac-utl-pen.ogg",
+   "bytes": 8589
+  },
+  {
+   "path": "sounds/ac-utl-pixels.ogg",
+   "bytes": 9172
+  },
+  {
+   "path": "sounds/ac-utl-rainbow.ogg",
+   "bytes": 7324
+  },
+  {
+   "path": "sounds/ac-utl-stamp.ogg",
+   "bytes": 4891
+  },
+  {
+   "path": "sounds/ac-vid-boomerang.ogg",
+   "bytes": 7563
+  },
+  {
+   "path": "sounds/ac-vid-clapper.ogg",
+   "bytes": 5179
+  },
+  {
+   "path": "sounds/ac-vid-dj.ogg",
+   "bytes": 7584
+  },
+  {
+   "path": "sounds/ac-vid-fast.ogg",
+   "bytes": 6451
+  },
+  {
+   "path": "sounds/ac-vid-flipbook.ogg",
+   "bytes": 7942
+  },
+  {
+   "path": "sounds/ac-vid-juggle.ogg",
+   "bytes": 7965
+  },
+  {
+   "path": "sounds/ac-vid-popcorn.ogg",
+   "bytes": 8703
+  },
+  {
+   "path": "sounds/ac-vid-projector.ogg",
+   "bytes": 10961
+  },
+  {
+   "path": "sounds/ac-vid-scissors.ogg",
+   "bytes": 4737
+  },
+  {
+   "path": "sounds/ac-vid-surf.ogg",
+   "bytes": 8194
+  },
+  {
+   "path": "sounds/bar-blade-slice.ogg",
+   "bytes": 4331
+  },
+  {
+   "path": "sounds/bar-comet.ogg",
+   "bytes": 4402
+  },
+  {
+   "path": "sounds/bar-fireflies.ogg",
+   "bytes": 4437
+  },
+  {
+   "path": "sounds/bar-gears.ogg",
+   "bytes": 4417
+  },
+  {
+   "path": "sounds/bar-liquid.ogg",
+   "bytes": 4408
+  },
+  {
+   "path": "sounds/bar-orbit.ogg",
+   "bytes": 4179
+  },
+  {
+   "path": "sounds/bar-pip-runs.ogg",
+   "bytes": 4209
+  },
+  {
+   "path": "sounds/bar-segments.ogg",
+   "bytes": 4394
+  },
+  {
+   "path": "sounds/bar-streams.ogg",
+   "bytes": 4427
+  },
+  {
+   "path": "sounds/bar-tiles.ogg",
+   "bytes": 4329
+  },
+  {
+   "path": "sounds/bar-warp.ogg",
+   "bytes": 4179
+  },
+  {
+   "path": "sounds/bar-zipper.ogg",
+   "bytes": 4176
+  },
+  {
+   "path": "sounds/bd-drop.ogg",
+   "bytes": 6379
+  },
+  {
+   "path": "sounds/bd-rare.ogg",
+   "bytes": 10929
+  },
+  {
+   "path": "sounds/bd-shine.ogg",
+   "bytes": 7906
+  },
+  {
+   "path": "sounds/bd-spin.ogg",
+   "bytes": 6824
+  },
+  {
+   "path": "sounds/bd-stamp.ogg",
+   "bytes": 4828
+  },
+  {
+   "path": "sounds/ce-air-guitar.ogg",
+   "bytes": 6919
+  },
+  {
+   "path": "sounds/ce-backflip.ogg",
+   "bytes": 5803
+  },
+  {
+   "path": "sounds/ce-cannon-hold.ogg",
+   "bytes": 9122
+  },
+  {
+   "path": "sounds/ce-disco.ogg",
+   "bytes": 6702
+  },
+  {
+   "path": "sounds/ce-high-five.ogg",
+   "bytes": 5369
+  },
+  {
+   "path": "sounds/ce-juggle-tools.ogg",
+   "bytes": 7776
+  },
+  {
+   "path": "sounds/ce-mic-drop.ogg",
+   "bytes": 5208
+  },
+  {
+   "path": "sounds/ce-moonwalk.ogg",
+   "bytes": 6458
+  },
+  {
+   "path": "sounds/ce-pompoms.ogg",
+   "bytes": 7880
+  },
+  {
+   "path": "sounds/ce-rocket-jump.ogg",
+   "bytes": 8723
+  },
+  {
+   "path": "sounds/ce-tool-fan.ogg",
+   "bytes": 7542
+  },
+  {
+   "path": "sounds/ce-tornado.ogg",
+   "bytes": 7770
+  },
+  {
+   "path": "sounds/ce-trophy-lift.ogg",
+   "bytes": 5828
+  },
+  {
+   "path": "sounds/ce-victory-dance.ogg",
+   "bytes": 6875
+  },
+  {
+   "path": "sounds/dl-balloon-pop.ogg",
+   "bytes": 6845
+  },
+  {
+   "path": "sounds/dl-bubbles.ogg",
+   "bytes": 8031
+  },
+  {
+   "path": "sounds/dl-check-draw.ogg",
+   "bytes": 5241
+  },
+  {
+   "path": "sounds/dl-coin-shower.ogg",
+   "bytes": 8959
+  },
+  {
+   "path": "sounds/dl-confetti-cannon.ogg",
+   "bytes": 9137
+  },
+  {
+   "path": "sounds/dl-curve-to-gallery.ogg",
+   "bytes": 6229
+  },
+  {
+   "path": "sounds/dl-drill.ogg",
+   "bytes": 5480
+  },
+  {
+   "path": "sounds/dl-fireworks.ogg",
+   "bytes": 11164
+  },
+  {
+   "path": "sounds/dl-floppy.ogg",
+   "bytes": 5518
+  },
+  {
+   "path": "sounds/dl-gift-box.ogg",
+   "bytes": 7946
+  },
+  {
+   "path": "sounds/dl-glow-badge.ogg",
+   "bytes": 5603
+  },
+  {
+   "path": "sounds/dl-lightning.ogg",
+   "bytes": 6078
+  },
+  {
+   "path": "sounds/dl-magnet.ogg",
+   "bytes": 5231
+  },
+  {
+   "path": "sounds/dl-mailbox.ogg",
+   "bytes": 5360
+  },
+  {
+   "path": "sounds/dl-mini-chest.ogg",
+   "bytes": 7879
+  },
+  {
+   "path": "sounds/dl-origami-crane.ogg",
+   "bytes": 9414
+  },
+  {
+   "path": "sounds/dl-paper-plane.ogg",
+   "bytes": 7087
+  },
+  {
+   "path": "sounds/dl-pip-catch.ogg",
+   "bytes": 5778
+  },
+  {
+   "path": "sounds/dl-polaroid.ogg",
+   "bytes": 8096
+  },
+  {
+   "path": "sounds/dl-ring-pop.ogg",
+   "bytes": 5464
+  },
+  {
+   "path": "sounds/dl-rocket.ogg",
+   "bytes": 9114
+  },
+  {
+   "path": "sounds/dl-safe-lock.ogg",
+   "bytes": 6108
+  },
+  {
+   "path": "sounds/dl-slot-roll.ogg",
+   "bytes": 10233
+  },
+  {
+   "path": "sounds/dl-sparkle-sweep.ogg",
+   "bytes": 7572
+  },
+  {
+   "path": "sounds/dl-stack-tidy.ogg",
+   "bytes": 7979
+  },
+  {
+   "path": "sounds/dl-stamp.ogg",
+   "bytes": 5260
+  },
+  {
+   "path": "sounds/dl-tray-drop.ogg",
+   "bytes": 4801
+  },
+  {
+   "path": "sounds/dl-vault.ogg",
+   "bytes": 9134
+  },
+  {
+   "path": "sounds/dl-wax-seal.ogg",
+   "bytes": 5218
+  },
+  {
+   "path": "sounds/dl-zip-pack.ogg",
+   "bytes": 9608
+  },
+  {
+   "path": "sounds/eg-hiccup.ogg",
+   "bytes": 5952
+  },
+  {
+   "path": "sounds/eg-peek.ogg",
+   "bytes": 5729
+  },
+  {
+   "path": "sounds/eg-sing.ogg",
+   "bytes": 8219
+  },
+  {
+   "path": "sounds/eg-sneeze.ogg",
+   "bytes": 6938
+  },
+  {
+   "path": "sounds/eg-snow.ogg",
+   "bytes": 7169
+  },
+  {
+   "path": "sounds/er-confused.ogg",
+   "bytes": 6443
+  },
+  {
+   "path": "sounds/er-dizzy.ogg",
+   "bytes": 7402
+  },
+  {
+   "path": "sounds/er-facepalm.ogg",
+   "bytes": 4454
+  },
+  {
+   "path": "sounds/er-sad.ogg",
+   "bytes": 7204
+  },
+  {
+   "path": "sounds/er-shrug.ogg",
+   "bytes": 5509
+  },
+  {
+   "path": "sounds/er-uhoh.ogg",
+   "bytes": 5785
+  },
+  {
+   "path": "sounds/gm-all-quests.ogg",
+   "bytes": 6809
+  },
+  {
+   "path": "sounds/gm-award.ogg",
+   "bytes": 8863
+  },
+  {
+   "path": "sounds/gm-chest-open.ogg",
+   "bytes": 9048
+  },
+  {
+   "path": "sounds/gm-chest-shake.ogg",
+   "bytes": 7215
+  },
+  {
+   "path": "sounds/gm-daily-open.ogg",
+   "bytes": 6587
+  },
+  {
+   "path": "sounds/gm-locked.ogg",
+   "bytes": 4698
+  },
+  {
+   "path": "sounds/gm-quest-done.ogg",
+   "bytes": 5605
+  },
+  {
+   "path": "sounds/gm-rank-up.ogg",
+   "bytes": 11015
+  },
+  {
+   "path": "sounds/gm-skin-unlock.ogg",
+   "bytes": 8998
+  },
+  {
+   "path": "sounds/gm-trophy.ogg",
+   "bytes": 6786
+  },
+  {
+   "path": "sounds/gm-xp-gain.ogg",
+   "bytes": 5616
+  },
+  {
+   "path": "sounds/gm-xp-tick.ogg",
+   "bytes": 3830
+  },
+  {
+   "path": "sounds/lv-ascend.ogg",
+   "bytes": 13773
+  },
+  {
+   "path": "sounds/lv-crown.ogg",
+   "bytes": 10081
+  },
+  {
+   "path": "sounds/lv-evolution.ogg",
+   "bytes": 11096
+  },
+  {
+   "path": "sounds/lv-gold-blade.ogg",
+   "bytes": 11567
+  },
+  {
+   "path": "sounds/lv-ladder.ogg",
+   "bytes": 9311
+  },
+  {
+   "path": "sounds/lv-leap.ogg",
+   "bytes": 7173
+  },
+  {
+   "path": "sounds/lv-medal-bite.ogg",
+   "bytes": 6455
+  },
+  {
+   "path": "sounds/lv-power-up.ogg",
+   "bytes": 10930
+  },
+  {
+   "path": "sounds/lv-rocket.ogg",
+   "bytes": 12095
+  },
+  {
+   "path": "sounds/lv-transform.ogg",
+   "bytes": 11021
+  },
+  {
+   "path": "sounds/sounds.json",
+   "bytes": 97993
+  },
+  {
+   "path": "sounds/st-calendar.ogg",
+   "bytes": 4532
+  },
+  {
+   "path": "sounds/st-flame.ogg",
+   "bytes": 7776
+  },
+  {
+   "path": "sounds/st-lost.ogg",
+   "bytes": 6601
+  },
+  {
+   "path": "sounds/st-save.ogg",
+   "bytes": 5742
+  },
+  {
+   "path": "sounds/tr-blade-swing.ogg",
+   "bytes": 6194
+  },
+  {
+   "path": "sounds/tr-blinds.ogg",
+   "bytes": 7366
+  },
+  {
+   "path": "sounds/tr-card-flip.ogg",
+   "bytes": 4518
+  },
+  {
+   "path": "sounds/tr-card-shuffle.ogg",
+   "bytes": 9102
+  },
+  {
+   "path": "sounds/tr-clock-wipe.ogg",
+   "bytes": 6863
+  },
+  {
+   "path": "sounds/tr-confetti-sweep.ogg",
+   "bytes": 7556
+  },
+  {
+   "path": "sounds/tr-curtain.ogg",
+   "bytes": 6208
+  },
+  {
+   "path": "sounds/tr-diamond.ogg",
+   "bytes": 5481
+  },
+  {
+   "path": "sounds/tr-drop-bounce.ogg",
+   "bytes": 4866
+  },
+  {
+   "path": "sounds/tr-film-roll.ogg",
+   "bytes": 8673
+  },
+  {
+   "path": "sounds/tr-glitch.ogg",
+   "bytes": 6497
+  },
+  {
+   "path": "sounds/tr-gooey.ogg",
+   "bytes": 6815
+  },
+  {
+   "path": "sounds/tr-ink.ogg",
+   "bytes": 6962
+  },
+  {
+   "path": "sounds/tr-iris.ogg",
+   "bytes": 5634
+  },
+  {
+   "path": "sounds/tr-liquid.ogg",
+   "bytes": 6919
+  },
+  {
+   "path": "sounds/tr-mosaic.ogg",
+   "bytes": 7664
+  },
+  {
+   "path": "sounds/tr-page-curl.ogg",
+   "bytes": 6765
+  },
+  {
+   "path": "sounds/tr-peel.ogg",
+   "bytes": 6716
+  },
+  {
+   "path": "sounds/tr-pip-pull.ogg",
+   "bytes": 6124
+  },
+  {
+   "path": "sounds/tr-pixel-bloom.ogg",
+   "bytes": 7751
+  },
+  {
+   "path": "sounds/tr-portal.ogg",
+   "bytes": 6945
+  },
+  {
+   "path": "sounds/tr-push-parallax.ogg",
+   "bytes": 5452
+  },
+  {
+   "path": "sounds/tr-ripple.ogg",
+   "bytes": 6989
+  },
+  {
+   "path": "sounds/tr-shatter.ogg",
+   "bytes": 8003
+  },
+  {
+   "path": "sounds/tr-shutter.ogg",
+   "bytes": 5284
+  },
+  {
+   "path": "sounds/tr-spiral.ogg",
+   "bytes": 7145
+  },
+  {
+   "path": "sounds/tr-sunrise.ogg",
+   "bytes": 6078
+  },
+  {
+   "path": "sounds/tr-tool-flip.ogg",
+   "bytes": 6719
+  },
+  {
+   "path": "sounds/tr-unzip.ogg",
+   "bytes": 6888
+  },
+  {
+   "path": "sounds/tr-vortex.ogg",
+   "bytes": 7374
+  },
+  {
+   "path": "sounds/tr-wipe.ogg",
+   "bytes": 5779
+  },
+  {
+   "path": "sounds/tr-zoom-through.ogg",
+   "bytes": 5948
+  },
+  {
+   "path": "sounds/ui-back.ogg",
+   "bytes": 4173
+  },
+  {
+   "path": "sounds/ui-camera.ogg",
+   "bytes": 4426
+  },
+  {
+   "path": "sounds/ui-close-sheet.ogg",
+   "bytes": 4329
+  },
+  {
+   "path": "sounds/ui-copy.ogg",
+   "bytes": 4147
+  },
+  {
+   "path": "sounds/ui-drop-file.ogg",
+   "bytes": 4161
+  },
+  {
+   "path": "sounds/ui-error.ogg",
+   "bytes": 3945
+  },
+  {
+   "path": "sounds/ui-menu-open.ogg",
+   "bytes": 5851
+  },
+  {
+   "path": "sounds/ui-menu-pick.ogg",
+   "bytes": 3985
+  },
+  {
+   "path": "sounds/ui-open-sheet.ogg",
+   "bytes": 4659
+  },
+  {
+   "path": "sounds/ui-process-done.ogg",
+   "bytes": 5368
+  },
+  {
+   "path": "sounds/ui-process-start.ogg",
+   "bytes": 5927
+  },
+  {
+   "path": "sounds/ui-select.ogg",
+   "bytes": 3803
+  },
+  {
+   "path": "sounds/ui-share.ogg",
+   "bytes": 4883
+  },
+  {
+   "path": "sounds/ui-success.ogg",
+   "bytes": 5047
+  },
+  {
+   "path": "sounds/ui-tap.ogg",
+   "bytes": 3923
+  },
+  {
+   "path": "sounds/ui-toggle-off.ogg",
+   "bytes": 3745
+  },
+  {
+   "path": "sounds/ui-toggle-on.ogg",
+   "bytes": 4113
+  },
+  {
+   "path": "sounds/ui-warning.ogg",
+   "bytes": 4245
+  },
+  {
+   "path": "sounds/vx-carpet-burst.ogg",
+   "bytes": 6879
+  },
+  {
+   "path": "sounds/vx-carpet-fly.ogg",
+   "bytes": 9840
+  },
+  {
+   "path": "sounds/vx-carpet-on.ogg",
+   "bytes": 7018
+  },
+  {
+   "path": "sounds/vx-cheer-big.ogg",
+   "bytes": 10758
+  },
+  {
+   "path": "sounds/vx-drop.ogg",
+   "bytes": 5223
+  },
+  {
+   "path": "sounds/vx-giggle1.ogg",
+   "bytes": 7251
+  },
+  {
+   "path": "sounds/vx-giggle2.ogg",
+   "bytes": 8087
+  },
+  {
+   "path": "sounds/vx-giggle3.ogg",
+   "bytes": 8374
+  },
+  {
+   "path": "sounds/vx-grumble.ogg",
+   "bytes": 6388
+  },
+  {
+   "path": "sounds/vx-hello.ogg",
+   "bytes": 6229
+  },
+  {
+   "path": "sounds/vx-hmm.ogg",
+   "bytes": 6105
+  },
+  {
+   "path": "sounds/vx-nibble.ogg",
+   "bytes": 5590
+  },
+  {
+   "path": "sounds/vx-oops.ogg",
+   "bytes": 5975
+  },
+  {
+   "path": "sounds/vx-ouch.ogg",
+   "bytes": 5944
+  },
+  {
+   "path": "sounds/vx-pickup.ogg",
+   "bytes": 5464
+  },
+  {
+   "path": "sounds/vx-raspberry.ogg",
+   "bytes": 7140
+  },
+  {
+   "path": "sounds/vx-ring-l.ogg",
+   "bytes": 5127
+  },
+  {
+   "path": "sounds/vx-ring-r.ogg",
+   "bytes": 5103
+  },
+  {
+   "path": "sounds/vx-sad.ogg",
+   "bytes": 6925
+  },
+  {
+   "path": "sounds/vx-sleepy.ogg",
+   "bytes": 10122
+  },
+  {
+   "path": "sounds/vx-squeal.ogg",
+   "bytes": 6122
+  },
+  {
+   "path": "sounds/vx-whee.ogg",
+   "bytes": 7146
+  },
+  {
+   "path": "sounds/vx-wow.ogg",
+   "bytes": 5836
+  },
+  {
+   "path": "sounds/vx-yay.ogg",
+   "bytes": 6121
+  }
+ ],
+ "totalBytes": 17772342,
+ "count": 628
+}

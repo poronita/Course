@@ -1,0 +1,382 @@
+<title>Swiss Knife Style Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Dela+Gothic+One&family=Familjen+Grotesk:wght@400..700&family=Fredoka:wght@400..700&family=Hanken+Grotesk:wght@400..800&family=JetBrains+Mono:wght@400;600&family=Lexend:wght@300..700&family=Manrope:wght@400..800&family=Rubik:wght@400..800&family=Unbounded:wght@400..800&family=Nunito:wght@400..900&family=Baloo+2:wght@400..800&family=Sora:wght@300..800&family=Outfit:wght@300..800&family=Plus+Jakarta+Sans:wght@400..800&family=Chakra+Petch:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400..800&family=Shippori+Mincho:wght@500;700;800&family=Exo+2:wght@400..800&display=swap">
+<style>
+/* Layout: a workshop bench. Header of controls, the device on a dotted
+   cutting mat, a scrubbable timeline under it, and the spec sheet beside it. */
+:root{
+  --bg:#eceef2; --panel:#ffffff; --mat:#e1e5eb; --mat-dot:rgba(30,40,60,.10);
+  --ink:#161a22; --muted:#5b6475; --line:#d5dae3; --chip:#f3f5f8;
+  --accent:#d8341f; --accent-ink:#ffffff; --good:#1d8a5b; --focus:#2463eb;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"Hanken Grotesk",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1115; --panel:#171a21; --mat:#0a0c10; --mat-dot:rgba(200,210,230,.08);
+  --ink:#eceff4; --muted:#9aa3b4; --line:#2a303b; --chip:#1f242d;
+  --accent:#ff5a43; --accent-ink:#140806; --good:#3fcf8e; --focus:#7aa2ff; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0f1115; --panel:#171a21; --mat:#0a0c10; --mat-dot:rgba(200,210,230,.08);
+  --ink:#eceff4; --muted:#9aa3b4; --line:#2a303b; --chip:#1f242d;
+  --accent:#ff5a43; --accent-ink:#140806; --good:#3fcf8e; --focus:#7aa2ff; color-scheme:dark;
+}
+body{box-sizing:border-box}
+.x-top *,.x-lab>*,.x-compare *{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-inline:16px;padding-block:0 32px}
+.x-top button,.x-top select,.x-tl button,.x-tl select,.x-tl input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+
+/* ---------- header */
+.x-top{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;max-width:1440px;margin:0 auto;padding-block:16px 12px}
+.x-brand{display:flex;align-items:center;gap:10px;margin-right:auto;min-width:0}
+.x-brand-mark{width:34px;height:34px;border-radius:9px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;flex:none}
+.x-brand h1{font:800 20px/1.1 var(--f-display);font-stretch:112%;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.x-brand p{margin:2px 0 0;color:var(--muted);font-size:13px}
+.x-ctl{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.x-lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.x-sel{appearance:none;background:var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center;border:1px solid var(--line);border-radius:10px;padding:9px 34px 9px 12px;font-weight:700;min-width:0;max-width:100%}
+.x-ibtn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--panel);display:grid;place-items:center;cursor:pointer}
+.x-ibtn:hover{border-color:var(--muted)}
+.x-seg{display:inline-flex;background:var(--chip);border:1px solid var(--line);border-radius:12px;padding:3px}
+.x-seg button{border:0;background:transparent;padding:7px 14px;border-radius:9px;cursor:pointer;font-weight:700;display:flex;align-items:center;gap:7px;color:var(--muted)}
+.x-seg button[aria-checked="true"]{background:var(--panel);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+
+/* ---------- lab grid */
+.x-lab{display:grid;grid-template-columns:minmax(0,1fr) 370px;gap:16px;max-width:1440px;margin:0 auto}
+@media (max-width:980px){.x-lab{grid-template-columns:minmax(0,1fr)}}
+@media (min-width:981px){.x-info{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}}
+.x-stage-col{display:flex;flex-direction:column;gap:10px;min-width:0}
+.x-stage{position:relative;border-radius:18px;background:var(--mat);background-image:radial-gradient(var(--mat-dot) 1.2px,transparent 1.3px);background-size:18px 18px;height:min(76vh,880px);min-height:420px;display:grid;place-items:center;overflow:hidden;border:1px solid var(--line)}
+.x-stage.is-web{height:min(70vh,820px)}
+@media (max-width:600px){.x-mode-chip{display:none}.x-stage{height:auto;min-height:0;aspect-ratio:auto;padding:14px 0}.x-stage .x-fit{margin:0 auto}}
+.x-mode-chip{position:absolute;left:14px;top:12px;font:600 11px/1 var(--f-mono);letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.x-fit{position:relative}
+.x-device{position:absolute;left:0;top:0;transform-origin:0 0}
+.x-device.is-app{width:414px;height:868px;border-radius:64px;background:#111317;padding:12px;box-shadow:0 0 0 2px #2b2f37 inset,0 40px 80px -30px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.4),0 0 0 2px rgba(255,255,255,.07)}
+.x-device.is-web{width:1280px;height:800px;border-radius:14px;background:#dfe3e9;box-shadow:0 40px 90px -40px rgba(0,0,0,.5),0 0 0 1px rgba(0,0,0,.18);overflow:hidden}
+.x-viewport{position:relative;overflow:hidden;background:#fff}
+.is-app .x-viewport{width:390px;height:844px;border-radius:52px}
+.is-web .x-viewport{width:1280px;height:756px}
+.x-chrome{display:none;height:44px;align-items:center;gap:14px;padding:0 14px;background:#e6e9ee;border-bottom:1px solid #cfd5dd;font:13px/1 var(--f-body);color:#3c4350}
+.is-web .x-chrome{display:flex}
+.x-chrome .x-dots{display:flex;gap:7px}.x-chrome .x-dots i{width:12px;height:12px;border-radius:50%;background:#ff5f57}.x-chrome .x-dots i:nth-child(2){background:#febc2e}.x-chrome .x-dots i:nth-child(3){background:#28c840}
+.x-chrome .x-tab{background:#fff;border-radius:8px 8px 0 0;align-self:flex-end;padding:9px 14px;display:flex;gap:8px;align-items:center;font-weight:600;min-width:200px}
+.x-chrome .x-tab b{width:14px;height:14px;border-radius:4px;background:#d8341f;display:inline-block}
+.x-chrome .x-url{flex:1;max-width:620px;margin:0 auto 0 30px;background:#fff;border-radius:999px;padding:7px 14px;display:flex;gap:8px;align-items:center;color:#2b313b}
+.x-chrome .x-url span{color:#7a8291}
+.x-sb{display:none;position:absolute;left:0;right:0;top:0;height:46px;z-index:1100;pointer-events:none;align-items:center;justify-content:space-between;padding:4px 30px 0 36px;font:600 15px/1 -apple-system,"SF Pro Text",system-ui,sans-serif;color:#111}
+.is-app .x-sb{display:flex}
+.x-sb.is-light{color:#fff}
+.x-sb .x-ics{display:flex;gap:6px;align-items:center}
+.x-island{display:none;position:absolute;left:50%;top:11px;width:122px;height:35px;margin-left:-61px;border-radius:20px;background:#000;z-index:1101}
+.is-app .x-island{display:block}
+.x-homebar{display:none;position:absolute;left:50%;bottom:8px;width:136px;height:5px;margin-left:-68px;border-radius:3px;background:#111;z-index:1101;opacity:.85}
+.is-app .x-homebar{display:block}
+.x-sb.is-light~.x-homebar{background:#fff}
+
+/* engine primitives */
+.isk-screen{position:relative;overflow:hidden;isolation:isolate}
+.isk-screen *{box-sizing:border-box}
+.isk-ptr{position:absolute;left:0;top:0;z-index:1000;pointer-events:none;will-change:transform}
+.isk-ptr .isk-dot{position:absolute;left:-23px;top:-23px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.5);border:2px solid rgba(15,20,30,.35);box-shadow:0 8px 20px rgba(0,0,0,.25),inset 0 0 0 6px rgba(255,255,255,.35);transition:transform .12s,background .12s}
+.isk-ptr.is-down .isk-dot{transform:scale(.8);background:rgba(255,255,255,.82)}
+.isk-ptr .isk-arrow{position:absolute;left:-4px;top:-3px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35));transform-origin:4px 3px;transition:transform .1s}
+.isk-ptr.is-down .isk-arrow{transform:scale(.86)}
+.isk-ripple{position:absolute;left:0;top:0;width:64px;height:64px;border-radius:50%;border:3px solid rgba(255,255,255,.95);box-shadow:0 0 0 2px rgba(0,0,0,.2),inset 0 0 0 2px rgba(0,0,0,.12);opacity:0;transform:translate(-50%,-50%)}
+.isk-confetti{position:absolute;left:0;top:0;z-index:900;pointer-events:none}
+.isk-confetti i{position:absolute;left:0;top:0;border-radius:2px}
+.isk-err{color:#b00;font:12px/1.4 var(--f-mono);white-space:pre-wrap;padding:60px 20px}
+
+/* ---------- timeline */
+.x-tl{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:10px}
+.x-tl-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.x-play{width:44px;height:44px;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;cursor:pointer;flex:none}
+.x-tc{font:600 14px/1 var(--f-mono);font-variant-numeric:tabular-nums;min-width:118px}
+.x-tc span{color:var(--muted)}
+.x-track{position:relative;flex:1 1 260px;min-width:0;height:44px;display:flex;align-items:center}
+#scrub{appearance:none;-webkit-appearance:none;width:100%;height:44px;background:transparent;cursor:pointer;position:relative;z-index:2;margin:0}
+#scrub::-webkit-slider-runnable-track{height:8px;border-radius:4px;background:linear-gradient(var(--accent),var(--accent)) 0/var(--p,0%) 100% no-repeat,var(--chip);box-shadow:inset 0 0 0 1px var(--line)}
+#scrub::-moz-range-track{height:8px;border-radius:4px;background:var(--chip);box-shadow:inset 0 0 0 1px var(--line)}
+#scrub::-moz-range-progress{height:8px;border-radius:4px;background:var(--accent)}
+#scrub::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--panel);border:3px solid var(--accent);margin-top:-6px;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+#scrub::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--panel);border:3px solid var(--accent)}
+.x-ticks{position:absolute;left:10px;right:10px;top:50%;height:18px;margin-top:-9px;pointer-events:none;z-index:1}
+.x-ticks i{position:absolute;top:0;width:2px;height:18px;margin-left:-1px;background:var(--muted);opacity:.35;border-radius:1px}
+.x-tl-opts{display:flex;gap:8px;align-items:center}
+.x-small-sel{appearance:none;background:var(--chip);border:1px solid var(--line);border-radius:9px;padding:7px 10px;font:600 13px/1 var(--f-mono);cursor:pointer}
+.x-tog{background:var(--chip);border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-weight:700;font-size:13px;cursor:pointer;color:var(--muted)}
+.x-tog[aria-pressed="true"]{color:var(--ink);border-color:var(--muted)}
+.x-chapters{display:flex;gap:4px;min-width:0}
+.x-chapters button{flex-basis:0;min-width:0;border:1px solid var(--line);background:var(--chip);border-radius:9px;padding:7px 8px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;overflow:hidden}
+.x-chapters b{font:600 11px/1 var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.x-chapters span{font-size:12.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.x-chapters button.is-on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.x-chapters button.is-on b{color:inherit;opacity:.7}
+@media (max-width:700px){.x-chapters{flex-wrap:wrap}.x-chapters button{flex:1 1 30% !important}}
+.x-keys{font-size:12px;color:var(--muted);margin:0}
+.x-keys kbd{font:600 11px/1 var(--f-mono);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:2px 5px;background:var(--chip)}
+
+/* ---------- spec sheet */
+.x-info{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:18px;min-width:0;align-self:start}
+.x-eyebrow{font:600 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.x-info h2{font:800 30px/1.05 var(--f-display);font-stretch:108%;letter-spacing:-.015em;margin:6px 0 6px;text-wrap:balance}
+.x-tagline{margin:0;font-size:16px;font-weight:600}
+.x-concept{margin:0;color:var(--muted)}
+.x-info h3{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.x-info ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
+.x-scores{display:grid;grid-template-columns:auto 1fr;gap:7px 14px;align-items:center}
+.x-scores dt{font-size:13px;font-weight:700}
+.x-scores dd{margin:0;display:flex;gap:4px}
+.x-scores dd i{width:100%;max-width:34px;height:10px;border-radius:3px;background:var(--chip);box-shadow:inset 0 0 0 1px var(--line)}
+.x-scores dd i.on{background:var(--ink);box-shadow:none}
+.x-scores dd.x-effort i.on{background:var(--muted)}
+.x-look{display:flex;flex-direction:column;gap:8px}
+.x-sw{display:flex;gap:6px;flex-wrap:wrap}
+.x-sw i{width:30px;height:30px;border-radius:8px;box-shadow:0 0 0 1px var(--line)}
+.x-look p{margin:0;font-size:13px;color:var(--muted)}
+.x-look p b{color:var(--ink)}
+.x-notes{list-style:none;padding:0 !important;gap:2px !important}
+.x-notes li{display:grid;grid-template-columns:44px 1fr;gap:8px;padding:8px 10px;border-radius:10px;cursor:pointer;border:1px solid transparent}
+.x-notes li:hover{border-color:var(--line)}
+.x-notes li.is-on{background:var(--chip);border-color:var(--line)}
+.x-notes b{font:600 12px/1.5 var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.x-notes span{font-size:13.5px}
+.x-notes span strong{display:block;font-size:13.5px}
+
+/* ---------- compare */
+.x-compare{max-width:1440px;margin:16px auto 0;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.x-compare h2{font:800 20px/1.1 var(--f-display);font-stretch:108%;margin:0 0 4px}
+.x-compare>p{margin:0 0 12px;color:var(--muted)}
+.x-tbl-wrap{overflow-x:auto}
+
+.x-compare table{border-collapse:collapse;width:100%;min-width:720px;font-size:14px}
+.x-compare th,.x-compare td{text-align:left;padding:10px 10px;border-top:1px solid var(--line);vertical-align:top}
+.x-compare th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-top:0}
+.x-compare td.x-num{font:600 13px/1.4 var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.x-compare tbody tr:not(.x-grp){cursor:pointer}
+.x-compare tr.x-grp td{font:700 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--chip);cursor:default;padding-block:8px}
+.x-compare tbody tr:not(.x-grp):hover td{background:var(--chip)}
+.x-compare tbody tr.is-on td{background:var(--chip)}
+.x-compare tbody tr.is-on td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+.x-foot{max-width:1440px;margin:14px auto 0;color:var(--muted);font-size:13px}
+@media (prefers-reduced-motion:reduce){.isk-ptr .isk-dot,.isk-ptr .isk-arrow{transition:none}}
+
+/* ===== style sheets of the eight directions ===== */
+/*@@STYLE_CSS@@*/
+</style>
+
+<header class="x-top">
+  <div class="x-brand">
+    <div class="x-brand-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 15.5h13a4 4 0 0 0 0-8H9"/><path d="M9 7.5L19.5 3"/><circle cx="6.5" cy="15.5" r="1" fill="currentColor"/></svg></div>
+    <div><h1>Swiss Knife Style Lab</h1><p>Sixteen directions for Image Swiss Knife in two rounds. The same 40-second story is told in each one.</p></div>
+  </div>
+  <div class="x-ctl">
+    <label class="x-lbl" for="style-select">Style</label>
+    <button class="x-ibtn" id="prev" aria-label="Previous style"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <select class="x-sel" id="style-select"></select>
+    <button class="x-ibtn" id="next" aria-label="Next style"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+  <div class="x-seg" role="radiogroup" aria-label="Screen layout">
+    <button id="mode-app" role="radio" aria-checked="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/></svg>App</button>
+    <button id="mode-web" role="radio" aria-checked="false"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2.5" y="4" width="19" height="14" rx="2"/><path d="M8 21h8"/></svg>Web</button>
+  </div>
+</header>
+
+<main class="x-lab">
+  <section class="x-stage-col" aria-label="Animated mockup">
+    <div class="x-stage" id="stage">
+      <span class="x-mode-chip" id="mode-chip">Android app · 390 × 844</span>
+      <div class="x-fit" id="fit">
+        <div class="x-device is-app" id="device">
+          <div class="x-chrome" aria-hidden="true">
+            <div class="x-dots"><i></i><i></i><i></i></div>
+            <div class="x-tab"><b></b>Image Swiss Knife</div>
+            <div class="x-url"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>imageswissknife.app<span>/</span></div>
+          </div>
+          <div class="x-viewport" id="viewport">
+            <div id="screen-host"></div>
+            <div class="x-sb" id="statusbar" aria-hidden="true"><span>9:41</span><span class="x-ics"><svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.4 0 4.6.9 6.2 2.5l1.3-1.4A10.6 10.6 0 0 0 8 .3 10.6 10.6 0 0 0 .5 3.3l1.3 1.4A8.7 8.7 0 0 1 8 2.2zm0 3.7c1.4 0 2.7.5 3.6 1.4l1.3-1.4A7 7 0 0 0 8 4a7 7 0 0 0-4.9 1.9l1.3 1.4C5.3 6.4 6.6 5.9 8 5.9zM8 9.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg><svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="18" height="9" rx="2" fill="currentColor"/><rect x="25" y="4.5" width="1.6" height="4" rx=".8" fill="currentColor" opacity=".5"/></svg></span></div>
+            <div class="x-island"></div>
+            <div class="x-homebar" id="homebar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="x-tl" aria-label="Timeline">
+      <div class="x-tl-row">
+        <button class="x-play" id="play" aria-label="Pause"></button>
+        <div class="x-tc" id="tc">0:00.0 <span>/ 0:40</span></div>
+        <div class="x-track"><div class="x-ticks" id="ticks"></div><input id="scrub" type="range" min="0" max="40" step="0.01" value="0" aria-label="Timeline position in seconds"></div>
+        <div class="x-tl-opts">
+          <label class="x-lbl" for="speed">Speed</label>
+          <select class="x-small-sel" id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select>
+          <button class="x-tog" id="loop" aria-pressed="true">Loop</button>
+          <button class="x-tog" id="shuffle" title="Pick a different set of progress bars for the same processes">Shuffle bars</button>
+        </div>
+      </div>
+      <div class="x-chapters" id="chapters"></div>
+      <p class="x-keys"><kbd>Space</kbd> play or pause · <kbd>←</kbd> <kbd>→</kbd> one second · <kbd>N</kbd> <kbd>P</kbd> next or previous style · <kbd>M</kbd> app or web. Switching style keeps the same moment, so you can compare.</p>
+    </div>
+  </section>
+
+  <aside class="x-info" id="info" aria-live="polite"></aside>
+</main>
+
+<section class="x-compare" aria-label="Compare all styles">
+  <h2>All sixteen side by side</h2>
+  <p>Scores are 1 to 5. Simple means a first-time, older user can finish the task alone. Pro look is how polished and grown-up it feels. Game feel is how much play and reward it has. Effort is build cost for your team; lower is cheaper. Select a row to view that style.</p>
+  <div class="x-tbl-wrap"><table><thead><tr><th>Style</th><th>Big idea</th><th>Simple</th><th>Fun</th><th>Wow</th><th>Pro look</th><th>Game feel</th><th>Effort</th></tr></thead><tbody id="cmp"></tbody></table></div>
+</section>
+<p class="x-foot">Mockups only. Photos are drawn shapes, not real images. Round 2 styles can use different progress bars for the same job; press Shuffle bars to see another set. Every style uses the same files and numbers: a 4.8 MB HEIC portrait shrunk to 196 KB, a mountain photo cropped to 1080 × 1350, a city photo taken in Pune, and a 3-second beach clip made into a 2.1 MB GIF.</p>
+
+<script>
+/*@@ENGINE@@*/
+</script>
+<script>
+/*@@STYLES@@*/
+</script>
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const S = ISK.styles, DUR = ISK.DUR;
+  const host = $('#screen-host'), device = $('#device'), fit = $('#fit'), stage = $('#stage');
+  const sel = $('#style-select'), scrub = $('#scrub'), playBtn = $('#play'), tc = $('#tc');
+  const sb = $('#statusbar');
+  let si = 0, mode = 'app', t = 0, playing = true, speed = 1, looping = true, last = null, cur = null, wasPlaying = false;
+  const reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) { playing = false; t = 11; }
+
+  const ICON_PLAY = '<svg width="18" height="18" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg>';
+  const ICON_PAUSE = '<svg width="18" height="18" viewBox="0 0 24 24"><rect x="6" y="4.5" width="4" height="15" rx="1" fill="currentColor"/><rect x="14" y="4.5" width="4" height="15" rx="1" fill="currentColor"/></svg>';
+  const fmt = x => { const m = Math.floor(x / 60), s = x - m * 60; return m + ':' + (s < 10 ? '0' : '') + s.toFixed(1); };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  const ROUNDS = { 1: 'Round 1 · First eight directions', 2: 'Round 2 · Gamified, with a character' };
+  const groups = {};
+  S.forEach((d, i) => {
+    const r = d.round || 1;
+    if (!groups[r]) { const g = document.createElement('optgroup'); g.label = ROUNDS[r] || ('Round ' + r); sel.appendChild(g); groups[r] = g; }
+    const o = document.createElement('option'); o.value = d.id; o.textContent = (i + 1) + ' · ' + d.name; groups[r].appendChild(o);
+  });
+
+  // timeline ticks + chapters
+  const ticks = $('#ticks'), chapters = $('#chapters');
+  ISK.SCENES.forEach((s, i) => {
+    const end = (ISK.SCENES[i + 1] || { t: DUR }).t;
+    if (s.t > 0) { const k = document.createElement('i'); k.style.left = (s.t / DUR * 100) + '%'; ticks.appendChild(k); }
+    const b = document.createElement('button');
+    b.style.flexGrow = end - s.t;
+    b.innerHTML = `<b>${fmt(s.t).replace('.0', '')}</b><span>${esc(s.label)}</span>`;
+    b.addEventListener('click', () => { t = s.t + 0.01; render(); });
+    chapters.appendChild(b);
+  });
+
+  function score(n, effort) { let h = ''; for (let i = 1; i <= 5; i++) h += `<i class="${i <= n ? 'on' : ''}"></i>`; return `<dd class="${effort ? 'x-effort' : ''}" aria-label="${n} of 5">${h}</dd>`; }
+  function renderInfo() {
+    const d = S[si];
+    const notes = ISK.SCENES.map(s => `<li data-t="${s.t}"><b>${fmt(s.t).replace('.0', '')}</b><span><strong>${esc(s.label)}</strong>${esc((d.notes || {})[s.id] || '')}</span></li>`).join('');
+    $('#info').innerHTML = `
+      <div><p class="x-eyebrow">Style ${si + 1} of ${S.length} · Round ${d.round || 1}</p><h2>${esc(d.name)}</h2><p class="x-tagline">${esc(d.tagline)}</p></div>
+      <p class="x-concept">${esc(d.concept)}</p>
+      <div><h3>Why it could win</h3><ul>${(d.wins || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+      <div><h3>Watch out for</h3><ul>${(d.risks || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+      <div><h3>Scores</h3><dl class="x-scores"><dt>Simple</dt>${score(d.scores.simple)}<dt>Fun</dt>${score(d.scores.fun)}<dt>Wow</dt>${score(d.scores.wow)}${d.scores.pro ? `<dt>Pro look</dt>${score(d.scores.pro)}` : ''}${d.scores.game ? `<dt>Game feel</dt>${score(d.scores.game)}` : ''}<dt>Build effort</dt>${score(d.scores.effort, true)}</dl></div>
+      <div class="x-look"><h3>Look and motion</h3><div class="x-sw">${(d.palette || []).map(c => `<i style="background:${c}" title="${c}"></i>`).join('')}</div><p><b>Type:</b> ${esc(d.type || '')}</p><p><b>Motion:</b> ${esc(d.motion || '')}</p>${(d.extras || []).map(x => `<p><b>${esc(x[0])}:</b> ${esc(x[1])}</p>`).join('')}</div>
+      <div><h3>Scene notes</h3><ul class="x-notes" id="notes">${notes}</ul></div>`;
+    $('#notes').querySelectorAll('li').forEach(li => li.addEventListener('click', () => { t = +li.dataset.t + 0.01; render(); }));
+    document.querySelectorAll('#cmp tr[data-i]').forEach(tr => tr.classList.toggle('is-on', +tr.dataset.i === si));
+  }
+  { let lastR = 0, rows = '';
+    S.forEach((d, i) => {
+      const r = d.round || 1;
+      if (r !== lastR) { rows += `<tr class="x-grp"><td colspan="8">${esc(ROUNDS[r] || 'Round ' + r)}</td></tr>`; lastR = r; }
+      const sc = d.scores, v = k => sc[k] ? sc[k] + '/5' : '–';
+      rows += `<tr data-i="${i}"><td><strong>${i + 1} · ${esc(d.name)}</strong></td><td>${esc(d.tagline)}</td><td class="x-num">${v('simple')}</td><td class="x-num">${v('fun')}</td><td class="x-num">${v('wow')}</td><td class="x-num">${v('pro')}</td><td class="x-num">${v('game')}</td><td class="x-num">${v('effort')}</td></tr>`;
+    });
+    $('#cmp').innerHTML = rows; }
+  document.querySelectorAll('#cmp tr[data-i]').forEach(tr => tr.addEventListener('click', () => { setStyle(+tr.dataset.i); stage.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' }); }));
+
+  function doFit() {
+    const nw = mode === 'app' ? 414 : 1280, nh = mode === 'app' ? 868 : 800;
+    const r = stage.getBoundingClientRect();
+    const narrow = window.innerWidth <= 600;
+    const aw = r.width - 28, ah = narrow ? (mode === 'app' ? 620 : 420) : r.height - 48;
+    const sc = Math.max(0.1, Math.min(aw / nw, ah / nh, 1));
+    device.style.transform = `scale(${sc})`;
+    fit.style.width = (nw * sc) + 'px'; fit.style.height = (nh * sc) + 'px';
+  }
+  new ResizeObserver(doFit).observe(stage);
+
+  function rebuild() { cur = ISK.mount(S[si], mode, host); render(); }
+  function render() {
+    if (!cur) return;
+    cur.update(t);
+    sb.classList.toggle('is-light', cur.statusBar(t) === 'light');
+    scrub.value = t.toFixed(2);
+    scrub.style.setProperty('--p', (t / DUR * 100) + '%');
+    tc.innerHTML = `${fmt(t)} <span>/ 0:40</span>`;
+    const sc = ISK.sceneAt(t);
+    chapters.querySelectorAll('button').forEach((b, i) => b.classList.toggle('is-on', ISK.SCENES[i] === sc));
+    const nl = document.querySelectorAll('#notes li'); nl.forEach((li, i) => li.classList.toggle('is-on', ISK.SCENES[i] === sc));
+  }
+  function setPlay(p) { playing = p; playBtn.innerHTML = p ? ICON_PAUSE : ICON_PLAY; playBtn.setAttribute('aria-label', p ? 'Pause' : 'Play'); if (p && t >= DUR - 0.01) t = 0; }
+  function setStyle(i) { si = (i + S.length) % S.length; sel.value = S[si].id; renderInfo(); rebuild(); saveHash(); }
+  function setMode(m) {
+    mode = m;
+    device.className = 'x-device is-' + m;
+    stage.classList.toggle('is-web', m === 'web');
+    $('#mode-app').setAttribute('aria-checked', m === 'app'); $('#mode-web').setAttribute('aria-checked', m === 'web');
+    $('#mode-chip').textContent = m === 'app' ? 'Android app · 390 × 844' : 'Website · 1280 × 756';
+    doFit(); rebuild(); saveHash();
+  }
+  function saveHash() { try { history.replaceState(null, '', '#' + S[si].id + '-' + mode); } catch (e) {} }
+
+  sel.addEventListener('change', () => setStyle(S.findIndex(d => d.id === sel.value)));
+  $('#prev').addEventListener('click', () => setStyle(si - 1));
+  $('#next').addEventListener('click', () => setStyle(si + 1));
+  $('#mode-app').addEventListener('click', () => setMode('app'));
+  $('#mode-web').addEventListener('click', () => setMode('web'));
+  playBtn.addEventListener('click', () => setPlay(!playing));
+  $('#shuffle').addEventListener('click', () => { ISK.variant++; rebuild(); });
+  $('#speed').addEventListener('change', e => { speed = +e.target.value; });
+  $('#loop').addEventListener('click', e => { looping = !looping; e.currentTarget.setAttribute('aria-pressed', looping); });
+  scrub.addEventListener('pointerdown', () => { wasPlaying = playing; setPlay(false); });
+  scrub.addEventListener('pointerup', () => { if (wasPlaying) setPlay(true); wasPlaying = false; });
+  scrub.addEventListener('input', () => { t = +scrub.value; render(); });
+  document.addEventListener('keydown', e => {
+    if (e.target.closest && e.target.closest('select,input:not([type=range])')) return;
+    const k = e.key;
+    if (k === ' ') { e.preventDefault(); setPlay(!playing); }
+    else if (k === 'ArrowRight') { e.preventDefault(); t = Math.min(DUR, t + (e.shiftKey ? 5 : 1)); render(); }
+    else if (k === 'ArrowLeft') { e.preventDefault(); t = Math.max(0, t - (e.shiftKey ? 5 : 1)); render(); }
+    else if (k === 'n' || k === 'N') setStyle(si + 1);
+    else if (k === 'p' || k === 'P') setStyle(si - 1);
+    else if (k === 'm' || k === 'M') setMode(mode === 'app' ? 'web' : 'app');
+    else if (k === 'Home') { t = 0; render(); }
+  });
+
+  function tick(ts) {
+    if (playing && last != null) {
+      t += Math.min(0.1, (ts - last) / 1000) * speed;
+      if (t >= DUR) { if (looping) t -= DUR; else { t = DUR; setPlay(false); } }
+      render();
+    }
+    last = ts;
+    requestAnimationFrame(tick);
+  }
+
+  // test hook for screenshots
+  window.__lab = { seek(x) { t = x; render(); }, pause() { setPlay(false); }, style(id) { setStyle(S.findIndex(d => d.id === id)); }, mode: setMode };
+
+  const h = (location.hash || '').slice(1).split('-');
+  const hi = S.findIndex(d => d.id === h[0]);
+  if (hi >= 0) si = hi;
+  sel.value = S[si].id;
+  setPlay(playing);
+  renderInfo();
+  setMode(h[1] === 'web' ? 'web' : 'app');
+  requestAnimationFrame(tick);
+})();
+</script>

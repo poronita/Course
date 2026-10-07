@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <linearGradient id="pip-light-52-belt-steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBFCFE" stop-opacity="1"/>
+      <stop offset="0.35" stop-color="#C9CFD8" stop-opacity="1"/>
+      <stop offset="0.55" stop-color="#E9ECF1" stop-opacity="1"/>
+      <stop offset="0.8" stop-color="#9AA2B0" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C7CDD6" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="pip-light-52-belt-rivet" cx="0.35" cy="0.3" r="0.75" fx="0.35" fy="0.3">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#C9CFD8" stop-opacity="1"/>
+      <stop offset="1" stop-color="#6F7889" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+        <g>
+          <rect x="118" y="266" width="164" height="25" rx="8" fill="url(#pip-light-52-belt-steel)" stroke="#4E5668" stroke-width="2.6"/>
+          <path d="M126 274H274M124 279H276M126 284H274" stroke="#6F7889" stroke-opacity="0.22" stroke-width="0.9"/>
+          <rect x="124" y="268.5" width="152" height="4" rx="2" fill="#fff" opacity="0.75"/>
+          <path d="M124 293H276" stroke="#6F5A3C" stroke-width="3" opacity="0.3"/>
+          <circle cx="140" cy="279" r="6.5" fill="url(#pip-light-52-belt-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+          <circle cx="138" cy="277" r="1.6" fill="#fff"/>
+          <circle cx="260" cy="279" r="6.5" fill="url(#pip-light-52-belt-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+          <circle cx="258" cy="277" r="1.6" fill="#fff"/>
+          <rect x="186" y="276" width="22" height="7" rx="3.5" fill="none" stroke="#6F7889" stroke-width="1.6" opacity="0.8"/>
+          <path d="M204 276L212 268.5Q213.5 267.5 213.5 269L209 276" fill="none" stroke="#6F7889" stroke-width="1.6" opacity="0.8" stroke-linejoin="round"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

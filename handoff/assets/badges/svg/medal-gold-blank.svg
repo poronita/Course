@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72" width="256" height="288" role="img">
+  <title>gold medal, blank</title>
+  <defs>
+    <linearGradient id="mg-gold-blank" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF3B0"/><stop offset=".5" stop-color="#FFC94A"/><stop offset="1" stop-color="#B97A08"/></linearGradient>
+    <linearGradient id="mg-gold-blank-f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC94A"/><stop offset="1" stop-color="#B97A08"/></linearGradient>
+  </defs>
+  <g>
+  <path d="M32 2 60 12v24c0 18-12 29-28 34C16 65 4 54 4 36V12z" fill="url(#mg-gold-blank)"/>
+  <path d="M32 8 54 16v20c0 14-9 23-22 28C19 59 10 50 10 36V16z" fill="url(#mg-gold-blank-f)" stroke="#fff" stroke-opacity=".55" stroke-width="1.2"/>
+  <path d="M32 8 54 16v8C44 22 20 22 10 24v-8z" fill="#fff" fill-opacity=".22"/>
+  </g>
+</svg>
