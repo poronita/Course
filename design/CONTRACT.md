@@ -101,3 +101,74 @@ node tools/shoot.mjs --page $SP/<id>.html --style <id> --modes app,web \
 ```
 
 The script prints `CONSOLE ERRORS` if any occur, and there must be none.
+
+---
+
+# Round 2 brief: gamified, with a character (styles 9 to 16)
+
+Round 1 (styles 1 to 8) is done. Round 2 builds on what the owner liked: **the Clay Buddy character plus the game feel**. The owner's rules, in their own words, condensed:
+
+1. **A real character with details.** More than a blob: expressive face (eyes, brows, cheeks, mouth shapes), body parts that move, accessories, idle life (breathing, blinking, looking at the pointer), and many moods. **Tapping the character opens a quick menu** (radial or small list of tools) so the user can jump anywhere in one tap.
+2. **A professional look.** Not childish or "cartoonish". Think premium game or well-funded consumer app: considered lighting (gradients, rim light, soft shadow), consistent illustration, refined type, tight spacing. Keep the game spirit (XP, levels, streaks, quests, badges, collectibles, ranks) but make it feel grown-up and trustworthy. Styles may use a different character (animal, robot, spirit, astronaut, plant...), as briefed.
+3. **Evolve the gamification.** Show real game systems that make sense for a free tools app: XP and levels, streaks, daily quests, achievements, collectibles, ranks. Rewards appear at completion, never block the flow.
+4. **Minimal clicks.** The whole story must finish with very few taps. Choosing the purpose ("Exam form") starts the job immediately, with no Next or Start. Suggestions come from the character. Show a small "N taps" receipt on the finish screen.
+5. **Compact.** Not everything big. Base text 13 to 15 px, controls 40 to 44 px, dense but breathable cards, bottom bar or compact top bar. On the web use a proper desktop layout with sensible widths, not stretched phone UI.
+6. **Waiting must feel short and beautiful.** Every process (shrink, remove location, make GIF) shows a mesmerising progress animation that makes time pass quickly. The progress is front-loaded (`A.rush`), the visual is busy and fast, and multiple mini bars may converge into one. **Each style uses at least three different bar kinds**, one per process, chosen with `A.bars(3, kinds, seed)` so the viewer can press "Shuffle bars" to see another set. Recolour bars to the style's palette, and you may add your own custom bar on top of the library (for example a brush stroke, a vine, a belt filling). The wait should also be entertaining: the character reacts, numbers count down, stage labels change.
+7. **Unique motion.** The product does the same jobs as every competitor, so the motion must be the difference. Each style needs: a **signature screen-change effect** (use `A.reveal` kinds or custom), a **signature process effect**, a **signature completion effect** (use `A.confetti` shapes or custom), and tool-to-tool transitions that feel lightweight, not heavy.
+
+## Story changes for round 2 (same scene boundaries as before)
+
+| t (s) | Scene | Round 2 requirement |
+|---|---|---|
+| 0–4 | `intro` | The character enters with personality (greeting, small gag). Home is compact and ends with the character plus a short list of tools or a smart suggestion. |
+| 4–9 | `pick` | One tap to choose the photo (phone) or a drag from the desktop (web). The character reacts (surprise, curious, thumbs up). Show the file facts briefly. |
+| 9–17 | `shrink` | **One tap** on "Exam form" (or the suggestion bubble) starts the job. Process #1 with bar kind A for 3 s or more (about 11 to 14.3 s). Size counts 4.8 MB → 196 KB. A completion effect plays, the character celebrates, XP is awarded, then Save. |
+| 17–24 | `crop` | The user **taps the character** and the quick menu opens (show it clearly, about 1.2 s). They tap **Crop**. Then one tap on "Instagram post 4:5" (1080 × 1350), reposition the photo by drag, tap Done. A short mini process with bar kind B (about 0.8 s) may run. |
+| 24–30 | `privacy` | The character notices the location and offers it in a bubble ("This photo knows where it was taken. Check?"). One tap opens it. Show **Pune, India** with a map pin and the warning. Remove location runs process #2 with bar kind C (about 1.5 s), then a shield or safe effect. |
+| 30–36 | `gif` | Reach the tool in the quickest way you design (quick menu or suggestion). Trim 0:04 to 0:07 (3.0 s), tap Make GIF, process #3 with bar kind D, the longest wait (about 33 to 35.2 s), shown with a different bar from #1. 36 frames, 12 fps, then the looping 2.1 MB GIF. |
+| 36–40 | `done` | Summary: 4 results, **XP gained, level or rank change, streak or badge**, "N taps" receipt, the promise ("Done on your phone. Nothing uploaded." / "...in your browser..."), and one clearly labelled "Ad" slot placed only here. |
+
+Use the exact numbers from `A.DATA`. `scores` must now include `pro` (professional look) and `game` (gamification richness) next to `simple`, `fun`, `wow`, `effort`. Set `round: 2`.
+
+## Extra registration fields
+
+```js
+ISK.register({
+  id, order: 9..16, round: 2, name, tagline, concept, wins, risks,
+  scores: { simple, fun, wow, pro, game, effort },
+  palette, type, motion, notes, statusBar, css, build,
+  extras: [                       // shown in the spec sheet, one line each
+    ['Character', 'who it is, its moods and quick-menu behaviour'],
+    ['Game system', 'XP, ranks, quests... as used here'],
+    ['Progress bars', 'which kinds, and what the viewer sees'],
+    ['Screen changes', 'the signature transition(s)'],
+    ['Finish effect', 'the completion effect'],
+    ['Taps to finish', 'e.g. Shrink 2 · Crop 3 · Place 2 · GIF 3'],
+  ],
+});
+```
+Plain, active, short sentences in all copy. No em-dash asides and no "not X but Y". Do not name real brands.
+
+## New helpers in `A` (round 2)
+
+| Helper | Use |
+|---|---|
+| `A.bar(parent, kind, {w,h,colors,track,seed,lanes,field})` | Canvas progress bar. Returns `{el, update(p, t)}`. Kinds: `streams` (mini bars race, then merge; use h 40 to 80), `liquid` (wavy tube), `orbit` (particles spiral into a core; make it roughly square, 90 to 140 px), `tiles` (grid pops in scattered order; h 36 to 80), `comet` (comets dive into a glowing head; h 28 to 50), `warp` (hyperspace; h 70 to 130). Pass 3 hex colours, plus a 4th for the `warp` field. |
+| `A.bars(n, kinds, seed)` | n **distinct** kinds, repeatable, and reshuffled when the viewer presses Shuffle bars. Call it once in `build`, and size each bar for the kind it ends up with (wrap sizes in a lookup). |
+| `A.rush(p)` | Front-loaded easing. Feed bars with `A.rush` yourself if you build custom ones. |
+| `A.reveal(el, kind, p, opts)` | Screen-change effect. p goes 0 to 1 to show, 1 to 0 to hide. Kinds: `iris` (opts `cx`, `cy`), `wipe` (`dir` l/r/u/d), `curtain`, `blinds` (`n`), `pixels` (`n`), `diamond`, `zoom`, `flip`, `push` (`dir`), `drop`, `fade`. It sets opacity, visibility, clip-path and transform on that element, so use it on page containers and never on elements you also move with `A.set`. |
+| `A.life(t, seed)` | `{blink 0..1, breathe, sway, bob, look}` for an idle character. Blink is 1 when the eyes are closed. |
+| `A.pointerAt(t)` | Pure pointer state `{x, y, vis, down, ripQ}` in screen px. Use it so the character's eyes follow the pointer (clamp the offset). |
+| `A.confetti(parent, {shape})` | `shape`: `rect` (default), `star`, `ring`, `coin`, `heart`, `petal`, `spark`. Also `colors`, `count`, `power`, `spread`, `gravity`, `dur`, `x`, `y`, `seed`. |
+| `A.hexA(hex, alpha)` | `rgba()` string from a hex colour. |
+| `A.variant` | Number that increases each time the viewer presses Shuffle bars (already used by `A.bars`). |
+
+Fonts now available in addition to round 1: Nunito, Baloo 2, Sora, Outfit, Plus Jakarta Sans, Chakra Petch, Fraunces, Shippori Mincho, Exo 2.
+
+## Quick-menu rule
+
+The quick menu is the star interaction. It opens from a tap on the character (pointer key with `tap: true` on the character element), animates out in under 0.4 s (radial fan, arc, or compact sheet), shows 5 tools with icons, and closes after a pick. In the web layout it can also show key hints. The character reacts (wink, surprised, point).
+
+## Speed and quality
+
+Per-frame cost matters: keep `update(t)` light. Canvas bars are fine. Avoid `filter: blur()` on many elements and avoid huge box-shadows on moving things. Check for clipping, overlap and illegible text at 18 time points in both modes, as in round 1, and **do at least 3 review-and-fix rounds**.

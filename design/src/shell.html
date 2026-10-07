@@ -1,7 +1,7 @@
 <title>Swiss Knife Style Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Dela+Gothic+One&family=Familjen+Grotesk:wght@400..700&family=Fredoka:wght@400..700&family=Hanken+Grotesk:wght@400..800&family=JetBrains+Mono:wght@400;600&family=Lexend:wght@300..700&family=Manrope:wght@400..800&family=Rubik:wght@400..800&family=Unbounded:wght@400..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Dela+Gothic+One&family=Familjen+Grotesk:wght@400..700&family=Fredoka:wght@400..700&family=Hanken+Grotesk:wght@400..800&family=JetBrains+Mono:wght@400;600&family=Lexend:wght@300..700&family=Manrope:wght@400..800&family=Rubik:wght@400..800&family=Unbounded:wght@400..800&family=Nunito:wght@400..900&family=Baloo+2:wght@400..800&family=Sora:wght@300..800&family=Outfit:wght@300..800&family=Plus+Jakarta+Sans:wght@400..800&family=Chakra+Petch:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400..800&family=Shippori+Mincho:wght@500;700;800&family=Exo+2:wght@400..800&display=swap">
 <style>
 /* Layout: a workshop bench. Header of controls, the device on a dotted
    cutting mat, a scrubbable timeline under it, and the spec sheet beside it. */
@@ -154,8 +154,9 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-i
 .x-compare th,.x-compare td{text-align:left;padding:10px 10px;border-top:1px solid var(--line);vertical-align:top}
 .x-compare th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-top:0}
 .x-compare td.x-num{font:600 13px/1.4 var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
-.x-compare tbody tr{cursor:pointer}
-.x-compare tbody tr:hover td{background:var(--chip)}
+.x-compare tbody tr:not(.x-grp){cursor:pointer}
+.x-compare tr.x-grp td{font:700 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--chip);cursor:default;padding-block:8px}
+.x-compare tbody tr:not(.x-grp):hover td{background:var(--chip)}
 .x-compare tbody tr.is-on td{background:var(--chip)}
 .x-compare tbody tr.is-on td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
 .x-foot{max-width:1440px;margin:14px auto 0;color:var(--muted);font-size:13px}
@@ -168,7 +169,7 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-i
 <header class="x-top">
   <div class="x-brand">
     <div class="x-brand-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 15.5h13a4 4 0 0 0 0-8H9"/><path d="M9 7.5L19.5 3"/><circle cx="6.5" cy="15.5" r="1" fill="currentColor"/></svg></div>
-    <div><h1>Swiss Knife Style Lab</h1><p>Eight directions for Image Swiss Knife. The same 40-second story is told in each one.</p></div>
+    <div><h1>Swiss Knife Style Lab</h1><p>Sixteen directions for Image Swiss Knife in two rounds. The same 40-second story is told in each one.</p></div>
   </div>
   <div class="x-ctl">
     <label class="x-lbl" for="style-select">Style</label>
@@ -212,6 +213,7 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-i
           <label class="x-lbl" for="speed">Speed</label>
           <select class="x-small-sel" id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select>
           <button class="x-tog" id="loop" aria-pressed="true">Loop</button>
+          <button class="x-tog" id="shuffle" title="Pick a different set of progress bars for the same processes">Shuffle bars</button>
         </div>
       </div>
       <div class="x-chapters" id="chapters"></div>
@@ -223,11 +225,11 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-i
 </main>
 
 <section class="x-compare" aria-label="Compare all styles">
-  <h2>All eight side by side</h2>
-  <p>Scores are 1 to 5. Simple means a first-time, older user can finish the task alone. Effort is build cost for your team; lower is cheaper. Select a row to view that style.</p>
-  <div class="x-tbl-wrap"><table><thead><tr><th>Style</th><th>Big idea</th><th>Simple</th><th>Fun</th><th>Wow</th><th>Effort</th></tr></thead><tbody id="cmp"></tbody></table></div>
+  <h2>All sixteen side by side</h2>
+  <p>Scores are 1 to 5. Simple means a first-time, older user can finish the task alone. Pro look is how polished and grown-up it feels. Game feel is how much play and reward it has. Effort is build cost for your team; lower is cheaper. Select a row to view that style.</p>
+  <div class="x-tbl-wrap"><table><thead><tr><th>Style</th><th>Big idea</th><th>Simple</th><th>Fun</th><th>Wow</th><th>Pro look</th><th>Game feel</th><th>Effort</th></tr></thead><tbody id="cmp"></tbody></table></div>
 </section>
-<p class="x-foot">Mockups only. Photos are drawn shapes, not real images. Every style uses the same files and numbers: a 4.8 MB HEIC portrait shrunk to 196 KB, a mountain photo cropped to 1080 × 1350, a city photo taken in Pune, and a 3-second beach clip made into a 2.1 MB GIF.</p>
+<p class="x-foot">Mockups only. Photos are drawn shapes, not real images. Round 2 styles can use different progress bars for the same job; press Shuffle bars to see another set. Every style uses the same files and numbers: a 4.8 MB HEIC portrait shrunk to 196 KB, a mountain photo cropped to 1080 × 1350, a city photo taken in Pune, and a 3-second beach clip made into a 2.1 MB GIF.</p>
 
 <script>
 /*@@ENGINE@@*/
@@ -251,7 +253,13 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-i
   const fmt = x => { const m = Math.floor(x / 60), s = x - m * 60; return m + ':' + (s < 10 ? '0' : '') + s.toFixed(1); };
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-  S.forEach((d, i) => { const o = document.createElement('option'); o.value = d.id; o.textContent = (i + 1) + ' · ' + d.name; sel.appendChild(o); });
+  const ROUNDS = { 1: 'Round 1 · First eight directions', 2: 'Round 2 · Gamified, with a character' };
+  const groups = {};
+  S.forEach((d, i) => {
+    const r = d.round || 1;
+    if (!groups[r]) { const g = document.createElement('optgroup'); g.label = ROUNDS[r] || ('Round ' + r); sel.appendChild(g); groups[r] = g; }
+    const o = document.createElement('option'); o.value = d.id; o.textContent = (i + 1) + ' · ' + d.name; groups[r].appendChild(o);
+  });
 
   // timeline ticks + chapters
   const ticks = $('#ticks'), chapters = $('#chapters');
@@ -270,18 +278,25 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-i
     const d = S[si];
     const notes = ISK.SCENES.map(s => `<li data-t="${s.t}"><b>${fmt(s.t).replace('.0', '')}</b><span><strong>${esc(s.label)}</strong>${esc((d.notes || {})[s.id] || '')}</span></li>`).join('');
     $('#info').innerHTML = `
-      <div><p class="x-eyebrow">Style ${si + 1} of ${S.length}</p><h2>${esc(d.name)}</h2><p class="x-tagline">${esc(d.tagline)}</p></div>
+      <div><p class="x-eyebrow">Style ${si + 1} of ${S.length} · Round ${d.round || 1}</p><h2>${esc(d.name)}</h2><p class="x-tagline">${esc(d.tagline)}</p></div>
       <p class="x-concept">${esc(d.concept)}</p>
       <div><h3>Why it could win</h3><ul>${(d.wins || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
       <div><h3>Watch out for</h3><ul>${(d.risks || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
-      <div><h3>Scores</h3><dl class="x-scores"><dt>Simple</dt>${score(d.scores.simple)}<dt>Fun</dt>${score(d.scores.fun)}<dt>Wow</dt>${score(d.scores.wow)}<dt>Build effort</dt>${score(d.scores.effort, true)}</dl></div>
-      <div class="x-look"><h3>Look and motion</h3><div class="x-sw">${(d.palette || []).map(c => `<i style="background:${c}" title="${c}"></i>`).join('')}</div><p><b>Type:</b> ${esc(d.type || '')}</p><p><b>Motion:</b> ${esc(d.motion || '')}</p></div>
+      <div><h3>Scores</h3><dl class="x-scores"><dt>Simple</dt>${score(d.scores.simple)}<dt>Fun</dt>${score(d.scores.fun)}<dt>Wow</dt>${score(d.scores.wow)}${d.scores.pro ? `<dt>Pro look</dt>${score(d.scores.pro)}` : ''}${d.scores.game ? `<dt>Game feel</dt>${score(d.scores.game)}` : ''}<dt>Build effort</dt>${score(d.scores.effort, true)}</dl></div>
+      <div class="x-look"><h3>Look and motion</h3><div class="x-sw">${(d.palette || []).map(c => `<i style="background:${c}" title="${c}"></i>`).join('')}</div><p><b>Type:</b> ${esc(d.type || '')}</p><p><b>Motion:</b> ${esc(d.motion || '')}</p>${(d.extras || []).map(x => `<p><b>${esc(x[0])}:</b> ${esc(x[1])}</p>`).join('')}</div>
       <div><h3>Scene notes</h3><ul class="x-notes" id="notes">${notes}</ul></div>`;
     $('#notes').querySelectorAll('li').forEach(li => li.addEventListener('click', () => { t = +li.dataset.t + 0.01; render(); }));
-    document.querySelectorAll('#cmp tr').forEach((tr, i) => tr.classList.toggle('is-on', i === si));
+    document.querySelectorAll('#cmp tr[data-i]').forEach(tr => tr.classList.toggle('is-on', +tr.dataset.i === si));
   }
-  $('#cmp').innerHTML = S.map((d, i) => `<tr data-i="${i}"><td><strong>${i + 1} · ${esc(d.name)}</strong></td><td>${esc(d.tagline)}</td><td class="x-num">${d.scores.simple}/5</td><td class="x-num">${d.scores.fun}/5</td><td class="x-num">${d.scores.wow}/5</td><td class="x-num">${d.scores.effort}/5</td></tr>`).join('');
-  document.querySelectorAll('#cmp tr').forEach(tr => tr.addEventListener('click', () => { setStyle(+tr.dataset.i); stage.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' }); }));
+  { let lastR = 0, rows = '';
+    S.forEach((d, i) => {
+      const r = d.round || 1;
+      if (r !== lastR) { rows += `<tr class="x-grp"><td colspan="8">${esc(ROUNDS[r] || 'Round ' + r)}</td></tr>`; lastR = r; }
+      const sc = d.scores, v = k => sc[k] ? sc[k] + '/5' : '–';
+      rows += `<tr data-i="${i}"><td><strong>${i + 1} · ${esc(d.name)}</strong></td><td>${esc(d.tagline)}</td><td class="x-num">${v('simple')}</td><td class="x-num">${v('fun')}</td><td class="x-num">${v('wow')}</td><td class="x-num">${v('pro')}</td><td class="x-num">${v('game')}</td><td class="x-num">${v('effort')}</td></tr>`;
+    });
+    $('#cmp').innerHTML = rows; }
+  document.querySelectorAll('#cmp tr[data-i]').forEach(tr => tr.addEventListener('click', () => { setStyle(+tr.dataset.i); stage.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' }); }));
 
   function doFit() {
     const nw = mode === 'app' ? 414 : 1280, nh = mode === 'app' ? 868 : 800;
@@ -324,6 +339,7 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-i
   $('#mode-app').addEventListener('click', () => setMode('app'));
   $('#mode-web').addEventListener('click', () => setMode('web'));
   playBtn.addEventListener('click', () => setPlay(!playing));
+  $('#shuffle').addEventListener('click', () => { ISK.variant++; rebuild(); });
   $('#speed').addEventListener('change', e => { speed = +e.target.value; });
   $('#loop').addEventListener('click', e => { looping = !looping; e.currentTarget.setAttribute('aria-pressed', looping); });
   scrub.addEventListener('pointerdown', () => { wasPlaying = playing; setPlay(false); });

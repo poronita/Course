@@ -6,7 +6,7 @@
 <title>Swiss Knife Style Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Dela+Gothic+One&family=Familjen+Grotesk:wght@400..700&family=Fredoka:wght@400..700&family=Hanken+Grotesk:wght@400..800&family=JetBrains+Mono:wght@400;600&family=Lexend:wght@300..700&family=Manrope:wght@400..800&family=Rubik:wght@400..800&family=Unbounded:wght@400..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Dela+Gothic+One&family=Familjen+Grotesk:wght@400..700&family=Fredoka:wght@400..700&family=Hanken+Grotesk:wght@400..800&family=JetBrains+Mono:wght@400;600&family=Lexend:wght@300..700&family=Manrope:wght@400..800&family=Rubik:wght@400..800&family=Unbounded:wght@400..800&family=Nunito:wght@400..900&family=Baloo+2:wght@400..800&family=Sora:wght@300..800&family=Outfit:wght@300..800&family=Plus+Jakarta+Sans:wght@400..800&family=Chakra+Petch:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400..800&family=Shippori+Mincho:wght@500;700;800&family=Exo+2:wght@400..800&display=swap">
 <style>
 /* Layout: a workshop bench. Header of controls, the device on a dotted
    cutting mat, a scrubbable timeline under it, and the spec sheet beside it. */
@@ -159,8 +159,9 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-i
 .x-compare th,.x-compare td{text-align:left;padding:10px 10px;border-top:1px solid var(--line);vertical-align:top}
 .x-compare th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-top:0}
 .x-compare td.x-num{font:600 13px/1.4 var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
-.x-compare tbody tr{cursor:pointer}
-.x-compare tbody tr:hover td{background:var(--chip)}
+.x-compare tbody tr:not(.x-grp){cursor:pointer}
+.x-compare tr.x-grp td{font:700 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--chip);cursor:default;padding-block:8px}
+.x-compare tbody tr:not(.x-grp):hover td{background:var(--chip)}
 .x-compare tbody tr.is-on td{background:var(--chip)}
 .x-compare tbody tr.is-on td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
 .x-foot{max-width:1440px;margin:14px auto 0;color:var(--muted);font-size:13px}
@@ -175,7 +176,7 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-i
 <header class="x-top">
   <div class="x-brand">
     <div class="x-brand-mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 15.5h13a4 4 0 0 0 0-8H9"/><path d="M9 7.5L19.5 3"/><circle cx="6.5" cy="15.5" r="1" fill="currentColor"/></svg></div>
-    <div><h1>Swiss Knife Style Lab</h1><p>Eight directions for Image Swiss Knife. The same 40-second story is told in each one.</p></div>
+    <div><h1>Swiss Knife Style Lab</h1><p>Sixteen directions for Image Swiss Knife in two rounds. The same 40-second story is told in each one.</p></div>
   </div>
   <div class="x-ctl">
     <label class="x-lbl" for="style-select">Style</label>
@@ -219,6 +220,7 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-i
           <label class="x-lbl" for="speed">Speed</label>
           <select class="x-small-sel" id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select>
           <button class="x-tog" id="loop" aria-pressed="true">Loop</button>
+          <button class="x-tog" id="shuffle" title="Pick a different set of progress bars for the same processes">Shuffle bars</button>
         </div>
       </div>
       <div class="x-chapters" id="chapters"></div>
@@ -230,11 +232,11 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding-i
 </main>
 
 <section class="x-compare" aria-label="Compare all styles">
-  <h2>All eight side by side</h2>
-  <p>Scores are 1 to 5. Simple means a first-time, older user can finish the task alone. Effort is build cost for your team; lower is cheaper. Select a row to view that style.</p>
-  <div class="x-tbl-wrap"><table><thead><tr><th>Style</th><th>Big idea</th><th>Simple</th><th>Fun</th><th>Wow</th><th>Effort</th></tr></thead><tbody id="cmp"></tbody></table></div>
+  <h2>All sixteen side by side</h2>
+  <p>Scores are 1 to 5. Simple means a first-time, older user can finish the task alone. Pro look is how polished and grown-up it feels. Game feel is how much play and reward it has. Effort is build cost for your team; lower is cheaper. Select a row to view that style.</p>
+  <div class="x-tbl-wrap"><table><thead><tr><th>Style</th><th>Big idea</th><th>Simple</th><th>Fun</th><th>Wow</th><th>Pro look</th><th>Game feel</th><th>Effort</th></tr></thead><tbody id="cmp"></tbody></table></div>
 </section>
-<p class="x-foot">Mockups only. Photos are drawn shapes, not real images. Every style uses the same files and numbers: a 4.8 MB HEIC portrait shrunk to 196 KB, a mountain photo cropped to 1080 × 1350, a city photo taken in Pune, and a 3-second beach clip made into a 2.1 MB GIF.</p>
+<p class="x-foot">Mockups only. Photos are drawn shapes, not real images. Round 2 styles can use different progress bars for the same job; press Shuffle bars to see another set. Every style uses the same files and numbers: a 4.8 MB HEIC portrait shrunk to 196 KB, a mountain photo cropped to 1080 × 1350, a city photo taken in Pune, and a 3-second beach clip made into a 2.1 MB GIF.</p>
 
 <script>
 /* ==========================================================================
@@ -476,19 +478,29 @@ ${b}${w}<rect y="760" width="1200" height="140" fill="#11132a"/><path d="M0 800h
   /* --------------------------------------------------------- confetti etc */
   function makeConfetti(parent, opt = {}) {
     const n = opt.count ?? 60, colors = opt.colors ?? ['#ff5a5f', '#ffcf3f', '#2bc48a', '#3d8bff', '#b36bff'];
-    const ox = opt.x ?? 0, oy = opt.y ?? 0, dur = opt.dur ?? 2.6, g = opt.gravity ?? 900;
+    const ox = opt.x ?? 0, oy = opt.y ?? 0, dur = opt.dur ?? 2.6, g = opt.gravity ?? 900, kind = opt.shape || 'rect';
     const r = rng(opt.seed ?? 11);
     const box = el('div', 'isk-confetti', parent);
     const parts = [];
+    const STAR = 'polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)';
+    const HEART = "path('M6 11C-4 4 2 -2 6 2C10 -2 16 4 6 11Z')";
     for (let i = 0; i < n; i++) {
-      const p = el('i', '', box);
-      p.style.background = colors[i % colors.length];
+      const p = el('i', '', box), col = colors[i % colors.length];
+      p.style.background = col;
       const a = (opt.spread ?? Math.PI * 0.9) * (r() - 0.5) - Math.PI / 2, v = (opt.power ?? 650) * (0.45 + r() * 0.75);
       const shape = r();
-      p.style.width = (shape > 0.5 ? 8 : 6) + 'px';
-      p.style.height = (shape > 0.5 ? 12 : 6) + 'px';
-      if (shape < 0.25) p.style.borderRadius = '50%';
-      parts.push({ p, vx: Math.cos(a) * v, vy: Math.sin(a) * v, vr: (r() - 0.5) * 900 });
+      if (kind === 'star') { const s = 9 + r() * 8; p.style.width = p.style.height = s + 'px'; p.style.clipPath = STAR; }
+      else if (kind === 'ring') { const s = 8 + r() * 8; p.style.width = p.style.height = s + 'px'; p.style.background = 'transparent'; p.style.border = `2px solid ${col}`; p.style.borderRadius = '50%'; }
+      else if (kind === 'coin') { p.style.width = p.style.height = '13px'; p.style.borderRadius = '50%'; p.style.background = `radial-gradient(circle at 35% 30%,#fff7b8,${col} 55%,rgba(0,0,0,.28))`; }
+      else if (kind === 'heart') { p.style.width = p.style.height = '12px'; p.style.clipPath = HEART; }
+      else if (kind === 'petal') { p.style.width = '8px'; p.style.height = '13px'; p.style.borderRadius = '0 100% 0 100%'; }
+      else if (kind === 'spark') { p.style.width = '2px'; p.style.height = (8 + r() * 10) + 'px'; p.style.borderRadius = '2px'; }
+      else {
+        p.style.width = (shape > 0.5 ? 8 : 6) + 'px';
+        p.style.height = (shape > 0.5 ? 12 : 6) + 'px';
+        if (shape < 0.25) p.style.borderRadius = '50%';
+      }
+      parts.push({ p, vx: Math.cos(a) * v, vy: Math.sin(a) * v, vr: (r() - 0.5) * (kind === 'spark' ? 0 : 900), a });
     }
     return {
       el: box,
@@ -500,7 +512,8 @@ ${b}${w}<rect y="760" width="1200" height="140" fill="#11132a"/><path d="M0 800h
         const fade = 1 - seg(dt, dur * 0.65, dur);
         for (const q of parts) {
           const x = ox + q.vx * dt, y = oy + q.vy * dt + 0.5 * g * dt * dt;
-          q.p.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px) rotate(${(q.vr * dt).toFixed(0)}deg)`;
+          const rot = kind === 'spark' ? (Math.atan2(q.vy + g * dt, q.vx) * 180 / Math.PI + 90) : q.vr * dt;
+          q.p.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px) rotate(${rot.toFixed(0)}deg)`;
           q.p.style.opacity = fade.toFixed(2);
         }
       },
@@ -534,63 +547,257 @@ ${b}${w}<rect y="760" width="1200" height="140" fill="#11132a"/><path d="M0 800h
       if (pos) { pos = { x: pos.x + (k.dx || 0), y: pos.y + (k.dy || 0) }; cache.set(i, pos); }
       return pos || cache.get(i) || { x: ctx.W / 2, y: ctx.H * 0.7 };
     };
-    return {
-      update(t) {
-        if (!keys.length) return;
-        const first = keys[0], last = keys[keys.length - 1];
-        const vis = win(t, first.t - 0.7, last.t + (last.hold || 0) + 0.9, 0.3, 0.4);
-        p.style.opacity = vis.toFixed(3);
-        p.style.display = vis <= 0.001 ? 'none' : '';
-        if (vis <= 0.001) return;
-        let pos, pressed = false;
-        if (t <= first.t) {
-          const a = resolve(first, 0);
-          const q = ease.out(seg(t, first.t - 0.7, first.t - 0.1));
-          pos = { x: a.x + (1 - q) * 40, y: a.y + (1 - q) * 70 };
-        } else {
-          let i = 0;
-          while (i < keys.length - 1 && t >= keys[i + 1].t) i++;
-          if (i >= keys.length - 1) pos = resolve(last, keys.length - 1);
-          else {
-            const a = keys[i], b = keys[i + 1];
-            const depart = a.t + (a.hold || 0) + 0.12;
-            const st = Math.max(depart, b.t - (b.move ?? 0.75));
-            if (b.t - depart > 2.2 && !b.drag) {
-              /* Long idle gap: lift the finger away, then bring it back near the next target. */
-              const out = seg(t, depart + 0.25, depart + 0.55), back = seg(t, b.t - 0.75, b.t - 0.45);
-              const fade = Math.max(1 - out, back);
-              p.style.opacity = (vis * fade).toFixed(3);
-              if (t < b.t - 0.75) { pos = resolve(a, i); }
-              else {
-                const B = resolve(b, i + 1), q = ease.out(seg(t, b.t - 0.75, b.t - 0.1));
-                pos = { x: B.x + (1 - q) * 40, y: B.y + (1 - q) * 70 };
-              }
-            } else {
-              const q = ease.inOut(seg(t, st, b.t));
-              const A = resolve(a, i), B = resolve(b, i + 1);
-              pos = { x: lerp(A.x, B.x, q), y: lerp(A.y, B.y, q) };
-              if (b.drag && t >= st - 0.08) pressed = true;
+    /* Pure position of the pointer at time t: { x, y, vis (0..1), down (bool), ripQ (-1 or 0..1) }. */
+    const locate = t => {
+      if (!keys.length) return { x: ctx.W / 2, y: ctx.H / 2, vis: 0, down: false, ripQ: -1 };
+      const first = keys[0], last = keys[keys.length - 1];
+      let vis = win(t, first.t - 0.7, last.t + (last.hold || 0) + 0.9, 0.3, 0.4);
+      let pos, pressed = false;
+      if (t <= first.t) {
+        const a = resolve(first, 0);
+        const q = ease.out(seg(t, first.t - 0.7, first.t - 0.1));
+        pos = { x: a.x + (1 - q) * 40, y: a.y + (1 - q) * 70 };
+      } else {
+        let i = 0;
+        while (i < keys.length - 1 && t >= keys[i + 1].t) i++;
+        if (i >= keys.length - 1) pos = resolve(last, keys.length - 1);
+        else {
+          const a = keys[i], b = keys[i + 1];
+          const depart = a.t + (a.hold || 0) + 0.12;
+          const st = Math.max(depart, b.t - (b.move ?? 0.75));
+          if (b.t - depart > 2.2 && !b.drag) {
+            /* Long idle gap: lift the finger away, then bring it back near the next target. */
+            const out = seg(t, depart + 0.25, depart + 0.55), back = seg(t, b.t - 0.75, b.t - 0.45);
+            vis *= Math.max(1 - out, back);
+            if (t < b.t - 0.75) pos = resolve(a, i);
+            else {
+              const B = resolve(b, i + 1), q = ease.out(seg(t, b.t - 0.75, b.t - 0.1));
+              pos = { x: B.x + (1 - q) * 40, y: B.y + (1 - q) * 70 };
             }
+          } else {
+            const q = ease.inOut(seg(t, st, b.t));
+            const A = resolve(a, i), B = resolve(b, i + 1);
+            pos = { x: lerp(A.x, B.x, q), y: lerp(A.y, B.y, q) };
+            if (b.drag && t >= st - 0.08) pressed = true;
           }
         }
-        let ripQ = -1;
-        keys.forEach(k => {
-          if ((k.tap || k.hold || k.drag) && t >= k.t - 0.08 && t <= k.t + Math.max(0.16, k.hold || 0)) pressed = true;
-          if (k.tap && t >= k.t && t <= k.t + 0.55) ripQ = seg(t, k.t, k.t + 0.55);
-        });
-        p.style.transform = `translate(${pos.x.toFixed(1)}px,${pos.y.toFixed(1)}px)`;
-        p.classList.toggle('is-down', pressed);
-        if (ripQ >= 0) { rip.style.opacity = (1 - ripQ).toFixed(2); rip.style.transform = `translate(-50%,-50%) scale(${(0.3 + ripQ * 1.7).toFixed(2)})`; }
+      }
+      let ripQ = -1;
+      keys.forEach(k => {
+        if ((k.tap || k.hold || k.drag) && t >= k.t - 0.08 && t <= k.t + Math.max(0.16, k.hold || 0)) pressed = true;
+        if (k.tap && t >= k.t && t <= k.t + 0.55) ripQ = seg(t, k.t, k.t + 0.55);
+      });
+      return { x: pos.x, y: pos.y, vis, down: pressed, ripQ };
+    };
+    return {
+      locate,
+      update(t) {
+        if (!keys.length) return;
+        const s = locate(t);
+        p.style.opacity = s.vis.toFixed(3);
+        p.style.display = s.vis <= 0.001 ? 'none' : '';
+        if (s.vis <= 0.001) return;
+        p.style.transform = `translate(${s.x.toFixed(1)}px,${s.y.toFixed(1)}px)`;
+        p.classList.toggle('is-down', s.down);
+        if (s.ripQ >= 0) { rip.style.opacity = (1 - s.ripQ).toFixed(2); rip.style.transform = `translate(-50%,-50%) scale(${(0.3 + s.ripQ * 1.7).toFixed(2)})`; }
         else rip.style.opacity = '0';
       },
     };
   }
 
+  /* ===================================================================
+     Round-2 toolkit: progress bars, screen transitions, "alive" helper.
+     Everything is a pure function of its inputs (so scrubbing is exact).
+     =================================================================== */
+  const TAU = Math.PI * 2;
+  /* Front-loaded easing: the bar jumps ahead early, so a wait feels shorter. */
+  const rush = p => 1 - Math.pow(1 - clamp(p), 2.3);
+  const hexA = (hex, a) => { let h = String(hex).replace('#', ''); if (h.length === 3) h = h.replace(/./g, c => c + c); const n = parseInt(h.slice(0, 6), 16); return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`; };
+  const rrPath = (c, x, y, w, h, r) => { r = Math.max(0, Math.min(r, w / 2, h / 2)); c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); };
+  const BAR_KINDS = ['streams', 'liquid', 'orbit', 'tiles', 'comet', 'warp'];
+
+  const DRAW = {
+    /* Several mini bars race at different speeds, then merge into one bar. */
+    streams(c, w, h, p, t, cols, bg, o) {
+      const n = o.lanes ?? 5, gap = Math.max(2, h * 0.05), rh = (h - gap * (n - 1)) / n, r = rng((o.seed ?? 3) * 7 + 1);
+      const conv = ease.inOut(seg(p, 0.74, 0.96));
+      const lanes = [];
+      for (let i = 0; i < n; i++) lanes.push({ den: 0.55 + r() * 0.45, ph: r() });
+      c.fillStyle = bg; rrPath(c, 0, 0, w, h, Math.min(h / 2, 8)); c.fill();
+      lanes.forEach((L, i) => {
+        const f = ease.out(clamp(seg(p, 0, 0.8) / L.den));
+        const y = lerp(i * (rh + gap), 0, conv), hh = lerp(rh, h, conv), fw = Math.max(0, w * f);
+        if (fw < 1) return;
+        const g = c.createLinearGradient(0, 0, w, 0); g.addColorStop(0, cols[0]); g.addColorStop(1, cols[1] || cols[0]);
+        c.save(); rrPath(c, 0, y, fw, hh, Math.min(hh / 2, 8)); c.clip();
+        c.globalAlpha = lerp(0.95, 0.92, conv); c.fillStyle = g; c.fillRect(0, y, fw, hh);
+        const sx = ((t * 1.4 + L.ph) % 1.5 - 0.25) * w;
+        const sg = c.createLinearGradient(sx - 40, 0, sx + 40, 0); sg.addColorStop(0, 'rgba(255,255,255,0)'); sg.addColorStop(0.5, 'rgba(255,255,255,.55)'); sg.addColorStop(1, 'rgba(255,255,255,0)');
+        c.fillStyle = sg; c.fillRect(0, y, fw, hh);
+        c.restore();
+        if (f < 1) { c.fillStyle = '#fff'; c.globalAlpha = 0.9; c.beginPath(); c.arc(fw, y + hh / 2, Math.max(1.5, hh * 0.35), 0, TAU); c.fill(); c.globalAlpha = 1; }
+      });
+    },
+    /* Wavy liquid fills a tube; bubbles rise. */
+    liquid(c, w, h, p, t, cols, bg, o) {
+      c.fillStyle = bg; rrPath(c, 0, 0, w, h, h / 2); c.fill();
+      c.save(); rrPath(c, 0, 0, w, h, h / 2); c.clip();
+      const amp = Math.min(6, h * 0.16) * seg(p, 0, 0.06), fw = rush(p) * (w + amp * 2);
+      const g = c.createLinearGradient(0, 0, w, 0); g.addColorStop(0, cols[0]); g.addColorStop(1, cols[1] || cols[0]);
+      const wave = (off, a) => { c.beginPath(); c.moveTo(0, 0); for (let y = 0; y <= h; y += 2) c.lineTo(fw - amp + Math.sin(y * 0.45 - t * 7 + off) * a, y); c.lineTo(0, h); c.closePath(); };
+      c.globalAlpha = 0.45; c.fillStyle = cols[2] || cols[0]; wave(1.7, amp * 1.2); c.fill();
+      c.globalAlpha = 1; c.fillStyle = g; wave(0, amp); c.fill();
+      const r = rng((o.seed ?? 3) * 5 + 2);
+      for (let i = 0; i < 9; i++) {
+        const bx = r() * Math.max(1, fw - 8), sp = 0.3 + r() * 0.5, ph = r(), rad = 1.2 + r() * 2.2;
+        const by = h - ((t * sp + ph) % 1) * h;
+        if (bx < fw - 4) { c.globalAlpha = 0.55; c.fillStyle = '#fff'; c.beginPath(); c.arc(bx, by, rad, 0, TAU); c.fill(); }
+      }
+      c.globalAlpha = 0.28; c.fillStyle = '#fff'; c.fillRect(0, h * 0.14, Math.max(0, fw - amp), h * 0.2);
+      c.restore(); c.globalAlpha = 1;
+    },
+    /* Particles spiral into a glowing core while a ring fills. Use a roughly square area. */
+    orbit(c, w, h, p, t, cols, bg, o) {
+      const cx = w / 2, cy = h / 2, R = Math.min(w, h) / 2 - 6, f = rush(p), r0 = R * (0.26 + 0.14 * f);
+      c.lineWidth = Math.max(3, R * 0.1); c.lineCap = 'round';
+      c.strokeStyle = bg; c.beginPath(); c.arc(cx, cy, R, 0, TAU); c.stroke();
+      const g = c.createLinearGradient(0, 0, w, h); g.addColorStop(0, cols[0]); g.addColorStop(1, cols[1] || cols[0]);
+      c.strokeStyle = g; c.beginPath(); c.arc(cx, cy, R, -Math.PI / 2, -Math.PI / 2 + f * TAU); c.stroke();
+      const r = rng((o.seed ?? 3) * 5 + 2), N = 44, fade = 1 - seg(p, 0.94, 1);
+      for (let i = 0; i < N; i++) {
+        const a0 = r() * TAU, sp = 0.6 + r() * 0.9, dir = i % 2 ? 1 : -1;
+        const u = (t * sp * 0.55 + i / N) % 1, rad = lerp(R * 1.12, r0, u * u), a = a0 + dir * u * 3.4;
+        c.globalAlpha = Math.sin(u * Math.PI) * 0.95 * fade; c.fillStyle = cols[i % cols.length];
+        c.beginPath(); c.arc(cx + Math.cos(a) * rad, cy + Math.sin(a) * rad, 0.9 + (1 - u) * 2.2, 0, TAU); c.fill();
+      }
+      c.globalAlpha = 1;
+      const pulse = 1 + 0.07 * Math.sin(t * 9), rg = c.createRadialGradient(cx, cy, 0, cx, cy, r0 * 1.7 * pulse);
+      rg.addColorStop(0, '#fff'); rg.addColorStop(0.35, cols[0]); rg.addColorStop(1, hexA(cols[1] || cols[0], 0));
+      c.fillStyle = rg; c.beginPath(); c.arc(cx, cy, r0 * 1.7 * pulse, 0, TAU); c.fill();
+    },
+    /* A grid of tiles pops in scattered order, with a bright flash on the newest. */
+    tiles(c, w, h, p, t, cols, bg, o) {
+      const rows = h < 40 ? 2 : h < 70 ? 3 : 4, cell = h / rows, gap = Math.max(1.5, cell * 0.14), nc = Math.floor(w / cell), N = rows * nc, ox = (w - nc * cell) / 2;
+      const r = rng((o.seed ?? 3) * 11 + 5), ord = [...Array(N).keys()];
+      for (let i = N - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [ord[i], ord[j]] = [ord[j], ord[i]]; }
+      const rank = new Array(N); ord.forEach((idx, k) => { rank[idx] = k; });
+      const done = rush(p) * N;
+      for (let idx = 0; idx < N; idx++) {
+        const cx = idx % nc, cy = (idx / nc) | 0, x = ox + cx * cell + gap / 2, y = cy * cell + gap / 2, s = cell - gap, k = rank[idx];
+        c.fillStyle = bg; rrPath(c, x, y, s, s, s * 0.28); c.fill();
+        const f = clamp(done - k);
+        if (f <= 0) continue;
+        const sc = 0.35 + 0.65 * ease.outBack(f), ss = s * sc, fx = x + (s - ss) / 2, fy = y + (s - ss) / 2;
+        const m = cols.length > 1 ? cx / Math.max(1, nc - 1) * (cols.length - 1) : 0, i0 = Math.min(cols.length - 1, Math.floor(m));
+        c.fillStyle = cols[i0]; rrPath(c, fx, fy, ss, ss, ss * 0.28); c.fill();
+        const fl = clamp(1 - (done - k) / 3);
+        if (fl > 0) { c.fillStyle = `rgba(255,255,255,${(fl * 0.7).toFixed(2)})`; rrPath(c, fx, fy, ss, ss, ss * 0.28); c.fill(); }
+      }
+    },
+    /* Several comets race along a rail and all dive into the bright head. */
+    comet(c, w, h, p, t, cols, bg, o) {
+      const cy = h / 2, head = 4 + rush(p) * (w - 8), lw = Math.max(3, h * 0.18);
+      c.lineCap = 'round'; c.lineWidth = lw; c.strokeStyle = bg; c.beginPath(); c.moveTo(4, cy); c.lineTo(w - 4, cy); c.stroke();
+      const g = c.createLinearGradient(4, 0, Math.max(5, head), 0); g.addColorStop(0, hexA(cols[0], 0.9)); g.addColorStop(1, cols[1] || cols[0]);
+      c.strokeStyle = g; c.beginPath(); c.moveTo(4, cy); c.lineTo(head, cy); c.stroke();
+      const r = rng((o.seed ?? 3) * 3 + 9), K = 7, spread = 1 - seg(p, 0.8, 1);
+      for (let i = 0; i < K; i++) {
+        const sp = 0.9 + r() * 1.1, off = r(), tl = 30 + r() * 44, lane = (i - (K - 1) / 2) * h * 0.09 * spread;
+        const u = (t * sp * 0.6 + off) % 1, x = 4 + u * (head - 4), y = cy + lane;
+        const tg = c.createLinearGradient(x - tl, 0, x, 0); tg.addColorStop(0, hexA(cols[i % cols.length], 0)); tg.addColorStop(1, cols[i % cols.length]);
+        c.strokeStyle = tg; c.lineWidth = 1.6 + r() * 1.4; c.beginPath(); c.moveTo(Math.max(0, x - tl), y); c.lineTo(x, y); c.stroke();
+        c.fillStyle = '#fff'; c.beginPath(); c.arc(x, y, 2, 0, TAU); c.fill();
+      }
+      const rg = c.createRadialGradient(head, cy, 0, head, cy, h * 0.5); rg.addColorStop(0, '#fff'); rg.addColorStop(0.3, cols[1] || cols[0]); rg.addColorStop(1, hexA(cols[1] || cols[0], 0));
+      c.fillStyle = rg; c.beginPath(); c.arc(head, cy, h * 0.5, 0, TAU); c.fill();
+    },
+    /* Hyperspace: stars streak outward faster as progress grows; thin bar at the bottom. */
+    warp(c, w, h, p, t, cols, bg, o) {
+      c.save(); rrPath(c, 0, 0, w, h, Math.min(14, h / 4)); c.clip();
+      c.fillStyle = o.field || cols[3] || '#0a0d24'; c.fillRect(0, 0, w, h);
+      const cx = w / 2, cy = h / 2, sp = 0.5 + rush(p) * 3, maxR = Math.hypot(w, h) / 2, r = rng((o.seed ?? 3) * 13 + 4);
+      c.lineCap = 'round';
+      for (let i = 0; i < 90; i++) {
+        const a = r() * TAU, ph = r(), u = (ph + t * 0.3 * sp * (0.6 + r() * 0.8)) % 1, rad = Math.pow(u, 2.2) * maxR, tail = rad * (1 - Math.min(0.5, 0.05 + 0.09 * sp * u));
+        c.globalAlpha = Math.min(1, u * 1.6); c.strokeStyle = cols[i % 3]; c.lineWidth = 0.6 + u * 1.5;
+        c.beginPath(); c.moveTo(cx + Math.cos(a) * tail, cy + Math.sin(a) * tail); c.lineTo(cx + Math.cos(a) * rad, cy + Math.sin(a) * rad); c.stroke();
+      }
+      c.globalAlpha = 1; const th = 3; c.fillStyle = 'rgba(255,255,255,.18)'; c.fillRect(0, h - th, w, th);
+      const g = c.createLinearGradient(0, 0, w, 0); g.addColorStop(0, cols[0]); g.addColorStop(1, cols[1] || cols[0]); c.fillStyle = g; c.fillRect(0, h - th, w * rush(p), th);
+      c.restore();
+    },
+  };
+
+  /* Create a canvas progress bar. kind: streams | liquid | orbit | tiles | comet | warp.
+     opts: { w, h, colors: ['#hex', '#hex', '#hex', '#hexForWarpField'], track: 'rgba(..)', seed, lanes }
+     Returns { el, kind, update(p, t) } with p = 0..1 and t = timeline seconds. */
+  function makeBar(parent, kind, o = {}) {
+    const w = o.w ?? 300, h = o.h ?? 44, dpr = 2, cv = document.createElement('canvas');
+    cv.width = w * dpr; cv.height = h * dpr; cv.style.cssText = `width:${w}px;height:${h}px;display:block`; cv.className = 'isk-bar';
+    if (parent) parent.appendChild(cv);
+    const c = cv.getContext('2d'), cols = o.colors || ['#4f8cff', '#9b6bff', '#37d6c4'], bg = o.track ?? 'rgba(128,128,150,.2)', draw = DRAW[kind] || DRAW.streams;
+    return {
+      el: cv, kind,
+      update(p, t = 0) { c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, w, h); draw(c, w, h, clamp(p), t, cols, bg, o); },
+    };
+  }
+  /* n distinct bar kinds, in a repeatable order that changes when the viewer presses "Shuffle bars". */
+  const pickBars = (n, kinds = BAR_KINDS, seed = 1, variant = 0) => {
+    const a = kinds.slice(), r = rng((seed + variant * 977) * 31 + 7);
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a.slice(0, n);
+  };
+
+  /* Screen-change effects. reveal(el, kind, p, opts) shows el by p (0 hidden .. 1 fully shown).
+     Enter with p rising, exit by passing 1 - progress. opts: { W, H, cx, cy, dir, n, cols, ease }.
+     kinds: iris, wipe, curtain, blinds, pixels, diamond, zoom, flip, push, drop, fade. */
+  function reveal(e, kind, p, o = {}) {
+    if (!e) return;
+    p = clamp(p);
+    if (p <= 0.001) { e.style.visibility = 'hidden'; e.style.opacity = '0'; return; }
+    if (p >= 0.999 && kind !== 'drop' && kind !== 'zoom') { e.style.visibility = 'visible'; e.style.opacity = '1'; e.style.clipPath = 'none'; e.style.transform = 'none'; return; }
+    const W = o.W || 390, H = o.H || 844, q = (o.ease || ease.inOut)(p);
+    let clip = 'none', tr = 'none', op = 1;
+    switch (kind) {
+      case 'iris': clip = `circle(${(q * 150).toFixed(1)}% at ${o.cx ?? W / 2}px ${o.cy ?? H / 2}px)`; break;
+      case 'wipe': { const d = o.dir || 'l', v = ((1 - q) * 100).toFixed(1); clip = d === 'l' ? `inset(0 ${v}% 0 0)` : d === 'r' ? `inset(0 0 0 ${v}%)` : d === 'u' ? `inset(0 0 ${v}% 0)` : `inset(${v}% 0 0 0)`; break; }
+      case 'curtain': { const v = ((1 - q) * 50).toFixed(1); clip = `inset(0 ${v}% 0 ${v}%)`; break; }
+      case 'blinds': { const n = o.n || 8, sw = W / n; let d = ''; for (let i = 0; i < n; i++) d += `M${(i * sw).toFixed(1)} 0h${(sw * q).toFixed(1)}v${H}h${(-sw * q).toFixed(1)}Z`; clip = `path('${d}')`; break; }
+      case 'pixels': {
+        const cn = o.n || 6, cw = W / cn, rn = Math.ceil(H / cw), rr = rng(5); let d = '';
+        for (let j = 0; j < rn; j++) for (let i = 0; i < cn; i++) {
+          const delay = (i / cn + j / rn) * 0.5 * 0.7 + rr() * 0.3, s = clamp((q * 1.3 - delay) / 0.3); if (s <= 0) continue;
+          const sz = cw * s, x = i * cw + (cw - sz) / 2, y = j * cw + (cw - sz) / 2; d += `M${x.toFixed(1)} ${y.toFixed(1)}h${sz.toFixed(1)}v${sz.toFixed(1)}h${(-sz).toFixed(1)}Z`;
+        }
+        clip = d ? `path('${d}')` : 'inset(50%)'; break;
+      }
+      case 'diamond': { const k = q * (W + H) * 0.6, cx = o.cx ?? W / 2, cy = o.cy ?? H / 2; clip = `polygon(${cx}px ${cy - k}px,${cx + k}px ${cy}px,${cx}px ${cy + k}px,${cx - k}px ${cy}px)`; break; }
+      case 'zoom': tr = `scale(${(0.82 + 0.18 * q).toFixed(4)})`; op = q; break;
+      case 'flip': tr = `perspective(1100px) rotateY(${((1 - q) * -75).toFixed(1)}deg)`; op = clamp(q * 1.6); break;
+      case 'push': { const d = o.dir || 'r', m = (1 - q) * (d === 'l' || d === 'r' ? W : H) * 0.45 * (d === 'r' || d === 'd' ? 1 : -1); tr = d === 'l' || d === 'r' ? `translateX(${m.toFixed(1)}px)` : `translateY(${m.toFixed(1)}px)`; op = clamp(q * 1.5); break; }
+      case 'drop': tr = `translateY(${((1 - ease.outBack(p)) * -H * 0.35).toFixed(1)}px)`; op = clamp(p * 3); break;
+      default: op = q;
+    }
+    e.style.visibility = 'visible'; e.style.opacity = op.toFixed(3); e.style.clipPath = clip; e.style.transform = tr;
+  }
+
+  /* Idle life for a character: blink (0 open .. 1 closed), breathe/sway/bob/look in -1..1. Pure in t. */
+  const lifeCache = new Map();
+  function life(t, seed = 1) {
+    let L = lifeCache.get(seed);
+    if (!L) { const r = rng(seed * 101 + 7), b = []; let x = 1.1 + r() * 1.2; while (x < 42) { b.push(x); if (r() < 0.25) b.push(x + 0.28); x += 2.2 + r() * 2.8; } L = b; lifeCache.set(seed, L); }
+    let blink = 0;
+    for (const bt of L) { const d = t - bt; if (d >= 0 && d < 0.16) { blink = 1 - Math.abs(d - 0.08) / 0.08; break; } }
+    return { blink, breathe: Math.sin(t * 2.2 + seed), sway: Math.sin(t * 0.8 + seed * 1.7), bob: Math.sin(t * 3.1 + seed * 0.4), look: Math.sin(t * 0.55 + seed) * 0.6 };
+  }
+
   /* -------------------------------------------------------------- registry */
   const styles = [];
+  const pub = { DUR, SCENES, DATA, styles, variant: 0, register: null, mount: null, sceneAt, icon, photo, clamp, seg, ease };
   const register = def => { styles.push(def); styles.sort((a, b) => (a.order ?? 99) - (b.order ?? 99)); };
 
   /* Build a style into a host element. Returns { update(t), screen, def }. */
+  pub.register = register;
   function mount(def, mode, host) {
     host.innerHTML = '';
     const W = mode === 'app' ? 390 : 1280, H = mode === 'app' ? 844 : 756;
@@ -613,6 +820,13 @@ ${b}${w}<rect y="760" width="1200" height="140" fill="#11132a"/><path d="M0 800h
       /* Toggle class `on` while t is inside a short window around a tap at tapT (button press look). */
       press(e, t, tapT, name = 'is-pressed') { if (e) e.classList.toggle(name, t >= tapT - 0.06 && t <= tapT + 0.2); },
       confetti(parent, opt) { return makeConfetti(parent, opt); },
+      /* Round-2 toolkit (see CONTRACT.md). */
+      variant: pub.variant, BAR_KINDS, rush, hexA, life,
+      bar(parent, kind, o) { return makeBar(parent, kind, o); },
+      bars(n, kinds, seed) { return pickBars(n, kinds, seed, pub.variant); },
+      reveal(e, kind, p, o) { reveal(e, kind, p, Object.assign({ W, H }, o)); },
+      /* Pure pointer state at time t: { x, y, vis, down, ripQ } (screen px). */
+      pointerAt(t) { return ptrs.length ? ptrs[0].locate(t) : { x: W / 2, y: H / 2, vis: 0, down: false, ripQ: -1 }; },
       /* Run fn(t) after the style's update (for anything that reads layout). */
       after(fn) { hooks.push(fn); },
     };
@@ -630,7 +844,8 @@ ${b}${w}<rect y="760" width="1200" height="140" fill="#11132a"/><path d="M0 800h
     };
   }
 
-  return { DUR, SCENES, DATA, styles, register, mount, sceneAt, icon, photo, clamp, seg, ease };
+  pub.mount = mount;
+  return pub;
 })();
 
 </script>
@@ -5754,7 +5969,13 @@ ISK.register({
   const fmt = x => { const m = Math.floor(x / 60), s = x - m * 60; return m + ':' + (s < 10 ? '0' : '') + s.toFixed(1); };
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-  S.forEach((d, i) => { const o = document.createElement('option'); o.value = d.id; o.textContent = (i + 1) + ' · ' + d.name; sel.appendChild(o); });
+  const ROUNDS = { 1: 'Round 1 · First eight directions', 2: 'Round 2 · Gamified, with a character' };
+  const groups = {};
+  S.forEach((d, i) => {
+    const r = d.round || 1;
+    if (!groups[r]) { const g = document.createElement('optgroup'); g.label = ROUNDS[r] || ('Round ' + r); sel.appendChild(g); groups[r] = g; }
+    const o = document.createElement('option'); o.value = d.id; o.textContent = (i + 1) + ' · ' + d.name; groups[r].appendChild(o);
+  });
 
   // timeline ticks + chapters
   const ticks = $('#ticks'), chapters = $('#chapters');
@@ -5773,18 +5994,25 @@ ISK.register({
     const d = S[si];
     const notes = ISK.SCENES.map(s => `<li data-t="${s.t}"><b>${fmt(s.t).replace('.0', '')}</b><span><strong>${esc(s.label)}</strong>${esc((d.notes || {})[s.id] || '')}</span></li>`).join('');
     $('#info').innerHTML = `
-      <div><p class="x-eyebrow">Style ${si + 1} of ${S.length}</p><h2>${esc(d.name)}</h2><p class="x-tagline">${esc(d.tagline)}</p></div>
+      <div><p class="x-eyebrow">Style ${si + 1} of ${S.length} · Round ${d.round || 1}</p><h2>${esc(d.name)}</h2><p class="x-tagline">${esc(d.tagline)}</p></div>
       <p class="x-concept">${esc(d.concept)}</p>
       <div><h3>Why it could win</h3><ul>${(d.wins || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
       <div><h3>Watch out for</h3><ul>${(d.risks || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
-      <div><h3>Scores</h3><dl class="x-scores"><dt>Simple</dt>${score(d.scores.simple)}<dt>Fun</dt>${score(d.scores.fun)}<dt>Wow</dt>${score(d.scores.wow)}<dt>Build effort</dt>${score(d.scores.effort, true)}</dl></div>
-      <div class="x-look"><h3>Look and motion</h3><div class="x-sw">${(d.palette || []).map(c => `<i style="background:${c}" title="${c}"></i>`).join('')}</div><p><b>Type:</b> ${esc(d.type || '')}</p><p><b>Motion:</b> ${esc(d.motion || '')}</p></div>
+      <div><h3>Scores</h3><dl class="x-scores"><dt>Simple</dt>${score(d.scores.simple)}<dt>Fun</dt>${score(d.scores.fun)}<dt>Wow</dt>${score(d.scores.wow)}${d.scores.pro ? `<dt>Pro look</dt>${score(d.scores.pro)}` : ''}${d.scores.game ? `<dt>Game feel</dt>${score(d.scores.game)}` : ''}<dt>Build effort</dt>${score(d.scores.effort, true)}</dl></div>
+      <div class="x-look"><h3>Look and motion</h3><div class="x-sw">${(d.palette || []).map(c => `<i style="background:${c}" title="${c}"></i>`).join('')}</div><p><b>Type:</b> ${esc(d.type || '')}</p><p><b>Motion:</b> ${esc(d.motion || '')}</p>${(d.extras || []).map(x => `<p><b>${esc(x[0])}:</b> ${esc(x[1])}</p>`).join('')}</div>
       <div><h3>Scene notes</h3><ul class="x-notes" id="notes">${notes}</ul></div>`;
     $('#notes').querySelectorAll('li').forEach(li => li.addEventListener('click', () => { t = +li.dataset.t + 0.01; render(); }));
-    document.querySelectorAll('#cmp tr').forEach((tr, i) => tr.classList.toggle('is-on', i === si));
+    document.querySelectorAll('#cmp tr[data-i]').forEach(tr => tr.classList.toggle('is-on', +tr.dataset.i === si));
   }
-  $('#cmp').innerHTML = S.map((d, i) => `<tr data-i="${i}"><td><strong>${i + 1} · ${esc(d.name)}</strong></td><td>${esc(d.tagline)}</td><td class="x-num">${d.scores.simple}/5</td><td class="x-num">${d.scores.fun}/5</td><td class="x-num">${d.scores.wow}/5</td><td class="x-num">${d.scores.effort}/5</td></tr>`).join('');
-  document.querySelectorAll('#cmp tr').forEach(tr => tr.addEventListener('click', () => { setStyle(+tr.dataset.i); stage.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' }); }));
+  { let lastR = 0, rows = '';
+    S.forEach((d, i) => {
+      const r = d.round || 1;
+      if (r !== lastR) { rows += `<tr class="x-grp"><td colspan="8">${esc(ROUNDS[r] || 'Round ' + r)}</td></tr>`; lastR = r; }
+      const sc = d.scores, v = k => sc[k] ? sc[k] + '/5' : '–';
+      rows += `<tr data-i="${i}"><td><strong>${i + 1} · ${esc(d.name)}</strong></td><td>${esc(d.tagline)}</td><td class="x-num">${v('simple')}</td><td class="x-num">${v('fun')}</td><td class="x-num">${v('wow')}</td><td class="x-num">${v('pro')}</td><td class="x-num">${v('game')}</td><td class="x-num">${v('effort')}</td></tr>`;
+    });
+    $('#cmp').innerHTML = rows; }
+  document.querySelectorAll('#cmp tr[data-i]').forEach(tr => tr.addEventListener('click', () => { setStyle(+tr.dataset.i); stage.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' }); }));
 
   function doFit() {
     const nw = mode === 'app' ? 414 : 1280, nh = mode === 'app' ? 868 : 800;
@@ -5827,6 +6055,7 @@ ISK.register({
   $('#mode-app').addEventListener('click', () => setMode('app'));
   $('#mode-web').addEventListener('click', () => setMode('web'));
   playBtn.addEventListener('click', () => setPlay(!playing));
+  $('#shuffle').addEventListener('click', () => { ISK.variant++; rebuild(); });
   $('#speed').addEventListener('change', e => { speed = +e.target.value; });
   $('#loop').addEventListener('click', e => { looping = !looping; e.currentTarget.setAttribute('aria-pressed', looping); });
   scrub.addEventListener('pointerdown', () => { wasPlaying = playing; setPlay(false); });
