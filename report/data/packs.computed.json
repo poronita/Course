@@ -1,0 +1,1344 @@
+{
+ "computedFrom": "data/measurements.json + data/packs.json",
+ "missingFiles": [],
+ "packs": {
+  "core-always-loaded": {
+   "label": "Always-loaded utility libs",
+   "sections": [
+    "10",
+    "01",
+    "03"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 42590,
+   "raw": 166377,
+   "files": [
+    {
+     "pkg": "comlink",
+     "version": "4.4.2",
+     "file": "dist/esm/comlink.mjs",
+     "raw": 12629,
+     "gzip": 3144
+    },
+    {
+     "pkg": "wasm-feature-detect",
+     "version": "1.9.0",
+     "file": "dist/esm/index.js",
+     "raw": 3381,
+     "gzip": 1023
+    },
+    {
+     "pkg": "file-type",
+     "version": "22.1.1",
+     "file": "source/index.js",
+     "raw": 47035,
+     "gzip": 11896
+    },
+    {
+     "pkg": "fflate",
+     "version": "0.8.3",
+     "file": "esm/browser.js",
+     "raw": 90922,
+     "gzip": 22151
+    },
+    {
+     "pkg": "colord",
+     "version": "2.10.0",
+     "file": "index.mjs",
+     "raw": 6023,
+     "gzip": 2125
+    },
+    {
+     "pkg": "changedpi",
+     "version": "1.0.4",
+     "file": "dist/index.js",
+     "raw": 6387,
+     "gzip": 2251
+    }
+   ]
+  },
+  "core-image-codecs": {
+   "label": "JPEG + PNG + WebP + oxipng + resize (jSquash)",
+   "sections": [
+    "01",
+    "02",
+    "03"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 513951,
+   "raw": 1385670,
+   "files": [
+    {
+     "pkg": "@jsquash/jpeg",
+     "version": "1.6.0",
+     "file": "codec/enc/mozjpeg_enc.wasm",
+     "raw": 251524,
+     "gzip": 59822
+    },
+    {
+     "pkg": "@jsquash/jpeg",
+     "version": "1.6.0",
+     "file": "codec/dec/mozjpeg_dec.wasm",
+     "raw": 166470,
+     "gzip": 63858
+    },
+    {
+     "pkg": "@jsquash/jpeg",
+     "version": "1.6.0",
+     "file": "codec/enc/mozjpeg_enc.js",
+     "raw": 38422,
+     "gzip": 11073
+    },
+    {
+     "pkg": "@jsquash/jpeg",
+     "version": "1.6.0",
+     "file": "codec/dec/mozjpeg_dec.js",
+     "raw": 36057,
+     "gzip": 10501
+    },
+    {
+     "pkg": "@jsquash/png",
+     "version": "3.1.1",
+     "file": "codec/pkg/squoosh_png_bg.wasm",
+     "raw": 181088,
+     "gzip": 85347
+    },
+    {
+     "pkg": "@jsquash/png",
+     "version": "3.1.1",
+     "file": "codec/pkg/squoosh_png.js",
+     "raw": 8818,
+     "gzip": 2377
+    },
+    {
+     "pkg": "@jsquash/webp",
+     "version": "1.5.0",
+     "file": "codec/enc/webp_enc.wasm",
+     "raw": 281261,
+     "gzip": 114911
+    },
+    {
+     "pkg": "@jsquash/webp",
+     "version": "1.5.0",
+     "file": "codec/dec/webp_dec.wasm",
+     "raw": 137960,
+     "gzip": 49448
+    },
+    {
+     "pkg": "@jsquash/webp",
+     "version": "1.5.0",
+     "file": "codec/enc/webp_enc.js",
+     "raw": 38665,
+     "gzip": 10431
+    },
+    {
+     "pkg": "@jsquash/webp",
+     "version": "1.5.0",
+     "file": "codec/dec/webp_dec.js",
+     "raw": 34823,
+     "gzip": 9617
+    },
+    {
+     "pkg": "@jsquash/oxipng",
+     "version": "2.3.0",
+     "file": "codec/pkg/squoosh_oxipng_bg.wasm",
+     "raw": 164172,
+     "gzip": 76133
+    },
+    {
+     "pkg": "@jsquash/oxipng",
+     "version": "2.3.0",
+     "file": "codec/pkg/squoosh_oxipng.js",
+     "raw": 6307,
+     "gzip": 1751
+    },
+    {
+     "pkg": "@jsquash/resize",
+     "version": "2.1.1",
+     "file": "lib/resize/pkg/squoosh_resize_bg.wasm",
+     "raw": 34545,
+     "gzip": 17051
+    },
+    {
+     "pkg": "@jsquash/resize",
+     "version": "2.1.1",
+     "file": "lib/resize/pkg/squoosh_resize.js",
+     "raw": 5558,
+     "gzip": 1631
+    }
+   ]
+  },
+  "avif": {
+   "label": "AVIF encode + decode",
+   "sections": [
+    "01",
+    "02"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 1487227,
+   "raw": 4731452,
+   "files": [
+    {
+     "pkg": "@jsquash/avif",
+     "version": "2.1.1",
+     "file": "codec/enc/avif_enc.wasm",
+     "raw": 3485872,
+     "gzip": 1125519
+    },
+    {
+     "pkg": "@jsquash/avif",
+     "version": "2.1.1",
+     "file": "codec/enc/avif_enc.js",
+     "raw": 39621,
+     "gzip": 10931
+    },
+    {
+     "pkg": "@jsquash/avif",
+     "version": "2.1.1",
+     "file": "codec/dec/avif_dec.wasm",
+     "raw": 1170930,
+     "gzip": 340845
+    },
+    {
+     "pkg": "@jsquash/avif",
+     "version": "2.1.1",
+     "file": "codec/dec/avif_dec.js",
+     "raw": 35029,
+     "gzip": 9932
+    }
+   ]
+  },
+  "avif-decode-only": {
+   "label": "AVIF decode only",
+   "sections": [
+    "01"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 350777,
+   "raw": 1205959,
+   "files": [
+    {
+     "pkg": "@jsquash/avif",
+     "version": "2.1.1",
+     "file": "codec/dec/avif_dec.wasm",
+     "raw": 1170930,
+     "gzip": 340845
+    },
+    {
+     "pkg": "@jsquash/avif",
+     "version": "2.1.1",
+     "file": "codec/dec/avif_dec.js",
+     "raw": 35029,
+     "gzip": 9932
+    }
+   ]
+  },
+  "jxl": {
+   "label": "JPEG XL encode + decode",
+   "sections": [
+    "01",
+    "02"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 857783,
+   "raw": 2296228,
+   "files": [
+    {
+     "pkg": "@jsquash/jxl",
+     "version": "1.3.0",
+     "file": "codec/enc/jxl_enc.wasm",
+     "raw": 1363824,
+     "gzip": 516855
+    },
+    {
+     "pkg": "@jsquash/jxl",
+     "version": "1.3.0",
+     "file": "codec/enc/jxl_enc.js",
+     "raw": 47073,
+     "gzip": 13132
+    },
+    {
+     "pkg": "@jsquash/jxl",
+     "version": "1.3.0",
+     "file": "codec/dec/jxl_dec.wasm",
+     "raw": 849240,
+     "gzip": 317757
+    },
+    {
+     "pkg": "@jsquash/jxl",
+     "version": "1.3.0",
+     "file": "codec/dec/jxl_dec.js",
+     "raw": 36091,
+     "gzip": 10039
+    }
+   ]
+  },
+  "heic-decode": {
+   "label": "HEIC decode (libheif-js wasm, LGPL)",
+   "sections": [
+    "01"
+   ],
+   "tierB": true,
+   "optional": false,
+   "gzip": 514926,
+   "raw": 1554761,
+   "files": [
+    {
+     "pkg": "libheif-js",
+     "version": "1.23.5",
+     "file": "libheif-wasm/libheif.wasm",
+     "raw": 1463506,
+     "gzip": 485813
+    },
+    {
+     "pkg": "libheif-js",
+     "version": "1.23.5",
+     "file": "libheif-wasm/libheif.js",
+     "raw": 91255,
+     "gzip": 29113
+    }
+   ]
+  },
+  "raw-decode": {
+   "label": "RAW decode (LibRaw wasm, CDDL option)",
+   "sections": [
+    "01"
+   ],
+   "tierB": true,
+   "optional": false,
+   "gzip": 346878,
+   "raw": 929221,
+   "files": [
+    {
+     "pkg": "@colorhythm/libraw-wasm",
+     "version": "1.1.1",
+     "file": "dist/libraw.wasm",
+     "raw": 853083,
+     "gzip": 326926
+    },
+    {
+     "pkg": "@colorhythm/libraw-wasm",
+     "version": "1.1.1",
+     "file": "dist/libraw.mjs",
+     "raw": 76138,
+     "gzip": 19952
+    }
+   ]
+  },
+  "tiff": {
+   "label": "TIFF (UTIF + pako)",
+   "sections": [
+    "01"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 33817,
+   "raw": 103711,
+   "files": [
+    {
+     "pkg": "utif",
+     "version": "3.1.0",
+     "file": "UTIF.js",
+     "raw": 58271,
+     "gzip": 19752
+    },
+    {
+     "pkg": "pako",
+     "version": "3.0.2",
+     "file": "dist/browser/pako.umd.min.js",
+     "raw": 45440,
+     "gzip": 14065
+    }
+   ]
+  },
+  "psd": {
+   "label": "PSD read (ag-psd)",
+   "sections": [
+    "01"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 169628,
+   "raw": 828929,
+   "files": [
+    {
+     "pkg": "ag-psd",
+     "version": "31.0.2",
+     "file": "dist/bundle.js",
+     "raw": 828929,
+     "gzip": 169628
+    }
+   ]
+  },
+  "vectorise": {
+   "label": "Raster to SVG (vtracer-wasm)",
+   "sections": [
+    "01"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 63067,
+   "raw": 150972,
+   "files": [
+    {
+     "pkg": "vtracer-wasm",
+     "version": "0.1.0",
+     "file": "vtracer.wasm",
+     "raw": 136862,
+     "gzip": 59624
+    },
+    {
+     "pkg": "vtracer-wasm",
+     "version": "0.1.0",
+     "file": "vtracer.js",
+     "raw": 14110,
+     "gzip": 3443
+    }
+   ]
+  },
+  "pdf-read": {
+   "label": "PDF to images (pdf.js min + worker)",
+   "sections": [
+    "01"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 507767,
+   "raw": 1723246,
+   "files": [
+    {
+     "pkg": "pdfjs-dist",
+     "version": "6.4.299",
+     "file": "build/pdf.min.mjs",
+     "raw": 458904,
+     "gzip": 132108
+    },
+    {
+     "pkg": "pdfjs-dist",
+     "version": "6.4.299",
+     "file": "build/pdf.worker.min.mjs",
+     "raw": 1264342,
+     "gzip": 375659
+    }
+   ]
+  },
+  "pdf-read-optional-wasm": {
+   "label": "pdf.js optional decoders (JPX, JBIG2, ICC)",
+   "sections": [
+    "01"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 159206,
+   "raw": 451391,
+   "files": [
+    {
+     "pkg": "pdfjs-dist",
+     "version": "6.4.299",
+     "file": "wasm/openjpeg.wasm",
+     "raw": 251131,
+     "gzip": 82201
+    },
+    {
+     "pkg": "pdfjs-dist",
+     "version": "6.4.299",
+     "file": "wasm/jbig2.wasm",
+     "raw": 103671,
+     "gzip": 41195
+    },
+    {
+     "pkg": "pdfjs-dist",
+     "version": "6.4.299",
+     "file": "wasm/qcms_bg.wasm",
+     "raw": 96589,
+     "gzip": 35810
+    }
+   ]
+  },
+  "pdf-write-lib": {
+   "label": "PDF create/merge (@cantoo/pdf-lib) — alternative to own minimal writer",
+   "sections": [
+    "01"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 252091,
+   "raw": 616746,
+   "files": [
+    {
+     "pkg": "@cantoo/pdf-lib",
+     "version": "2.11.1",
+     "file": "dist/pdf-lib.min.js",
+     "raw": 616746,
+     "gzip": 252091
+    }
+   ]
+  },
+  "metadata-read-edit": {
+   "label": "EXIF read (exifr lite) + write (piexifjs)",
+   "sections": [
+    "04"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 27427,
+   "raw": 124454,
+   "files": [
+    {
+     "pkg": "exifr",
+     "version": "7.1.3",
+     "file": "dist/lite.esm.mjs",
+     "raw": 45456,
+     "gzip": 14880
+    },
+    {
+     "pkg": "piexifjs",
+     "version": "1.0.6",
+     "file": "piexif.js",
+     "raw": 78998,
+     "gzip": 12547
+    }
+   ]
+  },
+  "location-code": {
+   "label": "Offline location code (kdbush, geokdbush, topojson, plus-codes, suncalc)",
+   "sections": [
+    "04"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 21915,
+   "raw": 68505,
+   "files": [
+    {
+     "pkg": "kdbush",
+     "version": "4.1.0",
+     "file": "kdbush.min.js",
+     "raw": 3759,
+     "gzip": 1652
+    },
+    {
+     "pkg": "geokdbush",
+     "version": "2.1.0",
+     "file": "index.js",
+     "raw": 7443,
+     "gzip": 2164
+    },
+    {
+     "pkg": "topojson-client",
+     "version": "3.1.0",
+     "file": "dist/topojson-client.min.js",
+     "raw": 7169,
+     "gzip": 2587
+    },
+    {
+     "pkg": "open-location-code",
+     "version": "1.0.3",
+     "file": "openlocationcode.js",
+     "raw": 27230,
+     "gzip": 7342
+    },
+    {
+     "pkg": "suncalc",
+     "version": "2.1.1",
+     "file": "index.js",
+     "raw": 22904,
+     "gzip": 8170
+    }
+   ]
+  },
+  "world-110m": {
+   "label": "World country shapes 110m (Natural Earth, public domain)",
+   "sections": [
+    "04"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 38063,
+   "raw": 107761,
+   "files": [
+    {
+     "pkg": "world-atlas",
+     "version": "2.0.2",
+     "file": "countries-110m.json",
+     "raw": 107761,
+     "gzip": 38063
+    }
+   ]
+  },
+  "world-50m": {
+   "label": "World country shapes 50m",
+   "sections": [
+    "04"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 229093,
+   "raw": 756420,
+   "files": [
+    {
+     "pkg": "world-atlas",
+     "version": "2.0.2",
+     "file": "countries-50m.json",
+     "raw": 756420,
+     "gzip": 229093
+    }
+   ]
+  },
+  "metrics-butteraugli": {
+   "label": "Perceptual metric (Butteraugli wasm)",
+   "sections": [
+    "02"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 37041,
+   "raw": 110211,
+   "files": [
+    {
+     "pkg": "@squoosh-kit/visdif",
+     "version": "0.2.10",
+     "file": "dist/wasm/visdif/visdif.wasm",
+     "raw": 58504,
+     "gzip": 23736
+    },
+    {
+     "pkg": "@squoosh-kit/visdif",
+     "version": "0.2.10",
+     "file": "dist/wasm/visdif/visdif.js",
+     "raw": 51707,
+     "gzip": 13305
+    }
+   ]
+  },
+  "metrics-fast": {
+   "label": "SSIM + pixelmatch",
+   "sections": [
+    "02"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 12753,
+   "raw": 42117,
+   "files": [
+    {
+     "pkg": "ssim.js",
+     "version": "3.5.0",
+     "file": "dist/ssim.web.js",
+     "raw": 17374,
+     "gzip": 5205
+    },
+    {
+     "pkg": "pixelmatch",
+     "version": "8.0.0",
+     "file": "index.js",
+     "raw": 24743,
+     "gzip": 7548
+    }
+   ]
+  },
+  "lossy-png-and-apng": {
+   "label": "image-q + UPNG (palette quantise, APNG)",
+   "sections": [
+    "02",
+    "05"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 42270,
+   "raw": 180387,
+   "files": [
+    {
+     "pkg": "image-q",
+     "version": "4.0.0",
+     "file": "dist/esm/image-q.mjs",
+     "raw": 103439,
+     "gzip": 19015
+    },
+    {
+     "pkg": "upng-js",
+     "version": "2.1.0",
+     "file": "UPNG.js",
+     "raw": 31508,
+     "gzip": 9190
+    },
+    {
+     "pkg": "pako",
+     "version": "3.0.2",
+     "file": "dist/browser/pako.umd.min.js",
+     "raw": 45440,
+     "gzip": 14065
+    }
+   ]
+  },
+  "placeholders": {
+   "label": "ThumbHash",
+   "sections": [
+    "02"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 3304,
+   "raw": 10255,
+   "files": [
+    {
+     "pkg": "thumbhash",
+     "version": "0.1.1",
+     "file": "thumbhash.js",
+     "raw": 10255,
+     "gzip": 3304
+    }
+   ]
+  },
+  "crop-ui": {
+   "label": "cropperjs + smartcrop + stackblur",
+   "sections": [
+    "03"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 21853,
+   "raw": 70672,
+   "files": [
+    {
+     "pkg": "cropperjs",
+     "version": "2.2.0",
+     "file": "dist/cropper.esm.min.js",
+     "raw": 44625,
+     "gzip": 12916
+    },
+    {
+     "pkg": "smartcrop",
+     "version": "2.0.5",
+     "file": "smartcrop.js",
+     "raw": 17674,
+     "gzip": 5082
+    },
+    {
+     "pkg": "stackblur-canvas",
+     "version": "3.0.1",
+     "file": "dist/stackblur.min.mjs",
+     "raw": 8373,
+     "gzip": 3855
+    }
+   ]
+  },
+  "gif-tools": {
+   "label": "GIF encode/decode (gifenc + gifuct-js; add image-q for dithers)",
+   "sections": [
+    "05"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 5059,
+   "raw": 12199,
+   "files": [
+    {
+     "pkg": "gifenc",
+     "version": "1.0.3",
+     "file": "dist/gifenc.esm.js",
+     "raw": 9098,
+     "gzip": 3926
+    },
+    {
+     "pkg": "gifuct-js",
+     "version": "2.1.2",
+     "file": "lib/index.js",
+     "raw": 3101,
+     "gzip": 1133
+    }
+   ]
+  },
+  "animated-webp": {
+   "label": "Animated WebP encode/decode (wasm-webp)",
+   "sections": [
+    "05"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 224715,
+   "raw": 629340,
+   "files": [
+    {
+     "pkg": "wasm-webp",
+     "version": "0.1.0",
+     "file": "dist/esm/webp-wasm.wasm",
+     "raw": 482273,
+     "gzip": 185932
+    },
+    {
+     "pkg": "wasm-webp",
+     "version": "0.1.0",
+     "file": "dist/esm/webp-wasm.js",
+     "raw": 147067,
+     "gzip": 38783
+    }
+   ]
+  },
+  "video-mediabunny": {
+   "label": "Video toolkit (mediabunny minified bundle)",
+   "sections": [
+    "05"
+   ],
+   "tierB": true,
+   "optional": false,
+   "gzip": 177226,
+   "raw": 691220,
+   "files": [
+    {
+     "pkg": "mediabunny",
+     "version": "1.61.3",
+     "file": "dist/bundles/mediabunny.min.mjs",
+     "raw": 691220,
+     "gzip": 177226
+    }
+   ]
+  },
+  "video-mp3-encoder": {
+   "label": "MP3 encoder extension (LAME, LGPL inside)",
+   "sections": [
+    "05"
+   ],
+   "tierB": true,
+   "optional": false,
+   "gzip": 132931,
+   "raw": 317165,
+   "files": [
+    {
+     "pkg": "@mediabunny/mp3-encoder",
+     "version": "1.61.3",
+     "file": "dist/bundles/mediabunny-mp3-encoder.mjs",
+     "raw": 317165,
+     "gzip": 132931
+    }
+   ]
+  },
+  "video-aac-encoder": {
+   "label": "AAC encoder extension (libavcodec; verify licence)",
+   "sections": [
+    "05"
+   ],
+   "tierB": true,
+   "optional": false,
+   "gzip": 255375,
+   "raw": 999289,
+   "files": [
+    {
+     "pkg": "@mediabunny/aac-encoder",
+     "version": "1.61.3",
+     "file": "dist/bundles/mediabunny-aac-encoder.mjs",
+     "raw": 999289,
+     "gzip": 255375
+    }
+   ]
+  },
+  "webcodecs-polyfill": {
+   "label": "WebCodecs fallback (libav.js webcodecs variant, LGPL)",
+   "sections": [
+    "05"
+   ],
+   "tierB": true,
+   "optional": false,
+   "gzip": 996469,
+   "raw": 2798883,
+   "files": [
+    {
+     "pkg": "libavjs-webcodecs-polyfill",
+     "version": "0.5.5",
+     "file": "dist/libavjs-webcodecs-polyfill.mjs",
+     "raw": 181885,
+     "gzip": 30676
+    },
+    {
+     "pkg": "@libav.js/variant-webcodecs",
+     "version": "6.10.9",
+     "file": "dist/libav-6.10.9.0-webcodecs.wasm.wasm",
+     "raw": 2344846,
+     "gzip": 909201
+    },
+    {
+     "pkg": "@libav.js/variant-webcodecs",
+     "version": "6.10.9",
+     "file": "dist/libav-6.10.9.0-webcodecs.wasm.mjs",
+     "raw": 272152,
+     "gzip": 56592
+    }
+   ]
+  },
+  "qr-generate": {
+   "label": "QR generate (uqr + qr-code-styling)",
+   "sections": [
+    "07"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 21934,
+   "raw": 75656,
+   "files": [
+    {
+     "pkg": "uqr",
+     "version": "0.1.3",
+     "file": "dist/index.mjs",
+     "raw": 27482,
+     "gzip": 7821
+    },
+    {
+     "pkg": "qr-code-styling",
+     "version": "1.9.2",
+     "file": "lib/qr-code-styling.js",
+     "raw": 48174,
+     "gzip": 14113
+    }
+   ]
+  },
+  "qr-scan-lite": {
+   "label": "QR scan (jsQR)",
+   "sections": [
+    "07"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 56888,
+   "raw": 256885,
+   "files": [
+    {
+     "pkg": "jsqr",
+     "version": "1.4.0",
+     "file": "dist/jsQR.js",
+     "raw": 256885,
+     "gzip": 56888
+    }
+   ]
+  },
+  "qr-scan-full": {
+   "label": "Multi-format barcode scan (zxing-wasm reader)",
+   "sections": [
+    "07"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 429778,
+   "raw": 1007492,
+   "files": [
+    {
+     "pkg": "zxing-wasm",
+     "version": "3.1.5",
+     "file": "dist/reader/zxing_reader.wasm",
+     "raw": 966895,
+     "gzip": 417976
+    },
+    {
+     "pkg": "zxing-wasm",
+     "version": "3.1.5",
+     "file": "dist/es/reader/index.js",
+     "raw": 40597,
+     "gzip": 11802
+    }
+   ]
+  },
+  "barcode-1d": {
+   "label": "1-D barcode generate (JsBarcode)",
+   "sections": [
+    "07"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 11376,
+   "raw": 66420,
+   "files": [
+    {
+     "pkg": "jsbarcode",
+     "version": "3.12.3",
+     "file": "dist/JsBarcode.all.min.js",
+     "raw": 66420,
+     "gzip": 11376
+    }
+   ]
+  },
+  "barcode-2d": {
+   "label": "2-D barcode generate (bwip-js)",
+   "sections": [
+    "07"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 445645,
+   "raw": 2298980,
+   "files": [
+    {
+     "pkg": "@bwip-js/browser",
+     "version": "4.11.4",
+     "file": "dist/bwip-js.mjs",
+     "raw": 197695,
+     "gzip": 55978
+    },
+    {
+     "pkg": "@bwip-js/browser",
+     "version": "4.11.4",
+     "file": "dist/bwipp.mjs",
+     "raw": 2101285,
+     "gzip": 389667
+    }
+   ]
+  },
+  "svgo": {
+   "label": "SVG optimiser (svgo browser)",
+   "sections": [
+    "07"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 195430,
+   "raw": 805016,
+   "files": [
+    {
+     "pkg": "svgo",
+     "version": "4.1.0",
+     "file": "dist/svgo.browser.js",
+     "raw": 805016,
+     "gzip": 195430
+    }
+   ]
+  },
+  "colour-tools": {
+   "label": "colord + culori + colorthief",
+   "sections": [
+    "07"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 35463,
+   "raw": 108686,
+   "files": [
+    {
+     "pkg": "culori",
+     "version": "4.0.2",
+     "file": "bundled/culori.min.js",
+     "raw": 64322,
+     "gzip": 23762
+    },
+    {
+     "pkg": "colorthief",
+     "version": "3.5.0",
+     "file": "dist/index.browser.js",
+     "raw": 44364,
+     "gzip": 11701
+    }
+   ]
+  },
+  "font-latin-inter": {
+   "label": "Inter latin 400 woff2",
+   "sections": [
+    "07"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 23664,
+   "raw": 23664,
+   "files": []
+  },
+  "font-noto-gujarati": {
+   "label": "Noto Sans Gujarati 400 woff2 (gujarati + latin subsets)",
+   "sections": [
+    "07"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 47724,
+   "raw": 47724,
+   "files": []
+  },
+  "font-noto-devanagari": {
+   "label": "Noto Sans Devanagari 400 woff2 (devanagari + latin subsets)",
+   "sections": [
+    "07"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 60928,
+   "raw": 60928,
+   "files": []
+  },
+  "presets-json": {
+   "label": "presets.json (43 entries)",
+   "sections": [
+    "03"
+   ],
+   "tierB": false,
+   "optional": false,
+   "gzip": 5010,
+   "raw": 18148,
+   "files": []
+  },
+  "OPTIONAL-imagemagick": {
+   "label": "ImageMagick wasm (long-tail formats)",
+   "sections": [
+    "01"
+   ],
+   "tierB": false,
+   "optional": true,
+   "gzip": 5650625,
+   "raw": 16238185,
+   "files": [
+    {
+     "pkg": "@imagemagick/magick-wasm",
+     "version": "0.0.44",
+     "file": "dist/x64/magick.wasm",
+     "raw": 15828735,
+     "gzip": 5551353
+    },
+    {
+     "pkg": "@imagemagick/magick-wasm",
+     "version": "0.0.44",
+     "file": "dist/index.js",
+     "raw": 409450,
+     "gzip": 99272
+    }
+   ]
+  },
+  "OPTIONAL-wasm-vips": {
+   "label": "wasm-vips core + heif + jxl modules (needs COOP/COEP)",
+   "sections": [
+    "01"
+   ],
+   "tierB": true,
+   "optional": true,
+   "gzip": 4082841,
+   "raw": 11181276,
+   "files": [
+    {
+     "pkg": "wasm-vips",
+     "version": "0.0.19",
+     "file": "lib/vips.wasm",
+     "raw": 5154052,
+     "gzip": 2023395
+    },
+    {
+     "pkg": "wasm-vips",
+     "version": "0.0.19",
+     "file": "lib/vips-heif.wasm",
+     "raw": 3802681,
+     "gzip": 1261044
+    },
+    {
+     "pkg": "wasm-vips",
+     "version": "0.0.19",
+     "file": "lib/vips-jxl.wasm",
+     "raw": 2224543,
+     "gzip": 798402
+    }
+   ]
+  },
+  "OPTIONAL-resvg": {
+   "label": "resvg wasm (high-fidelity SVG raster)",
+   "sections": [
+    "01"
+   ],
+   "tierB": true,
+   "optional": true,
+   "gzip": 961678,
+   "raw": 2495654,
+   "files": [
+    {
+     "pkg": "@resvg/resvg-wasm",
+     "version": "2.6.2",
+     "file": "index_bg.wasm",
+     "raw": 2478606,
+     "gzip": 957677
+    },
+    {
+     "pkg": "@resvg/resvg-wasm",
+     "version": "2.6.2",
+     "file": "index.mjs",
+     "raw": 17048,
+     "gzip": 4001
+    }
+   ]
+  },
+  "OPTIONAL-exiftool": {
+   "label": "ExifTool wasm (Perl) — legal review",
+   "sections": [
+    "04"
+   ],
+   "tierB": true,
+   "optional": true,
+   "gzip": 7878928,
+   "raw": 26572151,
+   "files": [
+    {
+     "pkg": "@colorhythm/exiftool-wasm",
+     "version": "1.0.4",
+     "file": "dist/esm/zeroperl-mqcadjqm.wasm",
+     "raw": 26120413,
+     "gzip": 7772273
+    },
+    {
+     "pkg": "@colorhythm/exiftool-wasm",
+     "version": "1.0.4",
+     "file": "dist/esm/index.js",
+     "raw": 451738,
+     "gzip": 106655
+    }
+   ]
+  },
+  "OPTIONAL-c2pa-web": {
+   "label": "C2PA full (Adobe wasm)",
+   "sections": [
+    "04"
+   ],
+   "tierB": false,
+   "optional": true,
+   "gzip": 3403190,
+   "raw": 9046558,
+   "files": [
+    {
+     "pkg": "@contentauth/c2pa-wasm",
+     "version": "0.13.2",
+     "file": "pkg/c2pa_bg.wasm",
+     "raw": 8987699,
+     "gzip": 3391816
+    },
+    {
+     "pkg": "@contentauth/c2pa-wasm",
+     "version": "0.13.2",
+     "file": "pkg/c2pa.js",
+     "raw": 58859,
+     "gzip": 11374
+    }
+   ]
+  },
+  "OPTIONAL-opencv": {
+   "label": "OpenCV.js (auto document scanner)",
+   "sections": [
+    "03"
+   ],
+   "tierB": false,
+   "optional": true,
+   "gzip": 3754423,
+   "raw": 13298869,
+   "files": [
+    {
+     "pkg": "@techstark/opencv-js",
+     "version": "5.0.0-release.1",
+     "file": "dist/opencv.js",
+     "raw": 13298869,
+     "gzip": 3754423
+    }
+   ]
+  }
+ },
+ "scenarios": {
+  "web-first-load-libs": {
+   "label": "Web: libs loaded at first paint (excl. your UI code)",
+   "packs": [
+    "core-always-loaded"
+   ],
+   "gzip": 42590,
+   "hasTierB": false
+  },
+  "android-lite": {
+   "label": "Android APK 'Lite' pre-bundle (most-used tools offline instantly)",
+   "packs": [
+    "core-always-loaded",
+    "core-image-codecs",
+    "metadata-read-edit",
+    "crop-ui",
+    "gif-tools",
+    "lossy-png-and-apng",
+    "qr-generate",
+    "qr-scan-lite",
+    "location-code",
+    "world-110m",
+    "presets-json",
+    "placeholders",
+    "metrics-fast",
+    "colour-tools",
+    "font-latin-inter"
+   ],
+   "gzip": 872144,
+   "hasTierB": false
+  },
+  "android-standard": {
+   "label": "Android APK 'Standard' (Lite + modern formats, video, PDF, SVG)",
+   "packs": [
+    "core-always-loaded",
+    "core-image-codecs",
+    "metadata-read-edit",
+    "crop-ui",
+    "gif-tools",
+    "lossy-png-and-apng",
+    "qr-generate",
+    "qr-scan-lite",
+    "location-code",
+    "world-110m",
+    "presets-json",
+    "placeholders",
+    "metrics-fast",
+    "colour-tools",
+    "font-latin-inter",
+    "avif",
+    "jxl",
+    "heic-decode",
+    "tiff",
+    "psd",
+    "pdf-read",
+    "vectorise",
+    "animated-webp",
+    "video-mediabunny",
+    "svgo",
+    "metrics-butteraugli",
+    "font-noto-gujarati",
+    "font-noto-devanagari"
+   ],
+   "gzip": 5249423,
+   "hasTierB": true
+  },
+  "android-full": {
+   "label": "Android APK 'Full' (Standard + RAW + multi-format scanning + 2-D barcodes + PDF extras + 50m shapes)",
+   "packs": [
+    "core-always-loaded",
+    "core-image-codecs",
+    "metadata-read-edit",
+    "crop-ui",
+    "gif-tools",
+    "lossy-png-and-apng",
+    "qr-generate",
+    "qr-scan-lite",
+    "location-code",
+    "world-110m",
+    "presets-json",
+    "placeholders",
+    "metrics-fast",
+    "colour-tools",
+    "font-latin-inter",
+    "avif",
+    "jxl",
+    "heic-decode",
+    "tiff",
+    "psd",
+    "pdf-read",
+    "vectorise",
+    "animated-webp",
+    "video-mediabunny",
+    "svgo",
+    "metrics-butteraugli",
+    "font-noto-gujarati",
+    "font-noto-devanagari",
+    "raw-decode",
+    "qr-scan-full",
+    "barcode-1d",
+    "barcode-2d",
+    "pdf-read-optional-wasm",
+    "pdf-write-lib",
+    "world-50m"
+   ],
+   "gzip": 7123490,
+   "hasTierB": true
+  }
+ }
+}

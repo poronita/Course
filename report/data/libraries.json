@@ -1,0 +1,8756 @@
+{
+ "_meta": {
+  "builtFrom": "data/verdicts-*.json + data/measurements.json",
+  "tiers": {
+   "A": "permissive",
+   "B": "weak copyleft (LGPL/MPL/CDDL) — allowed with obligations",
+   "X": "rejected"
+  },
+  "statuses": [
+   "recommended",
+   "optional",
+   "watch",
+   "see-05",
+   "not-needed",
+   "rejected"
+  ]
+ },
+ "libraries": [
+  {
+   "id": "@abasb75/openjpeg",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "JPEG2000"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: no licence declared/shipped"
+   ],
+   "declaredLicense": null,
+   "version": "2.5.3",
+   "registryLicense": null,
+   "publishedLatest": "2024-12-18T03:54:22.834Z",
+   "firstPublished": "2024-11-29T08:42:42.977Z",
+   "tarballBytes": 191532,
+   "unpackedBytes": 545248,
+   "deprecated": null,
+   "repository": "https://github.com/abasb75/openjpeg/raction.git",
+   "topFiles": [
+    {
+     "file": "openjpegjs.js",
+     "raw": 526882,
+     "gzip": 185922
+    },
+    {
+     "file": "decode.js",
+     "raw": 2336,
+     "gzip": 842
+    }
+   ]
+  },
+  {
+   "id": "@bjornlu/colorblind",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "colour-blind simulation"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2020"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.0.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2020-10-22T13:00:58.558Z",
+   "firstPublished": "2020-06-28T13:38:33.866Z",
+   "tarballBytes": 4662,
+   "unpackedBytes": 11820,
+   "deprecated": null,
+   "repository": "git+https://github.com/bluwy/colorblind.git",
+   "topFiles": []
+  },
+  {
+   "id": "@blazediff/ssim",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "fast SSIM (active)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "risk: young (2025-10)"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.7.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-01-11T17:23:23.900Z",
+   "firstPublished": "2025-10-21T14:42:13.497Z",
+   "tarballBytes": 9435,
+   "unpackedBytes": 35806,
+   "deprecated": null,
+   "repository": "git+https://github.com/teimurjan/blazediff.git",
+   "topFiles": [
+    {
+     "file": "dist/ssim.js",
+     "raw": 2983,
+     "gzip": 1335
+    },
+    {
+     "file": "dist/ssim.mjs",
+     "raw": 2911,
+     "gzip": 1286
+    },
+    {
+     "file": "dist/msssim.js",
+     "raw": 2882,
+     "gzip": 1407
+    },
+    {
+     "file": "dist/msssim.mjs",
+     "raw": 2810,
+     "gzip": 1355
+    }
+   ]
+  },
+  {
+   "id": "@breezystack/lamejs",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "MP3 encoder JS"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: LGPL JS"
+   ],
+   "declaredLicense": "LGPL-3.0",
+   "version": "1.2.7",
+   "registryLicense": "LGPL-3.0",
+   "publishedLatest": "2023-10-17T08:08:59.936Z",
+   "firstPublished": "2023-10-16T08:14:00.874Z",
+   "tarballBytes": 162808,
+   "unpackedBytes": 471068,
+   "deprecated": null,
+   "repository": "git+https://github.com/shijinyu/lamejs.git",
+   "topFiles": [
+    {
+     "file": "dist/lamejs.js",
+     "raw": 259508,
+     "gzip": 66949
+    },
+    {
+     "file": "dist/lamejs.iife.js",
+     "raw": 169114,
+     "gzip": 58531
+    }
+   ]
+  },
+  {
+   "id": "@bwip-js/browser",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "bwip-js browser build"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "4.11.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-19T15:41:44.501Z",
+   "firstPublished": "2024-06-19T00:05:27.548Z",
+   "tarballBytes": 702778,
+   "unpackedBytes": 3661403,
+   "deprecated": null,
+   "repository": "git+https://github.com/metafloor/bwip-js.git",
+   "topFiles": [
+    {
+     "file": "dist/bwipp.mjs",
+     "raw": 2101285,
+     "gzip": 389667
+    },
+    {
+     "file": "dist/bwip-js.mjs",
+     "raw": 197695,
+     "gzip": 55978
+    }
+   ]
+  },
+  {
+   "id": "@cantoo/pdf-lib",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "PDF create/merge/split (maintained pdf-lib fork)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "2.11.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-15T11:39:27.933Z",
+   "firstPublished": "2021-03-12T01:14:25.733Z",
+   "tarballBytes": 6087813,
+   "unpackedBytes": 26301363,
+   "deprecated": null,
+   "repository": "git+https://github.com/cantoo-scribe/pdf-lib.git",
+   "topFiles": [
+    {
+     "file": "dist/pdf-lib.js",
+     "raw": 1435281,
+     "gzip": 379208
+    },
+    {
+     "file": "dist/pdf-lib.esm.js",
+     "raw": 1393505,
+     "gzip": 376434
+    },
+    {
+     "file": "dist/pdf-lib.min.js",
+     "raw": 616746,
+     "gzip": 252091
+    },
+    {
+     "file": "dist/pdf-lib.esm.min.js",
+     "raw": 614304,
+     "gzip": 251528
+    }
+   ]
+  },
+  {
+   "id": "@colorhythm/exiftool-wasm",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "Full metadata read/write all formats (7.6MB gz)"
+   ],
+   "tier": "B",
+   "status": "optional",
+   "flags": [
+    "legal-review",
+    "very-heavy-7.6MB-gz"
+   ],
+   "notes": [],
+   "declaredLicense": "Apache-2.0 wrapper; ExifTool = Perl Artistic OR GPL; ships Perl",
+   "lazy": true,
+   "version": "1.0.4",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2026-07-02T07:53:39.834Z",
+   "firstPublished": "2026-06-18T04:26:54.052Z",
+   "tarballBytes": 7819809,
+   "unpackedBytes": 26635367,
+   "deprecated": null,
+   "repository": "git+https://github.com/colorhythm/exiftool-wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/esm/zeroperl-mqcadjqm.wasm",
+     "raw": 26120413,
+     "gzip": 7772273
+    },
+    {
+     "file": "dist/esm/index.js",
+     "raw": 451738,
+     "gzip": 106655
+    }
+   ]
+  },
+  {
+   "id": "@colorhythm/libraw-wasm",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "RAW decode"
+   ],
+   "tier": "B",
+   "status": "recommended",
+   "flags": [
+    "choose-CDDL"
+   ],
+   "notes": [],
+   "declaredLicense": "MIT wrapper; LibRaw LGPL-2.1 OR CDDL-1.0 (choose CDDL)",
+   "lazy": true,
+   "version": "1.1.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-03T21:35:38.752Z",
+   "firstPublished": "2026-07-02T07:54:19.531Z",
+   "tarballBytes": 396641,
+   "unpackedBytes": 1294596,
+   "deprecated": null,
+   "repository": "git+https://github.com/colorhythm/libraw-wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/libraw.wasm",
+     "raw": 853083,
+     "gzip": 326926
+    },
+    {
+     "file": "dist/libraw.mjs",
+     "raw": 76138,
+     "gzip": 19952
+    },
+    {
+     "file": "dist/libraw-types.js",
+     "raw": 36488,
+     "gzip": 5655
+    },
+    {
+     "file": "dist/index.js",
+     "raw": 15511,
+     "gzip": 3264
+    }
+   ]
+  },
+  {
+   "id": "@contentauth/c2pa-wasm",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "C2PA wasm core"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "0.13.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-30T05:39:32.557Z",
+   "firstPublished": "2025-08-30T08:10:36.956Z",
+   "tarballBytes": 3410065,
+   "unpackedBytes": 9072229,
+   "deprecated": null,
+   "repository": "git+https://github.com/contentauth/c2pa-js.git",
+   "topFiles": [
+    {
+     "file": "pkg/c2pa_bg.wasm",
+     "raw": 8987699,
+     "gzip": 3391816
+    },
+    {
+     "file": "pkg/c2pa.js",
+     "raw": 58859,
+     "gzip": 11374
+    }
+   ]
+  },
+  {
+   "id": "@contentauth/c2pa-web",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "C2PA full (Adobe, wasm 3.3MB gz)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [
+    "very-heavy-3.3MB-gz"
+   ],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "0.15.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-30T05:38:12.421Z",
+   "firstPublished": "2025-08-30T08:10:38.296Z",
+   "tarballBytes": 7940848,
+   "unpackedBytes": 21139918,
+   "deprecated": null,
+   "repository": "git+https://github.com/contentauth/c2pa-js.git",
+   "topFiles": [
+    {
+     "file": "dist/inline.js",
+     "raw": 11984256,
+     "gzip": 4500635
+    },
+    {
+     "file": "dist/resources/c2pa_bg.wasm",
+     "raw": 8987699,
+     "gzip": 3391816
+    },
+    {
+     "file": "dist/c2pa-ekHbRvhf.js",
+     "raw": 56130,
+     "gzip": 16556
+    },
+    {
+     "file": "dist/c2pa_worker.js",
+     "raw": 46368,
+     "gzip": 10922
+    }
+   ]
+  },
+  {
+   "id": "@cropper/element-image",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "cropperjs v2 image element"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "2.2.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-23T12:12:39.751Z",
+   "firstPublished": "2022-05-01T10:50:39.803Z",
+   "tarballBytes": 39437,
+   "unpackedBytes": 215876,
+   "deprecated": null,
+   "repository": "git+https://github.com/fengyuanchen/cropperjs.git",
+   "topFiles": [
+    {
+     "file": "dist/element-image.js",
+     "raw": 53489,
+     "gzip": 8679
+    },
+    {
+     "file": "dist/element-image.esm.js",
+     "raw": 48361,
+     "gzip": 8439
+    },
+    {
+     "file": "dist/element-image.raw.js",
+     "raw": 35809,
+     "gzip": 5441
+    },
+    {
+     "file": "dist/element-image.esm.raw.js",
+     "raw": 33324,
+     "gzip": 5232
+    }
+   ]
+  },
+  {
+   "id": "@cropper/elements",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "cropperjs v2 components"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "2.2.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-23T12:12:50.232Z",
+   "firstPublished": "2022-05-01T10:50:43.482Z",
+   "tarballBytes": 71599,
+   "unpackedBytes": 428836,
+   "deprecated": null,
+   "repository": "git+https://github.com/fengyuanchen/cropperjs.git",
+   "topFiles": [
+    {
+     "file": "dist/elements.js",
+     "raw": 134044,
+     "gzip": 21463
+    },
+    {
+     "file": "dist/elements.esm.js",
+     "raw": 121046,
+     "gzip": 20430
+    },
+    {
+     "file": "dist/elements.min.js",
+     "raw": 40552,
+     "gzip": 11520
+    },
+    {
+     "file": "dist/elements.esm.min.js",
+     "raw": 40268,
+     "gzip": 11391
+    }
+   ]
+  },
+  {
+   "id": "@fe-daily/libimagequant-wasm",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "PNG quantiser"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: effective GPL"
+   ],
+   "declaredLicense": "MIT label; same GPL dependency",
+   "version": "0.1.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-08-31T16:01:41.505Z",
+   "firstPublished": "2025-08-31T14:39:06.626Z",
+   "tarballBytes": 168194,
+   "unpackedBytes": 408256,
+   "deprecated": null,
+   "repository": "git+https://github.com/akshetpandey/libimagequant-wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/wasm/libimagequant_wasm_bg.wasm",
+     "raw": 339753,
+     "gzip": 151485
+    },
+    {
+     "file": "dist/wasm/libimagequant_wasm.js",
+     "raw": 15369,
+     "gzip": 3332
+    },
+    {
+     "file": "dist/index.mjs",
+     "raw": 3991,
+     "gzip": 1241
+    },
+    {
+     "file": "dist/index.cjs",
+     "raw": 2329,
+     "gzip": 1057
+    }
+   ]
+  },
+  {
+   "id": "@ffmpeg/core",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "ffmpeg.wasm core"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: GPL; 31MB wasm / 10MB gz"
+   ],
+   "declaredLicense": "GPL-2.0-or-later",
+   "version": "0.12.10",
+   "registryLicense": "GPL-2.0-or-later",
+   "publishedLatest": "2025-01-07T10:13:14.328Z",
+   "firstPublished": "2019-10-20T14:24:16.657Z",
+   "tarballBytes": 20634719,
+   "unpackedBytes": 64689644,
+   "deprecated": null,
+   "repository": "git+https://github.com/ffmpegwasm/ffmpeg.wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/esm/ffmpeg-core.wasm",
+     "raw": 32232419,
+     "gzip": 10257774
+    },
+    {
+     "file": "dist/umd/ffmpeg-core.wasm",
+     "raw": 32232419,
+     "gzip": 10257774
+    },
+    {
+     "file": "dist/umd/ffmpeg-core.js",
+     "raw": 112059,
+     "gzip": 29726
+    },
+    {
+     "file": "dist/esm/ffmpeg-core.js",
+     "raw": 111804,
+     "gzip": 29640
+    }
+   ]
+  },
+  {
+   "id": "@ffmpeg/core-mt",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "ffmpeg.wasm multithread core"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: GPL"
+   ],
+   "declaredLicense": "GPL-2.0-or-later",
+   "version": "0.12.10",
+   "registryLicense": "GPL-2.0-or-later",
+   "publishedLatest": "2025-04-28T22:31:57.839Z",
+   "firstPublished": "2023-07-26T15:28:53.744Z",
+   "tarballBytes": 20695080,
+   "unpackedBytes": 65700111,
+   "deprecated": null,
+   "repository": "git+https://github.com/ffmpegwasm/ffmpeg.wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/esm/ffmpeg-core.wasm",
+     "raw": 32718323,
+     "gzip": 10312618
+    },
+    {
+     "file": "dist/umd/ffmpeg-core.wasm",
+     "raw": 32718323,
+     "gzip": 10312618
+    },
+    {
+     "file": "dist/umd/ffmpeg-core.js",
+     "raw": 129115,
+     "gzip": 33707
+    },
+    {
+     "file": "dist/esm/ffmpeg-core.js",
+     "raw": 128947,
+     "gzip": 33659
+    }
+   ]
+  },
+  {
+   "id": "@ffmpeg/ffmpeg",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "ffmpeg.wasm wrapper"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: core is GPL"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.12.15",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-01-07T10:10:00.739Z",
+   "firstPublished": "2019-10-20T14:45:36.424Z",
+   "tarballBytes": 18455,
+   "unpackedBytes": 71999,
+   "deprecated": null,
+   "repository": "git+https://github.com/ffmpegwasm/ffmpeg.wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/esm/classes.js",
+     "raw": 9747,
+     "gzip": 2295
+    },
+    {
+     "file": "dist/esm/worker.js",
+     "raw": 5085,
+     "gzip": 1463
+    },
+    {
+     "file": "dist/umd/ffmpeg.js",
+     "raw": 4420,
+     "gzip": 1901
+    },
+    {
+     "file": "dist/umd/814.ffmpeg.js",
+     "raw": 3177,
+     "gzip": 1450
+    }
+   ]
+  },
+  {
+   "id": "@fontsource/inter",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "font (OFL-1.1)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "OFL-1.1",
+   "version": "5.3.0",
+   "registryLicense": "OFL-1.1",
+   "publishedLatest": "2026-07-19T03:40:13.819Z",
+   "firstPublished": "2020-12-23T22:18:56.133Z",
+   "tarballBytes": 4050993,
+   "unpackedBytes": 4268538,
+   "deprecated": null,
+   "repository": "git+https://github.com/fontsource/font-files.git",
+   "topFiles": [
+    {
+     "file": "100-italic.css",
+     "raw": 2654,
+     "gzip": 597
+    },
+    {
+     "file": "100.css",
+     "raw": 2654,
+     "gzip": 595
+    },
+    {
+     "file": "200-italic.css",
+     "raw": 2654,
+     "gzip": 597
+    },
+    {
+     "file": "200.css",
+     "raw": 2654,
+     "gzip": 595
+    }
+   ]
+  },
+  {
+   "id": "@fontsource/noto-sans-devanagari",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "font (OFL-1.1)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "OFL-1.1",
+   "version": "5.3.0",
+   "registryLicense": "OFL-1.1",
+   "publishedLatest": "2026-07-19T03:42:47.003Z",
+   "firstPublished": "2021-09-22T00:34:07.043Z",
+   "tarballBytes": 1422371,
+   "unpackedBytes": 1502382,
+   "deprecated": null,
+   "repository": "git+https://github.com/fontsource/font-files.git",
+   "topFiles": [
+    {
+     "file": "devanagari.css",
+     "raw": 2977,
+     "gzip": 284
+    },
+    {
+     "file": "latin-ext.css",
+     "raw": 2950,
+     "gzip": 290
+    },
+    {
+     "file": "latin.css",
+     "raw": 2842,
+     "gzip": 288
+    }
+   ]
+  },
+  {
+   "id": "@fontsource/noto-sans-gujarati",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "font (OFL-1.1)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "OFL-1.1",
+   "version": "5.3.0",
+   "registryLicense": "OFL-1.1",
+   "publishedLatest": "2026-07-19T03:42:51.304Z",
+   "firstPublished": "2021-09-22T00:34:08.702Z",
+   "tarballBytes": 1397389,
+   "unpackedBytes": 1520853,
+   "deprecated": null,
+   "repository": "git+https://github.com/fontsource/font-files.git",
+   "topFiles": [
+    {
+     "file": "100.css",
+     "raw": 4248,
+     "gzip": 1299
+    },
+    {
+     "file": "200.css",
+     "raw": 4248,
+     "gzip": 1299
+    },
+    {
+     "file": "300.css",
+     "raw": 4248,
+     "gzip": 1300
+    },
+    {
+     "file": "400.css",
+     "raw": 4248,
+     "gzip": 1300
+    }
+   ]
+  },
+  {
+   "id": "@imagemagick/magick-wasm",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "Long-tail formats pack (100+)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [
+    "very-heavy-5.4MB-gz"
+   ],
+   "notes": [],
+   "declaredLicense": "Apache-2.0 + ImageMagick License",
+   "lazy": true,
+   "version": "0.0.44",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2026-09-30T04:09:04.752Z",
+   "firstPublished": "2020-05-17T18:34:11.932Z",
+   "tarballBytes": 11250922,
+   "unpackedBytes": 32362468,
+   "deprecated": null,
+   "repository": "git+https://github.com/dlemstra/magick-wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/x64/magick.wasm",
+     "raw": 15828735,
+     "gzip": 5551353
+    },
+    {
+     "file": "dist/x86/magick.wasm",
+     "raw": 15447097,
+     "gzip": 5425092
+    },
+    {
+     "file": "dist/index.js",
+     "raw": 409450,
+     "gzip": 99272
+    },
+    {
+     "file": "dist/index.umd.cjs",
+     "raw": 323517,
+     "gzip": 90701
+    }
+   ]
+  },
+  {
+   "id": "@jsquash/avif",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "AVIF enc/dec"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "upstream": "libavif BSD-2 + aom BSD-2 + AOM patent licence",
+   "lazy": true,
+   "version": "2.1.1",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2025-05-20T14:10:44.668Z",
+   "firstPublished": "2021-11-22T06:19:56.724Z",
+   "tarballBytes": 2654320,
+   "unpackedBytes": 8360482,
+   "deprecated": null,
+   "repository": "git+https://github.com/jamsinclair/jSquash.git",
+   "topFiles": [
+    {
+     "file": "codec/enc/avif_enc_mt.wasm",
+     "raw": 3534665,
+     "gzip": 1139552
+    },
+    {
+     "file": "codec/enc/avif_enc.wasm",
+     "raw": 3485872,
+     "gzip": 1125519
+    },
+    {
+     "file": "codec/dec/avif_dec.wasm",
+     "raw": 1170930,
+     "gzip": 340845
+    },
+    {
+     "file": "codec/enc/avif_enc_mt.js",
+     "raw": 54909,
+     "gzip": 14661
+    }
+   ]
+  },
+  {
+   "id": "@jsquash/jpeg",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "JPEG enc/dec (mozjpeg)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "upstream": "mozjpeg: IJG+BSD-3+zlib",
+   "lazy": true,
+   "version": "1.6.0",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2025-05-12T15:02:43.715Z",
+   "firstPublished": "2021-11-12T00:03:40.555Z",
+   "tarballBytes": 157933,
+   "unpackedBytes": 530668,
+   "deprecated": null,
+   "repository": "git+https://github.com/jamsinclair/jSquash.git",
+   "topFiles": [
+    {
+     "file": "codec/enc/mozjpeg_enc.wasm",
+     "raw": 251524,
+     "gzip": 59822
+    },
+    {
+     "file": "codec/dec/mozjpeg_dec.wasm",
+     "raw": 166470,
+     "gzip": 63858
+    },
+    {
+     "file": "codec/enc/mozjpeg_enc.js",
+     "raw": 38422,
+     "gzip": 11073
+    },
+    {
+     "file": "codec/dec/mozjpeg_dec.js",
+     "raw": 36057,
+     "gzip": 10501
+    }
+   ]
+  },
+  {
+   "id": "@jsquash/jxl",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "JPEG XL enc/dec (beta)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "upstream": "libjxl BSD-3 + Google PATENTS grant",
+   "lazy": true,
+   "version": "1.3.0",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2025-07-12T02:51:19.844Z",
+   "firstPublished": "2023-06-13T16:18:28.605Z",
+   "tarballBytes": 2003636,
+   "unpackedBytes": 5848914,
+   "deprecated": null,
+   "repository": "git+https://github.com/jamsinclair/jSquash.git",
+   "topFiles": [
+    {
+     "file": "codec/enc/jxl_enc_mt_simd.wasm",
+     "raw": 2012670,
+     "gzip": 579061
+    },
+    {
+     "file": "codec/enc/jxl_enc_mt.wasm",
+     "raw": 1375371,
+     "gzip": 522094
+    },
+    {
+     "file": "codec/enc/jxl_enc.wasm",
+     "raw": 1363824,
+     "gzip": 516855
+    },
+    {
+     "file": "codec/dec/jxl_dec.wasm",
+     "raw": 849240,
+     "gzip": 317757
+    }
+   ]
+  },
+  {
+   "id": "@jsquash/oxipng",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "lossless PNG optimise"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "upstream": "oxipng MIT",
+   "lazy": true,
+   "version": "2.3.0",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2024-06-18T06:26:09.303Z",
+   "firstPublished": "2021-11-18T14:08:53.965Z",
+   "tarballBytes": 192200,
+   "unpackedBytes": 452392,
+   "deprecated": null,
+   "repository": "jamsinclair/jSquash/packages/oxipng",
+   "topFiles": [
+    {
+     "file": "codec/pkg-parallel/squoosh_oxipng_bg.wasm",
+     "raw": 236042,
+     "gzip": 101819
+    },
+    {
+     "file": "codec/pkg/squoosh_oxipng_bg.wasm",
+     "raw": 164172,
+     "gzip": 76133
+    },
+    {
+     "file": "codec/pkg-parallel/squoosh_oxipng.js",
+     "raw": 11197,
+     "gzip": 2865
+    },
+    {
+     "file": "codec/pkg/squoosh_oxipng.js",
+     "raw": 6307,
+     "gzip": 1751
+    }
+   ]
+  },
+  {
+   "id": "@jsquash/png",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "PNG enc/dec"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "upstream": "Rust png crate; Google BSD-3 notice in tarball",
+   "lazy": true,
+   "version": "3.1.1",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2025-05-20T14:11:32.543Z",
+   "firstPublished": "2021-11-12T04:45:59.814Z",
+   "tarballBytes": 96574,
+   "unpackedBytes": 220994,
+   "deprecated": null,
+   "repository": "git+https://github.com/jamsinclair/jSquash.git",
+   "topFiles": [
+    {
+     "file": "codec/pkg/squoosh_png_bg.wasm",
+     "raw": 181088,
+     "gzip": 85347
+    },
+    {
+     "file": "codec/pkg/squoosh_png.js",
+     "raw": 8818,
+     "gzip": 2377
+    }
+   ]
+  },
+  {
+   "id": "@jsquash/qoi",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "QOI (niche)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "upstream": "QOI MIT",
+   "lazy": true,
+   "version": "1.1.0",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2025-05-12T15:05:09.737Z",
+   "firstPublished": "2024-11-02T13:38:00.165Z",
+   "tarballBytes": 37511,
+   "unpackedBytes": 127868,
+   "deprecated": null,
+   "repository": "git+https://github.com/jamsinclair/jSquash.git",
+   "topFiles": [
+    {
+     "file": "codec/dec/qoi_dec.js",
+     "raw": 33500,
+     "gzip": 9538
+    },
+    {
+     "file": "codec/enc/qoi_enc.js",
+     "raw": 33500,
+     "gzip": 9538
+    },
+    {
+     "file": "codec/dec/qoi_dec.wasm",
+     "raw": 14866,
+     "gzip": 6498
+    },
+    {
+     "file": "codec/enc/qoi_enc.wasm",
+     "raw": 14727,
+     "gzip": 6479
+    }
+   ]
+  },
+  {
+   "id": "@jsquash/resize",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "Resize ImageData (lanczos3, magic-kernel, hqx...)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "upstream": "resize crate MIT; hqx Apache-2.0; magic-kernel MIT",
+   "lazy": true,
+   "version": "2.1.1",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2026-01-05T10:10:33.859Z",
+   "firstPublished": "2021-12-18T03:40:36.371Z",
+   "tarballBytes": 60148,
+   "unpackedBytes": 252440,
+   "deprecated": null,
+   "repository": "jamsinclair/jSquash/packages/resize",
+   "topFiles": [
+    {
+     "file": "lib/hqx/pkg/squooshhqx_bg.wasm",
+     "raw": 135082,
+     "gzip": 19936
+    },
+    {
+     "file": "lib/resize/pkg/squoosh_resize_bg.wasm",
+     "raw": 34545,
+     "gzip": 17051
+    },
+    {
+     "file": "lib/magic-kernel/pkg/jsquash_magic_kernel_bg.wasm",
+     "raw": 18760,
+     "gzip": 8588
+    },
+    {
+     "file": "lib/magic-kernel/pkg/jsquash_magic_kernel.js",
+     "raw": 7768,
+     "gzip": 2218
+    }
+   ]
+  },
+  {
+   "id": "@jsquash/webp",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "WebP enc/dec (has target_size)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "upstream": "libwebp BSD-3",
+   "lazy": true,
+   "version": "1.5.0",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2025-05-12T15:06:24.414Z",
+   "firstPublished": "2021-11-11T14:04:06.255Z",
+   "tarballBytes": 335509,
+   "unpackedBytes": 914811,
+   "deprecated": null,
+   "repository": "git+https://github.com/jamsinclair/jSquash.git",
+   "topFiles": [
+    {
+     "file": "codec/enc/webp_enc_simd.wasm",
+     "raw": 345584,
+     "gzip": 127777
+    },
+    {
+     "file": "codec/enc/webp_enc.wasm",
+     "raw": 281261,
+     "gzip": 114911
+    },
+    {
+     "file": "codec/dec/webp_dec.wasm",
+     "raw": 137960,
+     "gzip": 49448
+    },
+    {
+     "file": "codec/enc/webp_enc.js",
+     "raw": 38665,
+     "gzip": 10431
+    }
+   ]
+  },
+  {
+   "id": "@konnorr/qr-creator",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "styled QR"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "1.1.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-07-27T23:10:09.703Z",
+   "firstPublished": "2026-03-09T14:48:17.283Z",
+   "tarballBytes": 16610,
+   "unpackedBytes": 76075,
+   "deprecated": null,
+   "repository": "git+ssh://git@github.com/konnorrogers/qr-creator.git",
+   "topFiles": [
+    {
+     "file": "src/qr-creator.js",
+     "raw": 63880,
+     "gzip": 11738
+    }
+   ]
+  },
+  {
+   "id": "@libav.js/variant-webcodecs",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "libav.js build for polyfill (VP8/VP9/AV1/Opus class)"
+   ],
+   "tier": "B",
+   "status": "optional",
+   "flags": [
+    "LGPL-separate-wasm"
+   ],
+   "notes": [],
+   "declaredLicense": "LGPL-2.1",
+   "lazy": true,
+   "version": "6.10.9",
+   "registryLicense": "LGPL-2.1",
+   "publishedLatest": "2026-08-18T13:54:41.757Z",
+   "firstPublished": "2024-02-14T12:46:48.236Z",
+   "tarballBytes": 4658342,
+   "unpackedBytes": 15662658,
+   "deprecated": null,
+   "repository": "git+https://github.com/Yahweasel/libav.js.git",
+   "topFiles": [
+    {
+     "file": "dist/libav-6.10.9.0-webcodecs.asm.js",
+     "raw": 4679865,
+     "gzip": 1261061
+    },
+    {
+     "file": "dist/libav-6.10.9.0-webcodecs.asm.mjs",
+     "raw": 4679759,
+     "gzip": 1261064
+    },
+    {
+     "file": "dist/libav-6.10.9.0-webcodecs.thr.wasm",
+     "raw": 2511606,
+     "gzip": 939040
+    },
+    {
+     "file": "dist/libav-6.10.9.0-webcodecs.wasm.wasm",
+     "raw": 2344846,
+     "gzip": 909201
+    }
+   ]
+  },
+  {
+   "id": "@mediabunny/aac-encoder",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "AAC-LC encoder (libavcodec wasm)"
+   ],
+   "tier": "B",
+   "status": "optional",
+   "flags": [
+    "verify-embedded-licence"
+   ],
+   "notes": [],
+   "declaredLicense": "MPL-2.0 wrapper; embedded libavcodec licence unstated",
+   "lazy": true,
+   "version": "1.61.3",
+   "registryLicense": "MPL-2.0",
+   "publishedLatest": "2026-10-05T13:33:36.770Z",
+   "firstPublished": "2026-03-04T16:07:03.031Z",
+   "tarballBytes": 1287884,
+   "unpackedBytes": 4701888,
+   "deprecated": null,
+   "repository": "git+https://github.com/Vanilagy/mediabunny.git",
+   "topFiles": [
+    {
+     "file": "dist/bundles/mediabunny-aac-encoder.js",
+     "raw": 1002346,
+     "gzip": 256071
+    },
+    {
+     "file": "dist/bundles/mediabunny-aac-encoder.mjs",
+     "raw": 999289,
+     "gzip": 255375
+    },
+    {
+     "file": "dist/bundles/mediabunny-aac-encoder.min.js",
+     "raw": 993313,
+     "gzip": 254552
+    },
+    {
+     "file": "dist/bundles/mediabunny-aac-encoder.min.mjs",
+     "raw": 992505,
+     "gzip": 254207
+    }
+   ]
+  },
+  {
+   "id": "@mediabunny/flac-encoder",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "FLAC encoder"
+   ],
+   "tier": "B",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MPL-2.0 wrapper; libFLAC",
+   "lazy": true,
+   "version": "1.61.3",
+   "registryLicense": "MPL-2.0",
+   "publishedLatest": "2026-10-05T13:32:58.497Z",
+   "firstPublished": "2026-03-04T20:22:13.622Z",
+   "tarballBytes": 442590,
+   "unpackedBytes": 1625408,
+   "deprecated": null,
+   "repository": "git+https://github.com/Vanilagy/mediabunny.git",
+   "topFiles": [
+    {
+     "file": "dist/bundles/mediabunny-flac-encoder.js",
+     "raw": 329791,
+     "gzip": 84314
+    },
+    {
+     "file": "dist/bundles/mediabunny-flac-encoder.mjs",
+     "raw": 327195,
+     "gzip": 83486
+    },
+    {
+     "file": "dist/bundles/mediabunny-flac-encoder.min.js",
+     "raw": 323821,
+     "gzip": 83067
+    },
+    {
+     "file": "dist/bundles/mediabunny-flac-encoder.min.mjs",
+     "raw": 323011,
+     "gzip": 82664
+    }
+   ]
+  },
+  {
+   "id": "@mediabunny/mp3-encoder",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "MP3 encoder (LAME wasm, LGPL inside)"
+   ],
+   "tier": "B",
+   "status": "optional",
+   "flags": [
+    "LGPL-inside"
+   ],
+   "notes": [],
+   "declaredLicense": "MPL-2.0 wrapper; LAME LGPL",
+   "lazy": true,
+   "version": "1.61.3",
+   "registryLicense": "MPL-2.0",
+   "publishedLatest": "2026-10-05T13:33:06.419Z",
+   "firstPublished": "2025-08-10T01:52:14.524Z",
+   "tarballBytes": 692351,
+   "unpackedBytes": 1685432,
+   "deprecated": null,
+   "repository": "git+https://github.com/Vanilagy/mediabunny.git",
+   "topFiles": [
+    {
+     "file": "dist/bundles/mediabunny-mp3-encoder.js",
+     "raw": 320174,
+     "gzip": 133745
+    },
+    {
+     "file": "dist/bundles/mediabunny-mp3-encoder.mjs",
+     "raw": 317165,
+     "gzip": 132931
+    },
+    {
+     "file": "dist/modules/build/lame.js",
+     "raw": 313842,
+     "gzip": 130121
+    },
+    {
+     "file": "dist/bundles/mediabunny-mp3-encoder.min.js",
+     "raw": 312380,
+     "gzip": 132035
+    }
+   ]
+  },
+  {
+   "id": "@miconvert/browser-image-compression",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "canvas compressor"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "1.2.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-01T08:48:18.976Z",
+   "firstPublished": "2026-02-14T10:37:25.200Z",
+   "tarballBytes": 54265,
+   "unpackedBytes": 253106,
+   "deprecated": null,
+   "repository": "git+https://github.com/huuhuybn/miconvert-browser-image-compression.git",
+   "topFiles": [
+    {
+     "file": "dist/browser-image-compression.js",
+     "raw": 44875,
+     "gzip": 11274
+    },
+    {
+     "file": "dist/browser-image-compression.mjs",
+     "raw": 44652,
+     "gzip": 11215
+    }
+   ]
+  },
+  {
+   "id": "@neslinesli93/mozjpeg-wasm",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "mozjpeg wasm"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2022",
+    "reason: superseded by jSquash"
+   ],
+   "declaredLicense": "MIT",
+   "version": "2.0.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2022-07-03T12:16:18.871Z",
+   "firstPublished": "2021-01-03T18:00:49.619Z",
+   "tarballBytes": 148135,
+   "unpackedBytes": 679063,
+   "deprecated": null,
+   "repository": "git+https://github.com/neslinesli93/mozjpeg-wasm.git",
+   "topFiles": [
+    {
+     "file": "lib/mozjpeg-wasm.wasm",
+     "raw": 567829,
+     "gzip": 118663
+    },
+    {
+     "file": "lib/mozjpeg-wasm.js",
+     "raw": 109473,
+     "gzip": 29262
+    }
+   ]
+  },
+  {
+   "id": "@nitida/asset-compressor-web",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "compressor wrapper"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: pulls heic2any"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.6.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-13T01:28:13.579Z",
+   "firstPublished": "2026-08-16T23:36:31.910Z",
+   "tarballBytes": 56432,
+   "unpackedBytes": 186369,
+   "deprecated": null,
+   "repository": "git+https://github.com/espaciofuturoio/aquienpz.git",
+   "topFiles": [
+    {
+     "file": "dist/index.js",
+     "raw": 24050,
+     "gzip": 7433
+    }
+   ]
+  },
+  {
+   "id": "@pinta365/steganography",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "LSB steganography"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: heavy; own LSB simpler"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.3.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-12-29T12:46:44.232Z",
+   "firstPublished": "2025-12-28T22:54:36.606Z",
+   "tarballBytes": 230203,
+   "unpackedBytes": 1728020,
+   "deprecated": null,
+   "repository": "git+https://github.com/Pinta365/steganography.git",
+   "topFiles": [
+    {
+     "file": "script/deps/jsr.io/@cross/image/0.4.3/src/formats/jpeg.js",
+     "raw": 59067,
+     "gzip": 9818
+    },
+    {
+     "file": "esm/deps/jsr.io/@cross/image/0.4.3/src/formats/jpeg.js",
+     "raw": 57386,
+     "gzip": 9248
+    },
+    {
+     "file": "script/deps/jsr.io/@cross/image/0.4.3/src/formats/tiff.js",
+     "raw": 55102,
+     "gzip": 8319
+    },
+    {
+     "file": "esm/deps/jsr.io/@cross/image/0.4.3/src/formats/tiff.js",
+     "raw": 54603,
+     "gzip": 8235
+    }
+   ]
+  },
+  {
+   "id": "@resvg/resvg-wasm",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "High-fidelity SVG rasteriser"
+   ],
+   "tier": "B",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MPL-2.0",
+   "lazy": true,
+   "version": "2.6.2",
+   "registryLicense": "MPL-2.0",
+   "publishedLatest": "2024-03-26T13:43:40.968Z",
+   "firstPublished": "2022-02-15T12:19:42.199Z",
+   "tarballBytes": 967004,
+   "unpackedBytes": 2526600,
+   "deprecated": null,
+   "repository": "git+ssh://git@github.com/yisibl/resvg-js.git",
+   "topFiles": [
+    {
+     "file": "index_bg.wasm",
+     "raw": 2478606,
+     "gzip": 957677
+    },
+    {
+     "file": "index.js",
+     "raw": 18024,
+     "gzip": 4320
+    },
+    {
+     "file": "index.mjs",
+     "raw": 17048,
+     "gzip": 4001
+    },
+    {
+     "file": "index.min.js",
+     "raw": 8587,
+     "gzip": 2879
+    }
+   ]
+  },
+  {
+   "id": "@saschazar/wasm-heif",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "HEIC decode"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: stale 2021, bundles LGPL"
+   ],
+   "declaredLicense": "MIT label; libheif/libde265 inside",
+   "version": "2.0.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2021-04-15T08:02:43.642Z",
+   "firstPublished": "2020-04-08T06:53:32.767Z",
+   "tarballBytes": 216014,
+   "unpackedBytes": 598661,
+   "deprecated": null,
+   "repository": "git+https://github.com/saschazar21/webassembly.git",
+   "topFiles": [
+    {
+     "file": "wasm_heif.wasm",
+     "raw": 466186,
+     "gzip": 182319
+    },
+    {
+     "file": "wasm_heif.js",
+     "raw": 120013,
+     "gzip": 30480
+    }
+   ]
+  },
+  {
+   "id": "@squoosh-kit/avif",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "alt codec family"
+   ],
+   "tier": "A",
+   "status": "watch",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT AND Apache-2.0",
+   "version": "0.2.10",
+   "registryLicense": "MIT AND Apache-2.0",
+   "publishedLatest": "2026-09-02T15:19:22.187Z",
+   "firstPublished": "2026-03-25T08:17:24.374Z",
+   "tarballBytes": 4725698,
+   "unpackedBytes": 14317273,
+   "deprecated": null,
+   "repository": "git+https://github.com/bnowak008/squoosh-kit.git",
+   "topFiles": [
+    {
+     "file": "dist/wasm/avif-enc/avif_enc_mt.wasm",
+     "raw": 2872027,
+     "gzip": 997124
+    },
+    {
+     "file": "dist/wasm/avif-enc/avif_node_enc_mt.wasm",
+     "raw": 2831179,
+     "gzip": 981577
+    },
+    {
+     "file": "dist/wasm/avif-enc/avif_enc.wasm",
+     "raw": 2818173,
+     "gzip": 992235
+    },
+    {
+     "file": "dist/wasm/avif-enc/avif_node_enc.wasm",
+     "raw": 2781548,
+     "gzip": 976597
+    }
+   ]
+  },
+  {
+   "id": "@squoosh-kit/jxl",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "alt codec family"
+   ],
+   "tier": "A",
+   "status": "watch",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT AND Apache-2.0",
+   "version": "0.2.10",
+   "registryLicense": "MIT AND Apache-2.0",
+   "publishedLatest": "2026-09-02T15:19:36.266Z",
+   "firstPublished": "2026-03-25T08:17:32.505Z",
+   "tarballBytes": 2811962,
+   "unpackedBytes": 8297719,
+   "deprecated": null,
+   "repository": "git+https://github.com/bnowak008/squoosh-kit.git",
+   "topFiles": [
+    {
+     "file": "dist/wasm/jxl-enc/jxl_enc_mt_simd.wasm",
+     "raw": 1946500,
+     "gzip": 566170
+    },
+    {
+     "file": "dist/wasm/jxl-enc/jxl_enc_mt.wasm",
+     "raw": 1357906,
+     "gzip": 507061
+    },
+    {
+     "file": "dist/wasm/jxl-enc/jxl_enc.wasm",
+     "raw": 1345677,
+     "gzip": 502593
+    },
+    {
+     "file": "dist/wasm/jxl-enc/jxl_node_enc.wasm",
+     "raw": 1345677,
+     "gzip": 502593
+    }
+   ]
+  },
+  {
+   "id": "@squoosh-kit/mozjpeg",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "alt codec family with worker bridge"
+   ],
+   "tier": "A",
+   "status": "watch",
+   "flags": [],
+   "notes": [
+    "risk: young (first publish 2026-03)"
+   ],
+   "declaredLicense": "MIT AND Apache-2.0",
+   "version": "0.2.10",
+   "registryLicense": "MIT AND Apache-2.0",
+   "publishedLatest": "2026-09-02T15:19:28.502Z",
+   "firstPublished": "2026-03-25T08:17:28.267Z",
+   "tarballBytes": 238491,
+   "unpackedBytes": 1047276,
+   "deprecated": null,
+   "repository": "git+https://github.com/bnowak008/squoosh-kit.git",
+   "topFiles": [
+    {
+     "file": "dist/wasm/mozjpeg-enc/mozjpeg_enc.wasm",
+     "raw": 251948,
+     "gzip": 58807
+    },
+    {
+     "file": "dist/wasm/mozjpeg-enc/mozjpeg_node_enc.wasm",
+     "raw": 251948,
+     "gzip": 58807
+    },
+    {
+     "file": "dist/wasm/mozjpeg-dec/mozjpeg_node_dec.wasm",
+     "raw": 163966,
+     "gzip": 61432
+    },
+    {
+     "file": "dist/wasm/mozjpeg-enc/mozjpeg_enc.js",
+     "raw": 39891,
+     "gzip": 11082
+    }
+   ]
+  },
+  {
+   "id": "@squoosh-kit/oxipng",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "alt codec family"
+   ],
+   "tier": "A",
+   "status": "watch",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT AND Apache-2.0",
+   "version": "0.2.10",
+   "registryLicense": "MIT AND Apache-2.0",
+   "publishedLatest": "2026-09-02T15:19:42.784Z",
+   "firstPublished": "2026-03-25T08:17:35.960Z",
+   "tarballBytes": 181350,
+   "unpackedBytes": 553161,
+   "deprecated": null,
+   "repository": "git+https://github.com/bnowak008/squoosh-kit.git",
+   "topFiles": [
+    {
+     "file": "dist/wasm/oxipng-parallel/squoosh_oxipng_bg.wasm",
+     "raw": 220161,
+     "gzip": 93865
+    },
+    {
+     "file": "dist/wasm/oxipng/squoosh_oxipng_bg.wasm",
+     "raw": 147017,
+     "gzip": 68394
+    },
+    {
+     "file": "dist/index.node.cjs",
+     "raw": 21365,
+     "gzip": 5270
+    },
+    {
+     "file": "dist/index.bun.js",
+     "raw": 19871,
+     "gzip": 4943
+    }
+   ]
+  },
+  {
+   "id": "@squoosh-kit/resize",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "alt resize"
+   ],
+   "tier": "A",
+   "status": "watch",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT AND Apache-2.0",
+   "version": "0.2.10",
+   "registryLicense": "MIT AND Apache-2.0",
+   "publishedLatest": "2026-09-02T15:19:14.230Z",
+   "firstPublished": "2025-10-21T22:43:16.904Z",
+   "tarballBytes": 37781,
+   "unpackedBytes": 263564,
+   "deprecated": null,
+   "repository": "git+https://github.com/bnowak008/squoosh-kit.git",
+   "topFiles": [
+    {
+     "file": "dist/wasm/squoosh_resize_bg.wasm",
+     "raw": 37052,
+     "gzip": 19395
+    },
+    {
+     "file": "dist/index.node.cjs",
+     "raw": 27061,
+     "gzip": 6708
+    },
+    {
+     "file": "dist/index.bun.js",
+     "raw": 25488,
+     "gzip": 6376
+    },
+    {
+     "file": "dist/index.browser.mjs",
+     "raw": 25480,
+     "gzip": 6370
+    }
+   ]
+  },
+  {
+   "id": "@squoosh-kit/runtime",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "worker bridge"
+   ],
+   "tier": "A",
+   "status": "watch",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "0.2.10",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-02T15:19:00.836Z",
+   "firstPublished": "2025-10-21T23:46:11.548Z",
+   "tarballBytes": 10015,
+   "unpackedBytes": 76919,
+   "deprecated": null,
+   "repository": "git+https://github.com/bnowak008/squoosh-kit.git",
+   "topFiles": [
+    {
+     "file": "dist/index.node.cjs",
+     "raw": 18009,
+     "gzip": 4745
+    },
+    {
+     "file": "dist/index.bun.js",
+     "raw": 15909,
+     "gzip": 4195
+    },
+    {
+     "file": "dist/index.browser.mjs",
+     "raw": 15901,
+     "gzip": 4190
+    },
+    {
+     "file": "dist/index.node.mjs",
+     "raw": 15901,
+     "gzip": 4190
+    }
+   ]
+  },
+  {
+   "id": "@squoosh-kit/visdif",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "Butteraugli perceptual distance (WASM, worker API)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "risk: young single-maintainer package; calibrate thresholds"
+   ],
+   "declaredLicense": "MIT AND Apache-2.0",
+   "upstream": "Butteraugli Apache-2.0",
+   "lazy": true,
+   "version": "0.2.10",
+   "registryLicense": "MIT AND Apache-2.0",
+   "publishedLatest": "2026-09-02T15:20:28.492Z",
+   "firstPublished": "2026-03-25T08:17:59.867Z",
+   "tarballBytes": 49318,
+   "unpackedBytes": 267054,
+   "deprecated": null,
+   "repository": "git+https://github.com/bnowak008/squoosh-kit.git",
+   "topFiles": [
+    {
+     "file": "dist/wasm/visdif/visdif.wasm",
+     "raw": 58504,
+     "gzip": 23736
+    },
+    {
+     "file": "dist/wasm/visdif/visdif.js",
+     "raw": 51707,
+     "gzip": 13305
+    },
+    {
+     "file": "dist/index.node.cjs",
+     "raw": 20156,
+     "gzip": 5009
+    },
+    {
+     "file": "dist/index.bun.js",
+     "raw": 18525,
+     "gzip": 4673
+    }
+   ]
+  },
+  {
+   "id": "@squoosh-kit/webp",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "alt codec family"
+   ],
+   "tier": "A",
+   "status": "watch",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT AND Apache-2.0",
+   "version": "0.2.10",
+   "registryLicense": "MIT AND Apache-2.0",
+   "publishedLatest": "2026-09-02T15:19:07.527Z",
+   "firstPublished": "2025-10-21T22:45:33.160Z",
+   "tarballBytes": 543468,
+   "unpackedBytes": 1711975,
+   "deprecated": null,
+   "repository": "git+https://github.com/bnowak008/squoosh-kit.git",
+   "topFiles": [
+    {
+     "file": "dist/wasm/webp/webp_enc_simd.wasm",
+     "raw": 371597,
+     "gzip": 131847
+    },
+    {
+     "file": "dist/wasm/webp/webp_enc.wasm",
+     "raw": 298327,
+     "gzip": 112840
+    },
+    {
+     "file": "dist/wasm/webp/webp_node_enc.wasm",
+     "raw": 298327,
+     "gzip": 112840
+    },
+    {
+     "file": "dist/wasm/webp-dec/webp_dec.wasm",
+     "raw": 148687,
+     "gzip": 51594
+    }
+   ]
+  },
+  {
+   "id": "@stacksjs/ts-webp",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "pure-TS WebP codec, anim decode"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "risk: young"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.1.6",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-24T18:39:12.036Z",
+   "firstPublished": "2026-04-29T16:38:16.545Z",
+   "tarballBytes": 48309,
+   "unpackedBytes": 141804,
+   "deprecated": null,
+   "repository": "git+https://github.com/stacksjs/ts-webp.git",
+   "topFiles": [
+    {
+     "file": "dist/index.js",
+     "raw": 76926,
+     "gzip": 26146
+    }
+   ]
+  },
+  {
+   "id": "@techstark/opencv-js",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "OpenCV.js for auto document scanner (heavy)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [
+    "very-heavy-3.7MB-gz"
+   ],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "lazy": true,
+   "version": "5.0.0-release.1",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2026-06-24T07:27:28.510Z",
+   "firstPublished": "2021-02-12T15:02:29.594Z",
+   "tarballBytes": 4031133,
+   "unpackedBytes": 14731296,
+   "deprecated": null,
+   "repository": "git+https://github.com/TechStark/opencv-js.git",
+   "topFiles": [
+    {
+     "file": "dist/opencv.js",
+     "raw": 13298869,
+     "gzip": 3754423
+    },
+    {
+     "file": "dist/src/types/opencv/_types.js",
+     "raw": 3236,
+     "gzip": 799
+    }
+   ]
+  },
+  {
+   "id": "@trustnxt/c2pa-ts",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "C2PA read/validate light (pure TS, incomplete)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "risk: not fully functional; no chain-of-trust validation"
+   ],
+   "declaredLicense": "Apache-2.0",
+   "version": "0.14.0",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2026-04-21T08:43:23.996Z",
+   "firstPublished": "2024-10-11T10:40:44.598Z",
+   "tarballBytes": 272516,
+   "unpackedBytes": 1454271,
+   "deprecated": null,
+   "repository": "git+https://github.com/TrustNXT/c2pa-ts.git",
+   "topFiles": [
+    {
+     "file": "dist/chunk-KKRDVAG7.js",
+     "raw": 206464,
+     "gzip": 34687
+    },
+    {
+     "file": "dist/chunk-7G2A4TPX.js",
+     "raw": 153915,
+     "gzip": 28941
+    },
+    {
+     "file": "dist/chunk-PBCC22LZ.js",
+     "raw": 57037,
+     "gzip": 12067
+    },
+    {
+     "file": "dist/chunk-DJXCNGGN.js",
+     "raw": 20947,
+     "gzip": 4270
+    }
+   ]
+  },
+  {
+   "id": "@turf/boolean-point-in-polygon",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "point in polygon"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "7.4.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-03T15:32:31.567Z",
+   "firstPublished": "2017-10-30T21:56:04.186Z",
+   "tarballBytes": 5072,
+   "unpackedBytes": 18561,
+   "deprecated": null,
+   "repository": "git://github.com/Turfjs/turf.git",
+   "topFiles": []
+  },
+  {
+   "id": "@twemoji/api",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "emoji graphics"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [
+    "attribution"
+   ],
+   "notes": [],
+   "declaredLicense": "MIT (code) AND CC-BY-4.0 (graphics; attribution)",
+   "version": "17.0.3",
+   "registryLicense": "MIT AND CC-BY-4.0",
+   "publishedLatest": "2026-06-01T22:17:22.452Z",
+   "firstPublished": "2023-01-12T18:51:45.677Z",
+   "tarballBytes": 31204,
+   "unpackedBytes": 197789,
+   "deprecated": null,
+   "repository": "git://github.com/jdecked/twemoji.git",
+   "topFiles": [
+    {
+     "file": "dist/twemoji.amd.js",
+     "raw": 37576,
+     "gzip": 8583
+    },
+    {
+     "file": "dist/twemoji.npm.js",
+     "raw": 36636,
+     "gzip": 8602
+    },
+    {
+     "file": "dist/twemoji.js",
+     "raw": 36491,
+     "gzip": 8529
+    },
+    {
+     "file": "dist/twemoji.cjs.js",
+     "raw": 25672,
+     "gzip": 5577
+    }
+   ]
+  },
+  {
+   "id": "@webav/mp4box.js",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "mp4box fork"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "BSD-3-Clause",
+   "version": "0.5.7",
+   "registryLicense": "BSD-3-Clause",
+   "publishedLatest": "2025-07-14T07:53:52.512Z",
+   "firstPublished": "2023-09-03T13:21:56.649Z",
+   "tarballBytes": 213034,
+   "unpackedBytes": 945502,
+   "deprecated": null,
+   "repository": "git://github.com/gpac/mp4box.js.git",
+   "topFiles": [
+    {
+     "file": "dist/mp4box.all.js",
+     "raw": 278607,
+     "gzip": 52764
+    },
+    {
+     "file": "dist/mp4box.all.min.js",
+     "raw": 156995,
+     "gzip": 32472
+    },
+    {
+     "file": "src/isofile.js",
+     "raw": 22389,
+     "gzip": 6163
+    },
+    {
+     "file": "src/isofile-sample-processing.js",
+     "raw": 22352,
+     "gzip": 5031
+    }
+   ]
+  },
+  {
+   "id": "@wordpress/video-conversion",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "client-side video conversion"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: GPL"
+   ],
+   "declaredLicense": "GPL-2.0-or-later",
+   "version": "0.7.0",
+   "registryLicense": "GPL-2.0-or-later",
+   "publishedLatest": "2026-09-23T12:35:11.038Z",
+   "firstPublished": "2026-07-07T07:47:32.611Z",
+   "tarballBytes": 575589,
+   "unpackedBytes": 2859895,
+   "deprecated": null,
+   "repository": "git+https://github.com/WordPress/gutenberg.git",
+   "topFiles": [
+    {
+     "file": "build-module/worker-code.mjs",
+     "raw": 414650,
+     "gzip": 81906
+    },
+    {
+     "file": "build-module/worker.mjs",
+     "raw": 403264,
+     "gzip": 81430
+    },
+    {
+     "file": "build-module/index.mjs",
+     "raw": 5808,
+     "gzip": 1888
+    }
+   ]
+  },
+  {
+   "id": "@zag-js/image-cropper",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "headless crop state machine"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "1.45.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-10-05T15:17:27.732Z",
+   "firstPublished": "2025-10-23T14:57:49.783Z",
+   "tarballBytes": 58158,
+   "unpackedBytes": 301806,
+   "deprecated": null,
+   "repository": "https://github.com/chakra-ui/zag/tree/main/packages/image-cropper",
+   "topFiles": [
+    {
+     "file": "dist/image-cropper.machine.js",
+     "raw": 31397,
+     "gzip": 5917
+    },
+    {
+     "file": "dist/image-cropper.machine.mjs",
+     "raw": 28559,
+     "gzip": 5301
+    },
+    {
+     "file": "dist/utils/crop.js",
+     "raw": 22443,
+     "gzip": 4829
+    },
+    {
+     "file": "dist/utils/crop.mjs",
+     "raw": 19536,
+     "gzip": 4157
+    }
+   ]
+  },
+  {
+   "id": "@zxing/library",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "pure-JS ZXing"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "version": "0.23.0",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2026-04-29T06:28:09.349Z",
+   "firstPublished": "2018-02-23T22:51:19.139Z",
+   "tarballBytes": 1802262,
+   "unpackedBytes": 11863492,
+   "deprecated": null,
+   "repository": "git+https://github.com/zxing-js/library.git",
+   "topFiles": [
+    {
+     "file": "umd/index.js",
+     "raw": 1312428,
+     "gzip": 246663
+    },
+    {
+     "file": "umd/index.min.js",
+     "raw": 362150,
+     "gzip": 108179
+    },
+    {
+     "file": "cjs/core/datamatrix/encoder/MinimalEncoder.js",
+     "raw": 54179,
+     "gzip": 10241
+    },
+    {
+     "file": "esm/core/datamatrix/encoder/MinimalEncoder.js",
+     "raw": 53559,
+     "gzip": 10141
+    }
+   ]
+  },
+  {
+   "id": "ag-psd",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "PSD read/write"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "31.0.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-07-02T20:34:58.509Z",
+   "firstPublished": "2015-12-25T20:40:52.785Z",
+   "tarballBytes": 3948645,
+   "unpackedBytes": 12862278,
+   "deprecated": null,
+   "repository": "git+https://github.com/Agamnentzar/ag-psd.git",
+   "topFiles": [
+    {
+     "file": "dist/bundle.js",
+     "raw": 828929,
+     "gzip": 169628
+    },
+    {
+     "file": "dist/additionalInfo.js",
+     "raw": 171735,
+     "gzip": 29631
+    },
+    {
+     "file": "dist-es/additionalInfo.js",
+     "raw": 171735,
+     "gzip": 29631
+    },
+    {
+     "file": "dist/descriptor.js",
+     "raw": 77507,
+     "gzip": 16829
+    }
+   ]
+  },
+  {
+   "id": "apca-w3",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "APCA contrast"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: restrictive licence"
+   ],
+   "declaredLicense": "Limited W3 License (all rights reserved; patent pending)",
+   "version": "0.1.9",
+   "registryLicense": "Limited W3 License",
+   "publishedLatest": "2022-07-04T09:07:03.397Z",
+   "firstPublished": "2021-12-02T10:57:03.068Z",
+   "tarballBytes": 46014,
+   "unpackedBytes": 179212,
+   "deprecated": null,
+   "repository": "git+https://github.com/Myndex/apca-w3.git",
+   "topFiles": [
+    {
+     "file": "data/LUT-GseriesMay28-2022.js",
+     "raw": 54470,
+     "gzip": 9930
+    },
+    {
+     "file": "src/apca-w3.js",
+     "raw": 29404,
+     "gzip": 8652
+    }
+   ]
+  },
+  {
+   "id": "apng-js",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "APNG parse/play"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "1.1.5",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-01-25T09:25:08.437Z",
+   "firstPublished": "2016-09-08T12:42:18.610Z",
+   "tarballBytes": 11881,
+   "unpackedBytes": 44899,
+   "deprecated": null,
+   "repository": "https://github.com/davidmz/apng-js.git",
+   "topFiles": [
+    {
+     "file": "lib/index.js",
+     "raw": 29588,
+     "gzip": 7210
+    }
+   ]
+  },
+  {
+   "id": "barcode-detector",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "BarcodeDetector polyfill over zxing-wasm (self-host wasm)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [
+    "self-host-wasm"
+   ],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "3.2.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-16T07:47:44.770Z",
+   "firstPublished": "2021-03-25T20:01:30.096Z",
+   "tarballBytes": 82448,
+   "unpackedBytes": 260906,
+   "deprecated": null,
+   "repository": "git+https://github.com/Sec-ant/barcode-detector.git",
+   "topFiles": [
+    {
+     "file": "dist/es/zxing-exported.js",
+     "raw": 58799,
+     "gzip": 16910
+    },
+    {
+     "file": "dist/cjs/zxing-exported.js",
+     "raw": 44197,
+     "gzip": 15017
+    },
+    {
+     "file": "dist/iife/index.js",
+     "raw": 43998,
+     "gzip": 15098
+    },
+    {
+     "file": "dist/iife/polyfill.js",
+     "raw": 43978,
+     "gzip": 15094
+    }
+   ]
+  },
+  {
+   "id": "blockhash-core",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "perceptual hash"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2019"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.1.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2019-12-07T13:15:37.100Z",
+   "firstPublished": "2019-12-07T13:15:36.821Z",
+   "tarballBytes": 3332,
+   "unpackedBytes": 8527,
+   "deprecated": null,
+   "repository": "git+https://github.com/LinusU/blockhash-core.git",
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 4921,
+     "gzip": 1559
+    }
+   ]
+  },
+  {
+   "id": "blurhash",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "image placeholder hash"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2023"
+   ],
+   "declaredLicense": "MIT",
+   "version": "2.0.5",
+   "registryLicense": "MIT",
+   "publishedLatest": "2023-02-17T12:15:40.323Z",
+   "firstPublished": "2017-12-22T15:16:45.157Z",
+   "tarballBytes": 8588,
+   "unpackedBytes": 58793,
+   "deprecated": null,
+   "repository": "https://github.com/woltapp/blurhash/tree/master/TypeScript",
+   "topFiles": [
+    {
+     "file": "dist/index.js",
+     "raw": 3712,
+     "gzip": 1928
+    },
+    {
+     "file": "dist/index.mjs",
+     "raw": 3201,
+     "gzip": 1678
+    },
+    {
+     "file": "dist/esm/index.js",
+     "raw": 3200,
+     "gzip": 1677
+    }
+   ]
+  },
+  {
+   "id": "bmp-js",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "BMP"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: 2018; bmp-ts preferred"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.1.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2018-04-23T05:00:40.902Z",
+   "firstPublished": "2014-08-04T07:23:12.671Z",
+   "tarballBytes": 43502,
+   "unpackedBytes": 645720,
+   "deprecated": null,
+   "repository": "git+https://github.com/shaozilee/bmp-js.git",
+   "topFiles": [
+    {
+     "file": "lib/decoder.js",
+     "raw": 14445,
+     "gzip": 2318
+    },
+    {
+     "file": "lib/encoder.js",
+     "raw": 2429,
+     "gzip": 753
+    }
+   ]
+  },
+  {
+   "id": "bmp-ts",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "BMP enc/dec"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "1.0.9",
+   "registryLicense": "MIT",
+   "publishedLatest": "2024-03-24T03:26:09.559Z",
+   "firstPublished": "2019-09-19T20:16:11.643Z",
+   "tarballBytes": 17271,
+   "unpackedBytes": 139275,
+   "deprecated": null,
+   "repository": "git+https://github.com/hipstersmoothie/bmp-ts.git",
+   "topFiles": [
+    {
+     "file": "dist/commonjs/decoder.js",
+     "raw": 15638,
+     "gzip": 2751
+    },
+    {
+     "file": "dist/esm/decoder.js",
+     "raw": 15154,
+     "gzip": 2595
+    },
+    {
+     "file": "dist/commonjs/encoder.js",
+     "raw": 8551,
+     "gzip": 2001
+    },
+    {
+     "file": "dist/esm/encoder.js",
+     "raw": 8278,
+     "gzip": 1858
+    }
+   ]
+  },
+  {
+   "id": "browser-image-compression",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "canvas-only compressor"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2023"
+   ],
+   "declaredLicense": "MIT",
+   "version": "2.0.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2023-03-06T13:46:33.285Z",
+   "firstPublished": "2017-07-22T04:19:41.745Z",
+   "tarballBytes": 179846,
+   "unpackedBytes": 862967,
+   "deprecated": null,
+   "repository": "git+https://github.com/Donaldcwl/browser-image-compression.git",
+   "topFiles": [
+    {
+     "file": "dist/browser-image-compression.js",
+     "raw": 57069,
+     "gzip": 20602
+    },
+    {
+     "file": "dist/browser-image-compression.mjs",
+     "raw": 56841,
+     "gzip": 20514
+    },
+    {
+     "file": "package.json",
+     "raw": 2453,
+     "gzip": 908
+    }
+   ]
+  },
+  {
+   "id": "browser-image-hash",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "dHash"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "0.0.7",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-03-16T23:01:50.797Z",
+   "firstPublished": "2019-08-26T14:09:18.009Z",
+   "tarballBytes": 10657,
+   "unpackedBytes": 52814,
+   "deprecated": null,
+   "repository": "git+https://github.com/ytetsuro/image-hash.git",
+   "topFiles": [
+    {
+     "file": "dist/index.js",
+     "raw": 45662,
+     "gzip": 7820
+    }
+   ]
+  },
+  {
+   "id": "butteraugli",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "npm butteraugli"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: stale, superseded by visdif"
+   ],
+   "declaredLicense": "unknown/stale 2017"
+  },
+  {
+   "id": "bwip-js",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "2-D/100+ barcode generator"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "4.11.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-19T15:41:31.746Z",
+   "firstPublished": "2015-04-04T15:51:41.485Z",
+   "tarballBytes": 2664490,
+   "unpackedBytes": 12924186,
+   "deprecated": null,
+   "repository": "git+https://github.com/metafloor/bwip-js.git",
+   "topFiles": [
+    {
+     "file": "dist/bwip-js-node.js",
+     "raw": 2289430,
+     "gzip": 443488
+    },
+    {
+     "file": "dist/bwip-js.js",
+     "raw": 2284067,
+     "gzip": 441865
+    },
+    {
+     "file": "dist/bwipp.mjs",
+     "raw": 2101285,
+     "gzip": 389667
+    },
+    {
+     "file": "src/bwipp.js",
+     "raw": 2097814,
+     "gzip": 388614
+    }
+   ]
+  },
+  {
+   "id": "c2pa",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "legacy C2PA"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: DEPRECATED"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.30.17",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-11-07T18:34:01.401Z",
+   "firstPublished": "2022-03-23T20:30:36.720Z",
+   "tarballBytes": 2822305,
+   "unpackedBytes": 9972041,
+   "deprecated": "This package is no longer being actively developed. Please use @contentauth/c2pa-web instead.",
+   "repository": "git+https://github.com/contentauth/c2pa-js-legacy.git",
+   "topFiles": [
+    {
+     "file": "dist/assets/wasm/toolkit_bg.wasm",
+     "raw": 6259517,
+     "gzip": 2100820
+    },
+    {
+     "file": "dist/c2pa.esm.js",
+     "raw": 3117261,
+     "gzip": 642269
+    },
+    {
+     "file": "dist/c2pa.esm.min.js",
+     "raw": 337747,
+     "gzip": 113132
+    },
+    {
+     "file": "dist/c2pa.worker.js",
+     "raw": 167054,
+     "gzip": 31385
+    }
+   ]
+  },
+  {
+   "id": "calc-s2-rust",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "SSIMULACRA2 WASM (low maturity, key-buffer API)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2022",
+    "risk: undocumented API; prefer self-build"
+   ],
+   "declaredLicense": "BSD-2-Clause (wrapper also MIT/Apache files)",
+   "upstream": "rust-av/ssimulacra2 BSD-2-Clause; Cloudinary BSD-3",
+   "lazy": true,
+   "version": "1.0.3",
+   "registryLicense": "BSD-2-Clause",
+   "publishedLatest": "2022-12-18T09:04:44.797Z",
+   "firstPublished": "2022-12-11T07:30:04.399Z",
+   "tarballBytes": 44051,
+   "unpackedBytes": 107749,
+   "deprecated": null,
+   "repository": "git+https://github.com/iola1999/calc-s2-rust.git",
+   "topFiles": [
+    {
+     "file": "calc_s2_rust_bg.wasm",
+     "raw": 84615,
+     "gzip": 36101
+    },
+    {
+     "file": "calc_s2_rust.js",
+     "raw": 7491,
+     "gzip": 1990
+    }
+   ]
+  },
+  {
+   "id": "canvg",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "SVG on canvas"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "4.0.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-03-12T23:04:02.997Z",
+   "firstPublished": "2012-12-14T14:13:35.875Z",
+   "tarballBytes": 275064,
+   "unpackedBytes": 1293203,
+   "deprecated": null,
+   "repository": "git+https://github.com/canvg/canvg.git",
+   "topFiles": [
+    {
+     "file": "dist/index.cjs",
+     "raw": 193545,
+     "gzip": 37045
+    },
+    {
+     "file": "dist/index.js",
+     "raw": 191066,
+     "gzip": 36542
+    }
+   ]
+  },
+  {
+   "id": "changedpi",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "change DPI metadata w/o re-encode"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2018"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.0.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2018-10-22T13:19:22.915Z",
+   "firstPublished": "2018-06-07T09:00:32.054Z",
+   "tarballBytes": 6893,
+   "unpackedBytes": 21778,
+   "deprecated": null,
+   "repository": "git+https://github.com/shutterstock/changeDPI.git",
+   "topFiles": [
+    {
+     "file": "dist/index.js",
+     "raw": 6387,
+     "gzip": 2251
+    },
+    {
+     "file": "src/index.js",
+     "raw": 6054,
+     "gzip": 2113
+    }
+   ]
+  },
+  {
+   "id": "chroma-js",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "colour lib"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "BSD-3-Clause AND Apache-2.0",
+   "version": "3.2.0",
+   "registryLicense": "(BSD-3-Clause AND Apache-2.0)",
+   "publishedLatest": "2025-11-28T10:49:37.625Z",
+   "firstPublished": "2011-12-29T12:16:38.330Z",
+   "tarballBytes": 106675,
+   "unpackedBytes": 397100,
+   "deprecated": null,
+   "repository": "git://github.com/gka/chroma.js.git",
+   "topFiles": [
+    {
+     "file": "dist/chroma.cjs",
+     "raw": 131025,
+     "gzip": 29703
+    },
+    {
+     "file": "dist/chroma-light.cjs",
+     "raw": 55291,
+     "gzip": 12517
+    },
+    {
+     "file": "dist/chroma.min.cjs",
+     "raw": 52299,
+     "gzip": 19004
+    },
+    {
+     "file": "dist/chroma-light.min.cjs",
+     "raw": 22767,
+     "gzip": 8336
+    }
+   ]
+  },
+  {
+   "id": "color-name",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "CSS colour names"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "2.1.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-07-22T15:38:35.512Z",
+   "firstPublished": "2014-11-23T16:18:30.217Z",
+   "tarballBytes": 2846,
+   "unpackedBytes": 6308,
+   "deprecated": null,
+   "repository": "git+https://github.com/colorjs/color-name.git",
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 4245,
+     "gzip": 1520
+    }
+   ]
+  },
+  {
+   "id": "color-name-list",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "30k colour names (306KB gz) opt-in pack"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT (attribution; mixed sources)",
+   "lazy": true,
+   "version": "14.51.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-20T18:07:04.951Z",
+   "firstPublished": "2017-04-23T20:08:35.332Z",
+   "tarballBytes": 5302250,
+   "unpackedBytes": 19275764,
+   "deprecated": null,
+   "repository": "git+https://github.com/meodai/color-names.git",
+   "topFiles": [
+    {
+     "file": "dist/history.json",
+     "raw": 2513386,
+     "gzip": 660827
+    },
+    {
+     "file": "dist/colornames.umd.js",
+     "raw": 1275688,
+     "gzip": 313364
+    },
+    {
+     "file": "dist/colornames.esm.js",
+     "raw": 1275585,
+     "gzip": 313269
+    },
+    {
+     "file": "dist/colornames.esm.mjs",
+     "raw": 1275585,
+     "gzip": 313269
+    }
+   ]
+  },
+  {
+   "id": "colord",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "colour maths (2KB gz)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "2.10.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-20T17:09:58.437Z",
+   "firstPublished": "2020-11-27T16:12:02.335Z",
+   "tarballBytes": 36921,
+   "unpackedBytes": 126597,
+   "deprecated": null,
+   "repository": "git+https://github.com/omgovich/colord.git",
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 6083,
+     "gzip": 2155
+    },
+    {
+     "file": "index.mjs",
+     "raw": 6023,
+     "gzip": 2125
+    },
+    {
+     "file": "package.json",
+     "raw": 5379,
+     "gzip": 1385
+    },
+    {
+     "file": "plugins/names.mjs",
+     "raw": 3549,
+     "gzip": 1551
+    }
+   ]
+  },
+  {
+   "id": "colorjs.io",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "colour lib (108KB gz)"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "0.7.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-07-24T16:34:21.631Z",
+   "firstPublished": "2020-12-10T12:43:25.922Z",
+   "tarballBytes": 4149272,
+   "unpackedBytes": 15781049,
+   "deprecated": null,
+   "repository": "git+https://github.com/color-js/color.js.git",
+   "topFiles": [
+    {
+     "file": "dist/color.global.legacy.js",
+     "raw": 434146,
+     "gzip": 110566
+    },
+    {
+     "file": "dist/color.legacy.cjs",
+     "raw": 421976,
+     "gzip": 109902
+    },
+    {
+     "file": "dist/color-fn.legacy.cjs",
+     "raw": 409029,
+     "gzip": 105747
+    },
+    {
+     "file": "dist/color.legacy.js",
+     "raw": 369082,
+     "gzip": 97797
+    }
+   ]
+  },
+  {
+   "id": "colorthief",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "palette extraction (MMCQ/OKLCH)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "3.5.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-02T23:24:55.464Z",
+   "firstPublished": "2017-11-27T02:36:08.549Z",
+   "tarballBytes": 399155,
+   "unpackedBytes": 1696040,
+   "deprecated": null,
+   "repository": "git+https://github.com/lokesh/color-thief.git",
+   "topFiles": [
+    {
+     "file": "dist/cli.js",
+     "raw": 47968,
+     "gzip": 13158
+    },
+    {
+     "file": "dist/index.cjs",
+     "raw": 47944,
+     "gzip": 12814
+    },
+    {
+     "file": "dist/index.js",
+     "raw": 46221,
+     "gzip": 12229
+    },
+    {
+     "file": "dist/index.browser.cjs",
+     "raw": 45490,
+     "gzip": 12046
+    }
+   ]
+  },
+  {
+   "id": "comlink",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "worker RPC"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "version": "4.4.2",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2024-11-07T12:34:03.224Z",
+   "firstPublished": "2015-05-25T18:06:53.937Z",
+   "tarballBytes": 53654,
+   "unpackedBytes": 252242,
+   "deprecated": null,
+   "repository": "git+https://github.com/GoogleChromeLabs/comlink.git",
+   "topFiles": [
+    {
+     "file": "tests/same_window.comlink.test.js",
+     "raw": 19665,
+     "gzip": 3638
+    },
+    {
+     "file": "dist/umd/comlink.js",
+     "raw": 14644,
+     "gzip": 3353
+    },
+    {
+     "file": "dist/esm/comlink.mjs",
+     "raw": 12629,
+     "gzip": 3144
+    },
+    {
+     "file": "dist/esm/comlink.js",
+     "raw": 12628,
+     "gzip": 3143
+    }
+   ]
+  },
+  {
+   "id": "compressorjs",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "canvas-only compressor"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "1.4.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-10-01T04:57:14.309Z",
+   "firstPublished": "2018-10-15T13:06:24.527Z",
+   "tarballBytes": 43018,
+   "unpackedBytes": 165695,
+   "deprecated": null,
+   "repository": "git+https://github.com/fengyuanchen/compressorjs.git",
+   "topFiles": [
+    {
+     "file": "dist/compressor.js",
+     "raw": 38435,
+     "gzip": 9658
+    },
+    {
+     "file": "dist/compressor.common.js",
+     "raw": 36009,
+     "gzip": 9479
+    },
+    {
+     "file": "dist/compressor.esm.js",
+     "raw": 35999,
+     "gzip": 9478
+    },
+    {
+     "file": "src/index.js",
+     "raw": 12813,
+     "gzip": 3431
+    }
+   ]
+  },
+  {
+   "id": "country-reverse-geocoding",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "country lookup"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: no licence; 2014"
+   ],
+   "declaredLicense": null,
+   "version": "0.2.2",
+   "registryLicense": null,
+   "publishedLatest": "2014-03-07T14:03:11.136Z",
+   "firstPublished": "2013-02-04T15:07:30.415Z",
+   "tarballBytes": 137239,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": "https://github.com/teleportd/country-reverse-geocoding.git",
+   "topFiles": [
+    {
+     "file": "lib/country_reverse_geocoding.js",
+     "raw": 354624,
+     "gzip": 132545
+    },
+    {
+     "file": "spec/country_reverse_geocoding.spec.js",
+     "raw": 2506,
+     "gzip": 730
+    }
+   ]
+  },
+  {
+   "id": "cropperjs",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "Crop UI (web components, framework-agnostic)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "2.2.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-23T12:13:58.161Z",
+   "firstPublished": "2015-08-25T14:18:11.410Z",
+   "tarballBytes": 81563,
+   "unpackedBytes": 472907,
+   "deprecated": null,
+   "repository": "git+https://github.com/fengyuanchen/cropperjs.git",
+   "topFiles": [
+    {
+     "file": "dist/cropper.js",
+     "raw": 143205,
+     "gzip": 23368
+    },
+    {
+     "file": "dist/cropper.esm.js",
+     "raw": 127586,
+     "gzip": 22044
+    },
+    {
+     "file": "dist/cropper.min.js",
+     "raw": 44841,
+     "gzip": 13047
+    },
+    {
+     "file": "dist/cropper.esm.min.js",
+     "raw": 44625,
+     "gzip": 12916
+    }
+   ]
+  },
+  {
+   "id": "culori",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "OKLCH/gradients"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "4.0.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-06-27T15:55:34.023Z",
+   "firstPublished": "2018-03-27T15:05:58.317Z",
+   "tarballBytes": 263116,
+   "unpackedBytes": 1108305,
+   "deprecated": null,
+   "repository": "git+ssh://git@github.com/Evercoder/culori.git",
+   "topFiles": [
+    {
+     "file": "bundled/culori.umd.js",
+     "raw": 147274,
+     "gzip": 32177
+    },
+    {
+     "file": "bundled/culori.js",
+     "raw": 146937,
+     "gzip": 32046
+    },
+    {
+     "file": "bundled/culori.cjs",
+     "raw": 137177,
+     "gzip": 31704
+    },
+    {
+     "file": "bundled/culori.mjs",
+     "raw": 133591,
+     "gzip": 30931
+    }
+   ]
+  },
+  {
+   "id": "d3-geo",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "map projections"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "ISC",
+   "version": "3.1.1",
+   "registryLicense": "ISC",
+   "publishedLatest": "2024-03-12T22:06:03.888Z",
+   "firstPublished": "2014-03-29T21:55:42.660Z",
+   "tarballBytes": 61257,
+   "unpackedBytes": 227065,
+   "deprecated": null,
+   "repository": "git+https://github.com/d3/d3-geo.git",
+   "topFiles": [
+    {
+     "file": "dist/d3-geo.js",
+     "raw": 89758,
+     "gzip": 21272
+    },
+    {
+     "file": "dist/d3-geo.min.js",
+     "raw": 36329,
+     "gzip": 13087
+    },
+    {
+     "file": "src/projection/index.js",
+     "raw": 5870,
+     "gzip": 1559
+    },
+    {
+     "file": "src/clip/circle.js",
+     "raw": 5834,
+     "gzip": 1928
+    }
+   ]
+  },
+  {
+   "id": "dpi-tools",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "change DPI metadata"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2020"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.0.7",
+   "registryLicense": "MIT",
+   "publishedLatest": "2020-12-12T04:16:55.714Z",
+   "firstPublished": "2020-12-12T03:33:38.704Z",
+   "tarballBytes": 6468,
+   "unpackedBytes": 32543,
+   "deprecated": null,
+   "repository": "git+https://github.com/insomnia-dev/dpi-tools.git",
+   "topFiles": [
+    {
+     "file": "dist/dpi-tools.js",
+     "raw": 9807,
+     "gzip": 3150
+    },
+    {
+     "file": "dist/dpi-tools.cjs.js",
+     "raw": 9003,
+     "gzip": 3004
+    },
+    {
+     "file": "dist/dpi-tools.esm.js",
+     "raw": 8855,
+     "gzip": 2944
+    }
+   ]
+  },
+  {
+   "id": "dssim",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "perceptual metric (Rust)"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: AGPL"
+   ],
+   "declaredLicense": "AGPL-3.0"
+  },
+  {
+   "id": "exif-be-gone",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "reference for strip logic (JPEG/TIFF/PNG)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "ISC",
+   "version": "1.5.1",
+   "registryLicense": "ISC",
+   "publishedLatest": "2024-07-23T07:20:13.052Z",
+   "firstPublished": "2018-02-01T17:52:09.956Z",
+   "tarballBytes": 6888,
+   "unpackedBytes": 30218,
+   "deprecated": null,
+   "repository": "git+https://github.com/joshbuddy/exif-be-gone.git",
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 11317,
+     "gzip": 2279
+    },
+    {
+     "file": "tsconfig.json",
+     "raw": 6207,
+     "gzip": 2075
+    }
+   ]
+  },
+  {
+   "id": "exif-js",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "EXIF reader"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2017"
+   ],
+   "declaredLicense": "MIT",
+   "version": "2.3.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2017-09-10T20:41:59.391Z",
+   "firstPublished": "2014-04-28T15:06:03.208Z",
+   "tarballBytes": 1241188,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": "git+https://github.com/exif-js/exif-js.git",
+   "topFiles": [
+    {
+     "file": "exif.js",
+     "raw": 40454,
+     "gzip": 9180
+    }
+   ]
+  },
+  {
+   "id": "exif-parser",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "EXIF reader"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: no licence field; 2017"
+   ],
+   "declaredLicense": null,
+   "version": "0.1.12",
+   "registryLicense": null,
+   "publishedLatest": "2017-07-19T17:31:05.431Z",
+   "firstPublished": "2013-05-29T02:26:37.700Z",
+   "tarballBytes": 342026,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": "git+ssh://git@github.com/bwindels/exif-parser.git",
+   "topFiles": [
+    {
+     "file": "lib/exif-tags.js",
+     "raw": 13236,
+     "gzip": 4367
+    },
+    {
+     "file": "lib/parser.js",
+     "raw": 5433,
+     "gzip": 1492
+    },
+    {
+     "file": "lib/exif.js",
+     "raw": 4645,
+     "gzip": 1508
+    },
+    {
+     "file": "test/expected-exif-tags.json",
+     "raw": 4599,
+     "gzip": 513
+    }
+   ]
+  },
+  {
+   "id": "exif-reader",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "parse raw EXIF buffer"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "2.0.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-12-12T14:45:42.637Z",
+   "firstPublished": "2015-03-06T06:21:59.545Z",
+   "tarballBytes": 9288,
+   "unpackedBytes": 33240,
+   "deprecated": null,
+   "repository": "git://github.com/devongovett/exif-reader.git",
+   "topFiles": [
+    {
+     "file": "tags.js",
+     "raw": 10792,
+     "gzip": 3527
+    },
+    {
+     "file": "index.js",
+     "raw": 6783,
+     "gzip": 1658
+    }
+   ]
+  },
+  {
+   "id": "exifr",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "EXIF/GPS/XMP/IPTC/ICC/thumbnail reader (lite 15KB gz)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2021",
+    "note: mini 9KB, lite 15KB, full 26KB gz"
+   ],
+   "declaredLicense": "MIT",
+   "version": "7.1.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2021-08-05T08:00:59.676Z",
+   "firstPublished": "2018-08-01T21:14:55.188Z",
+   "tarballBytes": 390474,
+   "unpackedBytes": 1291466,
+   "deprecated": null,
+   "repository": "git+https://github.com/MikeKovarik/exifr.git",
+   "topFiles": [
+    {
+     "file": "dist/full.legacy.umd.cjs",
+     "raw": 104936,
+     "gzip": 31459
+    },
+    {
+     "file": "dist/full.legacy.umd.js",
+     "raw": 104936,
+     "gzip": 31459
+    },
+    {
+     "file": "dist/full.umd.cjs",
+     "raw": 75848,
+     "gzip": 26542
+    },
+    {
+     "file": "dist/full.umd.js",
+     "raw": 75848,
+     "gzip": 26542
+    }
+   ]
+  },
+  {
+   "id": "exifreader",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "EXIF reader (fallback)"
+   ],
+   "tier": "B",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MPL-2.0",
+   "version": "4.46.0",
+   "registryLicense": "MPL-2.0",
+   "publishedLatest": "2026-09-26T14:47:37.055Z",
+   "firstPublished": "2016-12-28T13:09:14.749Z",
+   "tarballBytes": 289789,
+   "unpackedBytes": 1217341,
+   "deprecated": null,
+   "repository": "git+https://github.com/mattiasw/ExifReader.git",
+   "topFiles": [
+    {
+     "file": "dist/exif-reader.js",
+     "raw": 132986,
+     "gzip": 39222
+    },
+    {
+     "file": "src/exif-reader.js",
+     "raw": 30927,
+     "gzip": 5790
+    },
+    {
+     "file": "bin/profile.js",
+     "raw": 27982,
+     "gzip": 7094
+    },
+    {
+     "file": "src/image-header-iso-bmff.js",
+     "raw": 24686,
+     "gzip": 5972
+    }
+   ]
+  },
+  {
+   "id": "exiftool-vendored",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "ExifTool Node wrapper"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: Node-only"
+   ],
+   "declaredLicense": "MIT wrapper; ExifTool Artistic/GPL"
+  },
+  {
+   "id": "fabric",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "canvas framework"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: heavy, not needed"
+   ],
+   "declaredLicense": "MIT",
+   "version": "7.4.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-05-18T18:36:25.365Z",
+   "firstPublished": "2011-08-16T20:17:15.294Z",
+   "tarballBytes": 4961826,
+   "unpackedBytes": 22222881,
+   "deprecated": null,
+   "repository": "git+https://github.com/fabricjs/fabric.js.git",
+   "topFiles": [
+    {
+     "file": "dist/index.js",
+     "raw": 817005,
+     "gzip": 193846
+    },
+    {
+     "file": "dist/index.mjs",
+     "raw": 792526,
+     "gzip": 192575
+    },
+    {
+     "file": "dist/index.node.cjs",
+     "raw": 788503,
+     "gzip": 192532
+    },
+    {
+     "file": "dist/index.node.mjs",
+     "raw": 785785,
+     "gzip": 191933
+    }
+   ]
+  },
+  {
+   "id": "fast-blurhash",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "blurhash decoder"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "ISC",
+   "version": "1.2.0",
+   "registryLicense": "ISC",
+   "publishedLatest": "2026-06-19T15:42:01.179Z",
+   "firstPublished": "2021-03-20T23:50:49.167Z",
+   "tarballBytes": 6464,
+   "unpackedBytes": 17862,
+   "deprecated": null,
+   "repository": "git+https://github.com/mad-gooze/fast-blurhash.git",
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 4911,
+     "gzip": 1823
+    },
+    {
+     "file": "index.test.js",
+     "raw": 2863,
+     "gzip": 1144
+    }
+   ]
+  },
+  {
+   "id": "fast-png",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "PNG codec"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "8.0.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-12-18T07:13:29.838Z",
+   "firstPublished": "2015-09-26T08:15:48.107Z",
+   "tarballBytes": 33675,
+   "unpackedBytes": 162913,
+   "deprecated": null,
+   "repository": "git+https://github.com/image-js/fast-png.git",
+   "topFiles": [
+    {
+     "file": "lib/png_decoder.js",
+     "raw": 20269,
+     "gzip": 3910
+    },
+    {
+     "file": "lib/png_encoder.js",
+     "raw": 8709,
+     "gzip": 2285
+    },
+    {
+     "file": "lib/helpers/decode_interlace_adam7.js",
+     "raw": 3112,
+     "gzip": 1092
+    },
+    {
+     "file": "lib/helpers/unfilter.js",
+     "raw": 2641,
+     "gzip": 494
+    }
+   ]
+  },
+  {
+   "id": "fast-xml-parser",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "XMP XML parsing"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "5.11.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-29T04:45:32.224Z",
+   "firstPublished": "2017-01-28T23:53:05.426Z",
+   "tarballBytes": 372179,
+   "unpackedBytes": 1315394,
+   "deprecated": null,
+   "repository": "git+https://github.com/NaturalIntelligence/fast-xml-parser.git",
+   "topFiles": [
+    {
+     "file": "lib/fxp.min.js",
+     "raw": 79215,
+     "gzip": 25601
+    },
+    {
+     "file": "lib/fxp.cjs",
+     "raw": 77653,
+     "gzip": 24672
+    },
+    {
+     "file": "lib/fxparser.min.js",
+     "raw": 64964,
+     "gzip": 22008
+    },
+    {
+     "file": "src/xmlparser/OrderedObjParser.js",
+     "raw": 30836,
+     "gzip": 7842
+    }
+   ]
+  },
+  {
+   "id": "fflate",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "ZIP/gzip, streaming"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "0.8.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-05-16T00:14:03.449Z",
+   "firstPublished": "2020-09-20T19:52:45.868Z",
+   "tarballBytes": 173034,
+   "unpackedBytes": 796742,
+   "deprecated": null,
+   "repository": "git+https://github.com/101arrowz/fflate.git",
+   "topFiles": [
+    {
+     "file": "lib/node.cjs",
+     "raw": 92380,
+     "gzip": 22564
+    },
+    {
+     "file": "esm/index.mjs",
+     "raw": 91765,
+     "gzip": 22444
+    },
+    {
+     "file": "lib/browser.cjs",
+     "raw": 91611,
+     "gzip": 22305
+    },
+    {
+     "file": "lib/index.cjs",
+     "raw": 91005,
+     "gzip": 22063
+    }
+   ]
+  },
+  {
+   "id": "file-type",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "Detect true file type by magic bytes"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "22.1.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-17T05:27:34.572Z",
+   "firstPublished": "2014-04-24T11:06:04.434Z",
+   "tarballBytes": 34980,
+   "unpackedBytes": 138897,
+   "deprecated": null,
+   "repository": "git+https://github.com/sindresorhus/file-type.git",
+   "topFiles": [
+    {
+     "file": "source/index.js",
+     "raw": 47035,
+     "gzip": 11896
+    },
+    {
+     "file": "source/detectors/zip.js",
+     "raw": 20094,
+     "gzip": 4929
+    },
+    {
+     "file": "source/supported.js",
+     "raw": 6681,
+     "gzip": 1933
+    },
+    {
+     "file": "package.json",
+     "raw": 3520,
+     "gzip": 1367
+    }
+   ]
+  },
+  {
+   "id": "filerobot-image-editor",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "image editor stub"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "5.0.0-beta.159",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-06-02T09:12:30.796Z",
+   "firstPublished": "2019-02-27T09:20:58.175Z",
+   "tarballBytes": 2831,
+   "unpackedBytes": 6917,
+   "deprecated": null,
+   "repository": "git+https://github.com/scaleflex/filerobot-image-editor.git#readme",
+   "topFiles": [
+    {
+     "file": "lib/index.js",
+     "raw": 3969,
+     "gzip": 1253
+    }
+   ]
+  },
+  {
+   "id": "fix-webm-duration",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "fix MediaRecorder WebM duration"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "1.0.6",
+   "registryLicense": "MIT",
+   "publishedLatest": "2024-07-04T23:57:17.129Z",
+   "firstPublished": "2019-01-16T17:13:52.738Z",
+   "tarballBytes": 6963,
+   "unpackedBytes": 28236,
+   "deprecated": null,
+   "repository": "git+https://github.com/yusitnikov/fix-webm-duration.git",
+   "topFiles": [
+    {
+     "file": "fix-webm-duration.js",
+     "raw": 23002,
+     "gzip": 4667
+    }
+   ]
+  },
+  {
+   "id": "geo-tz",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "timezone from GPS"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: 58MB package"
+   ],
+   "declaredLicense": "MIT",
+   "version": "8.1.9",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-16T16:02:31.418Z",
+   "firstPublished": "2016-03-31T18:33:52.162Z",
+   "tarballBytes": 59775439,
+   "unpackedBytes": 74179650,
+   "deprecated": null,
+   "repository": "git+https://github.com/evansiroky/node-geo-tz.git",
+   "topFiles": [
+    {
+     "file": "data/timezones.geojson.index.json",
+     "raw": 941298,
+     "gzip": 184645
+    },
+    {
+     "file": "data/timezones-1970.geojson.index.json",
+     "raw": 889116,
+     "gzip": 172927
+    },
+    {
+     "file": "data/timezones-now.geojson.index.json",
+     "raw": 731428,
+     "gzip": 138551
+    },
+    {
+     "file": "dist/find-1970.js",
+     "raw": 4010,
+     "gzip": 1642
+    }
+   ]
+  },
+  {
+   "id": "geokdbush",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "nearest city by great-circle distance"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "ISC",
+   "version": "2.1.0",
+   "registryLicense": "ISC",
+   "publishedLatest": "2026-04-06T09:05:29.347Z",
+   "firstPublished": "2017-03-17T13:27:08.352Z",
+   "tarballBytes": 4226,
+   "unpackedBytes": 13106,
+   "deprecated": null,
+   "repository": "git+https://github.com/mourner/geokdbush.git",
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 7443,
+     "gzip": 2164
+    }
+   ]
+  },
+  {
+   "id": "gif-encoder-2",
+   "sections": [
+    "01",
+    "05"
+   ],
+   "roles": [
+    "GIF encode",
+    "GIF encoder"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: see section 05",
+    "stale: 2019"
+   ],
+   "declaredLicense": "Unlicense",
+   "version": "1.0.5",
+   "registryLicense": "UNLICENSE",
+   "publishedLatest": "2019-08-25T03:30:29.815Z",
+   "firstPublished": "2019-06-10T07:07:46.479Z",
+   "tarballBytes": 12915,
+   "unpackedBytes": 42353,
+   "deprecated": null,
+   "repository": "git+https://github.com/benjaminadk/gif-encoder-2.git",
+   "topFiles": [
+    {
+     "file": "src/TypedNeuQuant.js",
+     "raw": 11605,
+     "gzip": 3510
+    },
+    {
+     "file": "src/GIFEncoder.js",
+     "raw": 9238,
+     "gzip": 2366
+    },
+    {
+     "file": "src/LZWEncoder.js",
+     "raw": 6278,
+     "gzip": 2461
+    },
+    {
+     "file": "src/OctreeQuant.js",
+     "raw": 5232,
+     "gzip": 1284
+    }
+   ]
+  },
+  {
+   "id": "gif.js",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "GIF encoder"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2016"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.2.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2016-12-06T19:51:15.888Z",
+   "firstPublished": "2013-11-12T03:27:47.842Z",
+   "tarballBytes": 2849663,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": "git+https://github.com/jnordberg/gif.js.git",
+   "topFiles": [
+    {
+     "file": "site/contents/scripts/vendor/mootools.js",
+     "raw": 111429,
+     "gzip": 28263
+    },
+    {
+     "file": "dist/gif.worker.js",
+     "raw": 16636,
+     "gzip": 5323
+    },
+    {
+     "file": "src/GIFEncoder.js",
+     "raw": 14983,
+     "gzip": 4743
+    },
+    {
+     "file": "dist/gif.js",
+     "raw": 13451,
+     "gzip": 4206
+    }
+   ]
+  },
+  {
+   "id": "gifenc",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "GIF encoder (fast, tiny)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2021"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.0.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2021-03-07T11:09:20.659Z",
+   "firstPublished": "2021-02-25T13:24:42.067Z",
+   "tarballBytes": 43036,
+   "unpackedBytes": 172516,
+   "deprecated": null,
+   "repository": "git://github.com/mattdesl/gifenc.git",
+   "topFiles": [
+    {
+     "file": "dist/gifenc.js",
+     "raw": 22617,
+     "gzip": 5663
+    },
+    {
+     "file": "dist/gifenc.esm.js",
+     "raw": 9098,
+     "gzip": 3926
+    },
+    {
+     "file": "src/pnnquant2.js",
+     "raw": 7761,
+     "gzip": 2544
+    },
+    {
+     "file": "src/index.js",
+     "raw": 7049,
+     "gzip": 2236
+    }
+   ]
+  },
+  {
+   "id": "gifsicle-wasm",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "GIF optimiser"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: GPL"
+   ],
+   "declaredLicense": "GPL-2.0-only",
+   "version": "1.96.4",
+   "registryLicense": "GPL-2.0-only",
+   "publishedLatest": "2026-03-24T00:49:00.718Z",
+   "firstPublished": "2026-03-23T22:15:40.504Z",
+   "tarballBytes": 125165,
+   "unpackedBytes": 305482,
+   "deprecated": null,
+   "repository": "git+https://github.com/ysamlan/gifsicle-bin.git",
+   "topFiles": [
+    {
+     "file": "dist/gifsicle.wasm",
+     "raw": 236944,
+     "gzip": 104483
+    },
+    {
+     "file": "dist/gifsicle.js",
+     "raw": 64414,
+     "gzip": 18226
+    }
+   ]
+  },
+  {
+   "id": "gifsicle-wasm-browser",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "GIF optimiser"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: effective GPL"
+   ],
+   "declaredLicense": "MIT label; bundles gifsicle (GPL-2.0)",
+   "version": "1.5.19",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-12-13T17:19:36.738Z",
+   "firstPublished": "2022-06-16T18:20:09.021Z",
+   "tarballBytes": 150214,
+   "unpackedBytes": 358740,
+   "deprecated": null,
+   "repository": "git+https://github.com/renzhezhilu/gifsicle-wasm-browser.git",
+   "topFiles": [
+    {
+     "file": "dist/gifsicle.min.js",
+     "raw": 341986,
+     "gzip": 144538
+    }
+   ]
+  },
+  {
+   "id": "gifski",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "high quality GIF encoder"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: AGPL"
+   ],
+   "declaredLicense": "AGPL-3.0"
+  },
+  {
+   "id": "gifski-lite",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "gifski wasm"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: AGPL"
+   ],
+   "declaredLicense": "AGPL-3.0"
+  },
+  {
+   "id": "gifuct-js",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "GIF decode"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2021"
+   ],
+   "declaredLicense": "MIT",
+   "version": "2.1.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2021-11-04T12:28:51.462Z",
+   "firstPublished": "2019-12-29T18:03:35.895Z",
+   "tarballBytes": 3726202,
+   "unpackedBytes": 3775208,
+   "deprecated": null,
+   "repository": "git+https://github.com/matt-way/gifuct-js.git",
+   "topFiles": [
+    {
+     "file": "demo/demo.build.js",
+     "raw": 26608,
+     "gzip": 7046
+    },
+    {
+     "file": "demo/demo.js",
+     "raw": 5547,
+     "gzip": 1765
+    },
+    {
+     "file": "lib/index.js",
+     "raw": 3101,
+     "gzip": 1133
+    },
+    {
+     "file": "src/lzw.js",
+     "raw": 2998,
+     "gzip": 1042
+    }
+   ]
+  },
+  {
+   "id": "hash-wasm",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "fast hashes, Argon2id"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "4.12.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2024-11-19T19:01:58.186Z",
+   "firstPublished": "2020-04-10T07:50:34.057Z",
+   "tarballBytes": 530236,
+   "unpackedBytes": 1799970,
+   "deprecated": null,
+   "repository": "git+https://github.com/Daninet/hash-wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/index.umd.js",
+     "raw": 283696,
+     "gzip": 84830
+    },
+    {
+     "file": "dist/index.esm.js",
+     "raw": 271659,
+     "gzip": 84162
+    },
+    {
+     "file": "dist/index.esm.min.js",
+     "raw": 216162,
+     "gzip": 77972
+    },
+    {
+     "file": "dist/index.umd.min.js",
+     "raw": 216086,
+     "gzip": 77758
+    }
+   ]
+  },
+  {
+   "id": "heic-to",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "HEIC decode"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: 3MB single-file bundle, not replaceable"
+   ],
+   "declaredLicense": "LGPL-3.0",
+   "version": "1.6.5",
+   "registryLicense": "LGPL-3.0",
+   "publishedLatest": "2026-10-01T10:53:18.044Z",
+   "firstPublished": "2024-08-07T17:58:22.306Z",
+   "tarballBytes": 6210178,
+   "unpackedBytes": 25919608,
+   "deprecated": null,
+   "repository": "git+https://github.com/hoppergee/heic-to.git",
+   "topFiles": [
+    {
+     "file": "src/lib/libheif.js",
+     "raw": 3361983,
+     "gzip": 788947
+    },
+    {
+     "file": "src/lib/libheif-without-unsafe-eval.js",
+     "raw": 3360521,
+     "gzip": 788564
+    },
+    {
+     "file": "dist/iife/heic-to.js",
+     "raw": 3193474,
+     "gzip": 770758
+    },
+    {
+     "file": "dist/heic-to.js",
+     "raw": 3190262,
+     "gzip": 769988
+    }
+   ]
+  },
+  {
+   "id": "heic2any",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "HEIC decode"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: un-swappable LGPL, stale 2023"
+   ],
+   "declaredLicense": "MIT label; bundles libheif (LGPL) in minified single file",
+   "version": "0.0.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2023-03-29T08:18:37.130Z",
+   "firstPublished": "2019-06-07T10:44:08.413Z",
+   "tarballBytes": 680355,
+   "unpackedBytes": 2719022,
+   "deprecated": null,
+   "repository": "git+https://github.com/alexcorvi/heic2any.git",
+   "topFiles": [
+    {
+     "file": "dist/heic2any.js",
+     "raw": 1361547,
+     "gzip": 340642
+    },
+    {
+     "file": "dist/heic2any.min.js",
+     "raw": 1351840,
+     "gzip": 338307
+    }
+   ]
+  },
+  {
+   "id": "html-to-image",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "DOM to image"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "1.11.13",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-02-14T01:43:48.709Z",
+   "firstPublished": "2017-12-04T09:39:46.360Z",
+   "tarballBytes": 71077,
+   "unpackedBytes": 315082,
+   "deprecated": null,
+   "repository": "git+https://github.com/bubkoo/html-to-image.git",
+   "topFiles": [
+    {
+     "file": "dist/html-to-image.js",
+     "raw": 20562,
+     "gzip": 6692
+    },
+    {
+     "file": "lib/embed-webfonts.js",
+     "raw": 14668,
+     "gzip": 3469
+    },
+    {
+     "file": "lib/clone-node.js",
+     "raw": 13928,
+     "gzip": 3228
+    },
+    {
+     "file": "lib/util.js",
+     "raw": 10788,
+     "gzip": 3250
+    }
+   ]
+  },
+  {
+   "id": "i18n-iso-countries",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "country names"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "7.14.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-02-17T18:48:00.439Z",
+   "firstPublished": "2013-12-18T09:48:43.978Z",
+   "tarballBytes": 170766,
+   "unpackedBytes": 623688,
+   "deprecated": null,
+   "repository": "git+https://github.com/michaelwittig/node-i18n-iso-countries.git",
+   "topFiles": [
+    {
+     "file": "langs/bn.json",
+     "raw": 12369,
+     "gzip": 2948
+    },
+    {
+     "file": "langs/km.json",
+     "raw": 11731,
+     "gzip": 2844
+    },
+    {
+     "file": "langs/ta.json",
+     "raw": 11686,
+     "gzip": 2770
+    },
+    {
+     "file": "langs/nl.json",
+     "raw": 11396,
+     "gzip": 3504
+    }
+   ]
+  },
+  {
+   "id": "ico-endec",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "ICO enc/dec"
+   ],
+   "tier": "B",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2020"
+   ],
+   "declaredLicense": "MPL-2.0",
+   "version": "0.1.6",
+   "registryLicense": "MPL-2.0",
+   "publishedLatest": "2020-05-12T12:25:47.419Z",
+   "firstPublished": "2020-04-01T23:51:49.820Z",
+   "tarballBytes": 8491,
+   "unpackedBytes": 26251,
+   "deprecated": null,
+   "repository": "git+https://github.com/kettek/ico-endec-js.git",
+   "topFiles": [
+    {
+     "file": "dist/bundle.js",
+     "raw": 6069,
+     "gzip": 1845
+    }
+   ]
+  },
+  {
+   "id": "icojs",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "ICO/CUR parse"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "1.0.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-22T12:11:19.655Z",
+   "firstPublished": "2015-03-24T02:18:17.956Z",
+   "tarballBytes": 27167,
+   "unpackedBytes": 115029,
+   "deprecated": null,
+   "repository": "git+https://github.com/egy186/icojs.git",
+   "topFiles": [
+    {
+     "file": "dist/ico.js",
+     "raw": 8652,
+     "gzip": 3156
+    },
+    {
+     "file": "dist/node/image.js",
+     "raw": 4197,
+     "gzip": 1156
+    },
+    {
+     "file": "dist/encode.js",
+     "raw": 3750,
+     "gzip": 1204
+    },
+    {
+     "file": "dist/bmp-icon.js",
+     "raw": 2843,
+     "gzip": 810
+    }
+   ]
+  },
+  {
+   "id": "image-blob-reduce",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "pica-based reduce helper"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "5.0.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-07-06T12:09:26.178Z",
+   "firstPublished": "2020-06-25T14:21:16.641Z",
+   "tarballBytes": 175995,
+   "unpackedBytes": 675692,
+   "deprecated": null,
+   "repository": "git+https://github.com/nodeca/image-blob-reduce.git",
+   "topFiles": [
+    {
+     "file": "dist/image-blob-reduce.browser.min.mjs",
+     "raw": 80660,
+     "gzip": 23966
+    },
+    {
+     "file": "dist/image-blob-reduce.browser.min.js",
+     "raw": 68801,
+     "gzip": 21270
+    },
+    {
+     "file": "dist/image-blob-reduce.js",
+     "raw": 28173,
+     "gzip": 6997
+    },
+    {
+     "file": "dist/image-blob-reduce.mjs",
+     "raw": 21689,
+     "gzip": 5445
+    }
+   ]
+  },
+  {
+   "id": "image-q",
+   "sections": [
+    "02",
+    "05"
+   ],
+   "roles": [
+    "palette quantise + dithering (lossy PNG)",
+    "palette quantise + dithering for GIF"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2022"
+   ],
+   "declaredLicense": "MIT",
+   "version": "4.0.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2022-01-08T15:05:27.852Z",
+   "firstPublished": "2015-06-16T15:57:01.354Z",
+   "tarballBytes": 167974,
+   "unpackedBytes": 845450,
+   "deprecated": null,
+   "repository": "git+https://github.com/ibezkrovnyi/image-quantization.git",
+   "topFiles": [
+    {
+     "file": "dist/cjs/image-q.cjs",
+     "raw": 104857,
+     "gzip": 19445
+    },
+    {
+     "file": "dist/esm/image-q.mjs",
+     "raw": 103439,
+     "gzip": 19015
+    },
+    {
+     "file": "package.json",
+     "raw": 13825,
+     "gzip": 5160
+    }
+   ]
+  },
+  {
+   "id": "image-size",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "Dimensions only"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "2.0.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-14T16:38:44.378Z",
+   "firstPublished": "2013-07-02T01:38:44.191Z",
+   "tarballBytes": 25254,
+   "unpackedBytes": 95510,
+   "deprecated": null,
+   "repository": "https://codeberg.org/image-size/image-size.git",
+   "topFiles": [
+    {
+     "file": "dist/cjs/types/tiff.js",
+     "raw": 4097,
+     "gzip": 1259
+    },
+    {
+     "file": "dist/esm/types/tiff.js",
+     "raw": 3862,
+     "gzip": 1200
+    },
+    {
+     "file": "dist/cjs/types/jpg.js",
+     "raw": 3507,
+     "gzip": 1079
+    },
+    {
+     "file": "dist/esm/types/jpg.js",
+     "raw": 3300,
+     "gzip": 1009
+    }
+   ]
+  },
+  {
+   "id": "image-ssim",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "SSIM"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2015"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.2.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2015-07-10T09:07:16.641Z",
+   "firstPublished": "2015-07-10T09:07:16.641Z",
+   "tarballBytes": 8437,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": "git+https://github.com/darosh/image-ssim-js.git",
+   "topFiles": [
+    {
+     "file": "dist/image-ssim.js",
+     "raw": 7591,
+     "gzip": 2140
+    },
+    {
+     "file": "index.js",
+     "raw": 6719,
+     "gzip": 1759
+    },
+    {
+     "file": "dist/image-ssim.min.js",
+     "raw": 2462,
+     "gzip": 1156
+    }
+   ]
+  },
+  {
+   "id": "imagetracerjs",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "Raster->SVG tiny"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2020"
+   ],
+   "declaredLicense": "Unlicense",
+   "version": "1.2.6",
+   "registryLicense": "Unlicense",
+   "publishedLatest": "2020-05-18T18:50:57.404Z",
+   "firstPublished": "2016-07-05T09:21:46.485Z",
+   "tarballBytes": 3079354,
+   "unpackedBytes": 3176908,
+   "deprecated": null,
+   "repository": "git+https://github.com/jankovicsandras/imagetracerjs.git",
+   "topFiles": [
+    {
+     "file": "imagetracer_v1.2.6.js",
+     "raw": 47118,
+     "gzip": 11967
+    },
+    {
+     "file": "nodecli/PNGReader.js",
+     "raw": 10591,
+     "gzip": 3212
+    },
+    {
+     "file": "nodecli/nodecli.js",
+     "raw": 4080,
+     "gzip": 1117
+    },
+    {
+     "file": "nodecli/PNG.js",
+     "raw": 3974,
+     "gzip": 1120
+    }
+   ]
+  },
+  {
+   "id": "jimp",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "Pure-JS image lib"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: slow for big images; superseded by WASM codecs"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.6.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-04-07T17:54:56.712Z",
+   "firstPublished": "2014-09-13T22:58:05.591Z",
+   "tarballBytes": 782322,
+   "unpackedBytes": 3311403,
+   "deprecated": null,
+   "repository": "git+https://github.com/jimp-dev/jimp.git",
+   "topFiles": [
+    {
+     "file": "dist/commonjs/index.js",
+     "raw": 8511,
+     "gzip": 2248
+    },
+    {
+     "file": "dist/esm/index.js",
+     "raw": 4195,
+     "gzip": 1458
+    },
+    {
+     "file": "package.json",
+     "raw": 3847,
+     "gzip": 1099
+    }
+   ]
+  },
+  {
+   "id": "jpeg-js",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "JPEG pure JS"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: superseded by mozjpeg wasm"
+   ],
+   "declaredLicense": "BSD-3-Clause",
+   "version": "0.4.4",
+   "registryLicense": "BSD-3-Clause",
+   "publishedLatest": "2022-06-07T14:18:01.740Z",
+   "firstPublished": "2014-01-16T14:47:09.720Z",
+   "tarballBytes": 21818,
+   "unpackedBytes": 76029,
+   "deprecated": null,
+   "repository": "git+https://github.com/eugeneware/jpeg-js.git",
+   "topFiles": [
+    {
+     "file": "lib/decoder.js",
+     "raw": 40593,
+     "gzip": 9493
+    },
+    {
+     "file": "lib/encoder.js",
+     "raw": 22120,
+     "gzip": 7415
+    }
+   ]
+  },
+  {
+   "id": "jsbarcode",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "1-D barcode generator"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "3.12.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-01-07T19:50:17.809Z",
+   "firstPublished": "2016-02-24T12:29:31.398Z",
+   "tarballBytes": 92639,
+   "unpackedBytes": 618083,
+   "deprecated": null,
+   "repository": "git+https://github.com/lindell/JsBarcode.git",
+   "topFiles": [
+    {
+     "file": "dist/JsBarcode.all.js",
+     "raw": 137598,
+     "gzip": 20784
+    },
+    {
+     "file": "dist/JsBarcode.all.min.js",
+     "raw": 66420,
+     "gzip": 11376
+    },
+    {
+     "file": "dist/barcodes/JsBarcode.ean-upc.min.js",
+     "raw": 34715,
+     "gzip": 6845
+    },
+    {
+     "file": "dist/barcodes/JsBarcode.code128.min.js",
+     "raw": 27899,
+     "gzip": 6416
+    }
+   ]
+  },
+  {
+   "id": "jscanify",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "doc scanner bundle"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: bundles 8.8MB old OpenCV"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.4.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-07-20T04:02:10.517Z",
+   "firstPublished": "2023-04-15T00:36:48.514Z",
+   "tarballBytes": 24193740,
+   "unpackedBytes": 30423023,
+   "deprecated": null,
+   "repository": "git+https://github.com/puffinsoft/jscanify.git",
+   "topFiles": [
+    {
+     "file": "src/opencv.js",
+     "raw": 8980607,
+     "gzip": 2863065
+    },
+    {
+     "file": "src/jscanify.js",
+     "raw": 7585,
+     "gzip": 2044
+    },
+    {
+     "file": "src/jscanify-node.js",
+     "raw": 7304,
+     "gzip": 2113
+    },
+    {
+     "file": "test/tests.js",
+     "raw": 4297,
+     "gzip": 1350
+    }
+   ]
+  },
+  {
+   "id": "jspdf",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "PDF generation"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: 31MB unpacked / 265KB gz; custom writer or pdf-lib fork better"
+   ],
+   "declaredLicense": "MIT",
+   "version": "4.2.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-03-17T11:16:14.226Z",
+   "firstPublished": "2015-05-19T00:28:59.608Z",
+   "tarballBytes": 3963861,
+   "unpackedBytes": 30192058,
+   "deprecated": null,
+   "repository": "git+https://github.com/parallax/jsPDF.git",
+   "topFiles": [
+    {
+     "file": "dist/jspdf.umd.js",
+     "raw": 1204344,
+     "gzip": 271133
+    },
+    {
+     "file": "dist/jspdf.node.js",
+     "raw": 910030,
+     "gzip": 203150
+    },
+    {
+     "file": "dist/jspdf.es.js",
+     "raw": 855530,
+     "gzip": 197213
+    },
+    {
+     "file": "dist/jspdf.umd.min.js",
+     "raw": 420165,
+     "gzip": 133693
+    }
+   ]
+  },
+  {
+   "id": "jsqr",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "QR decoder (pure JS)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2021"
+   ],
+   "declaredLicense": "Apache-2.0",
+   "version": "1.4.0",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2021-04-24T03:17:20.646Z",
+   "firstPublished": "2015-12-11T11:33:18.003Z",
+   "tarballBytes": 64745,
+   "unpackedBytes": 279741,
+   "deprecated": null,
+   "repository": "git+https://github.com/cozmo/jsQR.git",
+   "topFiles": [
+    {
+     "file": "dist/jsQR.js",
+     "raw": 256885,
+     "gzip": 56888
+    }
+   ]
+  },
+  {
+   "id": "jszip",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "ZIP (use MIT option of MIT OR GPL-3.0-or-later)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT OR GPL-3.0-or-later",
+   "version": "3.10.2",
+   "registryLicense": "(MIT OR GPL-3.0-or-later)",
+   "publishedLatest": "2026-09-08T22:31:16.671Z",
+   "firstPublished": "2013-09-11T15:25:45.354Z",
+   "tarballBytes": 179348,
+   "unpackedBytes": 693061,
+   "deprecated": null,
+   "repository": "git+https://github.com/Stuk/jszip.git",
+   "topFiles": [
+    {
+     "file": "dist/jszip.js",
+     "raw": 374565,
+     "gzip": 90039
+    },
+    {
+     "file": "dist/jszip.min.js",
+     "raw": 97781,
+     "gzip": 28496
+    },
+    {
+     "file": "lib/generate/ZipFileWorker.js",
+     "raw": 17954,
+     "gzip": 4796
+    },
+    {
+     "file": "lib/utils.js",
+     "raw": 16926,
+     "gzip": 4708
+    }
+   ]
+  },
+  {
+   "id": "justified-layout",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "justified rows layout"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2021"
+   ],
+   "declaredLicense": "ISC",
+   "version": "4.1.0",
+   "registryLicense": "ISC",
+   "publishedLatest": "2021-01-06T21:23:06.767Z",
+   "firstPublished": "2016-03-31T17:47:42.233Z",
+   "tarballBytes": 10198,
+   "unpackedBytes": 54953,
+   "deprecated": null,
+   "repository": "git+ssh://git@github.com/flickr/justified-layout.git",
+   "topFiles": [
+    {
+     "file": "dist/justified-layout.js",
+     "raw": 20086,
+     "gzip": 5603
+    },
+    {
+     "file": "lib/row.js",
+     "raw": 11398,
+     "gzip": 3389
+    },
+    {
+     "file": "dist/justified-layout.min.js",
+     "raw": 9711,
+     "gzip": 2378
+    },
+    {
+     "file": "lib/index.js",
+     "raw": 8096,
+     "gzip": 2354
+    }
+   ]
+  },
+  {
+   "id": "kdbush",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "spatial index"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "ISC",
+   "version": "4.1.0",
+   "registryLicense": "ISC",
+   "publishedLatest": "2026-05-19T16:11:42.061Z",
+   "firstPublished": "2016-04-08T23:31:33.030Z",
+   "tarballBytes": 7875,
+   "unpackedBytes": 39122,
+   "deprecated": null,
+   "repository": "git://github.com/mourner/kdbush.git",
+   "topFiles": [
+    {
+     "file": "kdbush.js",
+     "raw": 13306,
+     "gzip": 3483
+    },
+    {
+     "file": "index.js",
+     "raw": 12973,
+     "gzip": 3347
+    },
+    {
+     "file": "kdbush.min.js",
+     "raw": 3759,
+     "gzip": 1652
+    }
+   ]
+  },
+  {
+   "id": "konva",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "canvas framework"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: not needed"
+   ],
+   "declaredLicense": "MIT",
+   "version": "10.7.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-10-05T15:44:49.562Z",
+   "firstPublished": "2015-01-27T08:47:44.192Z",
+   "tarballBytes": 422126,
+   "unpackedBytes": 1882530,
+   "deprecated": null,
+   "repository": "git://github.com/konvajs/konva.git",
+   "topFiles": [
+    {
+     "file": "konva.js",
+     "raw": 785494,
+     "gzip": 154692
+    },
+    {
+     "file": "konva.min.js",
+     "raw": 194316,
+     "gzip": 58000
+    },
+    {
+     "file": "lib/Node.js",
+     "raw": 102910,
+     "gzip": 24203
+    },
+    {
+     "file": "lib/shapes/Transformer.js",
+     "raw": 71057,
+     "gzip": 15747
+    }
+   ]
+  },
+  {
+   "id": "lamejs",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "MP3 encoder JS"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: LGPL JS; hard to comply"
+   ],
+   "declaredLicense": "LGPL-3.0",
+   "version": "1.2.1",
+   "registryLicense": "LGPL-3.0",
+   "publishedLatest": "2021-12-02T15:44:40.036Z",
+   "firstPublished": "2015-11-25T17:40:20.020Z",
+   "tarballBytes": 3071027,
+   "unpackedBytes": 6458317,
+   "deprecated": null,
+   "repository": "git+https://github.com/zhuker/lamejs.git",
+   "topFiles": [
+    {
+     "file": "lame.all.js",
+     "raw": 530087,
+     "gzip": 119368
+    },
+    {
+     "file": "lame.min.js",
+     "raw": 156043,
+     "gzip": 55519
+    },
+    {
+     "file": "src/js/PsyModel.js",
+     "raw": 107510,
+     "gzip": 22239
+    },
+    {
+     "file": "src/js/Lame.js",
+     "raw": 64321,
+     "gzip": 14076
+    }
+   ]
+  },
+  {
+   "id": "leaflet",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "map widget (needs legal tiles)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "BSD-2-Clause",
+   "version": "1.9.4",
+   "registryLicense": "BSD-2-Clause",
+   "publishedLatest": "2023-05-18T11:04:11.088Z",
+   "firstPublished": "2013-02-26T16:42:56.985Z",
+   "tarballBytes": 869361,
+   "unpackedBytes": 3739487,
+   "deprecated": null,
+   "repository": "git://github.com/Leaflet/Leaflet.git",
+   "topFiles": [
+    {
+     "file": "dist/leaflet-src.js",
+     "raw": 450229,
+     "gzip": 111295
+    },
+    {
+     "file": "dist/leaflet-src.esm.js",
+     "raw": 424589,
+     "gzip": 109645
+    },
+    {
+     "file": "dist/leaflet.js",
+     "raw": 147552,
+     "gzip": 42494
+    },
+    {
+     "file": "src/map/Map.js",
+     "raw": 59071,
+     "gzip": 15601
+    }
+   ]
+  },
+  {
+   "id": "libav.js",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "ffmpeg libs wasm (variants)"
+   ],
+   "tier": "B",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: use only the webcodecs variant if needed"
+   ],
+   "declaredLicense": "LGPL-2.1",
+   "version": "6.10.9",
+   "registryLicense": "LGPL-2.1",
+   "publishedLatest": "2026-08-18T13:53:12.925Z",
+   "firstPublished": "2021-11-16T02:01:47.773Z",
+   "tarballBytes": null,
+   "unpackedBytes": 179082060,
+   "deprecated": null,
+   "repository": "git+https://github.com/Yahweasel/libav.js.git",
+   "topFiles": []
+  },
+  {
+   "id": "libavjs-webcodecs-polyfill",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "WebCodecs polyfill for old WebViews"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "0BSD",
+   "version": "0.5.5",
+   "registryLicense": "0BSD",
+   "publishedLatest": "2025-07-04T13:14:45.181Z",
+   "firstPublished": "2021-11-16T23:06:07.334Z",
+   "tarballBytes": 1363505,
+   "unpackedBytes": 2118507,
+   "deprecated": null,
+   "repository": "git+https://github.com/ennuicastr/libavjs-webcodecs-polyfill.git",
+   "topFiles": [
+    {
+     "file": "dist/libavjs-webcodecs-polyfill.js",
+     "raw": 199396,
+     "gzip": 31248
+    },
+    {
+     "file": "dist/libavjs-webcodecs-polyfill.min.js",
+     "raw": 199396,
+     "gzip": 31248
+    },
+    {
+     "file": "dist/libavjs-webcodecs-polyfill.mjs",
+     "raw": 181885,
+     "gzip": 30676
+    },
+    {
+     "file": "dist/libavjs-webcodecs-polyfill.min.mjs",
+     "raw": 50926,
+     "gzip": 11433
+    }
+   ]
+  },
+  {
+   "id": "libheif-js",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "HEIC decode (libde265 inside)"
+   ],
+   "tier": "B",
+   "status": "recommended",
+   "flags": [
+    "PATENT-FLAG",
+    "LGPL-separate-wasm"
+   ],
+   "notes": [],
+   "declaredLicense": "LGPL-3.0",
+   "upstream": "libheif LGPL, libde265 LGPL",
+   "lazy": true,
+   "version": "1.23.5",
+   "registryLicense": "LGPL-3.0",
+   "publishedLatest": "2026-10-04T22:04:30.307Z",
+   "firstPublished": "2020-01-17T04:51:11.128Z",
+   "tarballBytes": 2756050,
+   "unpackedBytes": 9046551,
+   "deprecated": null,
+   "repository": "git+https://github.com/catdad-experiments/libheif-js.git",
+   "topFiles": [
+    {
+     "file": "libheif/libheif.js",
+     "raw": 3189493,
+     "gzip": 766508
+    },
+    {
+     "file": "libheif-wasm/libheif-bundle.js",
+     "raw": 2044206,
+     "gzip": 713830
+    },
+    {
+     "file": "libheif-wasm/libheif-bundle.mjs",
+     "raw": 2043959,
+     "gzip": 713695
+    },
+    {
+     "file": "libheif-wasm/libheif.wasm",
+     "raw": 1463506,
+     "gzip": 485813
+    }
+   ]
+  },
+  {
+   "id": "libimagequant-wasm",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "PNG quantiser"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: effective GPL"
+   ],
+   "declaredLicense": "MIT label; depends on imagequant v4 = GPL-3.0-or-later",
+   "version": "0.3.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-04-03T21:51:35.941Z",
+   "firstPublished": "2025-08-13T06:46:55.896Z",
+   "tarballBytes": 169164,
+   "unpackedBytes": 417324,
+   "deprecated": null,
+   "repository": "git+https://github.com/akshetpandey/libimagequant-wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/wasm/libimagequant_wasm_bg.wasm",
+     "raw": 324048,
+     "gzip": 144642
+    },
+    {
+     "file": "dist/wasm/libimagequant_wasm.js",
+     "raw": 15844,
+     "gzip": 3482
+    },
+    {
+     "file": "dist/index.mjs",
+     "raw": 9919,
+     "gzip": 4063
+    },
+    {
+     "file": "dist/index.cjs",
+     "raw": 9272,
+     "gzip": 3879
+    }
+   ]
+  },
+  {
+   "id": "libraw-wasm",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "RAW decode"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: no upstream licence files in tarball; heavier than colorhythm build"
+   ],
+   "declaredLicense": "ISC wrapper",
+   "version": "1.6.0",
+   "registryLicense": "ISC",
+   "publishedLatest": "2026-07-02T06:23:29.647Z",
+   "firstPublished": "2025-01-22T05:24:54.256Z",
+   "tarballBytes": 673510,
+   "unpackedBytes": 2073506,
+   "deprecated": null,
+   "repository": "git+https://github.com/ybouane/LibRaw-Wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/libraw.wasm",
+     "raw": 1417725,
+     "gzip": 486840
+    },
+    {
+     "file": "dist/worker.js",
+     "raw": 69537,
+     "gzip": 24486
+    },
+    {
+     "file": "dist/libraw.js",
+     "raw": 69155,
+     "gzip": 24308
+    }
+   ]
+  },
+  {
+   "id": "maplibre-gl",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "vector map (needs tiles)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "BSD-3-Clause",
+   "version": "6.13.0",
+   "registryLicense": "BSD-3-Clause",
+   "publishedLatest": "2026-10-06T19:55:16.665Z",
+   "firstPublished": "2020-12-09T18:26:00.732Z",
+   "tarballBytes": 5960963,
+   "unpackedBytes": 27985118,
+   "deprecated": null,
+   "repository": "git+https://github.com/maplibre/maplibre-gl-js.git",
+   "topFiles": [
+    {
+     "file": "dist/maplibre-gl-dev.mjs",
+     "raw": 2406398,
+     "gzip": 532223
+    },
+    {
+     "file": "dist/maplibre-gl-worker-dev.mjs",
+     "raw": 1164735,
+     "gzip": 255729
+    },
+    {
+     "file": "dist/maplibre-gl.mjs",
+     "raw": 1079357,
+     "gzip": 286698
+    },
+    {
+     "file": "dist/maplibre-gl-worker.mjs",
+     "raw": 508314,
+     "gzip": 144488
+    }
+   ]
+  },
+  {
+   "id": "mediabunny",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "Media toolkit: demux/mux/transcode/trim (WebCodecs)"
+   ],
+   "tier": "B",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MPL-2.0 (upstream states free for closed-source commercial use)",
+   "lazy": true,
+   "version": "1.61.3",
+   "registryLicense": "MPL-2.0",
+   "publishedLatest": "2026-10-05T13:36:03.906Z",
+   "firstPublished": "2025-06-16T13:07:43.728Z",
+   "tarballBytes": 2185639,
+   "unpackedBytes": 10867673,
+   "deprecated": null,
+   "repository": "git+https://github.com/Vanilagy/mediabunny.git",
+   "topFiles": [
+    {
+     "file": "dist/bundles/mediabunny.node.cjs",
+     "raw": 1579822,
+     "gzip": 280505
+    },
+    {
+     "file": "dist/bundles/mediabunny.cjs",
+     "raw": 1579643,
+     "gzip": 280458
+    },
+    {
+     "file": "dist/bundles/mediabunny.mjs",
+     "raw": 1492866,
+     "gzip": 276484
+    },
+    {
+     "file": "dist/bundles/mediabunny.min.cjs",
+     "raw": 691640,
+     "gzip": 177371
+    }
+   ]
+  },
+  {
+   "id": "mediainfo.js",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "media info wasm (956KB gz)"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "BSD-2-Clause",
+   "version": "0.3.8",
+   "registryLicense": "BSD-2-Clause",
+   "publishedLatest": "2026-09-18T19:23:16.367Z",
+   "firstPublished": "2016-07-20T18:07:40.335Z",
+   "tarballBytes": 1280670,
+   "unpackedBytes": 4453310,
+   "deprecated": null,
+   "repository": "https://github.com/buzz/mediainfo.js",
+   "topFiles": [
+    {
+     "file": "dist/MediaInfoModule.wasm",
+     "raw": 2599419,
+     "gzip": 979446
+    },
+    {
+     "file": "dist/umd/index.js",
+     "raw": 32164,
+     "gzip": 9217
+    },
+    {
+     "file": "dist/esm-bundle/index.js",
+     "raw": 29289,
+     "gzip": 8844
+    },
+    {
+     "file": "dist/esm/MediaInfoModule.js",
+     "raw": 15398,
+     "gzip": 4600
+    }
+   ]
+  },
+  {
+   "id": "modern-gif",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "GIF enc/dec with worker"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "2.1.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-04-16T06:38:00.171Z",
+   "firstPublished": "2023-02-09T09:15:22.311Z",
+   "tarballBytes": 45584,
+   "unpackedBytes": 167505,
+   "deprecated": null,
+   "repository": "git+https://github.com/qq15725/modern-gif.git",
+   "topFiles": [
+    {
+     "file": "dist/index.cjs",
+     "raw": 39906,
+     "gzip": 9058
+    },
+    {
+     "file": "dist/index.mjs",
+     "raw": 39746,
+     "gzip": 9027
+    },
+    {
+     "file": "dist/worker.js",
+     "raw": 32507,
+     "gzip": 11768
+    },
+    {
+     "file": "dist/index.js",
+     "raw": 32325,
+     "gzip": 11756
+    }
+   ]
+  },
+  {
+   "id": "modern-screenshot",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "DOM to image"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "4.7.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-04-16T07:25:45.816Z",
+   "firstPublished": "2022-09-30T10:15:14.626Z",
+   "tarballBytes": 48493,
+   "unpackedBytes": 186023,
+   "deprecated": null,
+   "repository": "git+https://github.com/qq15725/modern-screenshot.git",
+   "topFiles": [
+    {
+     "file": "dist/index.cjs",
+     "raw": 55087,
+     "gzip": 14029
+    },
+    {
+     "file": "dist/index.mjs",
+     "raw": 54773,
+     "gzip": 13968
+    },
+    {
+     "file": "dist/index.js",
+     "raw": 29290,
+     "gzip": 11115
+    },
+    {
+     "file": "package.json",
+     "raw": 2468,
+     "gzip": 937
+    }
+   ]
+  },
+  {
+   "id": "mp4-muxer",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "MP4 muxer"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: DEPRECATED -> mediabunny"
+   ],
+   "declaredLicense": "MIT",
+   "version": "5.2.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-07-02T20:16:15.569Z",
+   "firstPublished": "2023-04-13T16:06:41.707Z",
+   "tarballBytes": 33785,
+   "unpackedBytes": 155878,
+   "deprecated": "This library is superseded by Mediabunny. Please migrate to it.",
+   "repository": "git+https://github.com/Vanilagy/mp4-muxer.git",
+   "topFiles": [
+    {
+     "file": "build/mp4-muxer.js",
+     "raw": 73921,
+     "gzip": 14864
+    },
+    {
+     "file": "build/mp4-muxer.mjs",
+     "raw": 69011,
+     "gzip": 14361
+    }
+   ]
+  },
+  {
+   "id": "mp4-wasm",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "MP4 mux/demux wasm"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2021"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.0.6",
+   "registryLicense": "MIT",
+   "publishedLatest": "2021-12-14T15:48:50.606Z",
+   "firstPublished": "2021-02-12T11:32:33.577Z",
+   "tarballBytes": 89769,
+   "unpackedBytes": 283598,
+   "deprecated": null,
+   "repository": "git://github.com/mattdesl/mp4-wasm.git",
+   "topFiles": [
+    {
+     "file": "build/mp4.node.wasm",
+     "raw": 41986,
+     "gzip": 17784
+    },
+    {
+     "file": "build/mp4.wasm",
+     "raw": 41986,
+     "gzip": 17784
+    },
+    {
+     "file": "build/mp4.node.js",
+     "raw": 23301,
+     "gzip": 9091
+    },
+    {
+     "file": "build/mp4.js",
+     "raw": 23069,
+     "gzip": 8970
+    }
+   ]
+  },
+  {
+   "id": "mp4box",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "MP4 demux/mux JS (BSD)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "BSD-3-Clause",
+   "version": "2.4.1",
+   "registryLicense": "BSD-3-Clause",
+   "publishedLatest": "2026-06-19T16:45:07.140Z",
+   "firstPublished": "2015-04-11T07:44:04.355Z",
+   "tarballBytes": 408220,
+   "unpackedBytes": 2260032,
+   "deprecated": null,
+   "repository": "git://github.com/gpac/mp4box.js.git",
+   "topFiles": [
+    {
+     "file": "dist/styp-CouZUj9h.cjs",
+     "raw": 253764,
+     "gzip": 44431
+    },
+    {
+     "file": "dist/styp-9TIZZDLN.mjs",
+     "raw": 236007,
+     "gzip": 43783
+    },
+    {
+     "file": "dist/mp4box.all.cjs",
+     "raw": 93784,
+     "gzip": 15867
+    },
+    {
+     "file": "dist/mp4box.all.mjs",
+     "raw": 91813,
+     "gzip": 16728
+    }
+   ]
+  },
+  {
+   "id": "ngx-image-cropper",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "Angular crop UI"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "9.1.7",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-28T12:19:52.157Z",
+   "firstPublished": "2017-09-28T19:31:29.738Z",
+   "tarballBytes": 107797,
+   "unpackedBytes": 546454,
+   "deprecated": null,
+   "repository": "git+https://github.com/Mawi137/ngx-image-cropper.git",
+   "topFiles": [
+    {
+     "file": "esm2022/lib/component/image-cropper.component.mjs",
+     "raw": 95093,
+     "gzip": 19317
+    },
+    {
+     "file": "fesm2022/ngx-image-cropper.mjs",
+     "raw": 85946,
+     "gzip": 13421
+    },
+    {
+     "file": "esm2022/lib/utils/cropper-position.utils.mjs",
+     "raw": 53385,
+     "gzip": 7382
+    },
+    {
+     "file": "esm2022/lib/services/load-image.service.mjs",
+     "raw": 31001,
+     "gzip": 8330
+    }
+   ]
+  },
+  {
+   "id": "node-geocoder",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "geocoding via remote APIs"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: calls remote services; breaks no-upload promise"
+   ],
+   "declaredLicense": "MIT"
+  },
+  {
+   "id": "node-vibrant",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "Vibrant swatches"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "4.0.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-01-27T22:43:38.904Z",
+   "firstPublished": "2015-06-04T13:28:31.569Z",
+   "tarballBytes": 5287,
+   "unpackedBytes": 20174,
+   "deprecated": null,
+   "repository": "git+https://github.com/Vibrant-Colors/node-vibrant.git",
+   "topFiles": [
+    {
+     "file": "package.json",
+     "raw": 2968,
+     "gzip": 920
+    }
+   ]
+  },
+  {
+   "id": "offline-geocode-city",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "offline city geocode"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: data licence unclear, ports-centric coverage"
+   ],
+   "declaredLicense": "MIT code; UN/LOCODE data terms unclear",
+   "version": "1.0.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2023-05-21T10:32:56.506Z",
+   "firstPublished": "2023-05-20T20:46:49.092Z",
+   "tarballBytes": 1318668,
+   "unpackedBytes": 1778510,
+   "deprecated": null,
+   "repository": "git+https://github.com/kyr0/offline-geocode-city.git",
+   "topFiles": [
+    {
+     "file": "dist/index.cjs.js",
+     "raw": 288778,
+     "gzip": 216588
+    },
+    {
+     "file": "dist/index.iife.js",
+     "raw": 288647,
+     "gzip": 216538
+    },
+    {
+     "file": "dist/index.esm.js",
+     "raw": 288040,
+     "gzip": 216053
+    },
+    {
+     "file": "dist/codegen.cjs.js",
+     "raw": 2197,
+     "gzip": 1150
+    }
+   ]
+  },
+  {
+   "id": "omggif",
+   "sections": [
+    "01",
+    "05"
+   ],
+   "roles": [
+    "GIF decode/encode",
+    "GIF enc/dec low-level"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2019"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.0.10",
+   "registryLicense": "MIT",
+   "publishedLatest": "2019-07-16T08:55:18.951Z",
+   "firstPublished": "2014-01-27T20:46:53.714Z",
+   "tarballBytes": 12117,
+   "unpackedBytes": 38509,
+   "deprecated": null,
+   "repository": "git+https://github.com/deanm/omggif.git",
+   "topFiles": [
+    {
+     "file": "omggif.js",
+     "raw": 31826,
+     "gzip": 9504
+    },
+    {
+     "file": "example_node.js",
+     "raw": 4102,
+     "gzip": 1340
+    }
+   ]
+  },
+  {
+   "id": "open-location-code",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "Plus Codes"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2015"
+   ],
+   "declaredLicense": "Apache-2.0",
+   "version": "1.0.3",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2015-08-20T00:15:20.359Z",
+   "firstPublished": "2015-08-19T07:46:57.897Z",
+   "tarballBytes": 13900,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": null,
+   "topFiles": [
+    {
+     "file": "openlocationcode.js",
+     "raw": 27230,
+     "gzip": 7342
+    }
+   ]
+  },
+  {
+   "id": "opencv-document-scanner",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "scanner helper over opencv.js"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "1.2.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-09-11T08:29:50.574Z",
+   "firstPublished": "2024-01-10T05:52:26.289Z",
+   "tarballBytes": 6318,
+   "unpackedBytes": 15672,
+   "deprecated": null,
+   "repository": "git+https://github.com/tony-xlh/opencvjs-document-scanner.git",
+   "topFiles": [
+    {
+     "file": "dist/opencv-document-scanner.js",
+     "raw": 4789,
+     "gzip": 1949
+    },
+    {
+     "file": "dist/opencv-document-scanner.umd.cjs",
+     "raw": 3602,
+     "gzip": 1828
+    }
+   ]
+  },
+  {
+   "id": "pako",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "zlib in JS (dep of utif/upng)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT AND Zlib",
+   "version": "3.0.2",
+   "registryLicense": "(MIT AND Zlib)",
+   "publishedLatest": "2026-09-12T04:30:57.531Z",
+   "firstPublished": "2014-02-19T16:02:05.385Z",
+   "tarballBytes": 599801,
+   "unpackedBytes": 2486658,
+   "deprecated": null,
+   "repository": "git+https://github.com/nodeca/pako.git",
+   "topFiles": [
+    {
+     "file": "dist/pako.cjs.js",
+     "raw": 99447,
+     "gzip": 21509
+    },
+    {
+     "file": "dist/pako.mjs",
+     "raw": 95926,
+     "gzip": 20638
+    },
+    {
+     "file": "dist/browser/pako.umd.min.js",
+     "raw": 45440,
+     "gzip": 14065
+    },
+    {
+     "file": "dist/browser/pako.esm.min.mjs",
+     "raw": 45176,
+     "gzip": 13904
+    }
+   ]
+  },
+  {
+   "id": "pdfjs-dist",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "PDF render to canvas"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "lazy": true,
+   "version": "6.4.299",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2026-10-03T16:47:40.337Z",
+   "firstPublished": "2014-09-22T22:34:59.546Z",
+   "tarballBytes": 8539589,
+   "unpackedBytes": 34913648,
+   "deprecated": null,
+   "repository": "git+https://github.com/mozilla/pdf.js.git",
+   "topFiles": [
+    {
+     "file": "legacy/build/pdf.worker.mjs",
+     "raw": 2418244,
+     "gzip": 513419
+    },
+    {
+     "file": "build/pdf.worker.mjs",
+     "raw": 2229713,
+     "gzip": 475292
+    },
+    {
+     "file": "legacy/build/pdf.worker.min.mjs",
+     "raw": 1321307,
+     "gzip": 392144
+    },
+    {
+     "file": "build/pdf.worker.min.mjs",
+     "raw": 1264342,
+     "gzip": 375659
+    }
+   ]
+  },
+  {
+   "id": "pdfkit",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "PDF generation"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: Node-first; no advantage"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.20.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-30T01:59:10.699Z",
+   "firstPublished": "2011-07-11T15:10:53.305Z",
+   "tarballBytes": 3297152,
+   "unpackedBytes": 10530445,
+   "deprecated": null,
+   "repository": "git+https://github.com/foliojs/pdfkit.git",
+   "topFiles": [
+    {
+     "file": ".yarn/releases/yarn-4.16.0.cjs",
+     "raw": 3013913,
+     "gzip": 1062977
+    },
+    {
+     "file": "js/pdfkit.standalone.js",
+     "raw": 1419252,
+     "gzip": 347609
+    },
+    {
+     "file": "js/pdfkit.browser.js",
+     "raw": 293508,
+     "gzip": 69202
+    },
+    {
+     "file": "js/pdfkit.browser.old.js",
+     "raw": 292946,
+     "gzip": 69045
+    }
+   ]
+  },
+  {
+   "id": "pdq-wasm",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "PDQ perceptual hash (Meta BSD)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "BSD-3-Clause",
+   "lazy": true,
+   "version": "0.3.9",
+   "registryLicense": "BSD-3-Clause",
+   "publishedLatest": "2025-11-08T23:21:00.983Z",
+   "firstPublished": "2025-11-03T09:52:19.467Z",
+   "tarballBytes": 62286,
+   "unpackedBytes": 276095,
+   "deprecated": null,
+   "repository": "git+https://github.com/Raudbjorn/pdq-wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/pdq.js",
+     "raw": 27726,
+     "gzip": 6571
+    },
+    {
+     "file": "dist/esm/pdq.js",
+     "raw": 26229,
+     "gzip": 6065
+    },
+    {
+     "file": "wasm/pdq.wasm",
+     "raw": 25893,
+     "gzip": 12092
+    },
+    {
+     "file": "dist/browser.js",
+     "raw": 24510,
+     "gzip": 6723
+    }
+   ]
+  },
+  {
+   "id": "perspective-transform",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "homography matrix"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2015"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.1.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2015-10-09T23:47:17.156Z",
+   "firstPublished": "2015-05-06T00:08:54.800Z",
+   "tarballBytes": 115629,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": "https://github.com/jlouthan/perspective-transform.git",
+   "topFiles": [
+    {
+     "file": "dist/perspective-transform.js",
+     "raw": 7762,
+     "gzip": 2258
+    },
+    {
+     "file": "dist/perspective-transform.min.js",
+     "raw": 4060,
+     "gzip": 1628
+    }
+   ]
+  },
+  {
+   "id": "pica",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "high-quality downscale w/ workers"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "10.0.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-15T12:29:41.750Z",
+   "firstPublished": "2014-09-24T10:16:50.332Z",
+   "tarballBytes": 350400,
+   "unpackedBytes": 1250208,
+   "deprecated": null,
+   "repository": "git+https://github.com/nodeca/pica.git",
+   "topFiles": [
+    {
+     "file": "dist/pica.js",
+     "raw": 82400,
+     "gzip": 23332
+    },
+    {
+     "file": "dist/pica.mjs",
+     "raw": 80410,
+     "gzip": 23181
+    },
+    {
+     "file": "dist/pica_main.js",
+     "raw": 61796,
+     "gzip": 16450
+    },
+    {
+     "file": "dist/pica_main.mjs",
+     "raw": 59820,
+     "gzip": 16306
+    }
+   ]
+  },
+  {
+   "id": "piexifjs",
+   "sections": [
+    "03",
+    "04"
+   ],
+   "roles": [
+    "EXIF read/write (JPEG)",
+    "JPEG EXIF write/edit"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2019",
+    "stale: 2019"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.0.6",
+   "registryLicense": "MIT",
+   "publishedLatest": "2019-06-21T16:39:24.133Z",
+   "firstPublished": "2015-04-23T07:25:34.240Z",
+   "tarballBytes": 15056,
+   "unpackedBytes": 85058,
+   "deprecated": null,
+   "repository": "git+https://github.com/hMatoba/piexifjs.git",
+   "topFiles": [
+    {
+     "file": "piexif.js",
+     "raw": 78998,
+     "gzip": 12547
+    }
+   ]
+  },
+  {
+   "id": "pintura",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "image editor"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: commercial"
+   ],
+   "declaredLicense": "npm name unrelated (Dojo); real product commercial",
+   "version": "0.3.10",
+   "registryLicense": [
+    {
+     "type": "AFLv2.1",
+     "url": "http://trac.dojotoolkit.org/browser/dojo/trunk/LICENSE#L43"
+    },
+    {
+     "type": "BSD",
+     "url": "http://trac.dojotoolkit.org/browser/dojo/trunk/LICENSE#L13"
+    }
+   ],
+   "publishedLatest": "2016-01-20T22:00:07.880Z",
+   "firstPublished": "2011-11-09T22:47:43.552Z",
+   "tarballBytes": 68791,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": "git+ssh://git@github.com/persvr/pintura.git",
+   "topFiles": [
+    {
+     "file": "require.js",
+     "raw": 45537,
+     "gzip": 10786
+    },
+    {
+     "file": "util/sha1.js",
+     "raw": 9422,
+     "gzip": 3121
+    },
+    {
+     "file": "jsgi/mime.js",
+     "raw": 6759,
+     "gzip": 1501
+    },
+    {
+     "file": "jsgi/rest-store.js",
+     "raw": 6419,
+     "gzip": 2421
+    }
+   ]
+  },
+  {
+   "id": "pixelmatch",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "pixel diff / heatmap"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "ISC",
+   "version": "8.0.0",
+   "registryLicense": "ISC",
+   "publishedLatest": "2026-10-06T09:14:23.921Z",
+   "firstPublished": "2015-10-14T10:05:59.683Z",
+   "tarballBytes": 11984,
+   "unpackedBytes": 36795,
+   "deprecated": null,
+   "repository": "git+https://github.com/mapbox/pixelmatch.git",
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 24743,
+     "gzip": 7548
+    }
+   ]
+  },
+  {
+   "id": "pmtiles",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "serverless tile archive reader"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "BSD-3-Clause",
+   "version": "4.5.0",
+   "registryLicense": "BSD-3-Clause",
+   "publishedLatest": "2026-08-10T20:12:24.430Z",
+   "firstPublished": "2021-02-17T07:07:10.160Z",
+   "tarballBytes": 96124,
+   "unpackedBytes": 380312,
+   "deprecated": null,
+   "repository": null,
+   "topFiles": [
+    {
+     "file": "dist/pmtiles.js",
+     "raw": 20229,
+     "gzip": 8013
+    },
+    {
+     "file": "dist/cjs/index.cjs",
+     "raw": 15109,
+     "gzip": 5549
+    },
+    {
+     "file": "dist/esm/index.js",
+     "raw": 14882,
+     "gzip": 5477
+    }
+   ]
+  },
+  {
+   "id": "png-chunks-encode",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "PNG chunk write"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2015"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.0.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2015-10-04T12:51:17.361Z",
+   "firstPublished": "2015-10-04T12:51:17.361Z",
+   "tarballBytes": 61823,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": "git://github.com/hughsk/png-chunks-encode.git",
+   "topFiles": []
+  },
+  {
+   "id": "png-chunks-extract",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "PNG chunk read"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2015"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.0.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2015-10-04T11:48:06.144Z",
+   "firstPublished": "2015-10-04T11:48:06.144Z",
+   "tarballBytes": 62116,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": "git://github.com/hughsk/png-chunks-extract.git",
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 3088,
+     "gzip": 1061
+    }
+   ]
+  },
+  {
+   "id": "png-dpi-reader-writer",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "PNG DPI"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: no licence file shipped"
+   ],
+   "declaredLicense": "MIT claim; no licence file",
+   "version": "0.2.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2019-07-29T09:38:32.237Z",
+   "firstPublished": "2018-12-17T18:28:43.567Z",
+   "tarballBytes": 5408,
+   "unpackedBytes": 13782,
+   "deprecated": null,
+   "repository": "git+https://github.com/daiiz/png-dpi-reader-writer.git",
+   "topFiles": [
+    {
+     "file": "lib/crc32.js",
+     "raw": 3571,
+     "gzip": 1840
+    },
+    {
+     "file": "lib/writer.js",
+     "raw": 3071,
+     "gzip": 1154
+    },
+    {
+     "file": "lib/share.js",
+     "raw": 2260,
+     "gzip": 890
+    }
+   ]
+  },
+  {
+   "id": "png-metadata-writer",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "PNG metadata"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2021"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.0.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2021-06-09T06:36:05.316Z",
+   "firstPublished": "2021-06-09T06:30:12.583Z",
+   "tarballBytes": 5575,
+   "unpackedBytes": 17717,
+   "deprecated": null,
+   "repository": null,
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 11588,
+     "gzip": 3545
+    },
+    {
+     "file": "crc32.js",
+     "raw": 3928,
+     "gzip": 961
+    }
+   ]
+  },
+  {
+   "id": "png-to-ico",
+   "sections": [
+    "01",
+    "07"
+   ],
+   "roles": [
+    "PNG->ICO (Node oriented; hand-written writer preferred)",
+    "PNG->ICO (Node)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "3.0.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-07-06T08:02:39.558Z",
+   "firstPublished": "2016-09-13T09:21:31.014Z",
+   "tarballBytes": 8704,
+   "unpackedBytes": 23955,
+   "deprecated": null,
+   "repository": "git+https://github.com/steambap/png-to-ico.git",
+   "topFiles": [
+    {
+     "file": "lib/resize.js",
+     "raw": 9231,
+     "gzip": 2889
+    },
+    {
+     "file": "index.js",
+     "raw": 5979,
+     "gzip": 2107
+    }
+   ]
+  },
+  {
+   "id": "png2icons",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "ICO/ICNS writer (Node; reference implementation)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2019"
+   ],
+   "declaredLicense": "MIT",
+   "version": "2.0.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2019-07-24T09:20:56.261Z",
+   "firstPublished": "2017-07-05T23:35:41.283Z",
+   "tarballBytes": 58433,
+   "unpackedBytes": 194951,
+   "deprecated": null,
+   "repository": "git+https://github.com/idesis-gmbh/png2icons.git",
+   "topFiles": [
+    {
+     "file": "lib/UPNG.js",
+     "raw": 45358,
+     "gzip": 13733
+    },
+    {
+     "file": "png2icons.js",
+     "raw": 29826,
+     "gzip": 8180
+    },
+    {
+     "file": "lib/UZIP.js",
+     "raw": 29316,
+     "gzip": 9862
+    },
+    {
+     "file": "lib/resize3.js",
+     "raw": 21958,
+     "gzip": 2314
+    }
+   ]
+  },
+  {
+   "id": "pngjs",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "PNG pure JS"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: superseded by WASM"
+   ],
+   "declaredLicense": "MIT",
+   "version": "7.0.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2023-02-20T06:59:21.772Z",
+   "firstPublished": "2012-08-18T23:14:58.086Z",
+   "tarballBytes": 160939,
+   "unpackedBytes": 650101,
+   "deprecated": null,
+   "repository": "git://github.com/pngjs/pngjs.git",
+   "topFiles": [
+    {
+     "file": "browser.js",
+     "raw": 572711,
+     "gzip": 140153
+    },
+    {
+     "file": "lib/parser.js",
+     "raw": 7720,
+     "gzip": 2039
+    },
+    {
+     "file": "lib/bitmapper.js",
+     "raw": 6477,
+     "gzip": 1450
+    },
+    {
+     "file": "lib/filter-parse.js",
+     "raw": 4798,
+     "gzip": 1292
+    }
+   ]
+  },
+  {
+   "id": "pngquant",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "PNG quantiser"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: GPL"
+   ],
+   "declaredLicense": "GPL (same family as libimagequant) [unverified]"
+  },
+  {
+   "id": "point-in-polygon",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "point in polygon"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2021"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.1.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2021-03-16T00:05:38.792Z",
+   "firstPublished": "2012-01-01T20:26:13.942Z",
+   "tarballBytes": 2792,
+   "unpackedBytes": 8697,
+   "deprecated": null,
+   "repository": "git://github.com/substack/point-in-polygon.git",
+   "topFiles": []
+  },
+  {
+   "id": "potrace",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "Raster->SVG"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: GPL"
+   ],
+   "declaredLicense": "GPL-2.0",
+   "version": "2.1.8",
+   "registryLicense": "GPL-2.0",
+   "publishedLatest": "2020-07-29T21:19:58.042Z",
+   "firstPublished": "2016-06-04T19:44:04.110Z",
+   "tarballBytes": 28941,
+   "unpackedBytes": 97283,
+   "deprecated": null,
+   "repository": "git+https://github.com/tooolbox/node-potrace.git",
+   "topFiles": [
+    {
+     "file": "lib/Potrace.js",
+     "raw": 32052,
+     "gzip": 8193
+    },
+    {
+     "file": "lib/Posterizer.js",
+     "raw": 14191,
+     "gzip": 4207
+    },
+    {
+     "file": "lib/types/Histogram.js",
+     "raw": 12343,
+     "gzip": 3797
+    },
+    {
+     "file": "lib/utils.js",
+     "raw": 4956,
+     "gzip": 1702
+    }
+   ]
+  },
+  {
+   "id": "probe-image-size",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "Read dimensions/orientation without decode"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "7.4.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-15T06:17:06.850Z",
+   "firstPublished": "2015-09-11T22:59:06.921Z",
+   "tarballBytes": 18928,
+   "unpackedBytes": 69722,
+   "deprecated": null,
+   "repository": "git+https://github.com/nodeca/probe-image-size.git",
+   "topFiles": [
+    {
+     "file": "lib/miaf_utils.js",
+     "raw": 7657,
+     "gzip": 2347
+    },
+    {
+     "file": "lib/exif_utils.js",
+     "raw": 6103,
+     "gzip": 1931
+    },
+    {
+     "file": "lib/parse_stream/webp.js",
+     "raw": 4444,
+     "gzip": 1229
+    },
+    {
+     "file": "lib/common/svg_header.js",
+     "raw": 4393,
+     "gzip": 1899
+    }
+   ]
+  },
+  {
+   "id": "qr-code-styling",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "Styled QR with logo/gradients"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "1.9.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-04-11T15:21:59.867Z",
+   "firstPublished": "2019-08-26T10:07:11.903Z",
+   "tarballBytes": 124416,
+   "unpackedBytes": 515630,
+   "deprecated": null,
+   "repository": "git+https://github.com/kozakdenys/qr-code-styling.git",
+   "topFiles": [
+    {
+     "file": "lib/qr-code-styling.js",
+     "raw": 48174,
+     "gzip": 14113
+    },
+    {
+     "file": "lib/qr-code-styling.common.js",
+     "raw": 47978,
+     "gzip": 14054
+    },
+    {
+     "file": "package.json",
+     "raw": 2281,
+     "gzip": 861
+    }
+   ]
+  },
+  {
+   "id": "qr-scanner",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "QR scanner"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2022"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.4.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2022-11-23T03:11:59.109Z",
+   "firstPublished": "2019-02-05T20:50:15.747Z",
+   "tarballBytes": 124693,
+   "unpackedBytes": 524238,
+   "deprecated": null,
+   "repository": "git+https://github.com/nimiq/qr-scanner.git",
+   "topFiles": [
+    {
+     "file": "qr-scanner.legacy.min.js",
+     "raw": 70155,
+     "gzip": 18287
+    },
+    {
+     "file": "qr-scanner-worker.min.js",
+     "raw": 43994,
+     "gzip": 10265
+    },
+    {
+     "file": "qr-scanner.umd.min.js",
+     "raw": 16082,
+     "gzip": 5792
+    },
+    {
+     "file": "qr-scanner.min.js",
+     "raw": 15844,
+     "gzip": 5687
+    }
+   ]
+  },
+  {
+   "id": "qrcode",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "QR encoder"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "1.5.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2024-08-05T21:52:58.518Z",
+   "firstPublished": "2010-12-21T10:54:37.802Z",
+   "tarballBytes": 50428,
+   "unpackedBytes": 135364,
+   "deprecated": null,
+   "repository": "git://github.com/soldair/node-qrcode.git",
+   "topFiles": [
+    {
+     "file": "helper/to-sjis.js",
+     "raw": 22178,
+     "gzip": 15793
+    },
+    {
+     "file": "lib/core/qrcode.js",
+     "raw": 15128,
+     "gzip": 4167
+    },
+    {
+     "file": "lib/core/segments.js",
+     "raw": 9331,
+     "gzip": 2710
+    },
+    {
+     "file": "lib/core/mask-pattern.js",
+     "raw": 6101,
+     "gzip": 1767
+    }
+   ]
+  },
+  {
+   "id": "qrcode-generator",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "QR encoder"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "2.0.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-08-07T14:11:54.669Z",
+   "firstPublished": "2014-11-26T13:28:40.187Z",
+   "tarballBytes": 190716,
+   "unpackedBytes": 555539,
+   "deprecated": null,
+   "repository": "git+https://github.com/kazuhikoarase/qrcode-generator.git",
+   "topFiles": [
+    {
+     "file": "experiment/vt/package-lock.json",
+     "raw": 215868,
+     "gzip": 52611
+    },
+    {
+     "file": "dist/qrcode.js",
+     "raw": 56694,
+     "gzip": 11728
+    },
+    {
+     "file": "dist/qrcode.mjs",
+     "raw": 51907,
+     "gzip": 11166
+    },
+    {
+     "file": "dist/qrcode_SJIS.js",
+     "raw": 39023,
+     "gzip": 28958
+    }
+   ]
+  },
+  {
+   "id": "react-advanced-cropper",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "React crop UI"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "0.20.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-03-01T20:11:50.596Z",
+   "firstPublished": "2021-10-25T19:20:34.764Z",
+   "tarballBytes": 233877,
+   "unpackedBytes": 1125449,
+   "deprecated": null,
+   "repository": "git+https://github.com/advanced-cropper/react-advanced-cropper.git",
+   "topFiles": [
+    {
+     "file": "dist/index.global.js",
+     "raw": 95100,
+     "gzip": 26339
+    },
+    {
+     "file": "dist/index.cjs.js",
+     "raw": 88499,
+     "gzip": 14598
+    },
+    {
+     "file": "dist/index.esm-bundler.js",
+     "raw": 81758,
+     "gzip": 14175
+    },
+    {
+     "file": "dist/style.css",
+     "raw": 12634,
+     "gzip": 1817
+    }
+   ]
+  },
+  {
+   "id": "react-easy-crop",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "React crop UI w/ pinch zoom"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "6.2.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-10-06T06:35:05.433Z",
+   "firstPublished": "2018-06-19T08:44:42.644Z",
+   "tarballBytes": 58102,
+   "unpackedBytes": 281641,
+   "deprecated": null,
+   "repository": "git+https://github.com/ValentinH/react-easy-crop.git",
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 39660,
+     "gzip": 8626
+    },
+    {
+     "file": "index.module.mjs",
+     "raw": 38398,
+     "gzip": 8195
+    }
+   ]
+  },
+  {
+   "id": "react-image-crop",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "React crop UI"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "ISC",
+   "version": "11.1.2",
+   "registryLicense": "ISC",
+   "publishedLatest": "2026-06-21T18:28:09.222Z",
+   "firstPublished": "2015-10-10T10:53:27.459Z",
+   "tarballBytes": 27229,
+   "unpackedBytes": 115367,
+   "deprecated": null,
+   "repository": "git+https://github.com/dominictobias/react-image-crop.git",
+   "topFiles": [
+    {
+     "file": "dist/index.js",
+     "raw": 19684,
+     "gzip": 5042
+    },
+    {
+     "file": "dist/index.umd.cjs",
+     "raw": 16330,
+     "gzip": 4883
+    },
+    {
+     "file": "dist/ReactCrop.css",
+     "raw": 4791,
+     "gzip": 1113
+    }
+   ]
+  },
+  {
+   "id": "resemblejs",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "image diff"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "5.0.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2023-06-06T21:17:38.781Z",
+   "firstPublished": "2014-02-25T15:33:44.364Z",
+   "tarballBytes": 12353,
+   "unpackedBytes": 50791,
+   "deprecated": null,
+   "repository": "git+https://github.com/rsmbl/Resemble.js.git",
+   "topFiles": [
+    {
+     "file": "resemble.js",
+     "raw": 36407,
+     "gzip": 6775
+    }
+   ]
+  },
+  {
+   "id": "reverse-geocode",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "reverse geocode"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: 2019; heavy per-country data; source unclear"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.3.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2019-10-31T20:32:14.528Z",
+   "firstPublished": "2016-05-24T01:58:42.022Z",
+   "tarballBytes": 947476,
+   "unpackedBytes": 7106524,
+   "deprecated": null,
+   "repository": "git+https://github.com/VikramTiwari/reverse-geocode.git",
+   "topFiles": [
+    {
+     "file": "locations/US.json",
+     "raw": 4073303,
+     "gzip": 596972
+    },
+    {
+     "file": "locations/AU.json",
+     "raw": 2723407,
+     "gzip": 239473
+    },
+    {
+     "file": "locations/CA.json",
+     "raw": 300163,
+     "gzip": 39965
+    },
+    {
+     "file": "__tests__/reverse-geocode.test.js",
+     "raw": 2292,
+     "gzip": 679
+    }
+   ]
+  },
+  {
+   "id": "satori",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "HTML->SVG for OG images"
+   ],
+   "tier": "B",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: needs fonts + rasteriser; canvas lighter"
+   ],
+   "declaredLicense": "MPL-2.0",
+   "version": "0.35.1",
+   "registryLicense": "MPL-2.0",
+   "publishedLatest": "2026-10-06T18:50:25.322Z",
+   "firstPublished": "2021-12-28T16:03:00.428Z",
+   "tarballBytes": 2548617,
+   "unpackedBytes": 9243134,
+   "deprecated": null,
+   "repository": "git+https://github.com/vercel/satori.git",
+   "topFiles": [
+    {
+     "file": "dist/experimental.cjs",
+     "raw": 369214,
+     "gzip": 131195
+    },
+    {
+     "file": "dist/experimental.js",
+     "raw": 368632,
+     "gzip": 131144
+    },
+    {
+     "file": "dist/index.cjs",
+     "raw": 362273,
+     "gzip": 128056
+    },
+    {
+     "file": "dist/index.js",
+     "raw": 361690,
+     "gzip": 127964
+    }
+   ]
+  },
+  {
+   "id": "seam-carving-js",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "content-aware resize (experimental)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2017"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.0.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2017-01-30T20:51:18.677Z",
+   "firstPublished": "2017-01-30T20:51:18.677Z",
+   "tarballBytes": 8554135,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": "git+https://github.com/mfbx9da4/seam-carving-js.git",
+   "topFiles": [
+    {
+     "file": "demo/javascript/build/bundle.js",
+     "raw": 30733,
+     "gzip": 8307
+    },
+    {
+     "file": "SeamCarver.js",
+     "raw": 16783,
+     "gzip": 4026
+    },
+    {
+     "file": "SeamCarver.min.js",
+     "raw": 7184,
+     "gzip": 2370
+    },
+    {
+     "file": "test.js",
+     "raw": 5525,
+     "gzip": 1050
+    }
+   ]
+  },
+  {
+   "id": "smartcrop",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "classical (non-AI) smart crop"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2021"
+   ],
+   "declaredLicense": "MIT",
+   "version": "2.0.5",
+   "registryLicense": "MIT",
+   "publishedLatest": "2021-09-01T18:05:13.926Z",
+   "firstPublished": "2014-04-03T14:43:54.194Z",
+   "tarballBytes": 10008,
+   "unpackedBytes": 30577,
+   "deprecated": null,
+   "repository": "git+https://github.com/jwagner/smartcrop.js.git",
+   "topFiles": [
+    {
+     "file": "smartcrop.js",
+     "raw": 17674,
+     "gzip": 5082
+    }
+   ]
+  },
+  {
+   "id": "ssim.js",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "fast SSIM"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2020"
+   ],
+   "declaredLicense": "MIT",
+   "version": "3.5.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2020-10-12T14:34:47.641Z",
+   "firstPublished": "2016-10-05T17:58:50.882Z",
+   "tarballBytes": 80591,
+   "unpackedBytes": 355360,
+   "deprecated": null,
+   "repository": "git+https://github.com/obartra/ssim.git",
+   "topFiles": [
+    {
+     "file": "dist/ssim.web.js",
+     "raw": 17374,
+     "gzip": 5205
+    },
+    {
+     "file": "dist/math.js",
+     "raw": 11374,
+     "gzip": 2051
+    },
+    {
+     "file": "dist/matlab/padarray.js",
+     "raw": 10859,
+     "gzip": 2407
+    },
+    {
+     "file": "dist/matlab/conv2.js",
+     "raw": 9058,
+     "gzip": 2467
+    }
+   ]
+  },
+  {
+   "id": "ssimulacra2-js",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "SSIMULACRA2 JS wrapper"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: no licence; depends on sharp/three"
+   ],
+   "declaredLicense": null,
+   "version": "1.0.2",
+   "registryLicense": null,
+   "publishedLatest": "2022-12-18T15:15:58.003Z",
+   "firstPublished": "2022-12-11T14:39:00.976Z",
+   "tarballBytes": 34591,
+   "unpackedBytes": 162528,
+   "deprecated": null,
+   "repository": "git+https://github.com/iola1999/ssimulacra2-js.git",
+   "topFiles": [
+    {
+     "file": "dist/index.umd.js",
+     "raw": 33850,
+     "gzip": 8478
+    },
+    {
+     "file": "dist/bundle.esm.js",
+     "raw": 30411,
+     "gzip": 8234
+    }
+   ]
+  },
+  {
+   "id": "stackblur-canvas",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "blur for padded backgrounds"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "3.0.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-03-14T01:17:40.409Z",
+   "firstPublished": "2015-07-07T11:38:40.987Z",
+   "tarballBytes": 34111,
+   "unpackedBytes": 156842,
+   "deprecated": null,
+   "repository": "git+https://github.com/flozz/StackBlur.git",
+   "topFiles": [
+    {
+     "file": "dist/stackblur.js",
+     "raw": 21024,
+     "gzip": 4969
+    },
+    {
+     "file": "dist/stackblur.mjs",
+     "raw": 19506,
+     "gzip": 4804
+    },
+    {
+     "file": "src/stackblur.js",
+     "raw": 19395,
+     "gzip": 4238
+    },
+    {
+     "file": "dist/stackblur.min.js",
+     "raw": 8671,
+     "gzip": 3950
+    }
+   ]
+  },
+  {
+   "id": "suncalc",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "sun position/golden hour"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "BSD-2-Clause (verified upstream)",
+   "version": "2.1.1",
+   "registryLicense": null,
+   "publishedLatest": "2026-10-05T17:07:10.225Z",
+   "firstPublished": "2011-12-07T15:20:03.263Z",
+   "tarballBytes": 17344,
+   "unpackedBytes": 56257,
+   "deprecated": null,
+   "repository": "git://github.com/mourner/suncalc.git",
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 22904,
+     "gzip": 8170
+    },
+    {
+     "file": "suncalc.cjs",
+     "raw": 16199,
+     "gzip": 4982
+    }
+   ]
+  },
+  {
+   "id": "svgo",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "SVG optimiser (svgo/browser, 191KB gz)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "4.1.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-24T12:10:36.576Z",
+   "firstPublished": "2012-09-27T11:15:51.133Z",
+   "tarballBytes": 353198,
+   "unpackedBytes": 1494938,
+   "deprecated": null,
+   "repository": "git://github.com/svg/svgo.git",
+   "topFiles": [
+    {
+     "file": "dist/svgo.browser.js",
+     "raw": 805016,
+     "gzip": 195430
+    },
+    {
+     "file": "dist/svgo-node.cjs",
+     "raw": 191815,
+     "gzip": 46470
+    },
+    {
+     "file": "plugins/_collections.js",
+     "raw": 52918,
+     "gzip": 9082
+    },
+    {
+     "file": "plugins/convertPathData.js",
+     "raw": 39291,
+     "gzip": 9024
+    }
+   ]
+  },
+  {
+   "id": "tga-js",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "TGA decode (niche)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2020"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.1.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2020-10-01T19:36:59.967Z",
+   "firstPublished": "2019-02-17T13:29:44.671Z",
+   "tarballBytes": 5003,
+   "unpackedBytes": 17488,
+   "deprecated": null,
+   "repository": "git+https://github.com/vthibault/tga.js.git",
+   "topFiles": [
+    {
+     "file": "dist/umd/tga.js",
+     "raw": 4844,
+     "gzip": 1784
+    },
+    {
+     "file": "dist/cjs/tga.js",
+     "raw": 4685,
+     "gzip": 1714
+    },
+    {
+     "file": "dist/esm/tga.js",
+     "raw": 4069,
+     "gzip": 1537
+    }
+   ]
+  },
+  {
+   "id": "thumbhash",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "image placeholder hash"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2023"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.1.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2023-03-22T07:35:37.061Z",
+   "firstPublished": "2023-03-22T06:36:56.566Z",
+   "tarballBytes": 3729,
+   "unpackedBytes": 12852,
+   "deprecated": null,
+   "repository": "git+https://github.com/evanw/thumbhash.git",
+   "topFiles": [
+    {
+     "file": "thumbhash.js",
+     "raw": 10255,
+     "gzip": 3304
+    }
+   ]
+  },
+  {
+   "id": "tiff",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "TIFF decode (fallback)"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "7.1.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-12-18T06:56:33.482Z",
+   "firstPublished": "2015-09-19T16:45:47.173Z",
+   "tarballBytes": 32548,
+   "unpackedBytes": 136306,
+   "deprecated": null,
+   "repository": "git+https://github.com/image-js/tiff.git",
+   "topFiles": [
+    {
+     "file": "lib/tiff_decoder.js",
+     "raw": 15148,
+     "gzip": 3633
+    },
+    {
+     "file": "lib/tags/standard.js",
+     "raw": 5235,
+     "gzip": 1928
+    },
+    {
+     "file": "lib/tiff_ifd.js",
+     "raw": 4762,
+     "gzip": 1220
+    },
+    {
+     "file": "lib/lzw.js",
+     "raw": 4118,
+     "gzip": 1335
+    }
+   ]
+  },
+  {
+   "id": "tinycolor2",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "colour lib"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2023"
+   ],
+   "declaredLicense": "MIT",
+   "version": "1.6.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2023-02-03T23:33:07.774Z",
+   "firstPublished": "2012-09-12T18:40:46.654Z",
+   "tarballBytes": 62909,
+   "unpackedBytes": 284855,
+   "deprecated": null,
+   "repository": "git+https://github.com/bgrins/TinyColor.git",
+   "topFiles": [
+    {
+     "file": "cjs/test.js",
+     "raw": 56320,
+     "gzip": 9560
+    },
+    {
+     "file": "esm/test.js",
+     "raw": 56279,
+     "gzip": 9545
+    },
+    {
+     "file": "tinycolor.js",
+     "raw": 37738,
+     "gzip": 9906
+    },
+    {
+     "file": "cjs/tinycolor.js",
+     "raw": 37584,
+     "gzip": 9844
+    }
+   ]
+  },
+  {
+   "id": "topojson-client",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "TopoJSON decode"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "ISC",
+   "version": "3.1.0",
+   "registryLicense": "ISC",
+   "publishedLatest": "2019-11-06T03:44:54.022Z",
+   "firstPublished": "2016-10-30T18:58:47.307Z",
+   "tarballBytes": 15911,
+   "unpackedBytes": 67594,
+   "deprecated": null,
+   "repository": "git+https://github.com/topojson/topojson-client.git",
+   "topFiles": [
+    {
+     "file": "dist/topojson-client.js",
+     "raw": 14779,
+     "gzip": 3994
+    },
+    {
+     "file": "dist/topojson-client.min.js",
+     "raw": 7169,
+     "gzip": 2587
+    },
+    {
+     "file": "src/merge.js",
+     "raw": 2775,
+     "gzip": 957
+    },
+    {
+     "file": "src/feature.js",
+     "raw": 2381,
+     "gzip": 782
+    }
+   ]
+  },
+  {
+   "id": "ts-ebml",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "EBML tools for WebM"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "3.0.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-09-28T20:43:26.501Z",
+   "firstPublished": "2017-02-05T21:34:47.674Z",
+   "tarballBytes": 346319,
+   "unpackedBytes": 2428251,
+   "deprecated": null,
+   "repository": "git+https://github.com/legokichi/ts-ebml.git",
+   "topFiles": [
+    {
+     "file": "dist/EBML.js",
+     "raw": 548518,
+     "gzip": 126784
+    },
+    {
+     "file": "dist/EBML.min.js",
+     "raw": 355584,
+     "gzip": 87438
+    },
+    {
+     "file": "lib/test.js",
+     "raw": 99700,
+     "gzip": 23745
+    },
+    {
+     "file": "doc/assets/main.js",
+     "raw": 42281,
+     "gzip": 12709
+    }
+   ]
+  },
+  {
+   "id": "ts-gif",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "GIF enc/dec"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "risk: young"
+   ],
+   "declaredLicense": "MIT",
+   "version": "0.1.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-02-11T05:37:49.035Z",
+   "firstPublished": "2025-02-11T05:37:48.722Z",
+   "tarballBytes": 8683,
+   "unpackedBytes": 42479,
+   "deprecated": null,
+   "repository": "git+https://github.com/stacksjs/ts-gif.git",
+   "topFiles": [
+    {
+     "file": "dist/index.js",
+     "raw": 19371,
+     "gzip": 3895
+    },
+    {
+     "file": "package.json",
+     "raw": 2260,
+     "gzip": 913
+    }
+   ]
+  },
+  {
+   "id": "tui-image-editor",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "image editor"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2022",
+    "reason: heavy"
+   ],
+   "declaredLicense": "MIT",
+   "version": "3.15.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2022-04-25T05:26:59.673Z",
+   "firstPublished": "2017-08-29T11:44:20.518Z",
+   "tarballBytes": 760195,
+   "unpackedBytes": 3671947,
+   "deprecated": null,
+   "repository": "git+https://github.com/nhn/tui.image-editor.git",
+   "topFiles": [
+    {
+     "file": "dist/tui-image-editor.js",
+     "raw": 1992577,
+     "gzip": 387339
+    },
+    {
+     "file": "dist/tui-image-editor.min.js",
+     "raw": 672513,
+     "gzip": 179951
+    },
+    {
+     "file": "src/js/imageEditor.js",
+     "raw": 52455,
+     "gzip": 10517
+    },
+    {
+     "file": "src/js/helper/imagetracer.js",
+     "raw": 41755,
+     "gzip": 8170
+    }
+   ]
+  },
+  {
+   "id": "twemoji",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "old twemoji package"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "stale: 2022"
+   ],
+   "declaredLicense": "MIT",
+   "version": "14.0.2",
+   "registryLicense": "MIT",
+   "publishedLatest": "2022-03-31T00:17:21.009Z",
+   "firstPublished": "2014-11-05T02:36:49.253Z",
+   "tarballBytes": 33593,
+   "unpackedBytes": 168381,
+   "deprecated": null,
+   "repository": "git://github.com/twitter/twemoji.git",
+   "topFiles": [
+    {
+     "file": "dist/twemoji.amd.js",
+     "raw": 33485,
+     "gzip": 8223
+    },
+    {
+     "file": "dist/twemoji.npm.js",
+     "raw": 32545,
+     "gzip": 8228
+    },
+    {
+     "file": "dist/twemoji.js",
+     "raw": 32400,
+     "gzip": 8163
+    },
+    {
+     "file": "dist/twemoji.esm.js",
+     "raw": 17461,
+     "gzip": 4151
+    }
+   ]
+  },
+  {
+   "id": "unpdf",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "pdf.js wrapper"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "1.8.1",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-08-13T20:46:23.155Z",
+   "firstPublished": "2023-08-11T21:04:24.796Z",
+   "tarballBytes": 606558,
+   "unpackedBytes": 2141399,
+   "deprecated": null,
+   "repository": "git+https://github.com/unjs/unpdf.git",
+   "topFiles": [
+    {
+     "file": "dist/pdfjs.mjs",
+     "raw": 1676063,
+     "gzip": 496898
+    },
+    {
+     "file": "dist/index.cjs",
+     "raw": 15318,
+     "gzip": 4706
+    },
+    {
+     "file": "dist/index.mjs",
+     "raw": 14947,
+     "gzip": 4627
+    },
+    {
+     "file": "package.json",
+     "raw": 2306,
+     "gzip": 922
+    }
+   ]
+  },
+  {
+   "id": "upng-js",
+   "sections": [
+    "01",
+    "05"
+   ],
+   "roles": [
+    "APNG enc/dec (see section 05) and lossy PNG quantise (see 02)",
+    "APNG enc/dec + lossy palette"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2017",
+    "stale: 2017"
+   ],
+   "declaredLicense": "MIT",
+   "version": "2.1.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2017-12-12T10:58:51.288Z",
+   "firstPublished": "2017-08-07T11:41:04.706Z",
+   "tarballBytes": 11656,
+   "unpackedBytes": null,
+   "deprecated": null,
+   "repository": "git+https://github.com/photopea/UPNG.js.git",
+   "topFiles": [
+    {
+     "file": "UPNG.js",
+     "raw": 31508,
+     "gzip": 9190
+    }
+   ]
+  },
+  {
+   "id": "uqr",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "QR encoder (tiny)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "0.1.3",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-04-03T01:23:47.609Z",
+   "firstPublished": "2023-08-04T12:03:25.999Z",
+   "tarballBytes": 20726,
+   "unpackedBytes": 79278,
+   "deprecated": null,
+   "repository": "git+https://github.com/unjs/uqr.git",
+   "topFiles": [
+    {
+     "file": "dist/index.cjs",
+     "raw": 27624,
+     "gzip": 7860
+    },
+    {
+     "file": "dist/index.mjs",
+     "raw": 27482,
+     "gzip": 7821
+    }
+   ]
+  },
+  {
+   "id": "utif",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "TIFF enc/dec multi-page"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2019"
+   ],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "3.1.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2019-06-18T08:37:46.792Z",
+   "firstPublished": "2017-08-03T11:26:35.665Z",
+   "tarballBytes": 22318,
+   "unpackedBytes": 63999,
+   "deprecated": null,
+   "repository": "git+https://github.com/photopea/UTIF.js.git",
+   "topFiles": [
+    {
+     "file": "UTIF.js",
+     "raw": 58271,
+     "gzip": 19752
+    }
+   ]
+  },
+  {
+   "id": "vtracer-wasm",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "Raster->SVG (colour tracing)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "risk: single maintainer v0.1.0"
+   ],
+   "declaredLicense": "MIT (LICENSE file; no package.json licence field)",
+   "upstream": "visioncortex/vtracer MIT",
+   "lazy": true,
+   "version": "0.1.0",
+   "registryLicense": null,
+   "publishedLatest": "2025-07-25T20:04:11.987Z",
+   "firstPublished": "2025-07-25T20:04:11.637Z",
+   "tarballBytes": 64947,
+   "unpackedBytes": 154078,
+   "deprecated": null,
+   "repository": "git+https://github.com/jsscheller/vtracer-wasm.git",
+   "topFiles": [
+    {
+     "file": "vtracer.wasm",
+     "raw": 136862,
+     "gzip": 59624
+    },
+    {
+     "file": "vtracer.js",
+     "raw": 14110,
+     "gzip": 3443
+    }
+   ]
+  },
+  {
+   "id": "vue-advanced-cropper",
+   "sections": [
+    "03"
+   ],
+   "roles": [
+    "Vue crop UI"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "version": "2.8.9",
+   "registryLicense": "MIT",
+   "publishedLatest": "2024-06-09T10:49:20.386Z",
+   "firstPublished": "2019-06-22T13:20:57.012Z",
+   "tarballBytes": 89737,
+   "unpackedBytes": 379833,
+   "deprecated": null,
+   "repository": "git+https://github.com/advanced-cropper/vue-advanced-cropper.git",
+   "topFiles": [
+    {
+     "file": "dist/index.cjs.js",
+     "raw": 85741,
+     "gzip": 20684
+    },
+    {
+     "file": "dist/index.global.js",
+     "raw": 85695,
+     "gzip": 20722
+    },
+    {
+     "file": "dist/index.esm-browser.js",
+     "raw": 84595,
+     "gzip": 20719
+    },
+    {
+     "file": "dist/index.esm-bundler.js",
+     "raw": 84595,
+     "gzip": 20719
+    }
+   ]
+  },
+  {
+   "id": "wasm-feature-detect",
+   "sections": [
+    "02"
+   ],
+   "roles": [
+    "feature detection (SIMD/threads)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "Apache-2.0",
+   "version": "1.9.0",
+   "registryLicense": "Apache-2.0",
+   "publishedLatest": "2026-08-11T03:25:40.845Z",
+   "firstPublished": "2019-09-07T00:03:32.306Z",
+   "tarballBytes": 8247,
+   "unpackedBytes": 34200,
+   "deprecated": null,
+   "repository": "git+https://github.com/GoogleChromeLabs/wasm-feature-detect.git",
+   "topFiles": [
+    {
+     "file": "dist/umd/index.js",
+     "raw": 3621,
+     "gzip": 1131
+    },
+    {
+     "file": "dist/cjs/index.cjs",
+     "raw": 3408,
+     "gzip": 1040
+    },
+    {
+     "file": "dist/esm/index.js",
+     "raw": 3381,
+     "gzip": 1023
+    }
+   ]
+  },
+  {
+   "id": "wasm-media-encoders",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "MP3/Opus/Vorbis wasm encoders"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: unclear embedded licences; 282KB gz"
+   ],
+   "declaredLicense": "MIT label; includes LAME (LGPL) unclear handling",
+   "version": "0.7.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2024-05-24T23:59:37.870Z",
+   "firstPublished": "2020-06-14T21:24:17.616Z",
+   "tarballBytes": 1112682,
+   "unpackedBytes": 2964508,
+   "deprecated": null,
+   "repository": "https://github.com/arseneyr/wasm-media-encoders",
+   "topFiles": [
+    {
+     "file": "dist/es/index.mjs",
+     "raw": 783133,
+     "gzip": 289173
+    },
+    {
+     "file": "dist/index.cjs",
+     "raw": 783129,
+     "gzip": 289173
+    },
+    {
+     "file": "dist/esnext/index.mjs",
+     "raw": 782641,
+     "gzip": 289013
+    },
+    {
+     "file": "wasm/ogg.wasm",
+     "raw": 450589,
+     "gzip": 162248
+    }
+   ]
+  },
+  {
+   "id": "wasm-vips",
+   "sections": [
+    "01"
+   ],
+   "roles": [
+    "Streaming big-image engine (Phase 3)"
+   ],
+   "tier": "B",
+   "status": "optional",
+   "flags": [
+    "needs-COOP-COEP",
+    "early-development"
+   ],
+   "notes": [],
+   "declaredLicense": "MIT wrapper; libvips LGPL-3.0(+)",
+   "lazy": true,
+   "version": "0.0.19",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-09-29T08:31:06.263Z",
+   "firstPublished": "2020-09-01T10:58:05.741Z",
+   "tarballBytes": 4693147,
+   "unpackedBytes": 12981395,
+   "deprecated": null,
+   "repository": "git+https://github.com/kleisauke/wasm-vips.git",
+   "topFiles": [
+    {
+     "file": "lib/vips.wasm",
+     "raw": 5154052,
+     "gzip": 2023395
+    },
+    {
+     "file": "lib/vips-heif.wasm",
+     "raw": 3802681,
+     "gzip": 1261044
+    },
+    {
+     "file": "lib/vips-jxl.wasm",
+     "raw": 2224543,
+     "gzip": 798402
+    },
+    {
+     "file": "lib/vips-resvg.wasm",
+     "raw": 1176530,
+     "gzip": 445638
+    }
+   ]
+  },
+  {
+   "id": "wasm-webp",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "Animated WebP encode+decode (libwebp wasm)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "risk: v0.1.0; test"
+   ],
+   "declaredLicense": "MIT wrapper; libwebp BSD-3 (add notice)",
+   "lazy": true,
+   "version": "0.1.0",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-03-02T02:57:02.560Z",
+   "firstPublished": "2024-04-10T09:39:44.323Z",
+   "tarballBytes": 450565,
+   "unpackedBytes": 1276911,
+   "deprecated": null,
+   "repository": "git+https://github.com/nieyuyao/webp-wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/cjs/webp-wasm.wasm",
+     "raw": 482273,
+     "gzip": 185932
+    },
+    {
+     "file": "dist/esm/webp-wasm.wasm",
+     "raw": 482273,
+     "gzip": 185932
+    },
+    {
+     "file": "dist/esm/webp-wasm.js",
+     "raw": 147067,
+     "gzip": 38783
+    },
+    {
+     "file": "dist/cjs/webp-wasm.js",
+     "raw": 146759,
+     "gzip": 38647
+    }
+   ]
+  },
+  {
+   "id": "wcag-contrast",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "WCAG contrast"
+   ],
+   "tier": "A",
+   "status": "optional",
+   "flags": [],
+   "notes": [
+    "stale: 2019"
+   ],
+   "declaredLicense": "BSD-2-Clause",
+   "version": "3.0.0",
+   "registryLicense": "BSD-2-Clause",
+   "publishedLatest": "2019-11-05T22:33:03.036Z",
+   "firstPublished": "2013-09-24T15:45:37.998Z",
+   "tarballBytes": 5877,
+   "unpackedBytes": 25015,
+   "deprecated": null,
+   "repository": "git://github.com/tmcw/wcag-contrast.git",
+   "topFiles": [
+    {
+     "file": "index.js",
+     "raw": 2133,
+     "gzip": 788
+    }
+   ]
+  },
+  {
+   "id": "web-demuxer",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "demuxer wasm"
+   ],
+   "tier": "X",
+   "status": "rejected",
+   "flags": [],
+   "notes": [
+    "reason: no licence"
+   ],
+   "declaredLicense": null,
+   "version": "4.0.0",
+   "registryLicense": null,
+   "publishedLatest": "2025-12-20T03:39:49.109Z",
+   "firstPublished": "2024-06-02T16:12:54.131Z",
+   "tarballBytes": 1550669,
+   "unpackedBytes": 4229009,
+   "deprecated": null,
+   "repository": "git+https://github.com/ForeverSc/web-demuxer.git",
+   "topFiles": [
+    {
+     "file": "dist/wasm-files/web-demuxer.wasm",
+     "raw": 3150317,
+     "gzip": 1032099
+    },
+    {
+     "file": "dist/wasm-files/web-demuxer-mini.wasm",
+     "raw": 823572,
+     "gzip": 422702
+    },
+    {
+     "file": "dist/web-demuxer.js",
+     "raw": 118338,
+     "gzip": 44521
+    },
+    {
+     "file": "dist/web-demuxer.umd.cjs",
+     "raw": 113274,
+     "gzip": 43806
+    }
+   ]
+  },
+  {
+   "id": "webm-muxer",
+   "sections": [
+    "05"
+   ],
+   "roles": [
+    "WebM muxer"
+   ],
+   "tier": "A",
+   "status": "not-needed",
+   "flags": [],
+   "notes": [
+    "reason: DEPRECATED -> mediabunny"
+   ],
+   "declaredLicense": "MIT",
+   "version": "5.1.4",
+   "registryLicense": "MIT",
+   "publishedLatest": "2025-07-02T20:17:08.609Z",
+   "firstPublished": "2022-11-10T15:22:36.875Z",
+   "tarballBytes": 28644,
+   "unpackedBytes": 147682,
+   "deprecated": "This library is superseded by Mediabunny. Please migrate to it.",
+   "repository": "git+https://github.com/Vanilagy/webm-muxer.git",
+   "topFiles": [
+    {
+     "file": "build/webm-muxer.js",
+     "raw": 69013,
+     "gzip": 12246
+    },
+    {
+     "file": "build/webm-muxer.mjs",
+     "raw": 64944,
+     "gzip": 11754
+    }
+   ]
+  },
+  {
+   "id": "world-atlas",
+   "sections": [
+    "04"
+   ],
+   "roles": [
+    "country polygons (Natural Earth PD)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [
+    "stale: 2019"
+   ],
+   "declaredLicense": "ISC (data public domain)",
+   "version": "2.0.2",
+   "registryLicense": "ISC",
+   "publishedLatest": "2019-09-05T17:16:29.393Z",
+   "firstPublished": "2013-03-05T00:36:10.037Z",
+   "tarballBytes": 2277546,
+   "unpackedBytes": 8219628,
+   "deprecated": null,
+   "repository": "git+https://github.com/topojson/world-atlas.git",
+   "topFiles": [
+    {
+     "file": "countries-10m.json",
+     "raw": 3661071,
+     "gzip": 916570
+    },
+    {
+     "file": "land-10m.json",
+     "raw": 3086715,
+     "gzip": 771205
+    },
+    {
+     "file": "countries-50m.json",
+     "raw": 756420,
+     "gzip": 229093
+    },
+    {
+     "file": "land-50m.json",
+     "raw": 545534,
+     "gzip": 168609
+    }
+   ]
+  },
+  {
+   "id": "zxing-wasm",
+   "sections": [
+    "07"
+   ],
+   "roles": [
+    "multi-format barcode read/write wasm (reader 408KB gz)"
+   ],
+   "tier": "A",
+   "status": "recommended",
+   "flags": [],
+   "notes": [],
+   "declaredLicense": "MIT",
+   "lazy": true,
+   "version": "3.1.5",
+   "registryLicense": "MIT",
+   "publishedLatest": "2026-10-06T02:13:09.328Z",
+   "firstPublished": "2023-10-23T18:27:22.718Z",
+   "tarballBytes": 1642639,
+   "unpackedBytes": 3705169,
+   "deprecated": null,
+   "repository": "git+https://github.com/Sec-ant/zxing-wasm.git",
+   "topFiles": [
+    {
+     "file": "dist/full/zxing_full.wasm",
+     "raw": 1546749,
+     "gzip": 737278
+    },
+    {
+     "file": "dist/reader/zxing_reader.wasm",
+     "raw": 966895,
+     "gzip": 417976
+    },
+    {
+     "file": "dist/writer/zxing_writer.wasm",
+     "raw": 647500,
+     "gzip": 346159
+    },
+    {
+     "file": "dist/es/full/index.js",
+     "raw": 43906,
+     "gzip": 12800
+    }
+   ]
+  }
+ ]
+}

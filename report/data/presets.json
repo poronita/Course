@@ -1,0 +1,1033 @@
+{
+  "_meta": {
+    "purpose": "Seed database of size/format presets for crop, resize, compress and convert tools. DATA, NOT CODE: ship as JSON, keep user-editable, show 'verify with the official notice' for anything not 'official'.",
+    "lastVerified": "2026-10-07",
+    "method": "Values read from web-search result summaries on 2026-10-07 (sources listed per entry). Pixel values marked 'derived' were computed from the physical size and DPI. No entry was verified against a live official page unless confidence = 'official'.",
+    "confidenceLevels": {
+      "official": "Quoted from the issuing organisation's page (as returned by search).",
+      "third-party": "Reported by 2+ aggregator/marketing sites; may be outdated.",
+      "single-source": "Only one secondary source found.",
+      "derived": "Computed from physical size x DPI.",
+      "unverified": "From background knowledge; must be checked."
+    },
+    "schema": "id, group, label, widthPx, heightPx (null = free), minWidthPx/minHeightPx/maxWidthPx/maxHeightPx, aspect, physicalMm [w,h], dpiHint, formats[], minKB, maxKB, fit ('cover'|'contain'|'pad'|'exact'), background, notes, confidence, sources[], validNote",
+    "updatePolicy": "Presets change (e.g. PAN photo size changed April 2026 per one source; SSC specs differ between years). Provide an in-app 'last verified' date, a report-wrong-preset button (mailto/GitHub issue link, no server), and allow users to create/share their own presets."
+  },
+  "presets": [
+    {
+      "id": "ig-post-square",
+      "group": "social",
+      "platform": "Instagram",
+      "label": "Instagram post — square",
+      "widthPx": 1080,
+      "heightPx": 1080,
+      "aspect": "1:1",
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxKB": 8192,
+      "fit": "cover",
+      "notes": "Max ~8 MB for feed images (third-party).",
+      "confidence": "third-party",
+      "sources": [
+        "https://buffer.com/library/instagram-image-size"
+      ]
+    },
+    {
+      "id": "ig-post-portrait-45",
+      "group": "social",
+      "platform": "Instagram",
+      "label": "Instagram post — portrait 4:5",
+      "widthPx": 1080,
+      "heightPx": 1350,
+      "aspect": "4:5",
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxKB": 8192,
+      "fit": "cover",
+      "notes": "Takes most feed space.",
+      "confidence": "third-party",
+      "sources": [
+        "https://buffer.com/library/instagram-image-size"
+      ]
+    },
+    {
+      "id": "ig-post-portrait-34",
+      "group": "social",
+      "platform": "Instagram",
+      "label": "Instagram post — portrait 3:4",
+      "widthPx": 1080,
+      "heightPx": 1440,
+      "aspect": "3:4",
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "fit": "cover",
+      "confidence": "third-party",
+      "sources": [
+        "https://buffer.com/library/instagram-image-size"
+      ]
+    },
+    {
+      "id": "ig-post-landscape",
+      "group": "social",
+      "platform": "Instagram",
+      "label": "Instagram post — landscape 1.91:1",
+      "widthPx": 1080,
+      "heightPx": 566,
+      "aspect": "1.91:1",
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "fit": "cover",
+      "confidence": "third-party",
+      "sources": [
+        "https://buffer.com/library/instagram-image-size"
+      ]
+    },
+    {
+      "id": "ig-story-reel",
+      "group": "social",
+      "platform": "Instagram",
+      "label": "Instagram Story / Reel",
+      "widthPx": 1080,
+      "heightPx": 1920,
+      "aspect": "9:16",
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxKB": 30720,
+      "fit": "cover",
+      "notes": "Story images up to ~30 MB (third-party). Keep key content away from top/bottom UI zones [safe-zone px unverified].",
+      "confidence": "third-party",
+      "sources": [
+        "https://buffer.com/library/instagram-image-size"
+      ]
+    },
+    {
+      "id": "ig-profile",
+      "group": "social",
+      "platform": "Instagram",
+      "label": "Instagram profile picture",
+      "widthPx": 320,
+      "heightPx": 320,
+      "aspect": "1:1",
+      "fit": "cover",
+      "notes": "Displayed as a circle — offer circle-mask overlay.",
+      "confidence": "third-party",
+      "sources": [
+        "https://buffer.com/library/instagram-image-size"
+      ]
+    },
+    {
+      "id": "fb-cover",
+      "group": "social",
+      "platform": "Facebook",
+      "label": "Facebook cover photo",
+      "widthPx": 851,
+      "heightPx": 315,
+      "aspect": "2.7:1",
+      "fit": "cover",
+      "notes": "Renders ~820x312 on desktop; crops to ~640x360 on mobile — keep key elements centred. Profile photo overlaps lower-left.",
+      "confidence": "third-party",
+      "sources": [
+        "https://www.99dollarsocial.com/blog/2026-social-media-image-dimensions-guide-for-facebook-instagram-and-more",
+        "https://www.adobe.com/in/express/discover/sizes/facebook"
+      ]
+    },
+    {
+      "id": "fb-profile",
+      "group": "social",
+      "platform": "Facebook",
+      "label": "Facebook profile picture",
+      "minWidthPx": 320,
+      "minHeightPx": 320,
+      "widthPx": 320,
+      "heightPx": 320,
+      "aspect": "1:1",
+      "fit": "cover",
+      "notes": "Shown ~196px desktop / ~128px mobile. (Older guides say 170x170.)",
+      "confidence": "third-party",
+      "sources": [
+        "https://www.99dollarsocial.com/blog/2026-social-media-image-dimensions-guide-for-facebook-instagram-and-more"
+      ]
+    },
+    {
+      "id": "fb-shared-link",
+      "group": "social",
+      "platform": "Facebook",
+      "label": "Facebook shared image / link preview (also Open Graph)",
+      "widthPx": 1200,
+      "heightPx": 630,
+      "aspect": "1.91:1",
+      "fit": "cover",
+      "confidence": "third-party",
+      "sources": [
+        "https://www.99dollarsocial.com/blog/2026-social-media-image-dimensions-guide-for-facebook-instagram-and-more"
+      ]
+    },
+    {
+      "id": "li-banner-personal",
+      "group": "social",
+      "platform": "LinkedIn",
+      "label": "LinkedIn personal banner",
+      "widthPx": 1584,
+      "heightPx": 396,
+      "aspect": "4:1",
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxKB": 8192,
+      "fit": "cover",
+      "notes": "Avoid text near edges (crops differ by device).",
+      "confidence": "third-party",
+      "sources": [
+        "https://nealschaffer.com/linkedin-banner-size/",
+        "https://www.zeliq.com/blog/linkedin-banner-size"
+      ]
+    },
+    {
+      "id": "li-profile",
+      "group": "social",
+      "platform": "LinkedIn",
+      "label": "LinkedIn profile photo",
+      "widthPx": 400,
+      "heightPx": 400,
+      "aspect": "1:1",
+      "fit": "cover",
+      "confidence": "third-party",
+      "sources": [
+        "https://picsart.com/blog/linkedin-image-sizes/"
+      ]
+    },
+    {
+      "id": "li-company-cover",
+      "group": "social",
+      "platform": "LinkedIn",
+      "label": "LinkedIn company cover",
+      "widthPx": 1128,
+      "heightPx": 191,
+      "aspect": "5.9:1",
+      "fit": "cover",
+      "confidence": "third-party",
+      "sources": [
+        "https://picsart.com/blog/linkedin-image-sizes/"
+      ]
+    },
+    {
+      "id": "li-company-logo",
+      "group": "social",
+      "platform": "LinkedIn",
+      "label": "LinkedIn company logo",
+      "widthPx": 300,
+      "heightPx": 300,
+      "aspect": "1:1",
+      "fit": "contain",
+      "confidence": "third-party",
+      "sources": [
+        "https://picsart.com/blog/linkedin-image-sizes/"
+      ]
+    },
+    {
+      "id": "li-feed",
+      "group": "social",
+      "platform": "LinkedIn",
+      "label": "LinkedIn feed image",
+      "widthPx": 1200,
+      "heightPx": 627,
+      "aspect": "1.91:1",
+      "fit": "cover",
+      "confidence": "third-party",
+      "sources": [
+        "https://picsart.com/blog/linkedin-image-sizes/"
+      ]
+    },
+    {
+      "id": "x-header",
+      "group": "social",
+      "platform": "X (Twitter)",
+      "label": "X header photo",
+      "widthPx": 1500,
+      "heightPx": 500,
+      "aspect": "3:1",
+      "fit": "cover",
+      "confidence": "third-party",
+      "sources": [
+        "https://metricool.com/twitter-image-size/",
+        "https://soona.co/image-resizer/twitter-spec-guide"
+      ]
+    },
+    {
+      "id": "x-profile",
+      "group": "social",
+      "platform": "X (Twitter)",
+      "label": "X profile picture",
+      "widthPx": 400,
+      "heightPx": 400,
+      "aspect": "1:1",
+      "maxKB": 2048,
+      "fit": "cover",
+      "confidence": "third-party",
+      "sources": [
+        "https://postfa.st/sizes/x/profile"
+      ]
+    },
+    {
+      "id": "x-post",
+      "group": "social",
+      "platform": "X (Twitter)",
+      "label": "X post image 16:9",
+      "widthPx": 1200,
+      "heightPx": 675,
+      "aspect": "16:9",
+      "formats": [
+        "jpg",
+        "png",
+        "gif",
+        "webp"
+      ],
+      "maxKB": 5120,
+      "fit": "cover",
+      "confidence": "third-party",
+      "sources": [
+        "https://moda.app/resources/sizes/twitter-post",
+        "https://ayrshare.com/docs/media-guidelines/x_twitter"
+      ]
+    },
+    {
+      "id": "yt-thumbnail",
+      "group": "social",
+      "platform": "YouTube",
+      "label": "YouTube thumbnail",
+      "widthPx": 1280,
+      "heightPx": 720,
+      "minWidthPx": 640,
+      "aspect": "16:9",
+      "formats": [
+        "jpg",
+        "png",
+        "gif",
+        "bmp"
+      ],
+      "maxKB": 2048,
+      "fit": "cover",
+      "confidence": "third-party",
+      "sources": [
+        "https://thumbnailtest.com/guides/youtube-thumbnail-size/"
+      ]
+    },
+    {
+      "id": "yt-banner",
+      "group": "social",
+      "platform": "YouTube",
+      "label": "YouTube channel banner",
+      "widthPx": 2560,
+      "heightPx": 1440,
+      "aspect": "16:9",
+      "maxKB": 6144,
+      "fit": "cover",
+      "notes": "Safe area for all devices: 1546x423 px, centred.",
+      "safeAreaPx": [
+        1546,
+        423
+      ],
+      "confidence": "third-party",
+      "sources": [
+        "https://size-charts.com/topics/youtube-banner-size/",
+        "https://www.collabpals.com/tools/youtube-image-size-guide"
+      ]
+    },
+    {
+      "id": "yt-profile",
+      "group": "social",
+      "platform": "YouTube",
+      "label": "YouTube channel profile picture",
+      "widthPx": 800,
+      "heightPx": 800,
+      "aspect": "1:1",
+      "fit": "cover",
+      "notes": "Displayed ~98x98 (circle).",
+      "confidence": "third-party",
+      "sources": [
+        "https://blog.photofeeler.com/youtube-profile-picture-channel-thumbnail-size/amp"
+      ]
+    },
+    {
+      "id": "wa-sticker",
+      "group": "stickers",
+      "platform": "WhatsApp",
+      "label": "WhatsApp sticker (static)",
+      "widthPx": 512,
+      "heightPx": 512,
+      "formats": [
+        "webp"
+      ],
+      "maxKB": 100,
+      "fit": "contain",
+      "background": "transparent",
+      "notes": "Animated stickers: <=500 KB. Pack: 3-30 stickers.",
+      "confidence": "third-party",
+      "sources": [
+        "https://developer.vonage.com/messages/concepts/whatsapp-stickers",
+        "https://moda.app/resources/sizes/whatsapp-sticker"
+      ]
+    },
+    {
+      "id": "wa-sticker-animated",
+      "group": "stickers",
+      "platform": "WhatsApp",
+      "label": "WhatsApp sticker (animated)",
+      "widthPx": 512,
+      "heightPx": 512,
+      "formats": [
+        "webp"
+      ],
+      "maxKB": 500,
+      "fit": "contain",
+      "background": "transparent",
+      "confidence": "third-party",
+      "sources": [
+        "https://developer.vonage.com/messages/concepts/whatsapp-stickers"
+      ],
+      "notes": "Animated: WebP 512x512, <=500 KB, frame duration >= 8 ms, total <= 10 s (third-party sources).",
+      "maxDurationSec": 10,
+      "minFrameMs": 8
+    },
+    {
+      "id": "wa-tray-icon",
+      "group": "stickers",
+      "platform": "WhatsApp",
+      "label": "WhatsApp sticker-pack tray icon",
+      "widthPx": 96,
+      "heightPx": 96,
+      "fit": "contain",
+      "confidence": "third-party",
+      "sources": [
+        "https://cf-production.makeemoji.com/blog/whatsapp-custom-stickers-how-to-create"
+      ]
+    },
+    {
+      "id": "tg-sticker",
+      "group": "stickers",
+      "platform": "Telegram",
+      "label": "Telegram sticker (static)",
+      "widthPx": 512,
+      "heightPx": null,
+      "maxWidthPx": 512,
+      "maxHeightPx": 512,
+      "formats": [
+        "png",
+        "webp"
+      ],
+      "maxKB": 512,
+      "fit": "contain",
+      "background": "transparent",
+      "notes": "One side exactly 512 px; the other <= 512.",
+      "confidence": "official",
+      "sources": [
+        "https://core.telegram.org/stickers",
+        "https://core.telegram.org/import-stickers"
+      ]
+    },
+    {
+      "id": "tg-sticker-video",
+      "group": "stickers",
+      "platform": "Telegram",
+      "label": "Telegram video sticker",
+      "widthPx": 512,
+      "heightPx": null,
+      "formats": [
+        "webm"
+      ],
+      "maxKB": 256,
+      "notes": "VP9, <=3 s, <=30 fps, looped.",
+      "confidence": "official",
+      "sources": [
+        "https://core.telegram.org/stickers/webm-vp9-encoding"
+      ],
+      "maxDurationSec": 3,
+      "maxFps": 30,
+      "codec": "vp9"
+    },
+    {
+      "id": "play-feature-graphic",
+      "group": "store",
+      "platform": "Google Play",
+      "label": "Play Store feature graphic",
+      "widthPx": 1024,
+      "heightPx": 500,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "fit": "cover",
+      "notes": "JPEG or 24-bit PNG, no alpha.",
+      "confidence": "official",
+      "sources": [
+        "https://support.google.com/googleplay/android-developer/answer/9866151"
+      ]
+    },
+    {
+      "id": "play-screenshot",
+      "group": "store",
+      "platform": "Google Play",
+      "label": "Play Store screenshot (phone)",
+      "minWidthPx": 320,
+      "minHeightPx": 320,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "notes": "2-8 per device type; JPEG or 24-bit PNG (no alpha); min dimension 320 px. Max/ratio limits not captured — check the page.",
+      "confidence": "official",
+      "sources": [
+        "https://support.google.com/googleplay/android-developer/answer/9866151"
+      ]
+    },
+    {
+      "id": "play-app-icon",
+      "group": "store",
+      "platform": "Google Play",
+      "label": "Play Store app icon",
+      "widthPx": 512,
+      "heightPx": 512,
+      "formats": [
+        "png"
+      ],
+      "maxKB": 1024,
+      "notes": "512x512 PNG <=1024 KB is from background knowledge — verify.",
+      "confidence": "unverified",
+      "sources": [
+        "https://support.google.com/googleplay/android-developer/answer/9866151"
+      ]
+    },
+    {
+      "id": "us-passport-visa-digital",
+      "group": "id-photo",
+      "country": "US",
+      "label": "US passport/visa digital photo",
+      "minWidthPx": 600,
+      "minHeightPx": 600,
+      "maxWidthPx": 1200,
+      "maxHeightPx": 1200,
+      "aspect": "1:1",
+      "formats": [
+        "jpg"
+      ],
+      "maxKB": 240,
+      "physicalMm": [
+        51,
+        51
+      ],
+      "dpiHint": 300,
+      "fit": "cover",
+      "background": "white",
+      "notes": "Square, 24-bit colour, sRGB, JPEG; compression ratio <= 20:1. 2x2 in = 600 px at 300 dpi.",
+      "confidence": "official",
+      "sources": [
+        "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos/digital-image-requirements.html"
+      ]
+    },
+    {
+      "id": "uk-passport-digital",
+      "group": "id-photo",
+      "country": "UK",
+      "label": "UK passport online photo",
+      "minWidthPx": 600,
+      "minHeightPx": 750,
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 50,
+      "maxKB": 10240,
+      "physicalMm": [
+        35,
+        45
+      ],
+      "fit": "cover",
+      "background": "plain light",
+      "notes": "Printed: 35x45 mm, head (crown to chin) 29-34 mm high. Taken within the last month.",
+      "confidence": "official",
+      "sources": [
+        "https://www.gov.uk/photos-for-passports/photo-requirements"
+      ]
+    },
+    {
+      "id": "in-passport-seva",
+      "group": "id-photo",
+      "country": "IN",
+      "label": "India Passport Seva online photo",
+      "widthPx": 630,
+      "heightPx": 810,
+      "aspect": "7:9",
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 10,
+      "maxKB": 250,
+      "physicalMm": [
+        35,
+        45
+      ],
+      "fit": "cover",
+      "background": "white",
+      "notes": "Portal validates dimensions exactly (reported). Face ~80-85% of frame.",
+      "confidence": "third-party",
+      "sources": [
+        "https://photogov.net/knowledge/requirements/indian-passport-photo-requirements/",
+        "https://mergeimages.net/resize-photo-for/passport-seva"
+      ]
+    },
+    {
+      "id": "schengen-visa",
+      "group": "id-photo",
+      "country": "EU",
+      "label": "Schengen visa photo (print)",
+      "physicalMm": [
+        35,
+        45
+      ],
+      "dpiHint": 300,
+      "widthPx": 413,
+      "heightPx": 531,
+      "fit": "cover",
+      "background": "light",
+      "notes": "Head height 32-36 mm (reported). Pixels derived at 300 dpi.",
+      "confidence": "third-party",
+      "sources": [
+        "https://immihelp.com/schengen-visa-photograph-requirements"
+      ]
+    },
+    {
+      "id": "china-visa",
+      "group": "id-photo",
+      "country": "CN",
+      "label": "China visa photo (print)",
+      "physicalMm": [
+        33,
+        48
+      ],
+      "dpiHint": 300,
+      "widthPx": 390,
+      "heightPx": 567,
+      "fit": "cover",
+      "notes": "Pixels derived at 300 dpi; online portals may need different px/KB — check.",
+      "confidence": "third-party",
+      "sources": [
+        "https://workvisa.guide/visa-photo-requirements"
+      ]
+    },
+    {
+      "id": "canada-passport",
+      "group": "id-photo",
+      "country": "CA",
+      "label": "Canada passport photo (print)",
+      "physicalMm": [
+        50,
+        70
+      ],
+      "dpiHint": 300,
+      "widthPx": 591,
+      "heightPx": 827,
+      "fit": "cover",
+      "background": "white or light grey",
+      "confidence": "third-party",
+      "sources": [
+        "https://photoaid.com/en-ca/visas-and-other-documents-needed-abroad"
+      ]
+    },
+    {
+      "id": "ssc-photo",
+      "group": "exam",
+      "country": "IN",
+      "label": "SSC (CGL/CHSL/MTS) photo",
+      "widthPx": 275,
+      "heightPx": 354,
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 20,
+      "maxKB": 50,
+      "physicalMm": [
+        35,
+        45
+      ],
+      "fit": "cover",
+      "notes": "3.5x4.5 cm at 200 dpi = 276x354. Some sources/years list 100x120 px. Always follow the current notification.",
+      "confidence": "third-party",
+      "validNote": "conflicting sources",
+      "sources": [
+        "https://www.pw.live/ssc/exams/ssc-cgl-photo-and-signature-size-2026",
+        "https://www.practicemock.com/blog/ssc-cgl-signature-size-and-photo-rules/amp/?p=200965"
+      ]
+    },
+    {
+      "id": "ssc-signature",
+      "group": "exam",
+      "country": "IN",
+      "label": "SSC signature",
+      "widthPx": 236,
+      "heightPx": 79,
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 10,
+      "maxKB": 20,
+      "notes": "Older/alternative: ~140x60 px, 10-30 KB. Follow current notification.",
+      "confidence": "third-party",
+      "validNote": "conflicting sources",
+      "sources": [
+        "https://www.pw.live/ssc/exams/ssc-cgl-photo-and-signature-size-2026"
+      ]
+    },
+    {
+      "id": "neet-photo",
+      "group": "exam",
+      "country": "IN",
+      "label": "NEET UG photograph",
+      "widthPx": null,
+      "heightPx": null,
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 10,
+      "maxKB": 200,
+      "physicalMm": [
+        35,
+        45
+      ],
+      "notes": "One aggregator lists 200x230 px; pixel size may be unconstrained — follow the NTA bulletin.",
+      "confidence": "third-party",
+      "sources": [
+        "https://www.aakash.ac.in/blog/neet-ug-2026-photograph-signature-upload-guidelines-document/",
+        "https://news.aglasem.com/jee-main-photo-requirements/"
+      ]
+    },
+    {
+      "id": "jee-main-photo",
+      "group": "exam",
+      "country": "IN",
+      "label": "JEE Main photograph",
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 10,
+      "maxKB": 200,
+      "physicalMm": [
+        35,
+        45
+      ],
+      "notes": "3.5x4.5 cm.",
+      "confidence": "third-party",
+      "sources": [
+        "https://news.aglasem.com/jee-main-photo-requirements/",
+        "https://motion.ac.in/examinfo/jee-main-photo-size-and-signature-guidelines/"
+      ]
+    },
+    {
+      "id": "jee-main-signature",
+      "group": "exam",
+      "country": "IN",
+      "label": "JEE Main signature",
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 10,
+      "maxKB": 100,
+      "physicalMm": [
+        35,
+        15
+      ],
+      "notes": "3.5x1.5 cm; older years: 4-30 KB. Follow current bulletin.",
+      "confidence": "third-party",
+      "validNote": "conflicting years",
+      "sources": [
+        "https://news.aglasem.com/jee-main-photo-requirements/"
+      ]
+    },
+    {
+      "id": "upsc-photo",
+      "group": "exam",
+      "country": "IN",
+      "label": "UPSC photograph",
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 20,
+      "maxKB": 200,
+      "notes": "Face >= 75% of photo; plain white background.",
+      "confidence": "single-source",
+      "validNote": "rules updated 2026 per source",
+      "sources": [
+        "https://www.visionias.in/blog/upsc-news/upsc-new-photo-signature-rules-2026-dos-and-donts",
+        "https://vajiramandravi.com/upsc-exam/upsc-photo-and-signature-guidelines/"
+      ]
+    },
+    {
+      "id": "upsc-signature",
+      "group": "exam",
+      "country": "IN",
+      "label": "UPSC signature",
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 20,
+      "maxKB": 100,
+      "notes": "Source says: sign three times one below the other, scan as one image; dimensions 350-500 px (ambiguous).",
+      "confidence": "single-source",
+      "sources": [
+        "https://www.visionias.in/blog/upsc-news/upsc-new-photo-signature-rules-2026-dos-and-donts"
+      ]
+    },
+    {
+      "id": "pan-photo",
+      "group": "government",
+      "country": "IN",
+      "label": "PAN application photo (NSDL/UTIITSL)",
+      "widthPx": 394,
+      "heightPx": 276,
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 20,
+      "maxKB": 50,
+      "physicalMm": [
+        50,
+        35
+      ],
+      "dpiHint": 200,
+      "fit": "cover",
+      "background": "white",
+      "notes": "One source says size changed April 2026 from 5x2.5 cm to 5x3.5 cm; 394x276 px derived at 200 dpi. Older guides show 213x213. VERIFY on the portal.",
+      "confidence": "derived",
+      "validNote": "recently changed; low confidence",
+      "sources": [
+        "https://mergeimages.net/resize-photo-for/pan-card",
+        "https://poonawallafincorp.com/blogs/financial-insights/pan-card-rejected-photo-signature-error-fix"
+      ]
+    },
+    {
+      "id": "pan-signature",
+      "group": "government",
+      "country": "IN",
+      "label": "PAN application signature",
+      "formats": [
+        "jpg"
+      ],
+      "minKB": 10,
+      "maxKB": 50,
+      "notes": "Reported px 157x354 (derived from physical size at 200 dpi) — treat as low confidence.",
+      "confidence": "single-source",
+      "sources": [
+        "https://mergeimages.net/resize-photo-for/pan-card"
+      ]
+    }
+  ],
+  "paperAndPrintSizes": {
+    "note": "Computed: px = mm / 25.4 * dpi, rounded.",
+    "paper": [
+      {
+        "id": "A3",
+        "mm": [
+          297,
+          420
+        ],
+        "px72pt": [
+          842,
+          1191
+        ],
+        "px150": [
+          1754,
+          2480
+        ],
+        "px300": [
+          3508,
+          4961
+        ],
+        "px600": [
+          7016,
+          9921
+        ]
+      },
+      {
+        "id": "A4",
+        "mm": [
+          210,
+          297
+        ],
+        "px72pt": [
+          595,
+          842
+        ],
+        "px150": [
+          1240,
+          1754
+        ],
+        "px300": [
+          2480,
+          3508
+        ],
+        "px600": [
+          4961,
+          7016
+        ]
+      },
+      {
+        "id": "A5",
+        "mm": [
+          148,
+          210
+        ],
+        "px72pt": [
+          420,
+          595
+        ],
+        "px150": [
+          874,
+          1240
+        ],
+        "px300": [
+          1748,
+          2480
+        ],
+        "px600": [
+          3496,
+          4961
+        ]
+      },
+      {
+        "id": "A6",
+        "mm": [
+          105,
+          148
+        ],
+        "px72pt": [
+          298,
+          420
+        ],
+        "px150": [
+          620,
+          874
+        ],
+        "px300": [
+          1240,
+          1748
+        ],
+        "px600": [
+          2480,
+          3496
+        ]
+      },
+      {
+        "id": "US Letter",
+        "mm": [
+          215.9,
+          279.4
+        ],
+        "px72pt": [
+          612,
+          792
+        ],
+        "px150": [
+          1275,
+          1650
+        ],
+        "px300": [
+          2550,
+          3300
+        ],
+        "px600": [
+          5100,
+          6600
+        ]
+      },
+      {
+        "id": "US Legal",
+        "mm": [
+          215.9,
+          355.6
+        ],
+        "px72pt": [
+          612,
+          1008
+        ],
+        "px150": [
+          1275,
+          2100
+        ],
+        "px300": [
+          2550,
+          4200
+        ],
+        "px600": [
+          5100,
+          8400
+        ]
+      }
+    ],
+    "photo": [
+      {
+        "id": "4x6 in",
+        "px300": [
+          1200,
+          1800
+        ],
+        "px600": [
+          2400,
+          3600
+        ]
+      },
+      {
+        "id": "5x7 in",
+        "px300": [
+          1500,
+          2100
+        ],
+        "px600": [
+          3000,
+          4200
+        ]
+      },
+      {
+        "id": "8x10 in",
+        "px300": [
+          2400,
+          3000
+        ],
+        "px600": [
+          4800,
+          6000
+        ]
+      },
+      {
+        "id": "3.5x4.5 cm",
+        "px300": [
+          413,
+          531
+        ],
+        "px200": [
+          276,
+          354
+        ]
+      },
+      {
+        "id": "2x2 in",
+        "px300": [
+          600,
+          600
+        ],
+        "px600": [
+          1200,
+          1200
+        ]
+      }
+    ]
+  }
+}
