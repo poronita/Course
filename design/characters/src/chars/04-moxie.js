@@ -11,7 +11,7 @@ CAST.register({
   palette: ['#E5322B', '#FFF3E4', '#2A2C33', '#C9D2DB', '#2EC4B6', '#F4BE3E'],
   bg: '#5b1c22',
   iconBg: '#FFF1E2',
-  icon: { viewBox: '92 36 300 300' },
+  icon: { viewBox: '56 30 328 328' },
 
   build(g, A) {
     const { lerp, clamp, seg, ease } = A;
@@ -53,9 +53,10 @@ CAST.register({
     const f = n => +n.toFixed(2);
 
     /* ---------- layers ---------- */
-    const shadow = A.el('ellipse', { cx: 212, cy: 343, rx: 112, ry: 12, fill: A.url('shadow') }, g);
-    const halo = A.el('circle', { cx: 300, cy: 180, r: 120, fill: A.url('halo') }, g);
-    const root = A.el('g', {}, g);
+    const stage = A.el('g', { transform: 'translate(-24 0)' }, g);
+    const shadow = A.el('ellipse', { cx: 212, cy: 343, rx: 112, ry: 12, fill: A.url('shadow') }, stage);
+    const halo = A.el('circle', { cx: 316, cy: 150, r: 130, fill: A.url('halo') }, stage);
+    const root = A.el('g', {}, stage);
     const tailG = A.el('g', {}, root);
     const bodyG = A.el('g', {}, root);
     const headO = A.el('g', {}, root);
@@ -79,57 +80,65 @@ CAST.register({
     const slit = A.el('path', { d: 'M0 -40 L0 -40', stroke: GRA, 'stroke-width': 2.6, 'stroke-linecap': 'round' }, card);
     const chips = [0, 1, 2, 3].map(k => A.el('path', { d: 'M-2.5 -2 L3 -1 L0 3 Z', fill: k % 2 ? '#FFF8EE' : '#7FE6DA' }, card));
 
-    /* tools: drawn pointing up from the pivot at (0,0) */
+    /* tools: drawn pointing up from the pivot at (0,0). Bold shapes with a dark keyline so they read small. */
+    const OUT = '#24262C';
     const tools = [];
     const mkTool = (kind) => {
       const tg = A.el('g', {}, tailG);
       const inner = A.el('g', {}, tg);
       const o = { g: tg, inner, kind };
-      A.el('rect', { x: -4, y: -18, width: 8, height: 18, rx: 2, fill: A.url('steelV') }, inner);
+      const stem = (y0, h) => A.el('rect', { x: -4.5, y: y0, width: 9, height: h, rx: 3, fill: A.url('steel'), stroke: OUT, 'stroke-width': 1.6 }, inner);
       if (kind === 'blade') {
-        A.el('path', { d: 'M-6 -14 L-6.5 -60 Q-5 -76 3 -82 Q9 -60 9 -36 Q9 -20 6 -14 Z', fill: A.url('steel'), stroke: '#4F5965', 'stroke-width': 1.2 }, inner);
-        A.el('path', { d: 'M5 -18 Q7 -40 4 -66', stroke: '#ffffff', 'stroke-width': 1.4, fill: 'none', opacity: 0.75 }, inner);
-        A.el('path', { d: 'M-6 -46 Q-1 -44 -6 -40', stroke: '#5A6572', 'stroke-width': 1.4, fill: 'none' }, inner);
+        A.el('path', { d: 'M-8 -6 L-9.5 -64 Q-9 -88 5 -96 Q15 -68 14 -38 Q13 -16 8 -6 Z', fill: A.url('steel'), stroke: OUT, 'stroke-width': 2.2, 'stroke-linejoin': 'round' }, inner);
+        A.el('path', { d: 'M-9.5 -64 Q-9 -86 4 -93 Q-3 -78 -4 -60 L-4 -10 L-8 -8 Z', fill: '#FFFFFF', opacity: 0.55 }, inner);
+        A.el('path', { d: 'M9 -14 Q12 -44 7 -80', stroke: '#5A6572', 'stroke-width': 1.6, fill: 'none', opacity: 0.6 }, inner);
+        A.el('path', { d: 'M2 -48 Q7 -46 2 -40', stroke: OUT, 'stroke-width': 2, fill: 'none', 'stroke-linecap': 'round' }, inner);
       } else if (kind === 'scissors') {
         const bA = A.el('g', {}, inner), bB = A.el('g', {}, inner);
-        A.el('path', { d: 'M-1 -16 L-4.5 -42 L-6 -72 Q-3 -74 -1.5 -70 L2.5 -42 L3 -16 Z', fill: A.url('steel'), stroke: '#4F5965', 'stroke-width': 1 }, bA);
-        A.el('path', { d: 'M1 -16 L4.5 -42 L6 -72 Q3 -74 1.5 -70 L-2.5 -42 L-3 -16 Z', fill: A.url('steel'), stroke: '#4F5965', 'stroke-width': 1 }, bB);
-        A.el('circle', { cx: 0, cy: -42, r: 3.2, fill: '#F4BE3E', stroke: '#8A5A10', 'stroke-width': 1 }, inner);
+        A.el('path', { d: 'M-3 -4 L-6 -34 L-10 -78 Q-9 -92 -3 -94 Q1 -78 2.5 -34 L3 -4 Z', fill: A.url('steel'), stroke: OUT, 'stroke-width': 2, 'stroke-linejoin': 'round' }, bA);
+        A.el('path', { d: 'M3 -4 L6 -34 L10 -78 Q9 -92 3 -94 Q-1 -78 -2.5 -34 L-3 -4 Z', fill: A.url('steelV'), stroke: OUT, 'stroke-width': 2, 'stroke-linejoin': 'round' }, bB);
+        A.el('circle', { cx: 0, cy: -34, r: 5, fill: A.url('gold'), stroke: '#6B4108', 'stroke-width': 1.4 }, inner);
         o.bA = bA; o.bB = bB;
       } else if (kind === 'lens') {
-        A.el('rect', { x: -3, y: -48, width: 6, height: 34, rx: 2, fill: A.url('steel') }, inner);
-        A.el('circle', { cx: 0, cy: -63, r: 15, fill: A.url('glass'), stroke: A.url('steelV'), 'stroke-width': 5 }, inner);
-        A.el('circle', { cx: 0, cy: -63, r: 17.4, fill: 'none', stroke: '#4F5965', 'stroke-width': 1 }, inner);
-        A.el('path', { d: 'M-8 -68 Q-6 -74 0 -75', stroke: '#fff', 'stroke-width': 2.4, fill: 'none', 'stroke-linecap': 'round' }, inner);
+        stem(-48, 46);
+        A.el('circle', { cx: 0, cy: -70, r: 21, fill: 'none', stroke: OUT, 'stroke-width': 12 }, inner);
+        A.el('circle', { cx: 0, cy: -70, r: 17, fill: A.url('glass') }, inner);
+        A.el('circle', { cx: 0, cy: -70, r: 21, fill: 'none', stroke: A.url('steelV'), 'stroke-width': 7.5 }, inner);
+        A.el('path', { d: 'M-10 -76 Q-7 -84 1 -85', stroke: '#fff', 'stroke-width': 3.4, fill: 'none', 'stroke-linecap': 'round' }, inner);
       } else if (kind === 'crop') {
-        A.el('rect', { x: -3, y: -46, width: 6, height: 32, rx: 2, fill: A.url('steel') }, inner);
-        A.el('path', { d: 'M-15 -42 L-15 -72 L13 -72', fill: 'none', stroke: '#E9EEF3', 'stroke-width': 7, 'stroke-linejoin': 'miter' }, inner);
-        A.el('path', { d: 'M-15 -42 L-15 -72 L13 -72', fill: 'none', stroke: '#5A6572', 'stroke-width': 1.2, transform: 'translate(3.5 3.5)' }, inner);
-        A.el('path', { d: 'M15 -66 L15 -46 L-7 -46', fill: 'none', stroke: RED, 'stroke-width': 5, 'stroke-linejoin': 'miter' }, inner);
+        stem(-42, 40);
+        A.el('path', { d: 'M-15 -46 L-15 -86 L16 -86 M18 -79 L18 -42 L-11 -42', fill: 'none', stroke: OUT, 'stroke-width': 12, 'stroke-linejoin': 'miter', 'stroke-linecap': 'square' }, inner);
+        A.el('path', { d: 'M-15 -46 L-15 -86 L16 -86', fill: 'none', stroke: '#F3F6F9', 'stroke-width': 7.5, 'stroke-linejoin': 'miter', 'stroke-linecap': 'square' }, inner);
+        A.el('path', { d: 'M18 -79 L18 -42 L-11 -42', fill: 'none', stroke: '#FF4A3D', 'stroke-width': 7.5, 'stroke-linejoin': 'miter', 'stroke-linecap': 'square' }, inner);
       } else if (kind === 'film') {
-        A.el('rect', { x: -3, y: -34, width: 6, height: 20, rx: 2, fill: A.url('steel') }, inner);
-        A.el('rect', { x: -11, y: -80, width: 22, height: 50, rx: 3, fill: A.url('film'), stroke: '#9AA6B2', 'stroke-width': 1 }, inner);
-        for (let k = 0; k < 3; k++) A.el('rect', { x: -5.5, y: -76 + k * 15.5, width: 11, height: 12, rx: 1.5, fill: k === 1 ? '#FF6B57' : '#E5322B', opacity: 0.95 }, inner);
+        stem(-36, 34);
+        A.el('rect', { x: -15, y: -88, width: 30, height: 54, rx: 4, fill: A.url('film'), stroke: OUT, 'stroke-width': 2 }, inner);
+        for (let k = 0; k < 3; k++) A.el('rect', { x: -8, y: -84 + k * 16, width: 16, height: 13, rx: 2, fill: k === 1 ? '#7FE6DA' : k ? '#F4BE3E' : '#FF5A47' }, inner);
         for (let k = 0; k < 6; k++) {
-          A.el('rect', { x: -9.6, y: -78 + k * 8, width: 2.4, height: 3.6, rx: 0.6, fill: CREAM }, inner);
-          A.el('rect', { x: 7.2, y: -78 + k * 8, width: 2.4, height: 3.6, rx: 0.6, fill: CREAM }, inner);
+          A.el('rect', { x: -13, y: -85 + k * 8.4, width: 3, height: 4.4, rx: 0.8, fill: CREAM }, inner);
+          A.el('rect', { x: 10, y: -85 + k * 8.4, width: 3, height: 4.4, rx: 0.8, fill: CREAM }, inner);
         }
       }
-      const glint = A.el('path', { d: star(7), fill: '#fff', opacity: 0 }, inner);
+      const glint = A.el('path', { d: star(9), fill: '#fff', opacity: 0 }, inner);
       o.glint = glint;
       tools.push(o);
       return o;
     };
-    // index: 0 lens, 1 scissors, 2 crop, 3 film, 4 blade (drawn last, it is the folded tip)
-    ['lens', 'scissors', 'crop', 'film', 'blade'].forEach(mkTool);
-    const FAN = [-56, -24, 40, 72, 8];
-    const TIPY = [-78, -72, -74, -80, -82];
+    // index: 0 lens, 1 scissors, 2 crop, 3 film, 4 blade
+    ['film', 'crop', 'lens', 'scissors', 'blade'].forEach(mkTool);
+    tools.sort((x, y) => ['lens', 'scissors', 'crop', 'film', 'blade'].indexOf(x.kind) - ['lens', 'scissors', 'crop', 'film', 'blade'].indexOf(y.kind));
+    const FAN = [-50, -20, 38, 68, 9];
+    const TIPY = [-78, -90, -86, -86, -94];
 
+    /* the knife grip that ends the tail: tools fold down into it */
+    A.grad('grip', [[0, '#9E1B15'], [0.28, '#F2463A'], [0.5, '#FF6F5C'], [0.75, RED], [1, '#8A1611']], { x1: 0, y1: 0, x2: 1, y2: 0 });
     const hub = A.el('g', {}, tailG);
-    A.el('rect', { x: -12, y: -3, width: 24, height: 13, rx: 5, fill: A.url('steelV'), stroke: '#4F5965', 'stroke-width': 1.2 }, hub);
-    A.el('rect', { x: -12, y: 6, width: 24, height: 2, fill: '#5A6572', opacity: 0.6 }, hub);
-    A.el('circle', { cx: 0, cy: 0, r: 5.5, fill: A.url('gold'), stroke: '#8A5A10', 'stroke-width': 1 }, hub);
-    A.el('circle', { cx: -1.4, cy: -1.4, r: 1.5, fill: '#FFF6D0' }, hub);
+    A.el('rect', { x: -14.5, y: 0, width: 29, height: 64, rx: 14.5, fill: A.url('grip'), stroke: '#5E0E0A', 'stroke-width': 1.8 }, hub);
+    A.el('path', { d: 'M-6 12 L-6 52', stroke: '#FFC2B4', 'stroke-width': 3, 'stroke-linecap': 'round', opacity: 0.55 }, hub);
+    [24, 44].forEach(y => { A.el('circle', { cx: 3, cy: y, r: 3, fill: A.url('steelV'), stroke: '#5E0E0A', 'stroke-width': 1 }, hub); });
+    A.el('rect', { x: -15.5, y: -7, width: 31, height: 15, rx: 6, fill: A.url('steel'), stroke: OUT, 'stroke-width': 1.6 }, hub);
+    A.el('circle', { cx: 0, cy: 0, r: 6, fill: A.url('gold'), stroke: '#6B4108', 'stroke-width': 1.2 }, hub);
+    A.el('circle', { cx: -1.6, cy: -1.6, r: 1.7, fill: '#FFF6D0' }, hub);
 
     const clickG = A.el('g', {}, tailG);
     const clickStar = A.el('path', { d: star(13), fill: '#FFF6D0' }, clickG);
@@ -164,7 +173,7 @@ CAST.register({
     const face = A.el('g', {}, hInside);
     A.el('path', { d: sym(-26, [[5, -15, 7, -1, 16, 8], [28, 12, 48, 14, 62, 28], [74, 34, 82, 30, 88, 38], [66, 58, 32, 67, 0, 67]]), fill: A.url('cream') }, face);
     A.el('path', { d: 'M-8 -52 Q-6 -40 -4 -34 M0 -56 L0 -36 M8 -52 Q6 -40 4 -34', stroke: '#B8231C', 'stroke-width': 3.2, fill: 'none', 'stroke-linecap': 'round', opacity: 0.8 }, face);
-    A.el('path', { d: headD, fill: 'none', stroke: A.url('rim'), 'stroke-width': 7 }, hInside);
+    A.el('path', { d: headD, fill: 'none', stroke: A.url('rim'), 'stroke-width': 5, opacity: 0.6 }, hInside);
 
     /* eyes */
     const EW = 24, EH = 16;
@@ -242,7 +251,7 @@ CAST.register({
     const whG = A.el('g', {}, headIn);
     const mkWh = side => {
       const o = A.el('g', {}, whG);
-      A.el('path', { d: `M${side * 22} 22 Q${side * 58} 10 ${side * 104} 6 M${side * 22} 26 Q${side * 60} 24 ${side * 108} 28 M${side * 22} 30 Q${side * 56} 36 ${side * 98} 48`, stroke: '#FFF8EE', 'stroke-width': 1.7, fill: 'none', 'stroke-linecap': 'round', opacity: 0.92 }, o);
+      A.el('path', { d: `M${side * 22} 22 Q${side * 54} 12 ${side * 92} 8 M${side * 22} 26 Q${side * 56} 25 ${side * 96} 29 M${side * 22} 30 Q${side * 52} 36 ${side * 86} 46`, stroke: '#FFF8EE', 'stroke-width': 1.7, fill: 'none', 'stroke-linecap': 'round', opacity: 0.92 }, o);
       return o;
     };
     const whL = mkWh(-1), whR = mkWh(1);
@@ -305,15 +314,15 @@ CAST.register({
       lidL: 1, lidR: 1, lowL: 0.08, lowR: 0.08, clsL: 0.25, clsR: 0.25, pupil: 0.4, eyeS: 1, gx: 0, gy: 0, gw: 0,
       browY: 0, browR: 0, browA: 0, sm: 0.3, op: 0, wd: 11, mx: 0, tongue: 0, tip: 0, whisk: 0,
       pLx: 152, pLy: 334, pRx: 206, pRy: 334, bL: 6, bR: -6, padL: 0, padR: 0,
-      hubX: 304, hubY: 188, hubA: 18, fan: [0, 0, 0, 0, 0], spread: 1, fanRot: 0, tsc: 1,
+      hubX: 312, hubY: 182, hubA: 16, fan: [0, 0, 0, 0, 0], spread: 1, fanRot: 0, tsc: 0.9,
       tAng: [0, 0, 0, 0, 0], tW: [0, 0, 0, 0, 0], slide: [0, 0, 0, 0, 0], snip: 0, halo: 0, card: 0, medal: 0,
     };
     const pose = (m, mt, t) => {
       const p = Object.assign({}, BASE, { fan: BASE.fan.slice(), tAng: BASE.tAng.slice(), tW: BASE.tW.slice(), slide: BASE.slide.slice() });
-      if (A.small) { p.fan = [0.8, 0.8, 0.8, 0.8, 0.8]; }
+      if (A.small) { p.fan = [1, 1, 1, 1, 1]; p.hubX = 324; p.hubY = 156; p.hubA = 8; }
       if (m === 'happy') {
         const b = Math.abs(Math.sin(mt * 5.2));
-        Object.assign(p, { y: b * 9, sy: 1 + b * 0.02, sx: 1 - b * 0.01, hr: Math.sin(mt * 2.6) * 4, lowL: 0.55, lowR: 0.55, clsL: 1, clsR: 1, pupil: 0.65, sm: 1, op: 0.35, wd: 13, browY: -3, earL: -4, earR: -4, whisk: -6, hubA: 18 + Math.sin(mt * 5) * 12, hubX: 304 + Math.sin(mt * 5) * 6 });
+        Object.assign(p, { y: b * 9, sy: 1 + b * 0.02, sx: 1 - b * 0.01, hr: Math.sin(mt * 2.6) * 4, lowL: 0.55, lowR: 0.55, clsL: 1, clsR: 1, pupil: 0.65, sm: 1, op: 0.35, wd: 13, browY: -3, earL: -4, earR: -4, whisk: -6, hubA: 18 + Math.sin(mt * 5) * 12, hubX: 312 + Math.sin(mt * 5) * 6 });
       } else if (m === 'wink') {
         const e = ease.outBack(seg(mt, 0, 0.35));
         Object.assign(p, { hr: -7 * e, hx: -2, lidR: 1 - e, clsR: 1, lowR: 0.4 * e, lowL: 0.25, pupil: 0.55, sm: 0.8, op: 0.12, mx: 4, wd: 12, browA: -6 * e, browY: -2, earR: 8 * e, whisk: -4, hubA: 30 * e + 10, gx: 0.15, gw: 0.3 });
@@ -321,11 +330,11 @@ CAST.register({
         const j = ease.outBack(seg(mt, 0, 0.3)), land = seg(mt, 0.3, 0.6);
         Object.assign(p, { y: 22 * Math.sin(Math.min(1, mt / 0.6) * Math.PI), rot: -5 * j, hx: -6 * j, hr: -5 * j, sy: 1 + 0.06 * j - 0.05 * Math.sin(land * Math.PI), lidL: 1.2, lidR: 1.2, lowL: 0, lowR: 0, eyeS: 1.13, pupil: 1, browY: -12, browR: 10, sm: 0, op: 0.75, wd: 6, earL: -10, earR: -10, whisk: -14, pLx: 142, pLy: 300, pRx: 216, pRy: 300, bL: 14, bR: -14, padL: 0, padR: 0 });
         const pop = Math.min(1, ease.outBack(seg(mt, 0.02, 0.28)));
-        p.fan = [pop, pop, pop, pop, pop]; p.spread = 0.85; p.tsc = 0.9; p.hubY = 176;
+        p.fan = [pop, pop, pop, pop, pop]; p.spread = 0.95; p.tsc = 0.86; p.hubX = 328; p.hubY = 160; p.hubA = 8;
       } else if (m === 'thinking') {
         const tap = Math.sin(mt * 6) * 0.5 + 0.5;
         Object.assign(p, { hr: 7, hx: 3, gx: -0.8, gy: -0.85, gw: 1, lidL: 0.88, lidR: 0.88, lowL: 0.18, lowR: 0.18, browA: 10, browY: -2, sm: -0.15, mx: -5, wd: 8, earL: -6, earR: 14, pRx: 190, pRy: 218, bR: -18, padR: 1, whisk: 4 });
-        p.fan[0] = 1; p.tW[0] = 1; p.tAng[0] = -28 + tap * 6; p.hubX = 300; p.hubY = 182 + tap * 3; p.hubA = 6;
+        p.fan[0] = 1; p.tW[0] = 1; p.tAng[0] = -10 + tap * 8; p.hubX = 322; p.hubY = 176 + tap * 3; p.hubA = 4;
       } else if (m === 'working') {
         const saw = Math.sin(mt * TAU * 2.1);
         Object.assign(p, { hr: 6, hx: 6, gx: 0.85, gy: 0.75, gw: 1, lidL: 0.68, lidR: 0.68, lowL: 0.25, lowR: 0.25, pupil: 0.15, browR: -9, browY: 3, sm: 0, wd: 8, mx: 7, tip: 1, earL: -5, earR: -8, card: 1, rot: 2 });
@@ -334,9 +343,9 @@ CAST.register({
       } else if (m === 'celebrate') {
         const ph = (mt % 0.9) / 0.9, air = Math.sin(ph * Math.PI);
         const crouch = ph < 0.12 ? Math.sin(ph / 0.12 * Math.PI) : 0;
-        Object.assign(p, { y: air * 42, sy: 1 + air * 0.07 - crouch * 0.1, sx: 1 - air * 0.04 + crouch * 0.08, hr: Math.sin(mt * 7) * 4, lowL: 0.6, lowR: 0.6, clsL: 1, clsR: 1, sm: 1, op: 0.85, wd: 15, browY: -6, earL: -8, earR: -8, whisk: -10, pLx: 116, pLy: 176 - air * 6, pRx: 242, pRy: 176 - air * 6, bL: 18, bR: -18, padL: 1, padR: 1, halo: 0.6 });
+        Object.assign(p, { y: air * 20, sy: 1 + air * 0.045 - crouch * 0.1, sx: 1 - air * 0.04 + crouch * 0.08, hr: Math.sin(mt * 7) * 4, lowL: 0.6, lowR: 0.6, clsL: 1, clsR: 1, sm: 1, op: 0.85, wd: 15, browY: -6, earL: -8, earR: -8, whisk: -10, pLx: 108, pLy: 182 - air * 6, pRx: 250, pRy: 182 - air * 6, bL: 18, bR: -18, padL: 1, padR: 1, halo: 0.6 });
         const fl = Math.sin(mt * 9);
-        p.fan = [1, 1, 1, 1, 1]; p.fanRot = fl * 6; p.spread = 1.05; p.hubY = 182 - air * 6; p.hubA = 14;
+        p.fan = [1, 1, 1, 1, 1]; p.fanRot = fl * 6; p.spread = 1.02; p.hubX = 328; p.hubY = 160 - air * 6; p.hubA = 8;
       } else if (m === 'sleepy') {
         const sw = Math.sin(mt * 1.3), nod = Math.max(0, Math.sin(mt * 0.9));
         Object.assign(p, { hr: 8 + sw * 4, hy: 6 + nod * 5, hx: 3, rot: sw * 1.5, sy: 0.98, lidL: 0.12 + (1 - nod) * 0.12, lidR: 0.08 + (1 - nod) * 0.1, clsL: 0, clsR: 0, lowL: 0.1, lowR: 0.1, pupil: 0.5, browY: 4, browR: 8, sm: 0.05, wd: 7, op: 0.08, earL: 22, earR: 26, whisk: 10 });
@@ -346,8 +355,8 @@ CAST.register({
         Object.assign(p, { hr: -5 * up, hy: -3 * up, rot: -2 * up, sy: 1 + 0.02 * up, lidL: 0.82, lidR: 0.82, lowL: 0.35, lowR: 0.35, clsL: 0.8, clsR: 0.8, pupil: 0.6, sm: 0.95, op: 0.3, wd: 13, browY: -4, browA: -3, earL: -6, earR: -6, whisk: -8, medal: up, halo: 0.35 * up });
         p.pLx = lerp(152, 98, up); p.pLy = lerp(334, 196, up); p.bL = lerp(6, 26, up); p.padL = 0;
         p.pRx = 200; p.pRy = 290; p.bR = -14;
-        const fanUp = ease.out(seg(mt, 0.2, 0.7)) * 0.75;
-        p.fan = [fanUp, fanUp, fanUp, fanUp, fanUp]; p.spread = 0.9; p.hubY = 180;
+        const fanUp = ease.outBack(seg(mt, 0.2, 0.7));
+        p.fan = [fanUp, fanUp, fanUp, fanUp, fanUp]; p.spread = 0.9; p.hubX = 328; p.hubY = 162; p.hubA = 8;
       } else if (m === 'signature') {
         const T = mt % 3.8;
         const ant = seg(T, 0, 0.35), go = ease.out(seg(T, 0.35, 0.6)), rel = ease.inOut(seg(T, 2.9, 3.4));
@@ -362,8 +371,8 @@ CAST.register({
         p.earL = -6 * pose; p.earR = -6 * pose; p.whisk = -8 * pose;
         p.pRx = lerp(206, 196, pose); p.pRy = lerp(334, 262, pose); p.bR = lerp(-6, -20, pose); p.padR = 0;
         p.halo = 0.9 * pose;
-        p.hubY = lerp(196 + 12 * ant, 160, go) + 22 * rel * 0; p.hubX = lerp(304, 300, go); p.hubA = lerp(30, 4, go);
-        p.spread = 1.18; p.tsc = 1.14;
+        p.hubY = lerp(190 + 12 * ant, 150, go); p.hubX = lerp(312, 328, go); p.hubA = lerp(30, 8, go);
+        p.spread = 1.08; p.tsc = 0.98;
         const order = [4, 1, 0, 2, 3]; // fan-out order: centre first, then outward
         const foldOrder = [3, 2, 1, 0, 4];
         for (let k = 0; k < 5; k++) {
@@ -384,10 +393,11 @@ CAST.register({
     };
     const tailPath = (H, a, curl) => {
       const B = [236, 326], dir = [Math.sin(rad(a)), -Math.cos(rad(a))];
-      const M1 = [(B[0] + H[0]) / 2 + 40 + curl, (B[1] + H[1]) / 2 + 12];
-      const P1 = [B[0] + 56, B[1] + 22], P2 = [M1[0] + 4, M1[1] + 44];
-      const P3 = [M1[0] - 4, M1[1] - 40], P4 = [H[0] - dir[0] * 30, H[1] - dir[1] * 30];
-      return `M${B[0]} ${B[1]} C${f(P1[0])} ${f(P1[1])} ${f(P2[0])} ${f(P2[1])} ${f(M1[0])} ${f(M1[1])} C${f(P3[0])} ${f(P3[1])} ${f(P4[0])} ${f(P4[1])} ${f(H[0])} ${f(H[1])}`;
+      const E = [H[0] - dir[0] * 56, H[1] - dir[1] * 56];
+      const M1 = [(B[0] + E[0]) / 2 + 36 + curl, (B[1] + E[1]) / 2 + 10];
+      const P1 = [B[0] + 56, B[1] + 22], P2 = [M1[0] + 4, M1[1] + 40];
+      const P3 = [M1[0] - 4, M1[1] - 36], P4 = [E[0] - dir[0] * 34, E[1] - dir[1] * 34];
+      return `M${B[0]} ${B[1]} C${f(P1[0])} ${f(P1[1])} ${f(P2[0])} ${f(P2[1])} ${f(M1[0])} ${f(M1[1])} C${f(P3[0])} ${f(P3[1])} ${f(P4[0])} ${f(P4[1])} ${f(E[0])} ${f(E[1])}`;
     };
     const fxOp = (s, m) => (s.mood === m ? s.blend : s.prev === m ? 1 - s.blend : 0);
 
@@ -402,12 +412,13 @@ CAST.register({
         const wob = A.wobble(pk, 15, 5), st = pk < 3 ? Math.exp(-pk * 3.2) : 0;
         const grump = s.pokes >= 3 ? clamp((3.2 - pk) / 0.7) : 0;
         const startle = st * (1 - grump);
-        P.sx += wob * 0.07; P.sy -= wob * 0.08; P.rot += wob * 3;
+        P.sx += wob * 0.07; P.sy -= wob * 0.08; P.rot += wob * 3; P.y += 14 * Math.sin(clamp(pk / 0.4) * Math.PI) * (pk < 0.4 ? 1 : 0);
         P.lidL = lerp(P.lidL, 1.2, startle); P.lidR = lerp(P.lidR, 1.2, startle); P.lowL *= 1 - startle; P.lowR *= 1 - startle;
         P.pupil = lerp(P.pupil, 1, startle); P.eyeS += 0.1 * startle; P.browY -= 10 * startle; P.op = Math.max(P.op, 0.5 * startle); P.wd = lerp(P.wd, 7, startle); P.sm = lerp(P.sm, 0, startle);
         P.earL += 24 * startle; P.earR += 24 * startle; P.whisk -= 12 * startle;
-        const flare = st * 0.75;
+        const flare = ease.inOut(clamp(st * 3 - 0.6)) * (1 - grump);
         P.fan = P.fan.map(v => Math.max(v, flare));
+        P.hubY -= 14 * flare; P.hubX += 6 * flare; P.hubA = lerp(P.hubA, 8, flare);
         if (grump > 0) {
           const lash = Math.sin(t * 8);
           P.lidL = lerp(P.lidL, 0.5, grump); P.lidR = lerp(P.lidR, 0.5, grump); P.clsL = lerp(P.clsL, 0.1, grump); P.clsR = lerp(P.clsR, 0.1, grump);
@@ -423,6 +434,10 @@ CAST.register({
         const fid = (t + 1.3) % 5.4, fidE = fid < 0.7 ? A.wobble(fid, 22, 6) : 0;
         const fid2 = (t + 3.6) % 7.1, tailFlick = fid2 < 0.9 ? A.wobble(fid2, 12, 4) : 0;
         P.earR += fidE * 16 * idleW; P.hubA += tailFlick * 18 * idleW;
+        if (s.mood === 'idle' && !A.small) {
+          const pc = (t + 0.4) % 9.3, peek = pc < 1.6 ? Math.sin(seg(pc, 0, 1.6) * Math.PI) : 0;
+          P.fan[4] = Math.max(P.fan[4], ease.inOut(clamp(peek * 1.4)) * 0.55);
+        }
         P.hubA += L.sway * 6; P.hubX += L.sway * 4;
         if (s.hover) { P.earL -= 4; P.earR -= 4; P.pupil += 0.12; }
         const blink = s.mood === 'sleepy' ? 0 : L.blink;
@@ -489,14 +504,14 @@ CAST.register({
         tools.forEach((T, i) => {
           const o = clamp(P.fan[i], 0, 1.3);
           const fanA = FAN[i] * P.spread + P.fanRot + Math.sin(t * 7 - i * 1.1) * 5 * ripple;
-          let ang = lerp(a, fanA, Math.min(1, o));
-          if (o > 1) ang = fanA + (o - 1) * (FAN[i] - 8) * 0.6;
+          let ang = lerp(a + 180, fanA, Math.min(1, o));
+          if (o > 1) ang = fanA + (o - 1) * (FAN[i] - 12) * 0.6;
           ang = lerp(ang, P.tAng[i], P.tW[i] * clamp(o * 1.5));
-          const sc = lerp(0.36, P.tsc, Math.min(1, o));
+          const sc = lerp(0.6, P.tsc, Math.min(1, o));
           const sl = P.slide[i];
           A.tf(T.g, H[0] + Math.sin(rad(ang)) * -sl, H[1] - Math.cos(rad(ang)) * -sl, ang, sc, sc, 0, 0);
-          A.op(T.g, i === 4 ? 1 : clamp(o * 5));
-          if (T.bA) { const sn = Math.max(0, Math.sin(P.snip * Math.PI * 6)) * 12 * (P.snip > 0 && P.snip < 1 ? 1 : 0) + 3 * o; A.tf(T.bA, 0, 0, -sn * 0.5, 1, 1, 0, -42); A.tf(T.bB, 0, 0, sn * 0.5, 1, 1, 0, -42); }
+          A.op(T.g, clamp(o * 8));
+          if (T.bA) { const sn = Math.max(0, Math.sin(P.snip * Math.PI * 6)) * 12 * (P.snip > 0 && P.snip < 1 ? 1 : 0) + 3 * o; A.tf(T.bA, 0, 0, -sn * 0.5, 1, 1, 0, -34); A.tf(T.bB, 0, 0, sn * 0.5, 1, 1, 0, -34); }
           const gl = s.mood === 'signature' ? seg(s.mt % 3.8, 0.95 + i * 0.12, 1.35 + i * 0.12) : 0;
           A.op(T.glint, Math.sin(gl * Math.PI) * clamp(o)); A.tf(T.glint, 0, TIPY[i] + 6, gl * 90, 1, 1, 0, 0);
         });
@@ -530,27 +545,27 @@ CAST.register({
         const osp = Math.max(oc, fxOp(s, 'signature') * clamp(P.halo));
         sparks.forEach((e, k) => {
           const ph = (s.mt * 0.8 + k / 5) % 1, sc = Math.sin(ph * Math.PI);
-          const cx = s.mood === 'signature' ? 300 + Math.cos(k * 1.3 - 2.6) * 110 : 70 + k * 65;
+          const cx = s.mood === 'signature' ? 304 + Math.cos(k * 1.3 - 2.6) * 110 : 70 + k * 65;
           const cy = s.mood === 'signature' ? 160 + Math.sin(k * 1.3 - 2.6) * 100 : 70 + (k % 2) * 40;
           A.tf(e, cx, cy - P.y * 0.3, ph * 120, sc, sc, 0, 0); A.op(e, osp);
         });
         const oz = fxOp(s, 'sleepy');
         zs.forEach((z, k) => {
           const ph = (s.mt * 0.4 + k / 3) % 1;
-          A.attr(z, { x: 258 + ph * 40 + Math.sin(ph * 6) * 5, y: 96 - ph * 70 });
+          A.attr(z, { x: 236 + ph * 40 + Math.sin(ph * 6) * 5, y: 96 - ph * 70 });
           A.op(z, oz * Math.sin(ph * Math.PI));
         });
         const ot = fxOp(s, 'thinking');
         dots.forEach((d, k) => {
           const ph = clamp((s.mt - k * 0.22) / 0.3);
-          A.attr(d, { cx: 108 - k * 16, cy: 78 - k * 18 + Math.sin(t * 2 + k) * 2 });
+          A.attr(d, { cx: 88 - k * 14, cy: 78 - k * 18 + Math.sin(t * 2 + k) * 2 });
           A.op(d, ot * ph * 0.95);
         });
         A.op(puff, grump * (0.6 + 0.4 * Math.sin(t * 10)));
-        A.tf(puff, 92, 72 + Math.sin(t * 5) * 2, 0, 1, 1, 0, 0);
+        A.tf(puff, 70, 72 + Math.sin(t * 5) * 2, 0, 1, 1, 0, 0);
         const ow = fxOp(s, 'wink');
         const wp = seg(s.mt, 0.25, 0.9);
-        A.op(winkSp, ow * Math.sin(wp * Math.PI)); A.tf(winkSp, 236, 128, wp * 180, 0.6 + wp, 0.6 + wp, 0, 0);
+        A.op(winkSp, ow * Math.sin(wp * Math.PI)); A.tf(winkSp, 216, 126, wp * 180, 0.6 + wp, 0.6 + wp, 0, 0);
       },
     };
   },
