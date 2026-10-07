@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <linearGradient id="pip-light-levelup-body" x1="0.15" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#FFFCF2" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#F3E8CF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#D2BF95" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="pip-light-levelup-shade" cx="0.38" cy="0.32" r="0.78" fx="0.38" fy="0.32">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="0.72" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#5E4B31" stop-opacity="0.45"/>
+    </radialGradient>
+    <linearGradient id="pip-light-levelup-bevel" x1="0" y1="0" x2="0.8" y2="0.9">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.7"/>
+      <stop offset="0.45" stop-color="#fff" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pip-light-levelup-rim" x1="0" y1="0.3" x2="1" y2="0.5">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.78" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="pip-light-levelup-spec" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pip-light-levelup-arm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFF9EC" stop-opacity="1"/>
+      <stop offset="1" stop-color="#DAC89E" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-light-levelup-steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBFCFE" stop-opacity="1"/>
+      <stop offset="0.35" stop-color="#C9CFD8" stop-opacity="1"/>
+      <stop offset="0.55" stop-color="#E9ECF1" stop-opacity="1"/>
+      <stop offset="0.8" stop-color="#9AA2B0" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C7CDD6" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-light-levelup-steelX" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8C95A4" stop-opacity="1"/>
+      <stop offset="0.3" stop-color="#F3F5F8" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#C2C8D2" stop-opacity="1"/>
+      <stop offset="0.72" stop-color="#EEF1F5" stop-opacity="1"/>
+      <stop offset="1" stop-color="#7E8797" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-light-levelup-grind" x1="0" y1="0" x2="1" y2="0.2">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8CED8" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="pip-light-levelup-rivet" cx="0.35" cy="0.3" r="0.75" fx="0.35" fy="0.3">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#C9CFD8" stop-opacity="1"/>
+      <stop offset="1" stop-color="#6F7889" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="pip-light-levelup-sclera" cx="0.45" cy="0.38" r="0.7" fx="0.45" fy="0.38">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.75" stop-color="#F3F1F4" stop-opacity="1"/>
+      <stop offset="1" stop-color="#D9D3DC" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="pip-light-levelup-iris" cx="0.5" cy="0.62" r="0.6" fx="0.5" fy="0.62">
+      <stop offset="0" stop-color="#7FD7FF" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#2F7BD0" stop-opacity="1"/>
+      <stop offset="0.85" stop-color="#1B2E73" stop-opacity="1"/>
+      <stop offset="1" stop-color="#121A45" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="pip-light-levelup-mitt" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#E3D9CF" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-light-levelup-feet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A3E58" stop-opacity="1"/>
+      <stop offset="1" stop-color="#14162A" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="pip-light-levelup-shadow" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pip-light-levelup-gold" cx="0.38" cy="0.32" r="0.8" fx="0.38" fy="0.32">
+      <stop offset="0" stop-color="#FFF3B8" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#FFC94A" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C7810E" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="pip-light-levelup-goldRim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE9A0" stop-opacity="1"/>
+      <stop offset="1" stop-color="#B06E07" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="pip-light-levelup-rays" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0" stop-color="#FFE08A" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#FFE08A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pip-light-levelup-lidT" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAF2E0" stop-opacity="1"/>
+      <stop offset="0.85" stop-color="#F6ECD7" stop-opacity="1"/>
+      <stop offset="1" stop-color="#E8DAB9" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="pip-light-levelup-lidB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E0D0AA" stop-opacity="1"/>
+      <stop offset="0.12" stop-color="#F6ECD7" stop-opacity="1"/>
+      <stop offset="1" stop-color="#F4EAD3" stop-opacity="1"/>
+    </linearGradient>
+    <clipPath id="pip-light-levelup-bladeClip">
+      <path d="M14 10V-50Q16 -92 -18 -122Q-27 -84 -17 -44L-17 10Z"/>
+    </clipPath>
+    <clipPath id="pip-light-levelup-eye0">
+      <ellipse rx="22" ry="26"/>
+    </clipPath>
+    <clipPath id="pip-light-levelup-lid0">
+      <ellipse rx="26.5" ry="30.5"/>
+    </clipPath>
+    <clipPath id="pip-light-levelup-eye1">
+      <ellipse rx="22" ry="26"/>
+    </clipPath>
+    <clipPath id="pip-light-levelup-lid1">
+      <ellipse rx="26.5" ry="30.5"/>
+    </clipPath>
+    <clipPath id="pip-light-levelup-mouth">
+      <path d="M-18 -7Q0 5.4 18 -11Q0 25 -18 -7Z"/>
+    </clipPath>
+    <clipPath id="pip-light-levelup-medalClip">
+      <circle r="33"/>
+    </clipPath>
+    <filter id="pip-light-levelup-outline" filterUnits="userSpaceOnUse" x="-20" y="-20" width="440" height="440" color-interpolation-filters="sRGB">
+      <feOffset in="SourceAlpha" dx="1.6" dy="0" result="o0"/>
+      <feOffset in="SourceAlpha" dx="1.13" dy="1.13" result="o1"/>
+      <feOffset in="SourceAlpha" dx="0" dy="1.6" result="o2"/>
+      <feOffset in="SourceAlpha" dx="-1.13" dy="1.13" result="o3"/>
+      <feOffset in="SourceAlpha" dx="-1.6" dy="0" result="o4"/>
+      <feOffset in="SourceAlpha" dx="-1.13" dy="-1.13" result="o5"/>
+      <feOffset in="SourceAlpha" dx="0" dy="-1.6" result="o6"/>
+      <feOffset in="SourceAlpha" dx="1.13" dy="-1.13" result="o7"/>
+      <feMerge result="ring">
+        <feMergeNode in="o0"/>
+        <feMergeNode in="o1"/>
+        <feMergeNode in="o2"/>
+        <feMergeNode in="o3"/>
+        <feMergeNode in="o4"/>
+        <feMergeNode in="o5"/>
+        <feMergeNode in="o6"/>
+        <feMergeNode in="o7"/>
+      </feMerge>
+      <feFlood flood-color="#7b6443" result="fc"/>
+      <feComposite in="fc" in2="ring" operator="in" result="line"/>
+      <feMerge>
+        <feMergeNode in="line"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g>
+    <ellipse cx="200" cy="350" rx="92" ry="13" fill="url(#pip-light-levelup-shadow)" opacity="1" transform="translate(200.00 350.00) rotate(0.00) scale(1.0000 1.0000) translate(-200 -350)"/>
+    <g filter="url(#pip-light-levelup-outline)">
+      <g/>
+      <g transform="translate(200.00 345.00) rotate(-2.93) scale(0.9958 1.0073) translate(-200 -345)">
+        <path fill="#FFFFFF" opacity="0.000"/>
+        <g transform="translate(286.00 284.00) rotate(3.31) scale(1.0000 1.0000) translate(-286 -284)">
+          <path d="M278 282Q292 280 294 292" fill="none" stroke="#4E5668" stroke-width="6" stroke-linecap="round"/>
+          <path d="M278 282Q292 280 294 292" fill="none" stroke="url(#pip-light-levelup-steelX)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="294" cy="309" r="15" fill="none" stroke="#4E5668" stroke-width="7.5"/>
+          <circle cx="294" cy="309" r="15" fill="none" stroke="url(#pip-light-levelup-steelX)" stroke-width="4"/>
+          <path d="M282 302A14 14 0 0 1 292 294.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+        </g>
+        <g transform="translate(212.00 140.00) rotate(36.00) scale(1.0000 1.0000) translate(0 0)">
+          <path d="M-7 10V-36Q-7 -46 3 -46Q12 -46 12 -38Q12 -33 6 -31L2 -29V-24L8 -22V10Z" fill="url(#pip-light-levelup-steelX)" stroke="#4E5668" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M-3 6V-36Q-3 -42 3 -42" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+        </g>
+        <g transform="translate(212.00 140.00) rotate(-3.98) scale(1.0000 1.0000) translate(0 0)">
+          <g>
+            <path d="M14 10V-50Q16 -92 -18 -122Q-27 -84 -17 -44L-17 10Z" fill="url(#pip-light-levelup-steelX)" stroke="#4E5668" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M-17 10L-17 -44Q-27 -84 -18 -122Q-12 -88 -5 -50L-5 10Z" fill="url(#pip-light-levelup-grind)" opacity="0.9"/>
+            <path d="M-5 6V-50Q-10 -88 -17 -120" fill="none" stroke="#8D96A6" stroke-width="1.4" opacity="0.8"/>
+            <path d="M7 -30Q9 -40 7 -50" fill="none" stroke="#6A7385" stroke-width="3.2" stroke-linecap="round" opacity="0.6"/>
+            <path d="M9 4V-50Q10 -82 -8 -106" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+            <g clip-path="url(#pip-light-levelup-bladeClip)">
+              <rect x="-30" y="-130" width="60" height="14" fill="#fff" opacity="0.85" transform="rotate(-30)"/>
+            </g>
+          </g>
+        </g>
+        <g>
+          <ellipse cx="172" cy="339" rx="22" ry="10" fill="url(#pip-light-levelup-feet)"/>
+          <ellipse cx="168" cy="335" rx="10" ry="3" fill="#fff" opacity="0.18"/>
+          <ellipse cx="228" cy="339" rx="22" ry="10" fill="url(#pip-light-levelup-feet)"/>
+          <ellipse cx="224" cy="335" rx="10" ry="3" fill="#fff" opacity="0.18"/>
+        </g>
+        <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+          <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="url(#pip-light-levelup-body)"/>
+          <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="url(#pip-light-levelup-shade)"/>
+          <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="none" stroke="url(#pip-light-levelup-bevel)" stroke-width="5" transform="translate(200 232) scale(.94) translate(-200 -232)"/>
+          <path d="M270 288Q270 326 232 328" fill="none" stroke="#6F5A3C" stroke-width="5" stroke-linecap="round" opacity="0.28"/>
+          <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="none" stroke="url(#pip-light-levelup-rim)" stroke-width="4"/>
+          <path d="M136 196Q140 156 176 140Q156 162 150 198Q146 208 136 196Z" fill="url(#pip-light-levelup-spec)" opacity="0.75"/>
+          <ellipse cx="186" cy="140" rx="5" ry="3.2" fill="#fff" opacity="0.8" transform="rotate(-14 186 140)"/>
+          <path d="M122 208A78 78 0 0 1 278 208V288Q278 336 232 336H168Q122 336 122 288Z" fill="none" stroke="#8C7550" stroke-width="3.2"/>
+          <g>
+            <rect x="118" y="266" width="164" height="25" rx="8" fill="url(#pip-light-levelup-steel)" stroke="#4E5668" stroke-width="2.6"/>
+            <path d="M126 274H274M124 279H276M126 284H274" stroke="#6F7889" stroke-opacity="0.22" stroke-width="0.9"/>
+            <rect x="124" y="268.5" width="152" height="4" rx="2" fill="#fff" opacity="0.75"/>
+            <path d="M124 293H276" stroke="#6F5A3C" stroke-width="3" opacity="0.3"/>
+            <circle cx="140" cy="279" r="6.5" fill="url(#pip-light-levelup-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+            <circle cx="138" cy="277" r="1.6" fill="#fff"/>
+            <circle cx="260" cy="279" r="6.5" fill="url(#pip-light-levelup-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+            <circle cx="258" cy="277" r="1.6" fill="#fff"/>
+            <rect x="186" y="276" width="22" height="7" rx="3.5" fill="none" stroke="#6F7889" stroke-width="1.6" opacity="0.8"/>
+            <path d="M204 276L212 268.5Q213.5 267.5 213.5 269L209 276" fill="none" stroke="#6F7889" stroke-width="1.6" opacity="0.8" stroke-linejoin="round"/>
+          </g>
+          <ellipse cx="150" cy="236" rx="12" ry="6.5" fill="#FFF6E4" opacity="0.510"/>
+          <ellipse cx="250" cy="236" rx="12" ry="6.5" fill="#FFF6E4" opacity="0.510"/>
+          <g transform="translate(169.50 200.18) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+            <ellipse rx="25.5" ry="29.5" fill="#6F5A3C" opacity="0.35" cy="1.5"/>
+            <g clip-path="url(#pip-light-levelup-eye0)">
+              <rect x="-26" y="-30" width="52" height="60" fill="url(#pip-light-levelup-sclera)"/>
+              <g transform="translate(-5.25 -4.13) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                  <circle r="14.5" fill="url(#pip-light-levelup-iris)"/>
+                  <circle r="14.5" fill="none" stroke="#0E1338" stroke-width="2.2"/>
+                  <circle r="7" fill="#070A1E"/>
+                  <path d="M-9 6A11 11 0 0 0 9 6" stroke="#9DE6FF" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+                </g>
+                <ellipse cx="-5" cy="-6" rx="5" ry="5.8" fill="#fff"/>
+                <circle cx="5.5" cy="5" r="2.2" fill="#fff" opacity="0.9"/>
+              </g>
+              <ellipse cy="-22" rx="22" ry="8" fill="#4F3F29" opacity="0.12"/>
+            </g>
+            <ellipse rx="22" ry="26" fill="none" stroke="#3D2F1E" stroke-width="2.6"/>
+            <g clip-path="url(#pip-light-levelup-lid0)">
+              <path fill="url(#pip-light-levelup-lidT)" d="M-32 -34H32V-25.92Q0 -17.032000000000004 -32 -25.92Z"/>
+              <path fill="url(#pip-light-levelup-lidB)" d="M-32 34H32V13.439999999999998Q0 -4.208000000000004 -32 13.439999999999998Z"/>
+            </g>
+            <path fill="none" stroke="#3D2F1E" stroke-width="3.4" stroke-linecap="round" opacity="0.000" d="M-8.622203894596787 -24.92Q0 -16.032000000000004 8.622203894596787 -24.92"/>
+            <path fill="none" stroke="#3D2F1E" stroke-width="2.8" stroke-linecap="round" opacity="1.000" d="M-23 14.439999999999998Q0 -5.208000000000004 23 14.439999999999998"/>
+          </g>
+          <g transform="translate(227.50 200.18) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+            <ellipse rx="25.5" ry="29.5" fill="#6F5A3C" opacity="0.35" cy="1.5"/>
+            <g clip-path="url(#pip-light-levelup-eye1)">
+              <rect x="-26" y="-30" width="52" height="60" fill="url(#pip-light-levelup-sclera)"/>
+              <g transform="translate(-5.25 -4.13) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                  <circle r="14.5" fill="url(#pip-light-levelup-iris)"/>
+                  <circle r="14.5" fill="none" stroke="#0E1338" stroke-width="2.2"/>
+                  <circle r="7" fill="#070A1E"/>
+                  <path d="M-9 6A11 11 0 0 0 9 6" stroke="#9DE6FF" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+                </g>
+                <ellipse cx="-5" cy="-6" rx="5" ry="5.8" fill="#fff"/>
+                <circle cx="5.5" cy="5" r="2.2" fill="#fff" opacity="0.9"/>
+              </g>
+              <ellipse cy="-22" rx="22" ry="8" fill="#4F3F29" opacity="0.12"/>
+            </g>
+            <ellipse rx="22" ry="26" fill="none" stroke="#3D2F1E" stroke-width="2.6"/>
+            <g clip-path="url(#pip-light-levelup-lid1)">
+              <path fill="url(#pip-light-levelup-lidT)" d="M-32 -34H32V-25.92Q0 -17.032000000000004 -32 -25.92Z"/>
+              <path fill="url(#pip-light-levelup-lidB)" d="M-32 34H32V13.439999999999998Q0 -4.208000000000004 -32 13.439999999999998Z"/>
+            </g>
+            <path fill="none" stroke="#3D2F1E" stroke-width="3.4" stroke-linecap="round" opacity="0.000" d="M-8.622203894596787 -24.92Q0 -16.032000000000004 8.622203894596787 -24.92"/>
+            <path fill="none" stroke="#3D2F1E" stroke-width="2.8" stroke-linecap="round" opacity="1.000" d="M-23 14.439999999999998Q0 -5.208000000000004 23 14.439999999999998"/>
+          </g>
+          <path d="M-15 4Q-2 -7 15 2" fill="none" stroke="#1E2036" stroke-width="7.5" stroke-linecap="round" transform="translate(167.13 151.90) rotate(3.00) scale(1.0000 1.0000) translate(0 0)"/>
+          <path d="M-15 2Q2 -7 15 4" fill="none" stroke="#1E2036" stroke-width="7.5" stroke-linecap="round" transform="translate(229.13 153.90) rotate(-3.00) scale(1.0000 1.0000) translate(0 0)"/>
+          <g transform="translate(197.75 244.90) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+            <path fill="#4F3F29" stroke="#3D2F1E" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round" d="M-18 -7Q0 5.4 18 -11Q0 25 -18 -7Z"/>
+            <g clip-path="url(#pip-light-levelup-mouth)">
+              <rect x="-18" width="60" height="5" fill="#fff" y="-4.8" opacity="0.750"/>
+              <ellipse fill="#FF7A86" cx="0" cy="9" rx="9.9" ry="5" opacity="1.000"/>
+            </g>
+          </g>
+          <ellipse cx="208" cy="149" rx="26" ry="7" fill="#5E4B31" opacity="0.28"/>
+        </g>
+        <g>
+          <path d="M150 150A76 76 0 0 1 250 150" fill="none" stroke="#4E5668" stroke-width="8" stroke-linecap="round"/>
+          <path d="M150 150A76 76 0 0 1 250 150" fill="none" stroke="url(#pip-light-levelup-steel)" stroke-width="4.5" stroke-linecap="round"/>
+          <circle cx="212" cy="140" r="12" fill="#4E5668"/>
+          <circle cx="212" cy="140" r="8.5" fill="url(#pip-light-levelup-rivet)" stroke="#4E5668" stroke-width="2"/>
+          <circle cx="209.5" cy="137.5" r="2.2" fill="#fff"/>
+        </g>
+        <g>
+          <g transform="translate(131.00 240.00) rotate(162.00) scale(1.0000 1.0000) translate(0 0)">
+            <rect x="-8.5" y="-8" width="17" height="44" rx="8.5" fill="url(#pip-light-levelup-arm)" stroke="#8C7550" stroke-width="2.6"/>
+            <path d="M-3.5 6V26" stroke="#fff" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round"/>
+            <circle r="6.2" fill="url(#pip-light-levelup-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+            <circle cx="-1.6" cy="-1.6" r="1.5" fill="#fff"/>
+            <g transform="translate(0.00 34.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+              <g transform="translate(0.00 8.00) rotate(-162.00) scale(1.0000 1.0000) translate(0 0)">
+                <g transform="translate(-16.00 -44.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                  <g transform="translate(0.00 0.00) rotate(100.00) scale(1.0000 1.0000) translate(0 0)">
+                    <path d="M0 0L-14 -74Q0 -80 14 -74Z" fill="url(#pip-light-levelup-rays)" transform="rotate(0)"/>
+                    <path d="M0 0L-14 -74Q0 -80 14 -74Z" fill="url(#pip-light-levelup-rays)" transform="rotate(30)"/>
+                    <path d="M0 0L-14 -74Q0 -80 14 -74Z" fill="url(#pip-light-levelup-rays)" transform="rotate(60)"/>
+                    <path d="M0 0L-14 -74Q0 -80 14 -74Z" fill="url(#pip-light-levelup-rays)" transform="rotate(90)"/>
+                    <path d="M0 0L-14 -74Q0 -80 14 -74Z" fill="url(#pip-light-levelup-rays)" transform="rotate(120)"/>
+                    <path d="M0 0L-14 -74Q0 -80 14 -74Z" fill="url(#pip-light-levelup-rays)" transform="rotate(150)"/>
+                    <path d="M0 0L-14 -74Q0 -80 14 -74Z" fill="url(#pip-light-levelup-rays)" transform="rotate(180)"/>
+                    <path d="M0 0L-14 -74Q0 -80 14 -74Z" fill="url(#pip-light-levelup-rays)" transform="rotate(210)"/>
+                    <path d="M0 0L-14 -74Q0 -80 14 -74Z" fill="url(#pip-light-levelup-rays)" transform="rotate(240)"/>
+                    <path d="M0 0L-14 -74Q0 -80 14 -74Z" fill="url(#pip-light-levelup-rays)" transform="rotate(270)"/>
+                  </g>
+                  <path d="M-6 0L-22 44L-12 40L-6 52L4 6Z" fill="#DCCAA4" stroke="#8C7550" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M6 0L22 44L12 40L6 52L-4 6Z" fill="#F3E8CF" stroke="#8C7550" stroke-width="2" stroke-linejoin="round"/>
+                  <circle r="33" fill="url(#pip-light-levelup-goldRim)" stroke="#8A5406" stroke-width="2.5"/>
+                  <circle r="26" fill="url(#pip-light-levelup-gold)" stroke="#B67809" stroke-width="1.6"/>
+                  <path d="M-6.91 -13.92V-6.77H-2.0700000000000003M-0.46 -13.7L3.06 -6.77L6.69 -13.7" fill="none" stroke="#8A4B05" stroke-width="1.87" stroke-linejoin="round" stroke-linecap="butt"/>
+                  <path d="M-4.2 5a4.2 3.64 0 1 0 8.4 0a4.2 3.64 0 1 0 -8.4 0zM-5.32 13.4a5.32 4.76 0 1 0 10.64 0a5.32 4.76 0 1 0 -10.64 0z" fill="none" stroke="#7A3F03" stroke-width="3.92" stroke-linejoin="round" stroke-linecap="butt"/>
+                  <g clip-path="url(#pip-light-levelup-medalClip)">
+                    <rect x="49.529" y="-50" width="14" height="100" fill="#fff" opacity="0.75" transform="skewX(-20)"/>
+                  </g>
+                </g>
+              </g>
+              <g>
+                <circle cx="0" cy="8" r="11.5" fill="url(#pip-light-levelup-mitt)" stroke="#8E6F66" stroke-width="2"/>
+                <path d="M-6 4Q-2 8 4 6" stroke="#B79E93" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              </g>
+            </g>
+          </g>
+          <g transform="matrix(-1 0 0 1 400 0)">
+            <g transform="translate(131.00 240.00) rotate(84.00) scale(1.0000 1.0000) translate(0 0)">
+              <rect x="-8.5" y="-8" width="17" height="44" rx="8.5" fill="url(#pip-light-levelup-arm)" stroke="#8C7550" stroke-width="2.6"/>
+              <path d="M-3.5 6V26" stroke="#fff" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round"/>
+              <circle r="6.2" fill="url(#pip-light-levelup-rivet)" stroke="#4E5668" stroke-width="1.6"/>
+              <circle cx="-1.6" cy="-1.6" r="1.5" fill="#fff"/>
+              <g transform="translate(0.00 34.00) rotate(6.00) scale(1.0000 1.0000) translate(0 0)">
+                <g>
+                  <circle cx="0" cy="8" r="11.5" fill="url(#pip-light-levelup-mitt)" stroke="#8E6F66" stroke-width="2"/>
+                  <rect x="-25" y="-1" width="20" height="10" rx="5" fill="url(#pip-light-levelup-mitt)" stroke="#8E6F66" stroke-width="2"/>
+                  <path d="M-3 6Q2 10 8 6M-3 12Q2 16 8 12" stroke="#B79E93" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g>
+        <path d="M0 -9Q0 0 9 0Q0 0 0 9Q0 0 -9 0Q0 0 0 -9Z" fill="#fff" transform="translate(96.00 120.00) rotate(240.00) scale(0.9084 0.9084) translate(0 0)" opacity="0.781"/>
+        <path d="M0 -12Q0 0 12 0Q0 0 0 12Q0 0 -12 0Q0 0 0 -12Z" fill="#FFE08A" transform="translate(312.00 96.00) rotate(260.00) scale(0.4042 0.4042) translate(0 0)" opacity="0.403"/>
+        <path d="M0 -15Q0 0 15 0Q0 0 0 15Q0 0 -15 0Q0 0 0 -15Z" fill="#fff" transform="translate(84.00 230.00) rotate(280.00) scale(0.7936 0.7936) translate(0 0)" opacity="0.695"/>
+        <path d="M0 -9Q0 0 9 0Q0 0 0 9Q0 0 -9 0Q0 0 0 -9Z" fill="#FFE08A" transform="translate(322.00 210.00) rotate(300.00) scale(1.1974 1.1974) translate(0 0)" opacity="0.998"/>
+        <path d="M0 -12Q0 0 12 0Q0 0 0 12Q0 0 -12 0Q0 0 0 -12Z" fill="#fff" transform="translate(140.00 70.00) rotate(320.00) scale(0.7040 0.7040) translate(0 0)" opacity="0.628"/>
+        <path d="M0 -15Q0 0 15 0Q0 0 0 15Q0 0 -15 0Q0 0 0 -15Z" fill="#FFE08A" transform="translate(270.00 52.00) rotate(340.00) scale(0.4273 0.4273) translate(0 0)" opacity="0.420"/>
+        <path d="M0 -9Q0 0 9 0Q0 0 0 9Q0 0 -9 0Q0 0 0 -9Z" fill="#fff" transform="translate(110.00 300.00) rotate(360.00) scale(0.9921 0.9921) translate(0 0)" opacity="0.844"/>
+        <path d="M0 -12Q0 0 12 0Q0 0 0 12Q0 0 -12 0Q0 0 0 -12Z" fill="#FFE08A" transform="translate(300.00 300.00) rotate(380.00) scale(1.1232 1.1232) translate(0 0)" opacity="0.942"/>
+      </g>
+    </g>
+  </g>
+</svg>
