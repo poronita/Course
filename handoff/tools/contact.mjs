@@ -4,7 +4,7 @@ import { chromium, write } from './lib/pw.mjs';
 const a = process.argv.slice(2);
 const opt = (k, d) => { const i = a.indexOf(k); if (i < 0) return d; const v = a[i + 1]; a.splice(i, 2); return v; };
 const cols = +opt('--cols', 5), cell = +opt('--cell', 240), bg = opt('--bg', '#071A21'), fg = opt('--fg', '#cfe');
-const out = a.shift(); const files = a;
+const out = path.resolve(a.shift()); const files = a.map(f => path.resolve(f));
 const rows = Math.ceil(files.length / cols);
 const html = `<!doctype html><body style="margin:0;background:${bg};font:11px sans-serif;color:${fg}"><div style="display:grid;grid-template-columns:repeat(${cols},${cell}px)">` +
   files.map(f => `<div style="width:${cell}px;height:${cell + 18}px;text-align:center"><img src="file://${f}" style="width:${cell - 8}px;height:${cell - 8}px;object-fit:contain;margin:4px"><div>${path.basename(f).replace(/\.svg$|\.png$/, '')}</div></div>`).join('') + '</div></body>';

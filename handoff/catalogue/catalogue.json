@@ -1764,7 +1764,7 @@
   },
   {
    "id": "ears",
-   "name": "Ear rivets (two side knobs)",
+   "name": "Shoulder rivets (his \"ears\")",
    "tap": "The knob rings like a bell and his head wobbles. Left and right give different notes.",
    "dwell": "The knob twitches (1 s), he tilts his head toward it (2.5 s), then he wiggles it to say stop (5 s)."
   },
@@ -1776,7 +1776,7 @@
   },
   {
    "id": "legs",
-   "name": "Legs and feet",
+   "name": "Feet",
    "tap": "He hops, kicks, or stomps. Three variants, small dust puff.",
    "dwell": "He wiggles his toes (1 s), giggles because it tickles (2 s). After 2.5 s steady, the pointer turns into a MINI MAGIC CARPET (see below)."
   },
@@ -1804,12 +1804,12 @@
    "id": "pickup",
    "name": "Pick up by the blade",
    "how": "Press and hold the blade quiff for 0.6 s while Pip is standing still (not mid-action).",
-   "result": "Pip is lifted by the blade, legs dangle and swing like a pendulum, eyes go wide, he squeals. He follows the pointer with physics (spring and pendulum). Fast moves make him fly sideways with the legs trailing. Release = he falls with gravity, squashes on landing, bounces twice, stars circle his head. A fast flick = he flies away, bounces off the screen edges and comes to rest. Dropping on a tool tile or the Save button counts as a tap on it."
+   "result": "Pip is lifted by the blade, his feet dangle and swing like a pendulum, eyes go wide, he squeals. He follows the pointer with physics (spring and pendulum). Fast moves make him fly sideways with the legs trailing. Release = he falls with gravity, squashes on landing, bounces twice, stars circle his head. A fast flick = he flies away, bounces off the screen edges and comes to rest. Dropping on a tool tile or the Save button counts as a tap on it."
   },
   {
    "id": "carpet",
    "name": "Magic carpet",
-   "how": "Keep the pointer (or a held finger) on a leg or foot, still, for 2.5 s.",
+   "how": "Keep the pointer (or a held finger) on a foot, still, for 2.5 s.",
    "result": "The cursor turns into a small flying carpet with tassels. The carpet slides under Pip, lifts him, and he sits cross-legged on it. The carpet follows the pointer with a delay, banks into turns, and the keyring tail trails behind. Desktop: the real cursor is replaced by the carpet. Touch: the carpet appears under the held finger. Sudden jerk (pointer speed above 2500 px per second change in under 80 ms) or any click or tap: the carpet bursts into threads and sparkles, Pip falls, squashes, shakes it off and says oops. Lifting a held finger gently lands the carpet softly and it folds away."
   },
   {

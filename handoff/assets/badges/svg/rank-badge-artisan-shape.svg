@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 32" width="372" height="96" role="img">
+  <title>Artisan rank badge</title>
+  <defs><linearGradient id="rank-artisan-s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset="1" stop-color="#FFC94A"/></linearGradient></defs>
+  <rect x="1" y="1" width="122" height="30" rx="15" fill="url(#rank-artisan-s)" stroke="#FFBE32" stroke-opacity=".6"/>
+  <g transform="translate(13 8.500) scale(.625)" fill="none" stroke="#2a1d00" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></g>
+</svg>

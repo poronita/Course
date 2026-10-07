@@ -133,7 +133,6 @@
     <g filter="url(#pip-light-working-outline)">
       <g/>
       <g transform="translate(200.00 343.59) rotate(0.07) scale(0.9958 1.0073) translate(-200 -345)">
-        <path fill="#FFFFFF" opacity="0.000"/>
         <g transform="translate(286.00 284.00) rotate(1.48) scale(1.0000 1.0000) translate(-286 -284)">
           <path d="M278 282Q292 280 294 292" fill="none" stroke="#4E5668" stroke-width="6" stroke-linecap="round"/>
           <path d="M278 282Q292 280 294 292" fill="none" stroke="url(#pip-light-working-steelX)" stroke-width="3" stroke-linecap="round"/>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <radialGradient id="pip-light-61-eye-left-iris-iris" cx="0.5" cy="0.62" r="0.6" fx="0.5" fy="0.62">
+      <stop offset="0" stop-color="#7FD7FF" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#2F7BD0" stop-opacity="1"/>
+      <stop offset="0.85" stop-color="#1B2E73" stop-opacity="1"/>
+      <stop offset="1" stop-color="#121A45" stop-opacity="1"/>
+    </radialGradient>
+    <clipPath id="pip-light-61-eye-left-iris-eye0">
+      <ellipse rx="22" ry="26"/>
+    </clipPath>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+        <g transform="translate(171.00 201.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+          <g clip-path="url(#pip-light-61-eye-left-iris-eye0)">
+            <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+              <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+                <circle r="14.5" fill="url(#pip-light-61-eye-left-iris-iris)"/>
+                <circle r="14.5" fill="none" stroke="#0E1338" stroke-width="2.2"/>
+                <circle r="7" fill="#070A1E"/>
+                <path d="M-9 6A11 11 0 0 0 9 6" stroke="#9DE6FF" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+              </g>
+              <ellipse cx="-5" cy="-6" rx="5" ry="5.8" fill="#fff"/>
+              <circle cx="5.5" cy="5" r="2.2" fill="#fff" opacity="0.9"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

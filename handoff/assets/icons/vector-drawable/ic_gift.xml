@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- gift: 24dp stroke icon, 2dp round. Tint with android:tint or ImageView app:tint. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:pathData="M4 8H20a1 1 0 0 1 1 1V11a1 1 0 0 1 -1 1H4a1 1 0 0 1 -1 -1V9a1 1 0 0 1 1 -1zM5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1 -1v-7M12 8v12M12 8c-1.5 -3 -3 -4 -4.5 -3.5S7 8 12 8zM12 8c1.5 -3 3 -4 4.5 -3.5S17 8 12 8z"
+        android:fillColor="#00000000"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+</vector>

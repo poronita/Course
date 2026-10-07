@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 70" width="234" height="210" role="img">
+  <title>Daily chest, closed</title>
+  <defs><linearGradient id="chest-closed-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6FD6EA"/><stop offset="1" stop-color="#2BB3D1"/></linearGradient></defs>
+  <rect x="8" y="34" width="62" height="30" rx="6" fill="url(#chest-closed-g)"/>
+  <rect x="8" y="44" width="62" height="5" fill="#000" fill-opacity=".2"/>
+  <rect x="34" y="40" width="10" height="14" rx="3" fill="#FFC94A"/>
+  <g>
+    <path d="M8 36V28Q8 14 39 14T70 28v8z" fill="url(#chest-closed-g)"/>
+    <path d="M8 28Q8 14 39 14T70 28" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="2"/>
+  </g>
+</svg>

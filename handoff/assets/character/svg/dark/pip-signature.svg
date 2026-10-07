@@ -102,7 +102,6 @@
     <ellipse cx="200" cy="350" rx="92" ry="13" fill="url(#pip-dark-signature-shadow)" opacity="1" transform="translate(200.00 350.00) rotate(0.00) scale(1.0000 1.0000) translate(-200 -350)"/>
     <g/>
     <g transform="translate(200.00 345.00) rotate(3.07) scale(0.9958 1.0073) translate(-200 -345)">
-      <path fill="#F0FCFD" opacity="0.000" d="M155.6 34.1L159.3 31.9L163.0 29.9L166.8 28.0L170.7 26.3L174.7 24.6L178.7 23.2L182.8 21.8L186.9 20.6L191.1 19.6L195.3 18.6L199.6 17.9L203.9 17.3L205.9 48.2L202.3 44.3L198.4 41.0L194.3 38.2L190.1 35.8L185.8 34.0L181.4 32.8L177.1 32.0L172.7 31.8L168.4 32.1L164.3 32.9L160.3 34.1L156.5 35.8Z"/>
       <g transform="translate(286.00 284.00) rotate(-3.91) scale(1.0000 1.0000) translate(-286 -284)">
         <path d="M278 282Q292 280 294 292" fill="none" stroke="#4E5668" stroke-width="6" stroke-linecap="round"/>
         <path d="M278 282Q292 280 294 292" fill="none" stroke="url(#pip-dark-signature-steelX)" stroke-width="3" stroke-linecap="round"/>

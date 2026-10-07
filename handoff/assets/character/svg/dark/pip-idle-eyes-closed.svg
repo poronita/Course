@@ -109,7 +109,6 @@
     <ellipse cx="200" cy="350" rx="92" ry="13" fill="url(#pip-dark-idle-eyes-closed-shadow)" opacity="1" transform="translate(200.00 350.00) rotate(0.00) scale(1.0000 1.0000) translate(-200 -350)"/>
     <g/>
     <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
-      <path fill="#F0FCFD" opacity="0.000"/>
       <g transform="translate(286.00 284.00) rotate(-3.11) scale(1.0000 1.0000) translate(-286 -284)">
         <path d="M278 282Q292 280 294 292" fill="none" stroke="#4E5668" stroke-width="6" stroke-linecap="round"/>
         <path d="M278 282Q292 280 294 292" fill="none" stroke="url(#pip-dark-idle-eyes-closed-steelX)" stroke-width="3" stroke-linecap="round"/>

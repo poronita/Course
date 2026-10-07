@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs/>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+        <ellipse cx="150" cy="236" rx="12" ry="6.5" fill="#8EE0EE" opacity="0.240"/>
+        <ellipse cx="250" cy="236" rx="12" ry="6.5" fill="#8EE0EE" opacity="0.240"/>
+      </g>
+    </g>
+  </g>
+</svg>

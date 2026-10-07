@@ -1,11 +1,12 @@
 ## 9. Pip Prime, the mascot (this is the brand)
 
-Pip Prime is a small pocket-knife-shaped character: a rounded body, a steel belt, two arms with mitts, two feet, two side rivets that act as ears, a keyring that swings like a tail, a face with big eyes and an expressive mouth, and a **steel blade quiff** on top that flips between tools. **Dark theme: Turkish blue body. Light theme: creamy white body with a thin warm outline.** The original red build exists in `assets/character/rig` for reference only and is not used in the app.
+Pip Prime is a small pocket-knife-shaped character: a rounded body, a steel belt, two arms with mitts, two feet, two shoulder rivets that act as his ears, a keyring that swings like a tail, a face with big eyes and an expressive mouth, and a **steel blade quiff** on top that flips between tools. **Dark theme: Turkish blue body. Light theme: creamy white body with a thin warm outline.** The original red build exists in `assets/character/rig` for reference only and is not used in the app.
 
 ### 9.1 How Pip is rendered
 - Pip is an **SVG rig** (400 x 400 viewBox) driven every frame by a state object. The source is in `assets/character/rig` (`cast.js`, `pip-dark.js`, `pip-light.js`, and `README.md`). **Port it to TypeScript as `packages/pip`**, keep the drawing code, and keep the same state object (`t, mood, mt, prev, blend, look, poke, pokes, hover, small`). Because the app UI is web-based, the same rig runs on the website and in the Android WebView. Do not rebuild Pip in Compose or as a Lottie file.
 - Static art for splash screens, notifications, store listings and fallbacks is in `assets/character/svg` and `png`. Separate body parts with pivots are in `assets/character/layers` (use them for skins, hit regions and new actions).
 - One big Pip at a time on screen (hero, nav or rail) plus small Pips in effects. Use `requestAnimationFrame`, pause when the tab or app is hidden, and cap work at 60 fps. Reuse DOM nodes; do not rebuild the SVG per frame. Target under 3 ms of script per frame for Pip on the mid phone.
+- **Rig facts (checked against the layers):** Pip has no separate legs and no ears. The "feet" zone is the two foot ovals under the body; the "ears" zone is the two shoulder rivets on the arms; the tail is the keyring. Actions in the catalogue that need legs (running, moonwalk, push-ups, stomping) must be done with body bounce, squash and stretch and foot movement. If the owner later wants real legs, the artist adds them as new layers; do not block on it.
 - Pip never blocks the UI. His container has `pointer-events: none`; only his hit regions (below) receive events.
 
 ### 9.2 The Pip brain: a small state machine
@@ -41,14 +42,14 @@ Every zone must also work for keyboard and screen-reader users in a simple way: 
 
 #### Pick-up physics (default numbers, tune by feel)
 - Start: pointer down on the blade region, moved less than 8 px, held 600 ms, Pip not in an `Action` or `Reward` state, and no job running. Play `vx-pickup`, haptic tick. The rig lifts by the blade: body hangs below the pointer.
-- Model Pip as a **pendulum hanging from the pointer**: angle `θ''= -(g/L)·sin θ - c·θ' + (a_x/L)·cos θ`, with `L = 0.55 · Pip height`, `g = 2400 px/s²`, damping `c = 1.8`. Legs kick in proportion to `|θ'|`. Body stretches `scaleY = 1 + min(0.12, speed/6000)`. The eyes widen when speed is high.
+- Model Pip as a **pendulum hanging from the pointer**: angle `θ''= -(g/L)·sin θ - c·θ' + (a_x/L)·cos θ`, with `L = 0.55 · Pip height`, `g = 2400 px/s²`, damping `c = 1.8`. Feet kick in proportion to `|θ'|`. Body stretches `scaleY = 1 + min(0.12, speed/6000)`. The eyes widen when speed is high.
 - Release: gravity `2200 px/s²`, floor at the top of the bottom bar (the safe area), restitution `0.38`, squash on impact `scaleY = 1 - min(0.35, v/3500)` with a spring-back, two bounces, then 1.5 s of dizzy stars (`er-dizzy`), then back to idle with a small shake.
 - Fling: release speed above 900 px/s sends Pip flying with air drag `0.4 /s` and spin; he bounces off the screen edges (restitution 0.6, up to 4 bounces) and comes to rest. Play `vx-whee` while he flies and `vx-drop` on the first landing.
 - If he is dropped over a tool tile or the Save button, treat it as a tap on that control (a playful shortcut) after he lands.
 - Disabled when "Pip interactions" is off, when a modal is open, or when a job is running.
 
 #### Carpet physics
-- Start: dwell on a leg or foot for 2.5 s. The cursor (desktop) or a carpet sprite under the finger (touch) becomes a **mini magic carpet** (about 0.9 x Pip's width, tassels, a soft shadow). It slides under Pip in 0.9 s, lifts him 12 px, and he sits cross-legged on it. Play `vx-carpet-on`, then the looping `vx-carpet-fly` while moving.
+- Start: dwell on a foot for 2.5 s. The cursor (desktop) or a carpet sprite under the finger (touch) becomes a **mini magic carpet** (about 0.9 x Pip's width, tassels, a soft shadow). It slides under Pip in 0.9 s, lifts him 12 px, and he sits cross-legged on it. Play `vx-carpet-on`, then the looping `vx-carpet-fly` while moving.
 - Follow: a critically damped spring toward the pointer with `ω = 6 rad/s` (about 0.3 s lag). Bank angle = `clamp(vx / 900, -1, 1) · 18°`. Bob `sin(t·3)·4 px`. The keyring tail streams behind. Pip's eyes look in the flight direction.
 - Burst: the carpet bursts when **any** of these happens: a click, tap or second finger; pointer acceleration jump above 2500 px/s within 80 ms (a sudden jerk); the pointer leaves the window. On burst: pop of threads and sparkles (`vx-carpet-burst`), Pip falls with the pick-up landing physics, says "oops" (`vx-oops`), dizzy stars, then back to idle.
 - Gentle end: if the user lifts a held finger slowly (speed under 200 px/s), the carpet lands softly and folds away. No burst, no fall.

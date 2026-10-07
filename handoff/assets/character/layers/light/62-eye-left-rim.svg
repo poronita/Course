@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <clipPath id="pip-light-62-eye-left-rim-eye0">
+      <ellipse rx="22" ry="26"/>
+    </clipPath>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g transform="translate(0.00 0.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+        <g transform="translate(171.00 201.00) rotate(0.00) scale(1.0000 1.0000) translate(0 0)">
+          <g clip-path="url(#pip-light-62-eye-left-rim-eye0)">
+            <ellipse cy="-22" rx="22" ry="8" fill="#4F3F29" opacity="0.12"/>
+          </g>
+          <ellipse rx="22" ry="26" fill="none" stroke="#3D2F1E" stroke-width="2.6"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

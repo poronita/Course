@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256" role="img">
+  <title>XP coin</title>
+  <defs>
+    <linearGradient id="coin-rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE9A0"/><stop offset="1" stop-color="#B06E07"/></linearGradient>
+    <radialGradient id="coin-face" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#FFF3B8"/><stop offset=".45" stop-color="#FFC94A"/><stop offset="1" stop-color="#C7810E"/></radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#coin-rim)" stroke="#8A5406" stroke-width="2.5"/>
+  <circle cx="32" cy="32" r="23.5" fill="url(#coin-face)" stroke="#B67809" stroke-width="1.6"/>
+  <path d="M20 24.5l11 15M31 24.5l-11 15M35.5 40V24.5h5a4.5 4.5 0 0 1 0 9h-5" fill="none" stroke="#7A3F03" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15 22A19 19 0 0 1 26 13" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

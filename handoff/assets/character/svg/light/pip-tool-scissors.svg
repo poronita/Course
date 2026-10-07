@@ -129,7 +129,6 @@
     <g filter="url(#pip-light-tool-scissors-outline)">
       <g/>
       <g transform="translate(200.00 345.00) rotate(-3.93) scale(0.9958 1.0073) translate(-200 -345)">
-        <path fill="#FFFFFF" opacity="0.000" d="M158.0 32.8L161.3 30.9L164.7 29.2L168.1 27.5L171.7 25.9L175.2 24.5L178.8 23.1L182.5 21.9L186.2 20.8L189.9 19.8L193.7 18.9L197.5 18.1L201.4 17.5L204.0 48.3L200.7 44.5L197.1 41.2L193.3 38.3L189.5 36.0L185.5 34.1L181.5 32.7L177.6 31.9L173.6 31.5L169.7 31.6L166.0 32.1L162.3 33.2L158.9 34.6Z"/>
         <g transform="translate(286.00 284.00) rotate(5.94) scale(1.0000 1.0000) translate(-286 -284)">
           <path d="M278 282Q292 280 294 292" fill="none" stroke="#4E5668" stroke-width="6" stroke-linecap="round"/>
           <path d="M278 282Q292 280 294 292" fill="none" stroke="url(#pip-light-tool-scissors-steelX)" stroke-width="3" stroke-linecap="round"/>

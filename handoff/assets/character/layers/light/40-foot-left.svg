@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img">
+  <title/>
+  <defs>
+    <linearGradient id="pip-light-40-foot-left-feet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A3E58" stop-opacity="1"/>
+      <stop offset="1" stop-color="#14162A" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <g transform="translate(200.00 345.00) rotate(0.62) scale(1.0080 0.9860) translate(-200 -345)">
+      <g>
+        <ellipse cx="172" cy="339" rx="22" ry="10" fill="url(#pip-light-40-foot-left-feet)"/>
+        <ellipse cx="168" cy="335" rx="10" ry="3" fill="#fff" opacity="0.18"/>
+      </g>
+    </g>
+  </g>
+</svg>
